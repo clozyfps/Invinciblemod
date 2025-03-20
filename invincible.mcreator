@@ -3779,6 +3779,23 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "InvincibleSuit",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible_suit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/item/InvincibleSuitItem.java",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_helmet.json",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_boots.json",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_leggings.json"
+        ]
+      },
+      "path": "~/Item"
     }
   ],
   "variable_elements": [
@@ -4075,12 +4092,12 @@
   "language_map": {
     "en_us": {
       "key.invincible.switch_moves": "Switch Moves",
-      "key.invincible.dash": "Dash",
       "effect.invincible.punch_catch_cd": "Punch Catch CD",
+      "key.invincible.dash": "Dash",
       "effect.invincible.cooldown": "Cooldown",
       "entity.invincible.mars_proximity": "Mars Proximity",
-      "effect.invincible.no_fall": "No Fall",
       "biome.invincible.space_biome": "Space Biome",
+      "effect.invincible.no_fall": "No Fall",
       "effect.invincible.slam_timer": "Slam Timer",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "effect.invincible.destruction_active": "Destruction Active",
@@ -4116,6 +4133,8 @@
       "item.invincible.test": "Test",
       "biome.invincible.mars_biome": "Mars Biome",
       "effect.invincible.combo_still": "Combo Still",
+      "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
+      "item.invincible.invincible_suit_leggings": "Invincible\u0027s Pants",
       "block.invincible.space_block": "Space Block",
       "subtitles.distantexplosion": "",
       "key.invincible.fly": "Fly",
@@ -4133,10 +4152,12 @@
       "effect.invincible.after_images": "After Images",
       "effect.invincible.active_burst": "Active Burst",
       "subtitles.powerfulpunch2": "",
+      "item.invincible.invincible_suit_helmet": "Invincible\u0027s Mask",
       "effect.invincible.takeoff_effects": "Takeoff Effects",
       "effect.invincible.point_destruction": "Point Destruction",
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
       "effect.invincible.smoking": "Smoking",
+      "item.invincible.invincible_suit_chestplate": "Invincible\u0027s Suit",
       "entity.invincible.viltrumite": "Viltrumite",
       "effect.invincible.flash_time": "Flash Time",
       "subtitles.bloodexplode": ""

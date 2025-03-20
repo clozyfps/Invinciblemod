@@ -36,6 +36,9 @@ public class MoveDisplayOverlay {
 		if (MoveDisplayDisplayOverlayIngameProcedure.execute(entity)) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
+					MoveNameDisplayProcedure.execute(entity), 18, h - 32, -10066330, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
 					MoveNameDisplayProcedure.execute(entity), 17, h - 33, -1, false);
 		}
 	}

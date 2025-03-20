@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.invincible.item.TestItem;
+import net.mcreator.invincible.item.InvincibleSuitItem;
 import net.mcreator.invincible.item.CharacterPickerItem;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -23,6 +24,10 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> SPACE_BLOCK = block(InvincibleModBlocks.SPACE_BLOCK);
 	public static final RegistryObject<Item> VILTRUMITE_SPAWN_EGG = REGISTRY.register("viltrumite_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.VILTRUMITE, -1250068, -5460820, new Item.Properties()));
 	public static final RegistryObject<Item> CHARACTER_PICKER = REGISTRY.register("character_picker", () -> new CharacterPickerItem());
+	public static final RegistryObject<Item> INVINCIBLE_SUIT_HELMET = REGISTRY.register("invincible_suit_helmet", () -> new InvincibleSuitItem.Helmet());
+	public static final RegistryObject<Item> INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("invincible_suit_chestplate", () -> new InvincibleSuitItem.Chestplate());
+	public static final RegistryObject<Item> INVINCIBLE_SUIT_LEGGINGS = REGISTRY.register("invincible_suit_leggings", () -> new InvincibleSuitItem.Leggings());
+	public static final RegistryObject<Item> INVINCIBLE_SUIT_BOOTS = REGISTRY.register("invincible_suit_boots", () -> new InvincibleSuitItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

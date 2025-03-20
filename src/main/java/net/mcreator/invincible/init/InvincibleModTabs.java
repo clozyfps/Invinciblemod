@@ -23,6 +23,11 @@ public class InvincibleModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(InvincibleModItems.VILTRUMITE_SPAWN_EGG.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+			tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_HELMET.get());
+			tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_CHESTPLATE.get());
+			tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_LEGGINGS.get());
+			tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_BOOTS.get());
 		}
 	}
 }

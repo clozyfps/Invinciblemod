@@ -13,13 +13,31 @@
             "name": "MoveNameDisplay"
           },
           "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 18,
+          "y": 208,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_move_name_display1",
+          "text": {
+            "fixedValue": "",
+            "name": "MoveNameDisplay"
+          },
+          "color": {
             "value": -1,
             "falpha": 0.0
           },
           "anchorPoint": "BOTTOM_LEFT",
           "x": 17,
           "y": 207,
-          "locked": false
+          "locked": true
         }
       }
     ],
