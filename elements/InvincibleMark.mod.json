@@ -7,7 +7,7 @@
     "mobModelTexture": "invincible.png",
     "mobModelGlowTexture": "",
     "visualScale": {
-      "fixedValue": 0.9
+      "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
