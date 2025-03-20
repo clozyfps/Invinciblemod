@@ -78,6 +78,12 @@ public class EnterSpaceProcedure {
 							_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 						}
 					}
+					{
+						Entity _ent = entity;
+						_ent.teleportTo(x, 150, z);
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport(x, 150, z, _ent.getYRot(), _ent.getXRot());
+					}
 				}
 			}
 		}

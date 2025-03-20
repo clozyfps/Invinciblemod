@@ -71,8 +71,8 @@
       "registry_name": "test",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/models/item/test.json",
-          "src/main/java/net/mcreator/invincible/item/TestItem.java"
+          "src/main/java/net/mcreator/invincible/item/TestItem.java",
+          "src/main/resources/assets/invincible/models/item/test.json"
         ]
       },
       "path": "~/Item"
@@ -171,8 +171,8 @@
       "registry_name": "mars_proximity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/MarsProximityRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/MarsProximityEntity.java"
+          "src/main/java/net/mcreator/invincible/entity/MarsProximityEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/MarsProximityRenderer.java"
         ]
       },
       "path": "~/Mobs/Util"
@@ -330,7 +330,16 @@
         "files": [
           "src/main/java/net/mcreator/invincible/procedures/SetupSkyboxProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -441,9 +450,9 @@
       "registry_name": "viltrumite",
       "metadata": {
         "files": [
+          "src/main/resources/assets/invincible/models/item/viltrumite_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/ViltrumiteEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteRenderer.java",
-          "src/main/resources/assets/invincible/models/item/viltrumite_spawn_egg.json"
+          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -1364,8 +1373,8 @@
       "registry_name": "after_image",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/AfterImageRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/AfterImageEntity.java"
+          "src/main/java/net/mcreator/invincible/entity/AfterImageEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/AfterImageRenderer.java"
         ]
       },
       "path": "~/Mobs/Util"
@@ -2790,8 +2799,8 @@
       "registry_name": "past_image",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/PastImageEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/PastImageRenderer.java"
+          "src/main/java/net/mcreator/invincible/client/renderer/PastImageRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/PastImageEntity.java"
         ]
       },
       "path": "~/Mobs/Util"
@@ -3816,6 +3825,17 @@
         ]
       },
       "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "InvincibleTab",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible_tab",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/MISC"
     }
   ],
   "variable_elements": [
@@ -4149,6 +4169,7 @@
       "effect.invincible.grabbed": "Grabbed",
       "subtitles.explosion": "",
       "effect.invincible.mars_shader": "Mars Shader",
+      "item_group.invincible.invincible_tab": "Invincible",
       "gui.invincible.book_picker.button_speedster": "Speedster WIP",
       "item.invincible.test": "Test",
       "biome.invincible.mars_biome": "Mars Biome",
@@ -4311,6 +4332,10 @@
       },
       {
         "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "MISC",
         "children": []
       }
     ]

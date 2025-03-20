@@ -12,7 +12,7 @@
     "textureBoots": "invincible_boots",
     "creativeTabs": [
       {
-        "value": "COMBAT"
+        "value": "CUSTOM:InvincibleTab"
       }
     ],
     "armorTextureFile": "empty",
