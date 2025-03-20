@@ -23,6 +23,11 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_CHESTPLATE.get());
 				tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_LEGGINGS.get());
 				tabData.accept(InvincibleModItems.INVINCIBLE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.INVINCIBLE_BLUE_MARK_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.INVINCIBLE_BLUE_SUIT_HELMET.get());
+				tabData.accept(InvincibleModItems.INVINCIBLE_BLUE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.INVINCIBLE_BLUE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.INVINCIBLE_BLUE_SUIT_BOOTS.get());
 				tabData.accept(InvincibleModItems.VILTRUMITE_SPAWN_EGG.get());
 			}).build());
 }

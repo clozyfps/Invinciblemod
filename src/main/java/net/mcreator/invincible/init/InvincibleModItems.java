@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.invincible.item.TestItem;
 import net.mcreator.invincible.item.InvincibleSuitItem;
+import net.mcreator.invincible.item.InvincibleBlueSuitItem;
 import net.mcreator.invincible.item.CharacterPickerItem;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -29,6 +30,11 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> INVINCIBLE_SUIT_LEGGINGS = REGISTRY.register("invincible_suit_leggings", () -> new InvincibleSuitItem.Leggings());
 	public static final RegistryObject<Item> INVINCIBLE_SUIT_BOOTS = REGISTRY.register("invincible_suit_boots", () -> new InvincibleSuitItem.Boots());
 	public static final RegistryObject<Item> INVINCIBLE_MARK_SPAWN_EGG = REGISTRY.register("invincible_mark_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.INVINCIBLE_MARK, -1513415, -16086563, new Item.Properties()));
+	public static final RegistryObject<Item> INVINCIBLE_BLUE_SUIT_HELMET = REGISTRY.register("invincible_blue_suit_helmet", () -> new InvincibleBlueSuitItem.Helmet());
+	public static final RegistryObject<Item> INVINCIBLE_BLUE_SUIT_CHESTPLATE = REGISTRY.register("invincible_blue_suit_chestplate", () -> new InvincibleBlueSuitItem.Chestplate());
+	public static final RegistryObject<Item> INVINCIBLE_BLUE_SUIT_LEGGINGS = REGISTRY.register("invincible_blue_suit_leggings", () -> new InvincibleBlueSuitItem.Leggings());
+	public static final RegistryObject<Item> INVINCIBLE_BLUE_SUIT_BOOTS = REGISTRY.register("invincible_blue_suit_boots", () -> new InvincibleBlueSuitItem.Boots());
+	public static final RegistryObject<Item> INVINCIBLE_BLUE_MARK_SPAWN_EGG = REGISTRY.register("invincible_blue_mark_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.INVINCIBLE_BLUE_MARK, -13472318, -14605275, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

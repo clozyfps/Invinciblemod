@@ -22,6 +22,7 @@ import net.mcreator.invincible.entity.SonicClapEntity;
 import net.mcreator.invincible.entity.PastImageEntity;
 import net.mcreator.invincible.entity.MarsProximityEntity;
 import net.mcreator.invincible.entity.InvincibleMarkEntity;
+import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -46,6 +47,8 @@ public class InvincibleModEntities {
 			EntityType.Builder.<WebLineEntity>of(WebLineEntity::new, MobCategory.MISC).setCustomClientFactory(WebLineEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<InvincibleMarkEntity>> INVINCIBLE_MARK = register("invincible_mark", EntityType.Builder.<InvincibleMarkEntity>of(InvincibleMarkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvincibleMarkEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InvincibleBlueMarkEntity>> INVINCIBLE_BLUE_MARK = register("invincible_blue_mark", EntityType.Builder.<InvincibleBlueMarkEntity>of(InvincibleBlueMarkEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvincibleBlueMarkEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -61,6 +64,7 @@ public class InvincibleModEntities {
 			AfterImageEntity.init();
 			PastImageEntity.init();
 			InvincibleMarkEntity.init();
+			InvincibleBlueMarkEntity.init();
 		});
 	}
 
@@ -71,5 +75,6 @@ public class InvincibleModEntities {
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
 		event.put(PAST_IMAGE.get(), PastImageEntity.createAttributes().build());
 		event.put(INVINCIBLE_MARK.get(), InvincibleMarkEntity.createAttributes().build());
+		event.put(INVINCIBLE_BLUE_MARK.get(), InvincibleBlueMarkEntity.createAttributes().build());
 	}
 }

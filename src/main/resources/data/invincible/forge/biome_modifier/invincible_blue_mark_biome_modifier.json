@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "invincible:invincible_blue_mark",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

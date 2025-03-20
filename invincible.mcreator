@@ -3853,6 +3853,40 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "InvincibleBlueSuit",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible_blue_suit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_helmet.json",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_leggings.json",
+          "src/main/java/net/mcreator/invincible/item/InvincibleBlueSuitItem.java",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_boots.json"
+        ]
+      },
+      "path": "~/Item"
+    },
+    {
+      "name": "InvincibleBlueMark",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible_blue_mark",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json",
+          "src/main/java/net/mcreator/invincible/entity/InvincibleBlueMarkEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleBlueMarkRenderer.java",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -4149,6 +4183,8 @@
     "CUSTOM:InvincibleTab": [
       "InvincibleMark",
       "InvincibleSuit",
+      "InvincibleBlueMark",
+      "InvincibleBlueSuit",
       "Viltrumite"
     ]
   },
@@ -4162,12 +4198,14 @@
       "entity.invincible.invincible_mark": "Invincible",
       "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.no_fall": "No Fall",
+      "item.invincible.invincible_blue_suit_leggings": "Invincible\u0027s Blue Pants",
       "effect.invincible.slam_timer": "Slam Timer",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "effect.invincible.destruction_active": "Destruction Active",
       "effect.invincible.grabbing_active": "Grabbing Active",
       "subtitles.grip": "",
       "gamerule.spaceexist": "Existance Of Space",
+      "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
       "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
       "entity.invincible.past_image": "Past Image",
@@ -4177,6 +4215,7 @@
       "subtitles.powerfulpunch": "",
       "effect.invincible.impact_frame_potion": "Impact Frame Potion",
       "key.invincible.toggle_heavy_punch": "Toggle Special",
+      "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Blue Boots",
       "death.attack.phase": "%1$s was blitzed",
       "effect.invincible.slowed": "Slowed",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
@@ -4191,6 +4230,8 @@
       "effect.invincible.smoke_circle_expanding": "Smoke Circle Expanding",
       "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",
       "effect.invincible.grabbed": "Grabbed",
+      "item.invincible.invincible_blue_suit_chestplate": "Invincible\u0027s Blue Suit",
+      "item.invincible.invincible_blue_mark_spawn_egg": "Invincible (Blue) Spawn Egg",
       "subtitles.explosion": "",
       "effect.invincible.mars_shader": "Mars Shader",
       "item_group.invincible.invincible_tab": "Invincible",
@@ -4219,6 +4260,7 @@
       "effect.invincible.active_burst": "Active Burst",
       "subtitles.powerfulpunch2": "",
       "item.invincible.invincible_suit_helmet": "Invincible\u0027s Mask",
+      "item.invincible.invincible_blue_suit_helmet": "Invincible\u0027s Blue Mask",
       "effect.invincible.takeoff_effects": "Takeoff Effects",
       "effect.invincible.point_destruction": "Point Destruction",
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",

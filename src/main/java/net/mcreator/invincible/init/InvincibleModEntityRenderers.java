@@ -15,6 +15,7 @@ import net.mcreator.invincible.client.renderer.ViltrumiteRenderer;
 import net.mcreator.invincible.client.renderer.PastImageRenderer;
 import net.mcreator.invincible.client.renderer.MarsProximityRenderer;
 import net.mcreator.invincible.client.renderer.InvincibleMarkRenderer;
+import net.mcreator.invincible.client.renderer.InvincibleBlueMarkRenderer;
 import net.mcreator.invincible.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -28,5 +29,6 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.PAST_IMAGE.get(), PastImageRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.WEB_LINE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.INVINCIBLE_MARK.get(), InvincibleMarkRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.INVINCIBLE_BLUE_MARK.get(), InvincibleBlueMarkRenderer::new);
 	}
 }
