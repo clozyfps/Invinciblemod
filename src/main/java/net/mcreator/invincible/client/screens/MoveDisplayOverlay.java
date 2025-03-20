@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.invincible.procedures.MoveNameDisplayShadowProcedure;
 import net.mcreator.invincible.procedures.MoveNameDisplayProcedure;
 import net.mcreator.invincible.procedures.MoveDisplayDisplayOverlayIngameProcedure;
 
@@ -36,7 +37,7 @@ public class MoveDisplayOverlay {
 		if (MoveDisplayDisplayOverlayIngameProcedure.execute(entity)) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					MoveNameDisplayProcedure.execute(entity), 18, h - 32, -10066330, false);
+					MoveNameDisplayShadowProcedure.execute(entity), 18, h - 32, -10066330, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					MoveNameDisplayProcedure.execute(entity), 17, h - 33, -1, false);

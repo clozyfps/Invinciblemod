@@ -3796,6 +3796,26 @@
         ]
       },
       "path": "~/Item"
+    },
+    {
+      "name": "MoveNameDisplayShadow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_name_display_shadow",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/MoveNameDisplayShadowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
     }
   ],
   "variable_elements": [
@@ -4092,12 +4112,12 @@
   "language_map": {
     "en_us": {
       "key.invincible.switch_moves": "Switch Moves",
-      "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "key.invincible.dash": "Dash",
+      "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "effect.invincible.cooldown": "Cooldown",
       "entity.invincible.mars_proximity": "Mars Proximity",
-      "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.no_fall": "No Fall",
+      "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.slam_timer": "Slam Timer",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "effect.invincible.destruction_active": "Destruction Active",

@@ -10,7 +10,7 @@
           "name": "label_proc_move_name_display",
           "text": {
             "fixedValue": "",
-            "name": "MoveNameDisplay"
+            "name": "MoveNameDisplayShadow"
           },
           "color": {
             "value": -10066330,
