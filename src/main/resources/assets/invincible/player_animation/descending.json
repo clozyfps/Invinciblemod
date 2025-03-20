@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"descending": {
+			"animation_length": 0.0417,
+			"bones": {
+				"right_leg": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					},
+					"position": {
+						"vector": [0, 3, -1]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [0, 0, -15]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [0, 0, 15]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

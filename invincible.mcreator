@@ -1,0 +1,4297 @@
+{
+  "mod_elements": [
+    {
+      "name": "SpaceBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/biome/space_biome.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "Space",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "space",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/dimension/space.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/SpaceDimension.java",
+          "src/main/resources/data/invincible/dimension_type/space.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "TestRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TestRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Item/Procedures"
+    },
+    {
+      "name": "Test",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/models/item/test.json",
+          "src/main/java/net/mcreator/invincible/item/TestItem.java"
+        ]
+      },
+      "path": "~/Item"
+    },
+    {
+      "name": "SpaceBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/blockstates/space_block.json",
+          "src/main/java/net/mcreator/invincible/block/SpaceBlockBlock.java",
+          "src/main/resources/data/invincible/loot_tables/blocks/space_block.json",
+          "src/main/resources/assets/invincible/models/item/space_block.json",
+          "src/main/resources/assets/invincible/models/block/space_block.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "NoGravityTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_gravity_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/NoGravityTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "EnterSpace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_space",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/EnterSpaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Flying",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlyingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "MarsProximity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mars_proximity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/renderer/MarsProximityRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/MarsProximityEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Util"
+    },
+    {
+      "name": "MarsProximityOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mars_proximity_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/MarsProximityOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "MarsDome",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mars_dome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/template_pool/mars_dome.json",
+          "src/main/resources/data/invincible/worldgen/structure_set/mars_dome.json",
+          "src/main/resources/data/invincible/worldgen/structure/mars_dome.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "MarsBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mars_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/biome/mars_biome.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "Mars",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mars",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/world/dimension/MarsDimension.java",
+          "src/main/resources/data/invincible/dimension_type/mars.json",
+          "src/main/resources/data/invincible/dimension/mars.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "MarsShader",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mars_shader",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/MarsShaderMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FogRenderer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fog_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FogRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FogColor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fog_color",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FogColorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SetupDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetupDimensionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SetupSkybox",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_skybox",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetupSkyboxProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Shockwave",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/particle/ShockwaveParticle.java",
+          "src/main/resources/assets/invincible/particles/shockwave.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ViltrumiteMobUppercut",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_mob_uppercut",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteMobUppercutProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SlamTimer",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slam_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/SlamTimerMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SlamTimerOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slam_timer_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SlamTimerOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "ViltrumiteOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Viltrumite",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/ViltrumiteEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteRenderer.java",
+          "src/main/resources/assets/invincible/models/item/viltrumite_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "CharacterPicker",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "character_picker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/item/CharacterPickerItem.java",
+          "src/main/resources/assets/invincible/models/item/character_picker.json"
+        ]
+      },
+      "path": "~/Item"
+    },
+    {
+      "name": "RaceTitleDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "race_title_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/RaceTitleDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "BookPicker",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "book_picker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/gui/BookPickerScreen.java",
+          "src/main/java/net/mcreator/invincible/world/inventory/BookPickerMenu.java",
+          "src/main/java/net/mcreator/invincible/network/BookPickerButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "AgeUp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "age_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AgeUpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FlyOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fly_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlyOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "FlyOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fly_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlyOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "Fly",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/FlyMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "JumpCharge",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jump_charge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/JumpChargeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TakeoffEffectsOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takeoff_effects_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TakeoffEffectsOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "TakeoffEffectsEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takeoff_effects_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TakeoffEffectsEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "TakeoffEffects",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takeoff_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/TakeoffEffectsMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "EXP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/EXPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "EXPTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/EXPTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ViltrumitePunches",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_punches",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumitePunchesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "BloodDrop",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/particles/blood_drop.json",
+          "src/main/java/net/mcreator/invincible/client/particle/BloodDropParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "CallPunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "call_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CallPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "CallPunchMob",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "call_punch_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CallPunchMobProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "PointDestructionOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "point_destruction_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PointDestructionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "PointDestruction",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "point_destruction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/PointDestructionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "DestructionActiveOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DestructionActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "DestructionActive",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/DestructionActiveMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FlightTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlightTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DashOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DashOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "Dash",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/DashMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "UpperCut",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upper_cut",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UpperCutProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "ComboStillOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "combo_still_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ComboStillOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "ComboStill",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "combo_still",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/ComboStillMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FollowUpOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follow_up_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FollowUpOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "FollowUp",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follow_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/FollowUpMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "GrabbingActive",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grabbing_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/GrabbingActiveMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GrabbingActiveOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grabbing_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/GrabbingActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "Grabbed",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grabbed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/GrabbedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Cooldown",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ThrowGrab",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_grab",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ThrowGrabProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "StatTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/StatTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GrabOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grab_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/GrabOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "ToggleHeavyPunchOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toggle_heavy_punch_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ToggleHeavyPunchOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "ToggleHeavyPunch",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toggle_heavy_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/ToggleHeavyPunchMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "AfterImages",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_images",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/AfterImagesMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "AfterImage",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/renderer/AfterImageRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/AfterImageEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Util"
+    },
+    {
+      "name": "ShockwaveBig",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_big",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/particles/shockwave_big.json",
+          "src/main/java/net/mcreator/invincible/client/particle/ShockwaveBigParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SonicClapWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sonic_clap_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SonicClapWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "SonicClap",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sonic_clap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/SonicClapEntity.java"
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "SwitchMovesOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_moves_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SwitchMovesOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "SwitchMoves",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/SwitchMovesMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "MoveNameDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_name_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/MoveNameDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "MoveDisplayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_display_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/MoveDisplayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "MoveDisplay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/screens/MoveDisplayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "Phase",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phase",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/damage_type/phase.json"
+        ]
+      },
+      "path": "~/Sources"
+    },
+    {
+      "name": "ActiveBurst",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_burst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/ActiveBurstMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ActiveBurstOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_burst_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ActiveBurstOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "ViltrumiteMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "UseMovesOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_moves_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UseMovesOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "UseMoves",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/UseMovesMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "SetViltrumite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_viltrumite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetViltrumiteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetStrength",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_strength",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetStrengthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetAgility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_agility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetAgilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_health",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetDefense",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_defense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetDefenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "Invincible",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/command/InvincibleCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AfterImageOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AfterImageOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "AfterImageOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AfterImageOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "ImpactFramePotion",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impact_frame_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/ImpactFramePotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ImpactFrame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impact_frame",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ImpactFrameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "UniversalPunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "universal_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UniversalPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "PointDestructionUniversalOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "point_destruction_universal_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PointDestructionUniversalOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "PointDestructionUniversal",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "point_destruction_universal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/PointDestructionUniversalMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "DestructionActiveRay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_active_ray",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DestructionActiveRayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "DestructionActiveBurstOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_active_burst_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DestructionActiveBurstOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "DestructionActiveBurst",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_active_burst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/DestructionActiveBurstMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PunchCatchCD",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_catch_cd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/PunchCatchCDMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PunchCatchActive",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_catch_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/PunchCatchActiveMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PunchCatch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_catch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PunchCatchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CounterParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "counter_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/particles/counter_particle.json",
+          "src/main/java/net/mcreator/invincible/client/particle/CounterParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "HeavyStunOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_stun_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/HeavyStunOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "HeavyStun",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_stun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/HeavyStunMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FallingBlockForEach",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_block_for_each",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FallingBlockForEachProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "FallingBlocksManipOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_blocks_manip_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FallingBlocksManipOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "FallingBlocksManip",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_blocks_manip",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/FallingBlocksManipMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CharacterPickerRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "character_picker_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CharacterPickerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Item/Procedures"
+    },
+    {
+      "name": "SelectViltrumite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_viltrumite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectViltrumiteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SelectSpeedster",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_speedster",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectSpeedsterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "joined_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/JoinedWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SpeedsterSprintTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speedster_sprint_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SpeedsterSprintTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Speedster"
+    },
+    {
+      "name": "ViltrumiteDash",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_dash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteDashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "SpeedsterDash",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speedster_dash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SpeedsterDashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Speedster"
+    },
+    {
+      "name": "ElectricityParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/particles/electricity_particle.json",
+          "src/main/java/net/mcreator/invincible/client/particle/ElectricityParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "DefaultKnockbackPunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "default_knockback_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DefaultKnockbackPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FlashTime",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/FlashTimeMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FlashTimeOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_time_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlashTimeOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "FlashTimeEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_time_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlashTimeEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "FlashTimeEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_time_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FlashTimeEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "SlowedOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slowed_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SlowedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "Slowed",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slowed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/SlowedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SpeedsterMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speedster_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SpeedsterMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Speedster"
+    },
+    {
+      "name": "DespawnTamed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawn_tamed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DespawnTamedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ViltrumiteNPCFollowUpTriggerEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_npc_follow_up_trigger_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteNPCFollowUpTriggerEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "ViltrumiteNPCFollowUpTrigger",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_npc_follow_up_trigger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/ViltrumiteNPCFollowUpTriggerMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "MultiHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multi_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/MultiHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Speedster"
+    },
+    {
+      "name": "PushMultiHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "push_multi_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PushMultiHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Speedster"
+    },
+    {
+      "name": "SprintCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprint_check",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SprintCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PastImageDisplayCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "past_image_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PastImageDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "PastImage",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "past_image",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/PastImageEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/PastImageRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Util"
+    },
+    {
+      "name": "PastImageOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "past_image_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PastImageOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "WebSwing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_swing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/WebSwingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Spider"
+    },
+    {
+      "name": "SpiderVector",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_vector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SpiderVectorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Spider"
+    },
+    {
+      "name": "SpiderMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SpiderMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Spider"
+    },
+    {
+      "name": "SelectSpider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_spider",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectSpiderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "WebLineProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_line_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/WebLineProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "WebParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/particle/WebParticleParticle.java",
+          "src/main/resources/assets/invincible/particles/web_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "WebLineWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_line_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/WebLineWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "WebLine",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_line",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/WebLineEntity.java"
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "SpiderGlobalTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_global_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SpiderGlobalTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Spider"
+    },
+    {
+      "name": "Spaceexist",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spaceexist",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "ViltrumiteMobPunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_mob_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteMobPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BackwardsTumbleOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backwards_tumble_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/BackwardsTumbleOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "BackwardsTumble",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backwards_tumble",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/BackwardsTumbleMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BurstOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burst_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/BurstOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "Burst",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/BurstMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "SmokingOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoking_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SmokingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "Smoking",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/SmokingMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SetupAnimations",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetupAnimationsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CircleExpandingBurstOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "circle_expanding_burst_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CircleExpandingBurstOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "CircleExpandingBurst",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "circle_expanding_burst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/CircleExpandingBurstMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CircleExpandingBurstEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "circle_expanding_burst_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CircleExpandingBurstEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "GlassBreakOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glass_break_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/GlassBreakOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "GlassBreak",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glass_break",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/GlassBreakMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Grab",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grab",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/GrabMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "GrabbedOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grabbed_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/GrabbedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "BulletSlamEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullet_slam_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/BulletSlamEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "BulletSlam",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullet_slam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/BulletSlamMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CustomSmoke",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_smoke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/particle/CustomSmokeParticle.java",
+          "src/main/resources/assets/invincible/particles/custom_smoke.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BulletSlamOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullet_slam_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/BulletSlamOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "SmokeCircleExpandingOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_circle_expanding_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SmokeCircleExpandingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "SmokeCircleExpanding",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_circle_expanding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/SmokeCircleExpandingMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InstantCraterEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "instant_crater_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/InstantCraterEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "InstantCrater",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "instant_crater",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/InstantCraterMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "InstantCraterOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "instant_crater_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/InstantCraterOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "ActiveFlightSpeedOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_flight_speed_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ActiveFlightSpeedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "ActiveFlightSpeed",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_flight_speed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/ActiveFlightSpeedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CatchPunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catch_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CatchPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PunchCatchActiveOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_catch_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PunchCatchActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ViltrumiteDashEffects",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_dash_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteDashEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "NoFallOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_fall_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/NoFallOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "NoFall",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_fall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/NoFallMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GrabCooldown",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grab_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/GrabCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Race",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Defense",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Flying",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Power",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "SelectedTitle",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "Age",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10.0"
+    },
+    {
+      "name": "AgeTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PowerExp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PowerEXPCap",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10.0"
+    },
+    {
+      "name": "Strength",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Health",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Agility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Punches",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ToggleSpecial",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "FollowUpCharges",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "3.0"
+    },
+    {
+      "name": "FollowUpChargeTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MoveSelected",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "SelectedNumber",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "AverageDamage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "SprintCheck",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Color",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "WebX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "WebZ",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "WebY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "WebN",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "VerticalMovement",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MaximumMoves",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "powerfulpunch",
+      "files": [
+        "powerfulpunch"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "takeoff",
+      "files": [
+        "superman-flying-take-off-breaking-the-sound-barrier-sound-effect-2-ezmp3c_ahst5thc"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "powerfulpunch2",
+      "files": [
+        "powerfulpunch2"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "bloodexplode",
+      "files": [
+        "blood_explosion_-_sound_effect__ezmp3.cc_"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "explosion",
+      "files": [
+        "explode"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "distantexplosion",
+      "files": [
+        "distantexplosion"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "grip",
+      "files": [
+        "grip-sound-effect-ezmp3cc_ai3xdi6j"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "speedfollowup",
+      "files": [
+        "flashfollowup"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "web",
+      "files": [
+        "spiderman_web_shooter_-_sound_effect__ezmp3.cc_"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:mod:modglass": [
+      "Blocks.GLASS",
+      "Blocks.TINTED_GLASS",
+      "Blocks.STAINED_GLASS#0",
+      "Blocks.STAINED_GLASS#1",
+      "Blocks.STAINED_GLASS#2",
+      "Blocks.STAINED_GLASS#3",
+      "Blocks.STAINED_GLASS#4",
+      "Blocks.STAINED_GLASS#5",
+      "Blocks.STAINED_GLASS#6",
+      "Blocks.STAINED_GLASS#7",
+      "Blocks.STAINED_GLASS#8",
+      "Blocks.STAINED_GLASS#9",
+      "Blocks.STAINED_GLASS#10",
+      "Blocks.STAINED_GLASS#11",
+      "Blocks.STAINED_GLASS#12",
+      "Blocks.STAINED_GLASS#13",
+      "Blocks.STAINED_GLASS#14",
+      "Blocks.STAINED_GLASS#15",
+      "Blocks.GLASS_PANE",
+      "Blocks.STAINED_GLASS_PANE#0",
+      "Blocks.STAINED_GLASS_PANE#1",
+      "Blocks.STAINED_GLASS_PANE#2",
+      "Blocks.STAINED_GLASS_PANE#3",
+      "Blocks.STAINED_GLASS_PANE#4",
+      "Blocks.STAINED_GLASS_PANE#5",
+      "Blocks.STAINED_GLASS_PANE#6",
+      "Blocks.STAINED_GLASS_PANE#7",
+      "Blocks.STAINED_GLASS_PANE#8",
+      "Blocks.STAINED_GLASS_PANE#9",
+      "Blocks.STAINED_GLASS_PANE#10",
+      "Blocks.STAINED_GLASS_PANE#11",
+      "Blocks.STAINED_GLASS_PANE#12",
+      "Blocks.STAINED_GLASS_PANE#13",
+      "Blocks.STAINED_GLASS_PANE#14",
+      "Blocks.STAINED_GLASS_PANE#15"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.SAND#1",
+      "~Blocks.SMOOTH_RED_SANDSTONE"
+    ],
+    "ENTITIES:mod:spacemob": [
+      "CUSTOM:Viltrumite"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "key.invincible.switch_moves": "Switch Moves",
+      "key.invincible.dash": "Dash",
+      "effect.invincible.punch_catch_cd": "Punch Catch CD",
+      "effect.invincible.cooldown": "Cooldown",
+      "entity.invincible.mars_proximity": "Mars Proximity",
+      "effect.invincible.no_fall": "No Fall",
+      "biome.invincible.space_biome": "Space Biome",
+      "effect.invincible.slam_timer": "Slam Timer",
+      "gamerule.spaceexist.description": "Disable Or Enable Space",
+      "effect.invincible.destruction_active": "Destruction Active",
+      "effect.invincible.grabbing_active": "Grabbing Active",
+      "subtitles.grip": "",
+      "gamerule.spaceexist": "Existance Of Space",
+      "item.invincible.character_picker": "Character Picker",
+      "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
+      "entity.invincible.past_image": "Past Image",
+      "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
+      "key.invincible.follow_up": "Follow Up",
+      "subtitles.web": "",
+      "subtitles.powerfulpunch": "",
+      "effect.invincible.impact_frame_potion": "Impact Frame Potion",
+      "key.invincible.toggle_heavy_punch": "Toggle Special",
+      "death.attack.phase": "%1$s was blitzed",
+      "effect.invincible.slowed": "Slowed",
+      "effect.invincible.punch_catch_active": "Punch Catch Active",
+      "key.invincible.use_moves": "Use Moves",
+      "item.invincible.viltrumite_spawn_egg": "Viltrumite Spawn Egg",
+      "key.invincible.burst": "Burst",
+      "effect.invincible.falling_blocks_manip": "Falling Blocks Manip",
+      "gui.invincible.book_picker.button_viltrumite": "Viltrumite",
+      "effect.invincible.backwards_tumble": "Backwards Tumble",
+      "effect.invincible.destruction_active_burst": "Destruction Active Burst",
+      "subtitles.takeoff": "",
+      "effect.invincible.smoke_circle_expanding": "Smoke Circle Expanding",
+      "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",
+      "effect.invincible.grabbed": "Grabbed",
+      "subtitles.explosion": "",
+      "effect.invincible.mars_shader": "Mars Shader",
+      "gui.invincible.book_picker.button_speedster": "Speedster WIP",
+      "item.invincible.test": "Test",
+      "biome.invincible.mars_biome": "Mars Biome",
+      "effect.invincible.combo_still": "Combo Still",
+      "block.invincible.space_block": "Space Block",
+      "subtitles.distantexplosion": "",
+      "key.invincible.fly": "Fly",
+      "gui.invincible.book_picker.button_spider": "Spider WIP",
+      "effect.invincible.bullet_slam": "Bullet Slam",
+      "key.invincible.grab": "Grab",
+      "effect.invincible.grab_cooldown": "Grab Cooldown",
+      "entity.invincible.after_image": "After Image",
+      "effect.invincible.heavy_stun": "Heavy Stun",
+      "effect.invincible.viltrumite_npc_follow_up_trigger": "Viltrumite NPC Follow Up Trigger",
+      "effect.invincible.instant_crater": "Instant Crater",
+      "effect.invincible.glass_break": "Glass Break",
+      "subtitles.speedfollowup": "",
+      "effect.invincible.active_flight_speed": "Active Flight Speed",
+      "effect.invincible.after_images": "After Images",
+      "effect.invincible.active_burst": "Active Burst",
+      "subtitles.powerfulpunch2": "",
+      "effect.invincible.takeoff_effects": "Takeoff Effects",
+      "effect.invincible.point_destruction": "Point Destruction",
+      "effect.invincible.point_destruction_universal": "Point Destruction Universal",
+      "effect.invincible.smoking": "Smoking",
+      "entity.invincible.viltrumite": "Viltrumite",
+      "effect.invincible.flash_time": "Flash Time",
+      "subtitles.bloodexplode": ""
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Util",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Places",
+        "children": []
+      },
+      {
+        "name": "Item",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Block",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "Races",
+            "children": [
+              {
+                "name": "Viltrumite",
+                "children": []
+              },
+              {
+                "name": "Speedster",
+                "children": []
+              },
+              {
+                "name": "Spider",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Potions",
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Keybind",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "GUI",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Projectile",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Overlay",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Sources",
+        "children": []
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Gamerules",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "invincible",
+    "modName": "Invincible",
+    "version": "1.0.0",
+    "author": "sushiclozy",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "kleidersplayerrenderer",
+      "playeranimator"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.invincible"
+  },
+  "mcreatorVersion": 202400452410
+}

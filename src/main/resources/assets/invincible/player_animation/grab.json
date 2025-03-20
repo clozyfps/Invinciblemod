@@ -1,0 +1,18 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"grab": {
+			"animation_length": 0.0417,
+			"bones": {
+				"left_arm": {
+					"rotation": {
+						"vector": [-94.6809, 19.92066, 1.81693]
+					},
+					"position": {
+						"vector": [0, 0, -1]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "invincible:block/whiteblock",
+    "up": "invincible:block/whiteblock",
+    "north": "invincible:block/whiteblock",
+    "east": "invincible:block/whiteblock",
+    "south": "invincible:block/whiteblock",
+    "west": "invincible:block/whiteblock",
+    "particle": "invincible:block/whiteblock"
+  },
+  "render_type": "solid"
+}

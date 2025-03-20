@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "B",
+    "keyBindingName": "Dash",
+    "keyBindingCategoryKey": "invincible",
+    "onKeyPressed": {
+      "name": "DashOnKeyPressed"
+    }
+  }
+}

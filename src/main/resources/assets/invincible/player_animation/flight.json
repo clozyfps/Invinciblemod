@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"flight": {
+			"animation_length": 0.0417,
+			"bones": {
+				"left_leg": {
+					"rotation": {
+						"vector": [90, 0, 0]
+					},
+					"position": {
+						"vector": [0, 12, 12]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [90, 0, 0]
+					},
+					"position": {
+						"vector": [0, 12, 12]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [90, 10, 0]
+					},
+					"position": {
+						"vector": [0, 2, 2]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [90, -10, 0]
+					},
+					"position": {
+						"vector": [0, 2, 2]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [90, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

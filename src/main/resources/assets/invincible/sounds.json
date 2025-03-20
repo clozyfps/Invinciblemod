@@ -1,0 +1,74 @@
+{
+  "powerfulpunch": {
+    "sounds": [
+      {
+        "name": "invincible:powerfulpunch",
+        "stream": false
+      }
+    ]
+  },
+  "takeoff": {
+    "sounds": [
+      {
+        "name": "invincible:superman-flying-take-off-breaking-the-sound-barrier-sound-effect-2-ezmp3c_ahst5thc",
+        "stream": false
+      }
+    ]
+  },
+  "powerfulpunch2": {
+    "sounds": [
+      {
+        "name": "invincible:powerfulpunch2",
+        "stream": false
+      }
+    ]
+  },
+  "bloodexplode": {
+    "sounds": [
+      {
+        "name": "invincible:blood_explosion_-_sound_effect__ezmp3.cc_",
+        "stream": false
+      }
+    ]
+  },
+  "explosion": {
+    "sounds": [
+      {
+        "name": "invincible:explode",
+        "stream": false
+      }
+    ]
+  },
+  "distantexplosion": {
+    "sounds": [
+      {
+        "name": "invincible:distantexplosion",
+        "stream": false
+      }
+    ]
+  },
+  "grip": {
+    "sounds": [
+      {
+        "name": "invincible:grip-sound-effect-ezmp3cc_ai3xdi6j",
+        "stream": false
+      }
+    ]
+  },
+  "speedfollowup": {
+    "sounds": [
+      {
+        "name": "invincible:flashfollowup",
+        "stream": false
+      }
+    ]
+  },
+  "web": {
+    "sounds": [
+      {
+        "name": "invincible:spiderman_web_shooter_-_sound_effect__ezmp3.cc_",
+        "stream": false
+      }
+    ]
+  }
+}

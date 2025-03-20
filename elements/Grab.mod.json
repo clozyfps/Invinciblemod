@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Grab",
+    "keyBindingCategoryKey": "invincible",
+    "onKeyPressed": {
+      "name": "GrabOnKeyPressed"
+    }
+  }
+}

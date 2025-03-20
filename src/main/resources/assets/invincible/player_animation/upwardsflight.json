@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"upwardsflight": {
+			"animation_length": 0.0417,
+			"bones": {
+				"left_arm": {
+					"rotation": {
+						"vector": [-180, 0, 10]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-180, 0, -10]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [-90, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}
