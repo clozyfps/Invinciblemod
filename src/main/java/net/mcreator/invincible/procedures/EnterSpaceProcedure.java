@@ -80,9 +80,9 @@ public class EnterSpaceProcedure {
 					}
 					{
 						Entity _ent = entity;
-						_ent.teleportTo(x, 150, z);
+						_ent.teleportTo(x, 200, z);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport(x, 150, z, _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(x, 200, z, _ent.getYRot(), _ent.getXRot());
 					}
 				}
 			}

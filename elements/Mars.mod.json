@@ -12,13 +12,13 @@
       "value": "Blocks.SAND#1"
     },
     "fluidBlock": {
-      "value": "Blocks.SMOOTH_RED_SANDSTONE"
+      "value": "Blocks.AIR"
     },
-    "seaLevel": 63,
+    "seaLevel": 0,
     "generateOreVeins": true,
-    "generateAquifers": true,
-    "horizontalNoiseSize": 1,
-    "verticalNoiseSize": 2,
+    "generateAquifers": false,
+    "horizontalNoiseSize": 2,
+    "verticalNoiseSize": 1,
     "defaultEffects": "overworld",
     "useCustomEffects": true,
     "hasClouds": false,
@@ -32,10 +32,10 @@
     "canRespawnHere": true,
     "hasFog": false,
     "ambientLight": 0.5,
-    "doesWaterVaporize": false,
+    "doesWaterVaporize": true,
     "hasFixedTime": false,
     "fixedTimeValue": 0,
-    "coordinateScale": 1.0,
+    "coordinateScale": 1.02,
     "infiniburnTag": "minecraft:infiniburn_overworld",
     "bedWorks": true,
     "hasSkyLight": true,

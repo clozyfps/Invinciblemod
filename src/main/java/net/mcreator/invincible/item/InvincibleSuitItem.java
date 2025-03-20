@@ -35,7 +35,7 @@ public abstract class InvincibleSuitItem extends ArmorItem {
 
 			@Override
 			public int getDefenseForType(ArmorItem.Type type) {
-				return new int[]{3, 5, 6, 3}[type.getSlot().getIndex()];
+				return new int[]{3, 6, 8, 3}[type.getSlot().getIndex()];
 			}
 
 			@Override
