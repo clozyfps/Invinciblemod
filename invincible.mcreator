@@ -85,10 +85,10 @@
       "registry_name": "space_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/blockstates/space_block.json",
           "src/main/java/net/mcreator/invincible/block/SpaceBlockBlock.java",
-          "src/main/resources/data/invincible/loot_tables/blocks/space_block.json",
           "src/main/resources/assets/invincible/models/item/space_block.json",
+          "src/main/resources/assets/invincible/blockstates/space_block.json",
+          "src/main/resources/data/invincible/loot_tables/blocks/space_block.json",
           "src/main/resources/assets/invincible/models/block/space_block.json"
         ]
       },
@@ -221,8 +221,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/worldgen/template_pool/mars_dome.json",
-          "src/main/resources/data/invincible/worldgen/structure_set/mars_dome.json",
-          "src/main/resources/data/invincible/worldgen/structure/mars_dome.json"
+          "src/main/resources/data/invincible/worldgen/structure/mars_dome.json",
+          "src/main/resources/data/invincible/worldgen/structure_set/mars_dome.json"
         ]
       },
       "path": "~/Structures"
@@ -1387,8 +1387,8 @@
       "registry_name": "shockwave_big",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/particles/shockwave_big.json",
-          "src/main/java/net/mcreator/invincible/client/particle/ShockwaveBigParticle.java"
+          "src/main/java/net/mcreator/invincible/client/particle/ShockwaveBigParticle.java",
+          "src/main/resources/assets/invincible/particles/shockwave_big.json"
         ]
       },
       "path": "~/Particles"
@@ -2095,8 +2095,8 @@
       "registry_name": "counter_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/particles/counter_particle.json",
-          "src/main/java/net/mcreator/invincible/client/particle/CounterParticleParticle.java"
+          "src/main/java/net/mcreator/invincible/client/particle/CounterParticleParticle.java",
+          "src/main/resources/assets/invincible/particles/counter_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -2421,8 +2421,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/particles/electricity_particle.json",
-          "src/main/java/net/mcreator/invincible/client/particle/ElectricityParticleParticle.java"
+          "src/main/java/net/mcreator/invincible/client/particle/ElectricityParticleParticle.java",
+          "src/main/resources/assets/invincible/particles/electricity_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -3836,6 +3836,23 @@
         "files": []
       },
       "path": "~/MISC"
+    },
+    {
+      "name": "InvincibleMark",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible_mark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
+          "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/invincible_mark_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -4136,6 +4153,7 @@
       "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "effect.invincible.cooldown": "Cooldown",
       "entity.invincible.mars_proximity": "Mars Proximity",
+      "entity.invincible.invincible_mark": "Invincible",
       "effect.invincible.no_fall": "No Fall",
       "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.slam_timer": "Slam Timer",
@@ -4188,6 +4206,7 @@
       "effect.invincible.viltrumite_npc_follow_up_trigger": "Viltrumite NPC Follow Up Trigger",
       "effect.invincible.instant_crater": "Instant Crater",
       "effect.invincible.glass_break": "Glass Break",
+      "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
       "subtitles.speedfollowup": "",
       "effect.invincible.active_flight_speed": "Active Flight Speed",
       "effect.invincible.after_images": "After Images",
@@ -4344,19 +4363,21 @@
     "modid": "invincible",
     "modName": "Invincible",
     "version": "1.0.0",
-    "author": "sushiclozy",
-    "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "description": "Adds Invincible into Minecraft",
+    "author": "sushiclozy, NoiiLive",
+    "websiteURL": "https://discord.gg/TJj3Sk52Jq",
+    "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "geckolib",
       "playeranimator"
     ],
     "currentGenerator": "forge-1.20.1",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "sushiclozy, NoiiLive, Invincible",
     "modElementsPackage": "net.mcreator.invincible"
   },
   "mcreatorVersion": 202400452410

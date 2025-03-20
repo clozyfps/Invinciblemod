@@ -1,14 +1,15 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="Not specified"
+license="All Rights Reserved"
 
 [[mods]]
 modId="invincible"
 version="1.0.0"
 displayName="Invincible"
-displayURL="https://mcreator.net"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-authors="sushiclozy"
+displayURL="https://discord.gg/TJj3Sk52Jq"
+credits="sushiclozy, NoiiLive, Invincible"
+authors="sushiclozy, NoiiLive"
+description="Adds Invincible into Minecraft"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -23,6 +24,12 @@ authors="sushiclozy"
 
 [[dependencies.invincible]]
     modId="kleidersplayerrenderer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.invincible]]
+    modId="geckolib"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
