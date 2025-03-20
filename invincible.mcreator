@@ -4145,7 +4145,13 @@
       "CUSTOM:Viltrumite"
     ]
   },
-  "tab_element_order": {},
+  "tab_element_order": {
+    "CUSTOM:InvincibleTab": [
+      "InvincibleMark",
+      "InvincibleSuit",
+      "Viltrumite"
+    ]
+  },
   "language_map": {
     "en_us": {
       "key.invincible.switch_moves": "Switch Moves",

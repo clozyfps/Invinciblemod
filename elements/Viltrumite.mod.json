@@ -38,7 +38,7 @@
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:InvincibleTab"
       }
     ],
     "isBoss": false,
@@ -64,12 +64,12 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 16,
+    "attackStrength": 15,
     "attackKnockback": 0.7,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
-    "armorBaseValue": 10.0,
+    "armorBaseValue": 25.0,
     "trackingRange": 64,
     "followRange": 50,
     "health": 300,
