@@ -6,7 +6,7 @@
   "spawners": {
     "type": "invincible:mauler",
     "weight": 1,
-    "minCount": 1,
-    "maxCount": 1
+    "minCount": 2,
+    "maxCount": 2
   }
 }
