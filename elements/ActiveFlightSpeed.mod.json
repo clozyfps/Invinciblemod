@@ -15,9 +15,6 @@
     "isCuredByMilk": false,
     "isProtectedByTotem": false,
     "isCuredbyHoney": false,
-    "modifiers": [],
-    "onActiveTick": {
-      "name": "ActiveFlightSpeedOnEffectActiveTick"
-    }
+    "modifiers": []
   }
 }

@@ -145,25 +145,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "Flying",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flying",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/FlyingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Races/Viltrumite"
-    },
-    {
       "name": "MarsProximity",
       "type": "livingentity",
       "compiles": true,
@@ -3601,25 +3582,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potions/Procedure"
-    },
-    {
-      "name": "ActiveFlightSpeedOnEffectActiveTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "active_flight_speed_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/ActiveFlightSpeedOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
