@@ -31,14 +31,14 @@ public class Modelmauler_suit<T extends Entity> extends EntityModel<T> {
 						.addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.5F)),
 				PartPose.offset(0.0F, 12.0F, 0.0F));
 
-		PartDefinition LeftArm = partdefinition.addOrReplaceChild("LeftArm", CubeListBuilder.create().texOffs(0, 62)
-				.addBox(-1.0F, -1.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(5.0F, 2.0F, 0.0F));
+		PartDefinition LeftArm = partdefinition.addOrReplaceChild("LeftArm", CubeListBuilder.create().texOffs(40, 0)
+				.addBox(-1.0F, -3.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.26F)),
+				PartPose.offset(5.0F, 15.0F, 0.0F));
 
 		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm",
-				CubeListBuilder.create().texOffs(0, 62).mirror()
-						.addBox(0.0F, -1.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false),
-				PartPose.offset(-5.0F, 2.0F, 0.0F));
+				CubeListBuilder.create().texOffs(40, 0).mirror()
+						.addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.26F)).mirror(false),
+				PartPose.offset(-5.0F, 14.0F, 0.0F));
 
 		PartDefinition LeftLeg = partdefinition.addOrReplaceChild("LeftLeg",
 				CubeListBuilder.create().texOffs(24, 0)
