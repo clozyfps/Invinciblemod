@@ -82,13 +82,17 @@ public class FlightTickProcedure {
 						}
 					}
 				}
+				if (entity instanceof Player _player) {
+					_player.getAbilities().flying = true;
+					_player.onUpdateAbilities();
+				}
 				if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), InputConstants.KEY_W)) {
-					if ((entity instanceof LivingEntity _livEnt14 && _livEnt14.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
-						vecX = vecX * 1.5;
-						vecY = vecY * 4;
-						vecZ = vecZ * 1.5;
+					if ((entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
+						vecX = vecX * 0.5;
+						vecY = vecY * 1;
+						vecZ = vecZ * 0.5;
 						entity.push(vecX, vecY, vecZ);
-						if ((entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+						if ((entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
 							if (!(entity.getXRot() == 90 && entity.getXRot() == -90)) {
 								if (world.isClientSide()) {
 									SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
@@ -109,11 +113,11 @@ public class FlightTickProcedure {
 							}
 						}
 					} else if (entity.isSprinting()) {
-						vecX = vecX * 0.15;
+						vecX = vecX * 0.1;
 						vecY = vecY * 0.5;
-						vecZ = vecZ * 0.15;
+						vecZ = vecZ * 0.1;
 						entity.push(vecX, vecY, vecZ);
-						if ((entity instanceof LivingEntity _livEnt22 && _livEnt22.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+						if ((entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
 							if (!(entity.getXRot() == 90 && entity.getXRot() == -90)) {
 								if (world.isClientSide()) {
 									SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
@@ -134,10 +138,6 @@ public class FlightTickProcedure {
 							}
 						}
 					}
-				}
-				if (entity instanceof Player _player) {
-					_player.getAbilities().flying = true;
-					_player.onUpdateAbilities();
 				}
 			} else {
 				if (entity instanceof Player _player) {

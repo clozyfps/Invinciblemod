@@ -50,6 +50,8 @@ public class ViltrumiteDashEffectsProcedure {
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 25, 0));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GLASS_BREAK.get(), 10, 0, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get(), 40, 0));
 			} else {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.CLOUD, x, (y + 1), z, 5, 0.5, 0.5, 0.5, 0.1);

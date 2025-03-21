@@ -3,59 +3,225 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 250,
-    "height": 150,
+    "width": 0,
+    "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
+        "type": "image",
         "data": {
-          "name": "button_viltrumite",
-          "text": "Viltrumite",
-          "isUndecorated": false,
+          "image": "selection_menu.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ability_selection1",
+          "text": {
+            "fixedValue": "Ability Selection"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 52,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ability_selection",
+          "text": {
+            "fixedValue": "Ability Selection"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 51,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 241,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 267,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_viltrumite",
+          "image": "icon_viltrumite.png",
+          "hoveredImage": "",
           "onClick": {
             "name": "SelectViltrumite"
           },
-          "width": 77,
-          "height": 20,
-          "x": 96,
-          "y": 52,
-          "locked": false
+          "x": 165,
+          "y": 76,
+          "locked": true
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_speedster",
-          "text": "Speedster WIP",
-          "isUndecorated": false,
+          "name": "imagebutton_icon_human",
+          "image": "icon_human.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectHuman"
+          },
+          "x": 139,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_speedster",
+          "image": "icon_speedster.png",
+          "hoveredImage": "",
           "onClick": {
             "name": "SelectSpeedster"
           },
-          "width": 72,
-          "height": 20,
-          "x": 96,
-          "y": 81,
-          "locked": false
+          "x": 191,
+          "y": 76,
+          "locked": true
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_spider",
-          "text": "Spider WIP",
-          "isUndecorated": false,
+          "name": "imagebutton_icon_spider",
+          "image": "icon_spider.png",
+          "hoveredImage": "",
           "onClick": {
             "name": "SelectSpider"
           },
-          "width": 56,
-          "height": 20,
-          "x": 96,
-          "y": 111,
-          "locked": false
+          "x": 218,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_viltrumite",
+          "text": {
+            "fixedValue": "Viltrumite"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_human",
+          "text": {
+            "fixedValue": "Human"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_speedster",
+          "text": {
+            "fixedValue": "Speedster (WIP)"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spider",
+          "text": {
+            "fixedValue": "Spider (WIP)"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 215,
+          "y": 73,
+          "locked": true
         }
       }
     ],
