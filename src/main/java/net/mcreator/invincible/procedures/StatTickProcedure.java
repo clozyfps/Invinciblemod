@@ -60,6 +60,13 @@ public class StatTickProcedure {
 				}
 			}
 			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Viltrumite")) {
+				{
+					double _setval = 4;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MaximumMoves = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 1) {
 					{
 						String _setval = "Sonic Clap";
@@ -79,6 +86,14 @@ public class StatTickProcedure {
 				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 3) {
 					{
 						String _setval = "Universal Slam";
+						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.MoveSelected = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 4) {
+					{
+						String _setval = "Chop";
 						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.MoveSelected = _setval;
 							capability.syncPlayerVariables(entity);

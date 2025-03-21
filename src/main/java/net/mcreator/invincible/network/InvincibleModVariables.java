@@ -174,7 +174,7 @@ public class InvincibleModVariables {
 		public double WebY = 0;
 		public double WebN = 0;
 		public double VerticalMovement = 0;
-		public double MaximumMoves = 0;
+		public double MaximumMoves = 3.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
