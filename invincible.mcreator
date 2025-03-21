@@ -3892,6 +3892,41 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Chop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ChopProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
     }
   ],
   "variable_elements": [
@@ -4198,8 +4233,8 @@
   "language_map": {
     "en_us": {
       "key.invincible.switch_moves": "Switch Moves",
-      "key.invincible.dash": "Dash",
       "effect.invincible.punch_catch_cd": "Punch Catch CD",
+      "key.invincible.dash": "Dash",
       "effect.invincible.cooldown": "Cooldown",
       "entity.invincible.mars_proximity": "Mars Proximity",
       "entity.invincible.invincible_mark": "Invincible",
