@@ -21,6 +21,7 @@ import net.mcreator.invincible.entity.ViltrumiteEntity;
 import net.mcreator.invincible.entity.SonicClapEntity;
 import net.mcreator.invincible.entity.PastImageEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
+import net.mcreator.invincible.entity.MaulerEntity;
 import net.mcreator.invincible.entity.MarsProximityEntity;
 import net.mcreator.invincible.entity.InvincibleMarkEntity;
 import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
@@ -52,6 +53,10 @@ public class InvincibleModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvincibleBlueMarkEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<OmnimanEntity>> OMNIMAN = register("omniman",
 			EntityType.Builder.<OmnimanEntity>of(OmnimanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OmnimanEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MaulerEntity>> MAULER = register("mauler",
+			EntityType.Builder.<MaulerEntity>of(MaulerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaulerEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -69,6 +74,7 @@ public class InvincibleModEntities {
 			InvincibleMarkEntity.init();
 			InvincibleBlueMarkEntity.init();
 			OmnimanEntity.init();
+			MaulerEntity.init();
 		});
 	}
 
@@ -81,5 +87,6 @@ public class InvincibleModEntities {
 		event.put(INVINCIBLE_MARK.get(), InvincibleMarkEntity.createAttributes().build());
 		event.put(INVINCIBLE_BLUE_MARK.get(), InvincibleBlueMarkEntity.createAttributes().build());
 		event.put(OMNIMAN.get(), OmnimanEntity.createAttributes().build());
+		event.put(MAULER.get(), MaulerEntity.createAttributes().build());
 	}
 }

@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.invincible.item.TestItem;
 import net.mcreator.invincible.item.OmniManSuitItem;
+import net.mcreator.invincible.item.MaulerSuitItem;
 import net.mcreator.invincible.item.InvincibleSuitItem;
 import net.mcreator.invincible.item.InvincibleBlueSuitItem;
 import net.mcreator.invincible.item.CharacterPickerItem;
@@ -40,6 +41,9 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> OMNI_MAN_SUIT_CHESTPLATE = REGISTRY.register("omni_man_suit_chestplate", () -> new OmniManSuitItem.Chestplate());
 	public static final RegistryObject<Item> OMNI_MAN_SUIT_LEGGINGS = REGISTRY.register("omni_man_suit_leggings", () -> new OmniManSuitItem.Leggings());
 	public static final RegistryObject<Item> OMNI_MAN_SUIT_BOOTS = REGISTRY.register("omni_man_suit_boots", () -> new OmniManSuitItem.Boots());
+	public static final RegistryObject<Item> MAULER_SUIT_CHESTPLATE = REGISTRY.register("mauler_suit_chestplate", () -> new MaulerSuitItem.Chestplate());
+	public static final RegistryObject<Item> MAULER_SUIT_LEGGINGS = REGISTRY.register("mauler_suit_leggings", () -> new MaulerSuitItem.Leggings());
+	public static final RegistryObject<Item> MAULER_SPAWN_EGG = REGISTRY.register("mauler_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MAULER, -1574407, -14670812, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
