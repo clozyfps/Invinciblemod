@@ -30,7 +30,7 @@ public class ViltrumiteDashEffectsProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 25, 0, false, false));
 		if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 15) {
-			if (entity.getPersistentData().getBoolean("flight")) {
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == true) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), x, y, z, 1, 0.1, 2, 0.1, 0);
 				if (world instanceof ServerLevel _level)
@@ -68,13 +68,13 @@ public class ViltrumiteDashEffectsProcedure {
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GLASS_BREAK.get(), 10, 0, false, false));
 			}
 		} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength < 10) {
-			if (entity.getPersistentData().getBoolean("flight")) {
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == true) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), x, y, z, 1, 0.1, 2, 0.1, 0);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 25, 0));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get(), 25, 0));
+					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get(), 40, 0));
 			} else {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.CLOUD, x, (y + 1), z, 5, 0.5, 0.5, 0.5, 0.1);
