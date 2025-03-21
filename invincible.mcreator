@@ -4226,11 +4226,11 @@
   "language_map": {
     "en_us": {
       "key.invincible.switch_moves": "Switch Moves",
-      "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "key.invincible.dash": "Dash",
-      "effect.invincible.cooldown": "Cooldown",
-      "entity.invincible.mars_proximity": "Mars Proximity",
+      "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "entity.invincible.invincible_mark": "Invincible",
+      "entity.invincible.mars_proximity": "Mars Proximity",
+      "effect.invincible.cooldown": "Cooldown",
       "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.invincible_blue_suit_leggings": "Invincible\u0027s Pants (Blue)",

@@ -7,7 +7,7 @@
     "mobModelTexture": "omniman.png",
     "mobModelGlowTexture": "",
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 1.1
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
