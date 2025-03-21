@@ -3873,6 +3873,25 @@
         ]
       },
       "path": "~/Item"
+    },
+    {
+      "name": "SelectHuman",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_human",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectHumanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -4181,12 +4200,13 @@
       "key.invincible.switch_moves": "Switch Moves",
       "key.invincible.dash": "Dash",
       "effect.invincible.punch_catch_cd": "Punch Catch CD",
-      "entity.invincible.invincible_mark": "Invincible",
-      "entity.invincible.mars_proximity": "Mars Proximity",
       "effect.invincible.cooldown": "Cooldown",
+      "entity.invincible.mars_proximity": "Mars Proximity",
+      "entity.invincible.invincible_mark": "Invincible",
       "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.invincible_blue_suit_leggings": "Invincible\u0027s Pants (Blue)",
+      "gui.invincible.book_picker.tooltip_spider": "Spider (WIP)",
       "effect.invincible.slam_timer": "Slam Timer",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "effect.invincible.destruction_active": "Destruction Active",
@@ -4211,10 +4231,13 @@
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "item.invincible.viltrumite_spawn_egg": "Viltrumite Spawn Egg",
       "key.invincible.burst": "Burst",
+      "gui.invincible.book_picker.tooltip_viltrumite": "Viltrumite",
       "effect.invincible.falling_blocks_manip": "Falling Blocks Manip",
       "gui.invincible.book_picker.button_viltrumite": "Viltrumite",
       "effect.invincible.backwards_tumble": "Backwards Tumble",
+      "gui.invincible.book_picker.tooltip_human": "Human",
       "effect.invincible.destruction_active_burst": "Destruction Active Burst",
+      "gui.invincible.book_picker.label_ability_selection": "Ability Selection",
       "subtitles.takeoff": "",
       "effect.invincible.smoke_circle_expanding": "Smoke Circle Expanding",
       "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",
@@ -4226,7 +4249,9 @@
       "item_group.invincible.invincible_tab": "Invincible",
       "gui.invincible.book_picker.button_speedster": "Speedster WIP",
       "item.invincible.test": "Test",
+      "gui.invincible.book_picker.label_ability_selection1": "Ability Selection",
       "biome.invincible.mars_biome": "Mars Biome",
+      "gui.invincible.book_picker.tooltip_speedster": "Speedster (WIP)",
       "effect.invincible.combo_still": "Combo Still",
       "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
       "item.invincible.invincible_suit_leggings": "Invincible\u0027s Pants",
