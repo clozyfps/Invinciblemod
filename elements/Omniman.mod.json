@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Invincible (Blue)",
+    "mobName": "Omni-Man",
     "mobLabel": "",
-    "mobModelTexture": "invinciblue.png",
+    "mobModelTexture": "omniman.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -20,11 +20,11 @@
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -13472318,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -14605275,
+      "value": -2344904,
       "falpha": 0.0
     },
     "creativeTabs": [
@@ -42,27 +42,27 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:InvincibleBlueSuit.helmet"
+      "value": ""
     },
     "equipmentBody": {
-      "value": "CUSTOM:InvincibleBlueSuit.body"
+      "value": "CUSTOM:OmniManSuit.body"
     },
     "equipmentLeggings": {
-      "value": "CUSTOM:InvincibleBlueSuit.legs"
+      "value": "CUSTOM:OmniManSuit.legs"
     },
     "equipmentBoots": {
-      "value": "CUSTOM:InvincibleBlueSuit.boots"
+      "value": "CUSTOM:OmniManSuit.boots"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 20,
-    "attackKnockback": 1.0,
+    "attackStrength": 50,
+    "attackKnockback": 1.2000000000000002,
     "knockbackResistance": 1.0,
-    "movementSpeed": 0.3,
-    "armorBaseValue": 50.0,
+    "movementSpeed": 0.4,
+    "armorBaseValue": 100.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 500,
+    "health": 1000,
     "xpAmount": 10,
     "waterMob": false,
     "flyingMob": false,
@@ -109,7 +109,7 @@
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "invincible.geo.json",
+    "model": "omniman.geo.json",
     "groupName": "head",
     "animation1": "idle",
     "animation2": "walk",

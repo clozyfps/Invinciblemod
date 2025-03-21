@@ -61,29 +61,28 @@ import net.mcreator.invincible.init.InvincibleModEntities;
 
 import java.util.List;
 
-public class InvincibleBlueMarkEntity extends TamableAnimal implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(InvincibleBlueMarkEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(InvincibleBlueMarkEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(InvincibleBlueMarkEntity.class, EntityDataSerializers.STRING);
+public class OmnimanEntity extends TamableAnimal implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(OmnimanEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(OmnimanEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(OmnimanEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public InvincibleBlueMarkEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(InvincibleModEntities.INVINCIBLE_BLUE_MARK.get(), world);
+	public OmnimanEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(InvincibleModEntities.OMNIMAN.get(), world);
 	}
 
-	public InvincibleBlueMarkEntity(EntityType<InvincibleBlueMarkEntity> type, Level world) {
+	public OmnimanEntity(EntityType<OmnimanEntity> type, Level world) {
 		super(type, world);
 		xpReward = 10;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
-		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(InvincibleModItems.INVINCIBLE_BLUE_SUIT_HELMET.get()));
-		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(InvincibleModItems.INVINCIBLE_BLUE_SUIT_CHESTPLATE.get()));
-		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(InvincibleModItems.INVINCIBLE_BLUE_SUIT_LEGGINGS.get()));
-		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(InvincibleModItems.INVINCIBLE_BLUE_SUIT_BOOTS.get()));
+		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(InvincibleModItems.OMNI_MAN_SUIT_CHESTPLATE.get()));
+		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(InvincibleModItems.OMNI_MAN_SUIT_LEGGINGS.get()));
+		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(InvincibleModItems.OMNI_MAN_SUIT_BOOTS.get()));
 	}
 
 	@Override
@@ -91,7 +90,7 @@ public class InvincibleBlueMarkEntity extends TamableAnimal implements GeoEntity
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "invinciblue");
+		this.entityData.define(TEXTURE, "omniman");
 	}
 
 	public void setTexture(String texture) {
@@ -235,7 +234,7 @@ public class InvincibleBlueMarkEntity extends TamableAnimal implements GeoEntity
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		InvincibleBlueMarkEntity retval = InvincibleModEntities.INVINCIBLE_BLUE_MARK.get().create(serverWorld);
+		OmnimanEntity retval = InvincibleModEntities.OMNIMAN.get().create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}
@@ -252,19 +251,19 @@ public class InvincibleBlueMarkEntity extends TamableAnimal implements GeoEntity
 	}
 
 	public static void init() {
-		SpawnPlacements.register(InvincibleModEntities.INVINCIBLE_BLUE_MARK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(InvincibleModEntities.OMNIMAN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 500);
-		builder = builder.add(Attributes.ARMOR, 50);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
+		builder = builder.add(Attributes.MAX_HEALTH, 1000);
+		builder = builder.add(Attributes.ARMOR, 100);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 50);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.2);
 		return builder;
 	}
 
@@ -327,7 +326,7 @@ public class InvincibleBlueMarkEntity extends TamableAnimal implements GeoEntity
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(InvincibleBlueMarkEntity.RemovalReason.KILLED);
+			this.remove(OmnimanEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}
