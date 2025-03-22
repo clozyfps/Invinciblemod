@@ -9,9 +9,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +30,8 @@ public class ChopProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		if (entity instanceof LivingEntity _entity)
+			_entity.swing(InteractionHand.MAIN_HAND, true);
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, (float) 1.5);
@@ -64,11 +68,11 @@ public class ChopProcedure {
 				entity.getPersistentData().putDouble("yslice", (entity.getPersistentData().getDouble("yslice") + 0.1));
 				if (entity.getPersistentData().getDouble("r") == 2 || entity.getPersistentData().getDouble("r") == 3) {
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.POOF, (x - entity.getPersistentData().getDouble("r") * Math.sin(Math.toRadians(entity.getPersistentData().getDouble("deg")))), (y + -0.5 + entity.getPersistentData().getDouble("yslice")),
+						_level.sendParticles(ParticleTypes.POOF, (x - entity.getPersistentData().getDouble("r") * Math.sin(Math.toRadians(entity.getPersistentData().getDouble("deg")))), (y + entity.getPersistentData().getDouble("yslice")),
 								(z + entity.getPersistentData().getDouble("r") * Math.cos(Math.toRadians(entity.getPersistentData().getDouble("deg")))), 2, 0.1, 0.1, 0.1, 0.1);
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (x - entity.getPersistentData().getDouble("r") * Math.sin(Math.toRadians(entity.getPersistentData().getDouble("deg")))),
-								(y + -0.5 + entity.getPersistentData().getDouble("yslice")), (z + entity.getPersistentData().getDouble("r") * Math.cos(Math.toRadians(entity.getPersistentData().getDouble("deg")))), 1, 0.1, 0.1, 0.1, 0.1);
+						_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (x - entity.getPersistentData().getDouble("r") * Math.sin(Math.toRadians(entity.getPersistentData().getDouble("deg")))), (y + entity.getPersistentData().getDouble("yslice")),
+								(z + entity.getPersistentData().getDouble("r") * Math.cos(Math.toRadians(entity.getPersistentData().getDouble("deg")))), 1, 0.1, 0.1, 0.1, 0.1);
 					entity.getPersistentData().putDouble("deg", (entity.getPersistentData().getDouble("deg") + 18));
 				}
 			}

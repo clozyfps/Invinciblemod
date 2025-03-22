@@ -5,8 +5,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
-
-import net.mcreator.invincible.network.InvincibleModVariables;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 
 import java.util.List;
 import java.util.Comparator;
@@ -28,12 +28,10 @@ public class FallingBlocksManipOnEffectActiveTickProcedure {
 					vecX = entity.getLookAngle().x / magnitude;
 					vecY = entity.getLookAngle().y / magnitude;
 					vecZ = entity.getLookAngle().z / magnitude;
-					vecX = vecX * ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 1.3
-							- (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense);
+					vecX = vecX * Mth.nextInt(RandomSource.create(), -1, 1);
 					vecY = vecY * 0.25;
-					vecZ = vecZ * ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 1.3
-							- (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense);
-					entityiterator.push(vecX, 1, vecZ);
+					vecZ = vecZ * Mth.nextInt(RandomSource.create(), -1, 1);
+					entityiterator.push(vecX, 0.5, vecZ);
 				}
 			}
 		}

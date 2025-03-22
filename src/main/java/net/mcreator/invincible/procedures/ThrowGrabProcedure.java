@@ -13,6 +13,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -89,7 +90,7 @@ public class ThrowGrabProcedure {
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						if (entityiterator instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(InvincibleModMobEffects.GRABBED.get())) {
+						if (entityiterator instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(InvincibleModMobEffects.GRABBED.get()) || entityiterator instanceof FallingBlockEntity) {
 							entityiterator.getPersistentData().putString("target", (entity.getDisplayName().getString()));
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {

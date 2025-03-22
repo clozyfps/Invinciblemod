@@ -19,6 +19,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.invincible.network.InvincibleModVariables;
 import net.mcreator.invincible.init.InvincibleModMobEffects;
 
 public class PointDestructionOnEffectActiveTickProcedure {
@@ -31,8 +32,8 @@ public class PointDestructionOnEffectActiveTickProcedure {
 		double magnitude = 0;
 		entity.getPersistentData().putDouble("pointdestimer", (entity.getPersistentData().getDouble("pointdestimer") + 1));
 		if (entity.getPersistentData().getDouble("pointdestimer") >= 10) {
-			int horizontalRadiusSphere = (int) 3 - 1;
-			int verticalRadiusSphere = (int) 3 - 1;
+			int horizontalRadiusSphere = (int) (3 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 30) - 1;
+			int verticalRadiusSphere = (int) (3 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 30) - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {

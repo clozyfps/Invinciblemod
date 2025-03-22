@@ -5,7 +5,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +15,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.invincible.network.InvincibleModVariables;
+import net.mcreator.invincible.init.InvincibleModMobEffects;
 
 public class DestructionActiveOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -47,6 +50,8 @@ public class DestructionActiveOnEffectActiveTickProcedure {
 								}
 							}
 							world.destroyBlock(BlockPos.containing(x + xi, y + i, z + zi), false);
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.FALLING_BLOCKS_MANIP.get(), 5, 0, false, false));
 						}
 					}
 				}

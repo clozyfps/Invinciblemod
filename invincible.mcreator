@@ -3927,6 +3927,34 @@
         ]
       },
       "path": "~/Procedures/Races/Viltrumite"
+    },
+    {
+      "name": "FlaxxanBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxxan_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/biome/flaxxan_biome.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "FlaxxanDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxxan_dimension",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/dimension_type/flaxxan_dimension.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/FlaxxanDimensionDimension.java",
+          "src/main/resources/data/invincible/dimension/flaxxan_dimension.json"
+        ]
+      },
+      "path": "~/Places"
     }
   ],
   "variable_elements": [
@@ -4212,6 +4240,8 @@
       "Blocks.STAINED_GLASS_PANE#15"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.DIRT#0",
+      "~Blocks.RED_SANDSTONE#0",
       "~Blocks.SAND#1",
       "~Blocks.SMOOTH_RED_SANDSTONE"
     ],
@@ -4314,6 +4344,7 @@
       "item.invincible.invincible_suit_helmet": "Invincible\u0027s Mask",
       "item.invincible.invincible_blue_suit_helmet": "Invincible\u0027s Mask (Blue)",
       "effect.invincible.takeoff_effects": "Takeoff Effects",
+      "biome.invincible.flaxxan_biome": "Flaxxan Biome",
       "effect.invincible.point_destruction": "Point Destruction",
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
       "item.invincible.omniman_spawn_egg": "Omni-Man Spawn Egg",
