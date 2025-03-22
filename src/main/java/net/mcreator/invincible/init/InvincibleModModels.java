@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.invincible.client.model.Modelomniman_suit;
 import net.mcreator.invincible.client.model.Modelmauler_suit;
 import net.mcreator.invincible.client.model.Modelinvincible_suit;
+import net.mcreator.invincible.client.model.Modelflaxan_armor;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class InvincibleModModels {
@@ -20,5 +21,6 @@ public class InvincibleModModels {
 		event.registerLayerDefinition(Modelmauler_suit.LAYER_LOCATION, Modelmauler_suit::createBodyLayer);
 		event.registerLayerDefinition(Modelinvincible_suit.LAYER_LOCATION, Modelinvincible_suit::createBodyLayer);
 		event.registerLayerDefinition(Modelomniman_suit.LAYER_LOCATION, Modelomniman_suit::createBodyLayer);
+		event.registerLayerDefinition(Modelflaxan_armor.LAYER_LOCATION, Modelflaxan_armor::createBodyLayer);
 	}
 }

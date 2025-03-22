@@ -18,6 +18,7 @@ import net.mcreator.invincible.item.OmniManSuitItem;
 import net.mcreator.invincible.item.MaulerSuitItem;
 import net.mcreator.invincible.item.InvincibleSuitItem;
 import net.mcreator.invincible.item.InvincibleBlueSuitItem;
+import net.mcreator.invincible.item.FlaxanArmorItem;
 import net.mcreator.invincible.item.CharacterPickerItem;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -44,6 +45,10 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> MAULER_SUIT_CHESTPLATE = REGISTRY.register("mauler_suit_chestplate", () -> new MaulerSuitItem.Chestplate());
 	public static final RegistryObject<Item> MAULER_SUIT_LEGGINGS = REGISTRY.register("mauler_suit_leggings", () -> new MaulerSuitItem.Leggings());
 	public static final RegistryObject<Item> MAULER_SPAWN_EGG = REGISTRY.register("mauler_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MAULER, -1574407, -14670812, new Item.Properties()));
+	public static final RegistryObject<Item> FLAXAN_SOLDIER_SPAWN_EGG = REGISTRY.register("flaxan_soldier_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.FLAXAN_SOLDIER, -1574407, -9849256, new Item.Properties()));
+	public static final RegistryObject<Item> FLAXAN_ARMOR_CHESTPLATE = REGISTRY.register("flaxan_armor_chestplate", () -> new FlaxanArmorItem.Chestplate());
+	public static final RegistryObject<Item> FLAXAN_ARMOR_LEGGINGS = REGISTRY.register("flaxan_armor_leggings", () -> new FlaxanArmorItem.Leggings());
+	public static final RegistryObject<Item> FLAXAN_ARMOR_BOOTS = REGISTRY.register("flaxan_armor_boots", () -> new FlaxanArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items
