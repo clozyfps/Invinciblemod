@@ -3955,6 +3955,70 @@
         ]
       },
       "path": "~/Places"
+    },
+    {
+      "name": "FlaxanSoldier",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_soldier",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MaulerSuit",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mauler_suit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/item/MaulerSuitItem.java",
+          "src/main/resources/assets/invincible/models/item/mauler_suit_leggings.json",
+          "src/main/resources/assets/invincible/models/item/mauler_suit_chestplate.json"
+        ]
+      },
+      "path": "~/Item"
+    },
+    {
+      "name": "Mauler",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mauler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/renderer/MaulerRenderer.java",
+          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/entity/MaulerEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/MaulerModel.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FlaxanArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/models/item/flaxan_armor_leggings.json",
+          "src/main/resources/assets/invincible/models/item/flaxan_armor_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/flaxan_armor_boots.json",
+          "src/main/java/net/mcreator/invincible/item/FlaxanArmorItem.java"
+        ]
+      },
+      "path": "~/Item"
     }
   ],
   "variable_elements": [
@@ -4257,34 +4321,24 @@
       "InvincibleBlueSuit",
       "Omniman",
       "OmniManSuit",
-      "Viltrumite"
+      "Viltrumite",
+      "FlaxanSoldier",
+      "MaulerSuit",
+      "Mauler",
+      "FlaxanArmor"
     ]
   },
   "language_map": {
     "en_us": {
-      "key.invincible.switch_moves": "Switch Moves",
-      "effect.invincible.punch_catch_cd": "Punch Catch CD",
-      "key.invincible.dash": "Dash",
-      "effect.invincible.cooldown": "Cooldown",
       "entity.invincible.mars_proximity": "Mars Proximity",
       "entity.invincible.invincible_mark": "Invincible",
-      "biome.invincible.space_biome": "Space Biome",
       "effect.invincible.no_fall": "No Fall",
-      "item.invincible.invincible_blue_suit_leggings": "Invincible\u0027s Pants (Blue)",
-      "gui.invincible.book_picker.tooltip_spider": "Spider (WIP)",
-      "effect.invincible.slam_timer": "Slam Timer",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
-      "effect.invincible.destruction_active": "Destruction Active",
-      "effect.invincible.grabbing_active": "Grabbing Active",
       "subtitles.grip": "",
       "gamerule.spaceexist": "Existance Of Space",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
-      "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
-      "entity.invincible.past_image": "Past Image",
-      "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
       "key.invincible.follow_up": "Follow Up",
-      "subtitles.web": "",
       "subtitles.powerfulpunch": "",
       "effect.invincible.impact_frame_potion": "Impact Frame Potion",
       "key.invincible.toggle_heavy_punch": "Toggle Special",
@@ -4293,9 +4347,42 @@
       "effect.invincible.slowed": "Slowed",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
       "key.invincible.use_moves": "Use Moves",
+      "key.invincible.burst": "Burst",
+      "item.invincible.invincible_blue_mark_spawn_egg": "Invincible (Blue) Spawn Egg",
+      "subtitles.explosion": "",
+      "item_group.invincible.invincible_tab": "Invincible",
+      "gui.invincible.book_picker.button_speedster": "Speedster WIP",
+      "item.invincible.test": "Test",
+      "biome.invincible.mars_biome": "Mars Biome",
+      "gui.invincible.book_picker.tooltip_speedster": "Speedster (WIP)",
+      "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
+      "key.invincible.fly": "Fly",
+      "effect.invincible.grab_cooldown": "Grab Cooldown",
+      "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
+      "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
+      "subtitles.speedfollowup": "",
+      "subtitles.powerfulpunch2": "",
+      "item.invincible.invincible_suit_helmet": "Invincible\u0027s Mask",
+      "item.invincible.invincible_blue_suit_helmet": "Invincible\u0027s Mask (Blue)",
+      "effect.invincible.takeoff_effects": "Takeoff Effects",
+      "effect.invincible.point_destruction_universal": "Point Destruction Universal",
+      "subtitles.bloodexplode": "",
+      "key.invincible.switch_moves": "Switch Moves",
+      "key.invincible.dash": "Dash",
+      "effect.invincible.punch_catch_cd": "Punch Catch CD",
+      "effect.invincible.cooldown": "Cooldown",
+      "biome.invincible.space_biome": "Space Biome",
+      "item.invincible.invincible_blue_suit_leggings": "Invincible\u0027s Pants (Blue)",
+      "gui.invincible.book_picker.tooltip_spider": "Spider (WIP)",
+      "effect.invincible.slam_timer": "Slam Timer",
+      "effect.invincible.grabbing_active": "Grabbing Active",
+      "effect.invincible.destruction_active": "Destruction Active",
+      "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
+      "entity.invincible.past_image": "Past Image",
+      "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
+      "subtitles.web": "",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "item.invincible.viltrumite_spawn_egg": "Viltrumite Spawn Egg",
-      "key.invincible.burst": "Burst",
       "gui.invincible.book_picker.tooltip_viltrumite": "Viltrumite",
       "effect.invincible.falling_blocks_manip": "Falling Blocks Manip",
       "gui.invincible.book_picker.button_viltrumite": "Viltrumite",
@@ -4308,80 +4395,46 @@
       "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",
       "effect.invincible.grabbed": "Grabbed",
       "item.invincible.invincible_blue_suit_chestplate": "Invincible\u0027s Suit (Blue)",
-      "item.invincible.invincible_blue_mark_spawn_egg": "Invincible (Blue) Spawn Egg",
-      "subtitles.explosion": "",
       "effect.invincible.mars_shader": "Mars Shader",
-      "item_group.invincible.invincible_tab": "Invincible",
-      "gui.invincible.book_picker.button_speedster": "Speedster WIP",
-      "item.invincible.test": "Test",
       "gui.invincible.book_picker.label_ability_selection1": "Ability Selection",
-      "biome.invincible.mars_biome": "Mars Biome",
-      "gui.invincible.book_picker.tooltip_speedster": "Speedster (WIP)",
       "effect.invincible.combo_still": "Combo Still",
-      "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
       "item.invincible.invincible_suit_leggings": "Invincible\u0027s Pants",
       "block.invincible.space_block": "Space Block",
       "entity.invincible.omniman": "Omni-Man",
       "subtitles.distantexplosion": "",
-      "key.invincible.fly": "Fly",
       "gui.invincible.book_picker.button_spider": "Spider WIP",
       "effect.invincible.bullet_slam": "Bullet Slam",
       "key.invincible.grab": "Grab",
-      "effect.invincible.grab_cooldown": "Grab Cooldown",
-      "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "entity.invincible.after_image": "After Image",
       "effect.invincible.heavy_stun": "Heavy Stun",
       "effect.invincible.viltrumite_npc_follow_up_trigger": "Viltrumite NPC Follow Up Trigger",
       "effect.invincible.instant_crater": "Instant Crater",
       "item.invincible.omni_man_suit_boots": "Omni-Man\u0027s Boots",
       "effect.invincible.glass_break": "Glass Break",
-      "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
-      "subtitles.speedfollowup": "",
       "effect.invincible.active_flight_speed": "Active Flight Speed",
       "effect.invincible.after_images": "After Images",
       "effect.invincible.active_burst": "Active Burst",
-      "subtitles.powerfulpunch2": "",
-      "item.invincible.invincible_suit_helmet": "Invincible\u0027s Mask",
-      "item.invincible.invincible_blue_suit_helmet": "Invincible\u0027s Mask (Blue)",
-      "effect.invincible.takeoff_effects": "Takeoff Effects",
-      "biome.invincible.flaxxan_biome": "Flaxxan Biome",
       "effect.invincible.point_destruction": "Point Destruction",
-      "effect.invincible.point_destruction_universal": "Point Destruction Universal",
       "item.invincible.omniman_spawn_egg": "Omni-Man Spawn Egg",
       "effect.invincible.smoking": "Smoking",
       "item.invincible.invincible_suit_chestplate": "Invincible\u0027s Suit",
       "entity.invincible.viltrumite": "Viltrumite",
-      "effect.invincible.flash_time": "Flash Time",
-      "subtitles.bloodexplode": ""
+      "effect.invincible.flash_time": "Flash Time"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Util",
-            "children": [
-              {
-                "name": "Procedures",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "name": "MISC",
+        "children": []
       },
       {
         "name": "Places",
         "children": []
       },
       {
-        "name": "Item",
+        "name": "Keybind",
         "children": [
           {
             "name": "Procedures",
@@ -4390,7 +4443,7 @@
         ]
       },
       {
-        "name": "Block",
+        "name": "Gamerules",
         "children": []
       },
       {
@@ -4400,7 +4453,7 @@
             "name": "Races",
             "children": [
               {
-                "name": "Viltrumite",
+                "name": "Spider",
                 "children": []
               },
               {
@@ -4408,7 +4461,7 @@
                 "children": []
               },
               {
-                "name": "Spider",
+                "name": "Viltrumite",
                 "children": []
               }
             ]
@@ -4416,24 +4469,11 @@
         ]
       },
       {
-        "name": "Structures",
+        "name": "Block",
         "children": []
       },
       {
-        "name": "Potions",
-        "children": [
-          {
-            "name": "Procedure",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Particles",
-        "children": []
-      },
-      {
-        "name": "Keybind",
+        "name": "Projectile",
         "children": [
           {
             "name": "Procedures",
@@ -4451,15 +4491,6 @@
         ]
       },
       {
-        "name": "Projectile",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Overlay",
         "children": [
           {
@@ -4469,8 +4500,52 @@
         ]
       },
       {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Util",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Potions",
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
+      },
+      {
         "name": "Sources",
         "children": []
+      },
+      {
+        "name": "Item",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Commands",
@@ -4480,14 +4555,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Gamerules",
-        "children": []
-      },
-      {
-        "name": "MISC",
-        "children": []
       }
     ]
   },

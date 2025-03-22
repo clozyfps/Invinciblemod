@@ -33,5 +33,12 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.OMNI_MAN_SUIT_LEGGINGS.get());
 				tabData.accept(InvincibleModItems.OMNI_MAN_SUIT_BOOTS.get());
 				tabData.accept(InvincibleModItems.VILTRUMITE_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.FLAXAN_SOLDIER_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.MAULER_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.MAULER_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.MAULER_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_BOOTS.get());
 			}).build());
 }
