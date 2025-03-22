@@ -9,6 +9,7 @@ import net.mcreator.invincible.entity.MaulerEntity;
 import net.mcreator.invincible.entity.InvincibleMarkEntity;
 import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
+import net.mcreator.invincible.entity.FlaxanPortalEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -44,6 +45,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MaulerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FlaxanPortalEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
