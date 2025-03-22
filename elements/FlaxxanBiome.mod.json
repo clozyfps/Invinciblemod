@@ -49,11 +49,11 @@
     },
     "genContinentalness": {
       "min": 0.3,
-      "max": 1.0
+      "max": 0.5
     },
     "genErosion": {
-      "min": -0.5,
-      "max": 0.1
+      "min": -1.0,
+      "max": -0.75
     },
     "genWeirdness": {
       "min": -1.0,

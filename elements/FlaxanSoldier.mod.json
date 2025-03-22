@@ -62,7 +62,7 @@
     "armorBaseValue": 20.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 100,
+    "health": 80,
     "xpAmount": 10,
     "waterMob": false,
     "flyingMob": false,
@@ -158,13 +158,17 @@
       4,
       2
     ],
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 1,
-    "mobSpawningType": "monster",
+    "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 3,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:FlaxxanBiome"
+      }
+    ],
     "spawnInDungeons": false
   }
 }

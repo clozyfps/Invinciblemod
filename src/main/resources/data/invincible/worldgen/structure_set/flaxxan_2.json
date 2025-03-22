@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "invincible:flaxxan_2",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 4,
+    "separation": 3,
+    "salt": 310129476
+  }
+}
