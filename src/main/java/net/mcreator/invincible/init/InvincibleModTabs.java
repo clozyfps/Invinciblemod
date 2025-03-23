@@ -40,5 +40,7 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_CHESTPLATE.get());
 				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_LEGGINGS.get());
 				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_BOOTS.get());
+				tabData.accept(InvincibleModItems.FLAXAN_GUNMAN_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.FLAXAN_GUN.get());
 			}).build());
 }

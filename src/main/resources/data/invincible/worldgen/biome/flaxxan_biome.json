@@ -16,7 +16,13 @@
     "ambient": [
       {
         "type": "invincible:flaxan_soldier",
-        "weight": 15,
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "invincible:flaxan_gunman",
+        "weight": 20,
         "minCount": 1,
         "maxCount": 5
       }
