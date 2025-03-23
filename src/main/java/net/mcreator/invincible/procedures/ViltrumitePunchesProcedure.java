@@ -135,7 +135,7 @@ public class ViltrumitePunchesProcedure {
 				}
 			} else {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entity.getX()), (entity.getY()), (entity.getZ() + 1), 10, 0.01, 0.1, 0.01, 0.2);
+					_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 10, 0.01, 0.1, 0.01, 0.2);
 			}
 		}
 	}

@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.invincible.item.TutorialItem;
 import net.mcreator.invincible.item.TestItem;
 import net.mcreator.invincible.item.OmniManSuitItem;
 import net.mcreator.invincible.item.MaulerSuitItem;
@@ -49,6 +50,7 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> FLAXAN_ARMOR_CHESTPLATE = REGISTRY.register("flaxan_armor_chestplate", () -> new FlaxanArmorItem.Chestplate());
 	public static final RegistryObject<Item> FLAXAN_ARMOR_LEGGINGS = REGISTRY.register("flaxan_armor_leggings", () -> new FlaxanArmorItem.Leggings());
 	public static final RegistryObject<Item> FLAXAN_ARMOR_BOOTS = REGISTRY.register("flaxan_armor_boots", () -> new FlaxanArmorItem.Boots());
+	public static final RegistryObject<Item> TUTORIAL = REGISTRY.register("tutorial", () -> new TutorialItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

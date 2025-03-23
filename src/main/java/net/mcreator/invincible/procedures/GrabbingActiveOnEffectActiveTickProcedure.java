@@ -50,7 +50,7 @@ public class GrabbingActiveOnEffectActiveTickProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.NO_FALL.get(), 20, 0, false, false));
 								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal(("Grabbing " + entityiterator.getDisplayName().getString())), true);
+									_player.displayClientMessage(Component.literal("Right Click To Throw"), true);
 							}
 						}
 					}

@@ -1,5 +1,6 @@
 package net.mcreator.invincible.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -46,8 +47,13 @@ public class JoinedWorldProcedure {
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(InvincibleModItems.TUTORIAL.get()).copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Mob Combat Is Not Done, It is recomended to fight other players."), false);
+				_player.displayClientMessage(Component.literal(""), false);
 		}
 	}
 }
