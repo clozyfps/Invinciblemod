@@ -72,118 +72,32 @@ public class StatTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 1) {
-					{
-						String _setval = "Sonic Clap";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 2) {
-					{
-						String _setval = "Bullet Slam";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 3) {
-					{
-						String _setval = "Universal Slam";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 4) {
-					{
-						String _setval = "Chop";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 5) {
-					{
-						String _setval = "Hyper Sonic Dash";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				}
 			}
 			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Human")) {
 				{
-					double _setval = 1;
+					double _setval = 0;
 					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.MaximumMoves = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 1) {
-					{
-						String _setval = "";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				}
 			}
 			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Speedster")) {
-				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 1) {
-					{
-						String _setval = "Flash Time";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 2) {
-					{
-						String _setval = "Multi Hit Strike";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 3) {
-					{
-						String _setval = "Time Stop";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+				{
+					double _setval = 3;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MaximumMoves = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Spider")) {
-				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 1) {
-					{
-						String _setval = "Web Shooter";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 2) {
-					{
-						String _setval = "Web Slam";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SelectedNumber == 3) {
-					{
-						String _setval = "Web Pull";
-						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.MoveSelected = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+				{
+					double _setval = 3;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MaximumMoves = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength > 100) {
@@ -228,6 +142,24 @@ public class StatTickProcedure {
 					double _setval = 150;
 					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Power = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar > 2) {
+				{
+					double _setval = 2;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AbilityBar = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar < 1) {
+				{
+					double _setval = 1;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AbilityBar = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

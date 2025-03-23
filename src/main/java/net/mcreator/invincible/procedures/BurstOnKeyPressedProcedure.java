@@ -33,7 +33,7 @@ public class BurstOnKeyPressedProcedure {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Viltrumite")) {
-			if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(InvincibleModMobEffects.COOLDOWN.get()))) {
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).DashCooldown == 0) {
 				if (world.isClientSide()) {
 					SetupAnimationsProcedure.setAnimationClientside((Player) entity, "burst", true);
 				}
@@ -90,8 +90,13 @@ public class BurstOnKeyPressedProcedure {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(InvincibleModMobEffects.GRABBED.get());
 					entity.setDeltaMovement(new Vec3(0, 0, 0));
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 60, 0, false, false));
+					{
+						double _setval = 60;
+						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.DashCooldown = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.CIRCLE_EXPANDING_BURST.get(), 5, 0, false, false));
 					if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 20) {

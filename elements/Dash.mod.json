@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "B",
+    "triggerKey": "LCONTROL",
     "keyBindingName": "Dash",
     "keyBindingCategoryKey": "invincible",
     "onKeyPressed": {

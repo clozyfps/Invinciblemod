@@ -2,11 +2,11 @@
   "_fv": 73,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "R",
-    "keyBindingName": "Switch Moves",
+    "triggerKey": "Y",
+    "keyBindingName": "Switch Bars",
     "keyBindingCategoryKey": "invincible",
     "onKeyPressed": {
-      "name": "SwitchMovesOnKeyPressed"
+      "name": "SwitchBarsKeybind"
     }
   }
 }

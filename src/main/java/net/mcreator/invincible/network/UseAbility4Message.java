@@ -10,31 +10,31 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.invincible.procedures.UseMovesOnKeyPressedProcedure;
+import net.mcreator.invincible.procedures.UseAbilityKey4Procedure;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class UseMovesMessage {
+public class UseAbility4Message {
 	int type, pressedms;
 
-	public UseMovesMessage(int type, int pressedms) {
+	public UseAbility4Message(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public UseMovesMessage(FriendlyByteBuf buffer) {
+	public UseAbility4Message(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(UseMovesMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(UseAbility4Message message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(UseMovesMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(UseAbility4Message message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			pressAction(context.getSender(), message.type, message.pressedms);
@@ -52,12 +52,16 @@ public class UseMovesMessage {
 			return;
 		if (type == 0) {
 
-			UseMovesOnKeyPressedProcedure.execute(world, x, y, z, entity);
+			UseAbilityKey4Procedure.execute(world, x, y, z, entity);
+		}
+		if (type == 1) {
+
+			UseAbilityKey4Procedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		InvincibleMod.addNetworkMessage(UseMovesMessage.class, UseMovesMessage::buffer, UseMovesMessage::new, UseMovesMessage::handler);
+		InvincibleMod.addNetworkMessage(UseAbility4Message.class, UseAbility4Message::buffer, UseAbility4Message::new, UseAbility4Message::handler);
 	}
 }

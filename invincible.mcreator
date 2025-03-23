@@ -1191,19 +1191,6 @@
       "path": "~/Potions"
     },
     {
-      "name": "Cooldown",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/potion/CooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potions"
-    },
-    {
       "name": "ThrowGrab",
       "type": "procedure",
       "compiles": true,
@@ -1399,38 +1386,6 @@
       "path": "~/Projectile"
     },
     {
-      "name": "SwitchMovesOnKeyPressed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_moves_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/SwitchMovesOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybind/Procedures"
-    },
-    {
-      "name": "SwitchMoves",
-      "type": "keybind",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/network/SwitchMovesMessage.java"
-        ]
-      },
-      "path": "~/Keybind"
-    },
-    {
       "name": "MoveNameDisplay",
       "type": "procedure",
       "compiles": true,
@@ -1543,54 +1498,6 @@
         ]
       },
       "path": "~/Potions/Procedure"
-    },
-    {
-      "name": "UseMovesOnKeyPressed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "use_moves_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/UseMovesOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Keybind/Procedures"
-    },
-    {
-      "name": "UseMoves",
-      "type": "keybind",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "use_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/network/UseMovesMessage.java"
-        ]
-      },
-      "path": "~/Keybind"
     },
     {
       "name": "SetViltrumite",
@@ -4758,6 +4665,750 @@
         ]
       },
       "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnBar1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_bar_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnBar1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnBar2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_bar_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnBar2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "UseAbility1",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/UseAbility1Message.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "UseAbility2",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/UseAbility2Message.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "UseAbility3",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/UseAbility3Message.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "UseAbility4",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/UseAbility4Message.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "UseAbility5",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/UseAbility5Message.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "SwitchBars",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_bars",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/SwitchBarsMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "SwitchBarsKeybind",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_bars_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SwitchBarsKeybindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "UseAbilityKey1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UseAbilityKey1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "UseAbilityKey2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UseAbilityKey2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "UseAbilityKey3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UseAbilityKey3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "UseAbilityKey4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UseAbilityKey4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "UseAbilityKey5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/UseAbilityKey5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "ReturnAbility1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAbility10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAbility10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "CooldownTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CooldownTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ReturnCooldown1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnCooldown10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cooldown_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnCooldown10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "MoveCooldownDisplay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_cooldown_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/screens/MoveCooldownDisplayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
     }
   ],
   "variable_elements": [
@@ -4958,6 +5609,90 @@
       "type": "number",
       "scope": "world",
       "value": "0"
+    },
+    {
+      "name": "AbilityBar",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "KeyHeld",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "InputDelay",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown1",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown2",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown3",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown4",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown5",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown6",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown7",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown8",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown9",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Cooldown10",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "DashCooldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -5165,7 +5900,9 @@
       "~Blocks.SMOOTH_RED_SANDSTONE"
     ],
     "ENTITIES:mod:villains": [
-      "CUSTOM:Mauler"
+      "CUSTOM:Mauler",
+      "CUSTOM:FlaxanGunman",
+      "CUSTOM:FlaxanSoldier"
     ],
     "ENTITIES:mod:spacemob": [
       "CUSTOM:Viltrumite",
@@ -5193,8 +5930,8 @@
   },
   "language_map": {
     "en_us": {
-      "entity.invincible.mars_proximity": "Mars Proximity",
       "entity.invincible.invincible_mark": "Invincible",
+      "entity.invincible.mars_proximity": "Mars Proximity",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
@@ -5214,7 +5951,6 @@
       "item.invincible.tutorial": "Tutorial",
       "entity.invincible.mauler": "Mauler",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
-      "key.invincible.use_moves": "Use Moves",
       "item.invincible.flaxan_gun": "Flaxan Gun",
       "key.invincible.burst": "Burst",
       "item.invincible.mauler_suit_leggings": "Mauler\u0027s Pants",
@@ -5243,21 +5979,24 @@
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
       "item.invincible.flaxan_armor_boots": "Flaxan Boots",
       "subtitles.bloodexplode": "",
-      "key.invincible.switch_moves": "Switch Moves",
       "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "key.invincible.dash": "Dash",
-      "effect.invincible.cooldown": "Cooldown",
       "entity.invincible.flaxan_portal": "Flaxan Portal",
       "biome.invincible.space_biome": "Space Biome",
       "item.invincible.invincible_blue_suit_leggings": "Invincible\u0027s Pants (Blue)",
       "gui.invincible.book_picker.tooltip_spider": "Spider (WIP)",
       "effect.invincible.slam_timer": "Slam Timer",
+      "key.invincible.use_ability_4": "Ability 4",
+      "key.invincible.use_ability_3": "Ability 3",
+      "key.invincible.use_ability_2": "Ability 2",
+      "key.invincible.use_ability_1": "Ability 1",
       "effect.invincible.grabbing_active": "Grabbing Active",
       "effect.invincible.destruction_active": "Destruction Active",
       "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
       "entity.invincible.past_image": "Past Image",
       "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
       "subtitles.web": "",
+      "key.invincible.use_ability_5": "Ability 5",
       "effect.invincible.hyper_sonic_burst_tick": "Hyper Sonic Burst Tick",
       "item.invincible.flaxan_armor_chestplate": "Flaxan Chestplate",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
@@ -5284,6 +6023,7 @@
       "subtitles.distantexplosion": "",
       "gui.invincible.book_picker.button_spider": "Spider WIP",
       "effect.invincible.bullet_slam": "Bullet Slam",
+      "key.invincible.switch_bars": "Switch Bars",
       "key.invincible.grab": "Grab",
       "entity.invincible.after_image": "After Image",
       "effect.invincible.heavy_stun": "Heavy Stun",
