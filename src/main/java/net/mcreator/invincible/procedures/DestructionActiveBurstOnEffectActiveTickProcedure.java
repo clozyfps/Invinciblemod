@@ -8,6 +8,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -30,8 +31,8 @@ public class DestructionActiveBurstOnEffectActiveTickProcedure {
 			for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
 				for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
 					// Execute the desired statements within the square/cube
-					if (!((world.getBlockState(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 3) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 3) + zi)))
-							.getBlock() == Blocks.AIR)) {
+					if (!(world.getBlockState(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 3) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 3) + zi)))
+							.is(BlockTags.create(new ResourceLocation("invincible:indestructible")))) {
 						world.levelEvent(2001, BlockPos.containing((entity.getX() + entity.getLookAngle().x * 3) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 3) + zi),
 								Block.getId((world.getBlockState(
 										BlockPos.containing((entity.getX() + entity.getLookAngle().x * 3) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 3) + zi)))));
@@ -50,9 +51,8 @@ public class DestructionActiveBurstOnEffectActiveTickProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
-						if (!((world
-								.getBlockState(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 2) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 2) + zi)))
-								.getBlock() == Blocks.AIR)) {
+						if (!(world.getBlockState(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 2) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 2) + zi)))
+								.is(BlockTags.create(new ResourceLocation("invincible:indestructible")))) {
 							world.setBlock(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 2) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 2) + zi),
 									Blocks.AIR.defaultBlockState(), 3);
 							if (entity instanceof LivingEntity _livEnt27 && _livEnt27.hasEffect(InvincibleModMobEffects.HYPER_SONIC.get())) {

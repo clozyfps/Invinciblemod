@@ -17,6 +17,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -54,31 +55,33 @@ public class MultiHitProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 15, 3, false, false));
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.ELECTRICITY_PARTICLE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 3, 0.1, 1, 0.1, 0.2);
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.COUNTER_PARTICLE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 1, 0.1, 1, 0.1, 0);
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 1, 0.1, 1, 0.1, 0);
-					world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:speedfollowup")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:speedfollowup")), SoundSource.NEUTRAL, 1, 1, false);
+					if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:untargetable")))) {
+						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 15, 3, false, false));
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.ELECTRICITY_PARTICLE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 3, 0.1, 1, 0.1, 0.2);
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.COUNTER_PARTICLE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 1, 0.1, 1, 0.1, 0);
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 1, 0.1, 1, 0.1, 0);
+						world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:speedfollowup")), SoundSource.NEUTRAL, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:speedfollowup")), SoundSource.NEUTRAL, 1, 1, false);
+							}
 						}
+						if (entityiterator instanceof Player) {
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 15, 0.1, 0.1, 0.1, 0);
+						} else if (!(entityiterator instanceof Player)) {
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 15, 0.1, 0.1, 0.1, 0);
+						}
+						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity), 10);
+						entityiterator.getPersistentData().putString("target", (entity.getDisplayName().getString()));
 					}
-					if (entityiterator instanceof Player) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 15, 0.1, 0.1, 0.1, 0);
-					} else if (!(entityiterator instanceof Player)) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 15, 0.1, 0.1, 0.1, 0);
-					}
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity), 10);
-					entityiterator.getPersistentData().putString("target", (entity.getDisplayName().getString()));
 				}
 			}
 		}

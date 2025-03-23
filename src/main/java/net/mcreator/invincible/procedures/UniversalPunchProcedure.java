@@ -16,6 +16,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -55,70 +56,72 @@ public class UniversalPunchProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE_BIG.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.1, 1, 0.1, 0);
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.1, 1, 0.1, 0);
-					world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:explosion")), SoundSource.PLAYERS, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:explosion")), SoundSource.PLAYERS, 1, 1, false);
-						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:bloodexplode")), SoundSource.PLAYERS, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:bloodexplode")), SoundSource.PLAYERS, 1, 1, false);
-						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.attack_impact")), SoundSource.PLAYERS, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.attack_impact")), SoundSource.PLAYERS, 1, 1, false);
-						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:powerfulpunch2")), SoundSource.PLAYERS, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:powerfulpunch2")), SoundSource.PLAYERS, 1, 1, false);
-						}
-					}
-					if (entityiterator instanceof Player) {
+					if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:untargetable")))) {
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 40, 1, 1, 1, 0);
-					} else if (!(entityiterator instanceof Player)) {
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE_BIG.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.1, 1, 0.1, 0);
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 40, 1, 1, 1, 0);
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.1, 1, 0.1, 0);
+						world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:explosion")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:explosion")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:bloodexplode")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:bloodexplode")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.attack_impact")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.attack_impact")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:powerfulpunch2")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("invincible:powerfulpunch2")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						if (entityiterator instanceof Player) {
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 40, 1, 1, 1, 0);
+						} else if (!(entityiterator instanceof Player)) {
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entityiterator.getX()), entityiterator.getEyeHeight(), (entityiterator.getZ()), 40, 1, 1, 1, 0);
+						}
+						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity), 25);
+						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.BACKWARDS_TUMBLE.get(),
+									(int) (20 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength
+											- (entityiterator.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense),
+									0, false, false));
+						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.IMPACT_FRAME_POTION.get(), 5, 0, false, false));
+						entityiterator.getPersistentData().putString("target", (entity.getDisplayName().getString()));
+						magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
+						vecX = entity.getLookAngle().x / magnitude;
+						vecY = entity.getLookAngle().y / magnitude;
+						vecZ = entity.getLookAngle().z / magnitude;
+						vecX = vecX * 1;
+						vecY = vecY * 1;
+						vecZ = vecZ * 1;
+						entityiterator.push(vecX, vecY, vecZ);
+						entityiterator.getPersistentData().putDouble("magviltrumite", magnitude);
+						entityiterator.getPersistentData().putDouble("vecxpre", vecX);
+						entityiterator.getPersistentData().putDouble("vecypre", vecY);
+						entityiterator.getPersistentData().putDouble("veczpre", vecZ);
+						entityiterator.getPersistentData().putDouble("lookx", (entity.getLookAngle().x / magnitude));
+						entityiterator.getPersistentData().putDouble("looky", (entity.getLookAngle().y / magnitude));
+						entityiterator.getPersistentData().putDouble("lookz", (entity.getLookAngle().z / magnitude));
 					}
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity), 25);
-					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.BACKWARDS_TUMBLE.get(),
-								(int) (20 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength
-										- (entityiterator.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense),
-								0, false, false));
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.IMPACT_FRAME_POTION.get(), 5, 0, false, false));
-					entityiterator.getPersistentData().putString("target", (entity.getDisplayName().getString()));
-					magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
-					vecX = entity.getLookAngle().x / magnitude;
-					vecY = entity.getLookAngle().y / magnitude;
-					vecZ = entity.getLookAngle().z / magnitude;
-					vecX = vecX * 1;
-					vecY = vecY * 1;
-					vecZ = vecZ * 1;
-					entityiterator.push(vecX, vecY, vecZ);
-					entityiterator.getPersistentData().putDouble("magviltrumite", magnitude);
-					entityiterator.getPersistentData().putDouble("vecxpre", vecX);
-					entityiterator.getPersistentData().putDouble("vecypre", vecY);
-					entityiterator.getPersistentData().putDouble("veczpre", vecZ);
-					entityiterator.getPersistentData().putDouble("lookx", (entity.getLookAngle().x / magnitude));
-					entityiterator.getPersistentData().putDouble("looky", (entity.getLookAngle().y / magnitude));
-					entityiterator.getPersistentData().putDouble("lookz", (entity.getLookAngle().z / magnitude));
 				}
 			}
 		}

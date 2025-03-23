@@ -7,7 +7,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.invincible.init.InvincibleModMobEffects;
 
@@ -25,21 +28,23 @@ public class GrabOnKeyPressedProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entity == entityiterator)) {
-							if (entityiterator instanceof LivingEntity) {
-								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GRABBING_ACTIVE.get(), 99999, 0, false, false));
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GRABBED.get(), 99999, 0, false, false));
-							} else {
-								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GRAB_COOLDOWN.get(), 30, 0));
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal("Nothing to grab"), true);
+							if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:untargetable")))) {
+								if (entityiterator instanceof LivingEntity) {
+									if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GRABBING_ACTIVE.get(), 99999, 0, false, false));
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GRABBED.get(), 99999, 0, false, false));
+								} else {
+									if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GRAB_COOLDOWN.get(), 30, 0));
+									if (entity instanceof Player _player && !_player.level().isClientSide())
+										_player.displayClientMessage(Component.literal("Nothing to grab"), true);
+								}
 							}
 						}
 					}
 				}
-			} else if (entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) {
+			} else if (entity instanceof LivingEntity _livEnt10 && _livEnt10.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get());
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -49,9 +54,11 @@ public class GrabOnKeyPressedProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(100 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entity == entityiterator)) {
-							if (entityiterator instanceof LivingEntity) {
-								if (entityiterator instanceof LivingEntity _entity)
-									_entity.removeEffect(InvincibleModMobEffects.GRABBED.get());
+							if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:untargetable")))) {
+								if (entityiterator instanceof LivingEntity) {
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(InvincibleModMobEffects.GRABBED.get());
+								}
 							}
 						}
 					}
