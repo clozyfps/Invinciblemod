@@ -164,7 +164,11 @@
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 2,
     "maxNumberOfMobsPerGroup": 2,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "plains"
+      }
+    ],
     "spawnInDungeons": false
   }
 }

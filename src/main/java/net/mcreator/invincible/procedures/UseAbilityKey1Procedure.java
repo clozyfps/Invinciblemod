@@ -47,7 +47,8 @@ public class UseAbilityKey1Procedure {
 				}
 			}
 			ViltrumiteMovesProcedure.execute(world, x, y, z, entity);
-		} else if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Speedster")) {
+		}
+		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Speedster")) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 1) {
 				{
 					String _setval = "Flash Time";
@@ -66,7 +67,8 @@ public class UseAbilityKey1Procedure {
 				}
 			}
 			SelectSpeedsterProcedure.execute(entity);
-		} else if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Spider")) {
+		}
+		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Spider")) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 1) {
 				{
 					String _setval = "Web Shooter";
@@ -85,6 +87,26 @@ public class UseAbilityKey1Procedure {
 				}
 			}
 			SpiderMovesProcedure.execute(world, x, y, z, entity);
+		}
+		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Explode")) {
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 1) {
+				{
+					String _setval = "Charged Toss";
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MoveSelected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 2) {
+				{
+					String _setval = "";
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MoveSelected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			ExplodeMovesProcedure.execute(entity);
 		}
 	}
 }
