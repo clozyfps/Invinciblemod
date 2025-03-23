@@ -2,7 +2,6 @@ package net.mcreator.invincible.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.LivingEntity;
@@ -55,7 +54,7 @@ public class InstantCraterOnEffectActiveTickProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
 								+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
 						if (distanceSq <= 1.0) {
-							if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
+							if (!(world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("invincible:indestructible")))) {
 								if (world instanceof ServerLevel _level)
 									FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + i, z + zi), (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))));
 							}

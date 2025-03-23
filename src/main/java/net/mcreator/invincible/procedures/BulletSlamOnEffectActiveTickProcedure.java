@@ -1,10 +1,11 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.invincible.init.InvincibleModMobEffects;
@@ -25,7 +26,7 @@ public class BulletSlamOnEffectActiveTickProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
 							+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
 					if (distanceSq <= 1.0) {
-						if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
+						if (!(world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("invincible:indestructible")))) {
 							if (entity instanceof LivingEntity _entity)
 								_entity.removeEffect(InvincibleModMobEffects.BULLET_SLAM.get());
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
