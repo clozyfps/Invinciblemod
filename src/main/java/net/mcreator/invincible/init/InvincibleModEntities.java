@@ -63,10 +63,8 @@ public class InvincibleModEntities {
 			EntityType.Builder.<MaulerEntity>of(MaulerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaulerEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal",
-			EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanPortalEntity::new)
-
-					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal", EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanPortalEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

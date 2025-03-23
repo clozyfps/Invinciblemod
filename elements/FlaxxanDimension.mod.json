@@ -12,9 +12,9 @@
       "value": "Blocks.RED_SANDSTONE#0"
     },
     "fluidBlock": {
-      "value": "Blocks.FLOWING_LAVA"
+      "value": "Blocks.DIRT#0"
     },
-    "seaLevel": 63,
+    "seaLevel": 15,
     "generateOreVeins": false,
     "generateAquifers": false,
     "horizontalNoiseSize": 1,
@@ -31,15 +31,15 @@
     "sunHeightAffectsFog": false,
     "canRespawnHere": false,
     "hasFog": false,
-    "ambientLight": 0.0,
+    "ambientLight": 0.4,
     "doesWaterVaporize": false,
     "hasFixedTime": false,
-    "fixedTimeValue": 0,
+    "fixedTimeValue": 12000,
     "coordinateScale": 1.0,
     "infiniburnTag": "minecraft:infiniburn_overworld",
     "bedWorks": true,
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": true,
+    "imitateOverworldBehaviour": false,
     "piglinSafe": false,
     "hasRaids": true,
     "minMonsterSpawnLightLimit": 0,

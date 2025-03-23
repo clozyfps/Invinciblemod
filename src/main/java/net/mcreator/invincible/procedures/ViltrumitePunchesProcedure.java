@@ -60,7 +60,7 @@ public class ViltrumitePunchesProcedure {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 1, 0.1, 1, 0.1, 0);
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 10, 0.1, 0.1, 0.1, 0.01);
+						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 10, 0.1, 0.1, 0.1, 0.1);
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.POOF, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 0.01, 0.01, 0.01, 0);
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -78,10 +78,11 @@ public class ViltrumitePunchesProcedure {
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GLASS_BREAK.get(), 1, 0, false, false));
 						}
 					}
-					if ((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength
-							- (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense >= 50) {
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE.get(), 30, 0, false, false));
+					if ((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 25) {
+						InvincibleMod.queueServerWork(10, () -> {
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE.get(), 20, 0, false, false));
+						});
 					}
 					if (entity instanceof Player) {
 						if (entity.getPersistentData().getBoolean("flight")) {
@@ -134,7 +135,7 @@ public class ViltrumitePunchesProcedure {
 				}
 			} else {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 10, 0.1, 0.1, 0.1, 0);
+					_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.BLOOD_DROP.get()), (entity.getX()), (entity.getY()), (entity.getZ() + 1), 10, 0.01, 0.1, 0.01, 0.2);
 			}
 		}
 	}

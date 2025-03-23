@@ -2,21 +2,14 @@ package net.mcreator.invincible.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
 
 import net.mcreator.invincible.init.InvincibleModMobEffects;
 
@@ -58,26 +51,6 @@ public class GrabbingActiveOnEffectActiveTickProcedure {
 									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.NO_FALL.get(), 20, 0, false, false));
 								if (entity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal(("Grabbing " + entityiterator.getDisplayName().getString())), true);
-								if (entity.getPersistentData().getBoolean("flight")) {
-									int horizontalRadiusSquare = (int) 3 - 1;
-									int verticalRadiusSquare = (int) 3 - 1;
-									int yIterationsSquare = verticalRadiusSquare;
-									for (int i = -yIterationsSquare; i <= yIterationsSquare; i++) {
-										for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
-											for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
-												// Execute the desired statements within the square/cube
-												if (!((world.getBlockState(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 2) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i,
-														(entity.getZ() + entity.getLookAngle().z * 2) + zi))).getBlock() == Blocks.AIR)) {
-													world.destroyBlock(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 2) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i,
-															(entity.getZ() + entity.getLookAngle().z * 2) + zi), false);
-													entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.EXPLOSION), entityiterator), 6);
-													if (world instanceof ServerLevel _level)
-														_level.sendParticles(ParticleTypes.EXPLOSION, (entityiterator.getX()), (entityiterator.getY() + 1), (entityiterator.getZ()), 1, 0.1, 0.1, 0.1, 0);
-												}
-											}
-										}
-									}
-								}
 							}
 						}
 					}

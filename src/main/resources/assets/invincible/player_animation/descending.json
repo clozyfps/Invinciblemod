@@ -22,9 +22,12 @@
 						"vector": [0, 0, 15]
 					}
 				},
-				"head": {
+				"left_leg": {
 					"rotation": {
-						"vector": [12.5, 0, 0]
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
 					}
 				}
 			}

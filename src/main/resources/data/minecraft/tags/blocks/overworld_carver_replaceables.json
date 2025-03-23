@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:stone",
     "minecraft:dirt",
     "minecraft:red_sandstone",
     "minecraft:red_sand",

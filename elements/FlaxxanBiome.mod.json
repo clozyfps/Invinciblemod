@@ -4,7 +4,7 @@
   "definition": {
     "name": "Flaxxan Biome",
     "groundBlock": {
-      "value": "Blocks.RED_SANDSTONE#0"
+      "value": "Blocks.STONE#0"
     },
     "undergroundBlock": {
       "value": "Blocks.DIRT#0"
@@ -13,7 +13,7 @@
       "value": "Blocks.CLAY"
     },
     "airColor": {
-      "value": -6750208,
+      "value": -10092544,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -96,6 +96,16 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:FlaxanSoldier"
+        },
+        "minGroup": 1,
+        "maxGroup": 5,
+        "weight": 15,
+        "spawnType": "ambient"
+      }
+    ]
   }
 }

@@ -1239,25 +1239,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "StatTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stat_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/StatTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "GrabOnKeyPressed",
       "type": "procedure",
       "compiles": true,
@@ -1562,41 +1543,6 @@
         ]
       },
       "path": "~/Potions/Procedure"
-    },
-    {
-      "name": "ViltrumiteMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "viltrumite_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Races/Viltrumite"
     },
     {
       "name": "UseMovesOnKeyPressed",
@@ -4199,6 +4145,127 @@
         ]
       },
       "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "HyperSonic",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hyper_sonic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/HyperSonicMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "HyperSonicOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hyper_sonic_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/HyperSonicOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "WorldTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/WorldTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "StatTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/StatTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ViltrumiteMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Viltrumite"
     }
   ],
   "variable_elements": [
@@ -4369,6 +4436,36 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "3.0"
+    },
+    {
+      "name": "EventTimer",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "Event",
+      "type": "string",
+      "scope": "world",
+      "value": "\"\""
+    },
+    {
+      "name": "EventX",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "EventY",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "EventZ",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -4484,13 +4581,17 @@
       "Blocks.STAINED_GLASS_PANE#15"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.RED_SANDSTONE#0",
       "~Blocks.SAND#1",
       "~Blocks.SMOOTH_RED_SANDSTONE"
     ],
     "ENTITIES:mod:spacemob": [
-      "CUSTOM:Viltrumite"
+      "CUSTOM:Viltrumite",
+      "CUSTOM:Omniman",
+      "CUSTOM:InvincibleMark",
+      "CUSTOM:InvincibleBlueMark"
     ]
   },
   "tab_element_order": {
@@ -4545,6 +4646,7 @@
       "effect.invincible.grab_cooldown": "Grab Cooldown",
       "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
+      "effect.invincible.hyper_sonic": "Hyper Sonic",
       "item.invincible.mauler_spawn_egg": "Mauler Spawn Egg",
       "subtitles.speedfollowup": "",
       "subtitles.powerfulpunch2": "",
@@ -4756,7 +4858,7 @@
     "version": "1.0.0",
     "description": "Adds Invincible into Minecraft",
     "author": "sushiclozy, NoiiLive",
-    "websiteURL": "https://discord.gg/TJj3Sk52Jq",
+    "websiteURL": "https://discord.gg/gHqRUE4ecb",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "requiredMods": [],

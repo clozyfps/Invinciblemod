@@ -15,6 +15,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -25,7 +26,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.invincible.network.InvincibleModVariables;
 import net.mcreator.invincible.init.InvincibleModParticleTypes;
 import net.mcreator.invincible.init.InvincibleModMobEffects;
-import net.mcreator.invincible.entity.ViltrumiteEntity;
 import net.mcreator.invincible.InvincibleMod;
 
 import javax.annotation.Nullable;
@@ -50,7 +50,7 @@ public class ViltrumiteMobPunchProcedure {
 		double vecY = 0;
 		double vecX = 0;
 		double magnitude = 0;
-		if (sourceentity instanceof ViltrumiteEntity) {
+		if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:spacemobs")))) {
 			if (Math.random() < 0.5) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.POINT_DESTRUCTION.get(), 50, 0));

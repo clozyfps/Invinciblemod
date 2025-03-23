@@ -57,7 +57,5 @@ public class DestructionActiveOnEffectActiveTickProcedure {
 				}
 			}
 		}
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.LARGE_SMOKE, (entity.getX()), (entity.getY()), (entity.getZ()), 1, 0.01, 0.01, 0.01, 0);
 	}
 }

@@ -73,6 +73,12 @@ public class ViltrumiteMovesProcedure {
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 40, 0, false, false));
 				ChopProcedure.execute(world, x, y, z, entity);
 			}
+			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).MoveSelected).equals("Hyper Sonic Dash")) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.HYPER_SONIC.get(), 40, 0, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.HYPER_SONIC.get(), 100, 0, false, false));
+			}
 		}
 	}
 }

@@ -1,8 +1,11 @@
 package net.mcreator.invincible.procedures;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.invincible.network.InvincibleModVariables;
+import net.mcreator.invincible.init.InvincibleModMobEffects;
 
 public class CallPunchProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {
@@ -42,6 +45,8 @@ public class CallPunchProcedure {
 			vecZ = vecZ * 0;
 			entity.push(vecX, ((2 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20)
 					- (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense / 10), vecZ);
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.BULLET_SLAM.get(), 40, 0, false, false));
 		}
 	}
 }

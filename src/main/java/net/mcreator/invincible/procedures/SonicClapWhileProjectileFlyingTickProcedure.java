@@ -1,12 +1,14 @@
 package net.mcreator.invincible.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.NetworkDirection;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -15,6 +17,8 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.Connection;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
@@ -26,6 +30,7 @@ import net.mcreator.invincible.init.InvincibleModMobEffects;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.List;
+import java.util.Iterator;
 import java.util.Comparator;
 
 public class SonicClapWhileProjectileFlyingTickProcedure {
@@ -39,6 +44,22 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 		immediatesourceentity.setNoGravity(true);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE_BIG.get()), x, y, z, 5, 0.1, 0.1, 0.1, 0);
+		if (world.isClientSide()) {
+			SetupAnimationsProcedure.setAnimationClientside((Player) entity, "sonicclap", true);
+		}
+		if (!world.isClientSide()) {
+			if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+				List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+				synchronized (connections) {
+					Iterator<Connection> iterator = connections.iterator();
+					while (iterator.hasNext()) {
+						Connection connection = iterator.next();
+						if (!connection.isConnecting() && connection.isConnected())
+							InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("sonicclap"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+					}
+				}
+			}
+		}
 		if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying) {
 			int horizontalRadiusSphere = (int) (4 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 100) - 1;
 			int verticalRadiusSphere = (int) (4 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 100) - 1;

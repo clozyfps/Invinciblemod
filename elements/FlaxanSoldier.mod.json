@@ -57,7 +57,7 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 5,
     "attackKnockback": 1.0,
-    "knockbackResistance": 1.0,
+    "knockbackResistance": 0.2,
     "movementSpeed": 0.3,
     "armorBaseValue": 20.0,
     "trackingRange": 64,
@@ -159,7 +159,7 @@
       2
     ],
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 1,
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,

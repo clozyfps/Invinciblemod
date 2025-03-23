@@ -24,6 +24,7 @@ import net.mcreator.invincible.potion.NoFallMobEffect;
 import net.mcreator.invincible.potion.MarsShaderMobEffect;
 import net.mcreator.invincible.potion.InstantCraterMobEffect;
 import net.mcreator.invincible.potion.ImpactFramePotionMobEffect;
+import net.mcreator.invincible.potion.HyperSonicMobEffect;
 import net.mcreator.invincible.potion.HeavyStunMobEffect;
 import net.mcreator.invincible.potion.GrabbingActiveMobEffect;
 import net.mcreator.invincible.potion.GrabbedMobEffect;
@@ -76,4 +77,5 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> ACTIVE_FLIGHT_SPEED = REGISTRY.register("active_flight_speed", () -> new ActiveFlightSpeedMobEffect());
 	public static final RegistryObject<MobEffect> NO_FALL = REGISTRY.register("no_fall", () -> new NoFallMobEffect());
 	public static final RegistryObject<MobEffect> GRAB_COOLDOWN = REGISTRY.register("grab_cooldown", () -> new GrabCooldownMobEffect());
+	public static final RegistryObject<MobEffect> HYPER_SONIC = REGISTRY.register("hyper_sonic", () -> new HyperSonicMobEffect());
 }

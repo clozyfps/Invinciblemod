@@ -77,6 +77,7 @@ public class FlaxanSoldierEntity extends TamableAnimal implements GeoEntity {
 		xpReward = 10;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
+		setPersistenceRequired();
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(InvincibleModItems.FLAXAN_ARMOR_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(InvincibleModItems.FLAXAN_ARMOR_LEGGINGS.get()));
 		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(InvincibleModItems.FLAXAN_ARMOR_BOOTS.get()));
@@ -122,6 +123,11 @@ public class FlaxanSoldierEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
@@ -230,7 +236,7 @@ public class FlaxanSoldierEntity extends TamableAnimal implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 20);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		return builder;
 	}
