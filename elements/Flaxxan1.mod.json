@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 5,
-    "separation": 4,
+    "spacing": 3,
+    "separation": 2,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:FlaxxanBiome"

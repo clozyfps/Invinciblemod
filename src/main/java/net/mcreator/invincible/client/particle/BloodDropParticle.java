@@ -37,7 +37,7 @@ public class BloodDropParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 2f;
-		this.lifetime = 7;
+		this.lifetime = 10;
 		this.gravity = 1f;
 		this.hasPhysics = true;
 		this.xd = vx * 0.5;

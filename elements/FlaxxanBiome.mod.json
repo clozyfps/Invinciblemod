@@ -96,25 +96,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": [
-      {
-        "entity": {
-          "value": "CUSTOM:FlaxanSoldier"
-        },
-        "minGroup": 1,
-        "maxGroup": 3,
-        "weight": 10,
-        "spawnType": "ambient"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:FlaxanGunman"
-        },
-        "minGroup": 1,
-        "maxGroup": 5,
-        "weight": 20,
-        "spawnType": "ambient"
-      }
-    ]
+    "spawnEntries": []
   }
 }

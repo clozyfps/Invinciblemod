@@ -16,8 +16,14 @@
     "isProtectedByTotem": false,
     "isCuredbyHoney": false,
     "modifiers": [],
+    "onStarted": {
+      "name": "GrabbedEffectStartedapplied"
+    },
     "onActiveTick": {
       "name": "GrabbedOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "GrabbedEffectExpires"
     }
   }
 }

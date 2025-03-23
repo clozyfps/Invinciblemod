@@ -3,7 +3,7 @@
   "biomes": "invincible:flaxxan_biome",
   "spawners": {
     "type": "invincible:flaxan_soldier",
-    "weight": 1,
+    "weight": 5,
     "minCount": 1,
     "maxCount": 3
   }

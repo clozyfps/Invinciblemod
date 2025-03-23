@@ -27,8 +27,8 @@ import net.mcreator.invincible.entity.InvincibleMarkEntity;
 import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
-import net.mcreator.invincible.entity.FlaxanGunmanEntityProjectile;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
+import net.mcreator.invincible.entity.BlasterProjectileEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -71,8 +71,8 @@ public class InvincibleModEntities {
 			EntityType.Builder.<FlaxanGunmanEntity>of(FlaxanGunmanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanGunmanEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<FlaxanGunmanEntityProjectile>> FLAXAN_GUNMAN_PROJECTILE = register("projectile_flaxan_gunman", EntityType.Builder.<FlaxanGunmanEntityProjectile>of(FlaxanGunmanEntityProjectile::new, MobCategory.MISC)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(FlaxanGunmanEntityProjectile::new).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BlasterProjectileEntity>> BLASTER_PROJECTILE = register("blaster_projectile", EntityType.Builder.<BlasterProjectileEntity>of(BlasterProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(BlasterProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

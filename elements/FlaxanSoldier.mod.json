@@ -160,7 +160,7 @@
     ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 1,
+    "spawningProbability": 5,
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 3,

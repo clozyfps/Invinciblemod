@@ -4,6 +4,7 @@ package net.mcreator.invincible.potion;
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -12,6 +13,8 @@ import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.invincible.procedures.GrabbedOnEffectActiveTickProcedure;
+import net.mcreator.invincible.procedures.GrabbedEffectStartedappliedProcedure;
+import net.mcreator.invincible.procedures.GrabbedEffectExpiresProcedure;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -28,8 +31,20 @@ public class GrabbedMobEffect extends MobEffect {
 	}
 
 	@Override
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.addAttributeModifiers(entity, attributeMap, amplifier);
+		GrabbedEffectStartedappliedProcedure.execute(entity);
+	}
+
+	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		GrabbedOnEffectActiveTickProcedure.execute();
+	}
+
+	@Override
+	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.removeAttributeModifiers(entity, attributeMap, amplifier);
+		GrabbedEffectExpiresProcedure.execute(entity);
 	}
 
 	@Override

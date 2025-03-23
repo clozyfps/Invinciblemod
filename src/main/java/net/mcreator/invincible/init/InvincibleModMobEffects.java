@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.invincible.potion.ViltrumiteNPCFollowUpTriggerMobEffect;
+import net.mcreator.invincible.potion.ThrowPlayerMobEffect;
 import net.mcreator.invincible.potion.TakeoffEffectsMobEffect;
 import net.mcreator.invincible.potion.SmokingMobEffect;
 import net.mcreator.invincible.potion.SmokeCircleExpandingMobEffect;
@@ -25,6 +26,7 @@ import net.mcreator.invincible.potion.MarsShaderMobEffect;
 import net.mcreator.invincible.potion.InstantCraterMobEffect;
 import net.mcreator.invincible.potion.ImpactFramePotionMobEffect;
 import net.mcreator.invincible.potion.HyperSonicMobEffect;
+import net.mcreator.invincible.potion.HyperSonicBurstTickMobEffect;
 import net.mcreator.invincible.potion.HeavyStunMobEffect;
 import net.mcreator.invincible.potion.GrabbingActiveMobEffect;
 import net.mcreator.invincible.potion.GrabbedMobEffect;
@@ -78,4 +80,6 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> NO_FALL = REGISTRY.register("no_fall", () -> new NoFallMobEffect());
 	public static final RegistryObject<MobEffect> GRAB_COOLDOWN = REGISTRY.register("grab_cooldown", () -> new GrabCooldownMobEffect());
 	public static final RegistryObject<MobEffect> HYPER_SONIC = REGISTRY.register("hyper_sonic", () -> new HyperSonicMobEffect());
+	public static final RegistryObject<MobEffect> HYPER_SONIC_BURST_TICK = REGISTRY.register("hyper_sonic_burst_tick", () -> new HyperSonicBurstTickMobEffect());
+	public static final RegistryObject<MobEffect> THROW_PLAYER = REGISTRY.register("throw_player", () -> new ThrowPlayerMobEffect());
 }

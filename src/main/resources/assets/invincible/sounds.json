@@ -70,5 +70,13 @@
         "stream": false
       }
     ]
+  },
+  "blaster": {
+    "sounds": [
+      {
+        "name": "invincible:star-wars-blaster-shot-hd-sound-effect-ezmp3co_9jhskipg",
+        "stream": false
+      }
+    ]
   }
 }

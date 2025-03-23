@@ -21,17 +21,17 @@
     "verticalNoiseSize": 2,
     "defaultEffects": "overworld",
     "useCustomEffects": true,
-    "hasClouds": true,
+    "hasClouds": false,
     "cloudHeight": 192.0,
     "skyType": "NONE",
     "airColor": {
-      "value": -6750208,
+      "value": -7995392,
       "falpha": 0.0
     },
     "sunHeightAffectsFog": false,
     "canRespawnHere": false,
     "hasFog": false,
-    "ambientLight": 0.4,
+    "ambientLight": 0.0,
     "doesWaterVaporize": false,
     "hasFixedTime": false,
     "fixedTimeValue": 12000,
@@ -45,6 +45,9 @@
     "minMonsterSpawnLightLimit": 0,
     "maxMonsterSpawnLightLimit": 7,
     "monsterSpawnBlockLightLimit": 0,
+    "onPlayerEntersDimension": {
+      "name": "FlaxxanDimensionPlayerEntersDimension"
+    },
     "portalFrame": {
       "value": ""
     },

@@ -32,7 +32,7 @@ public class HyperSonicOnEffectActiveTickProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.NO_FALL.get(), 25, 0, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.HYPER_SONIC_BURST_TICK.get(), 5, 0, false, false));
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.FLAME, x, (y + 0.5), z, 20, 1, 1, 1, 0);
 		if (world instanceof ServerLevel _level)

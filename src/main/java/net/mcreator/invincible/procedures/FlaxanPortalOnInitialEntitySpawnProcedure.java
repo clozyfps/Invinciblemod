@@ -23,14 +23,7 @@ public class FlaxanPortalOnInitialEntitySpawnProcedure {
 		if (entity instanceof FlaxanPortalEntity) {
 			((FlaxanPortalEntity) entity).setAnimation("portalopen");
 		}
-		if (world instanceof Level _level) {
-			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.portal.trigger")), SoundSource.NEUTRAL, 1, 1);
-			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.portal.trigger")), SoundSource.NEUTRAL, 1, 1, false);
-			}
-		}
-		InvincibleMod.queueServerWork(1500, () -> {
+		InvincibleMod.queueServerWork(5000, () -> {
 			if (!entity.level().isClientSide())
 				entity.discard();
 			if (world instanceof Level _level) {

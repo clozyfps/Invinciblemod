@@ -55,10 +55,7 @@ public class DestructionActiveBurstOnEffectActiveTickProcedure {
 								.getBlock() == Blocks.AIR)) {
 							world.setBlock(BlockPos.containing((entity.getX() + entity.getLookAngle().x * 2) + xi, (entity.getY() + entity.getEyeHeight() + entity.getLookAngle().y * 2) + i, (entity.getZ() + entity.getLookAngle().z * 2) + zi),
 									Blocks.AIR.defaultBlockState(), 3);
-							if (!(entity instanceof LivingEntity _livEnt27 && _livEnt27.hasEffect(InvincibleModMobEffects.HYPER_SONIC.get()))) {
-								if (world instanceof ServerLevel _level)
-									_level.sendParticles(ParticleTypes.EXPLOSION, x, (y + 1), z, 1, 0.01, 0.01, 0.01, 0);
-							} else if (entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(InvincibleModMobEffects.HYPER_SONIC.get())) {
+							if (entity instanceof LivingEntity _livEnt27 && _livEnt27.hasEffect(InvincibleModMobEffects.HYPER_SONIC.get())) {
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.CUSTOM_SMOKE.get()), x, (y + 1), z, 1, 0.01, 0.01, 0.01, 0.1);
 								if (world instanceof ServerLevel _level)

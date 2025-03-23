@@ -24,4 +24,5 @@ public class InvincibleModSounds {
 	public static final RegistryObject<SoundEvent> GRIP = REGISTRY.register("grip", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("invincible", "grip")));
 	public static final RegistryObject<SoundEvent> SPEEDFOLLOWUP = REGISTRY.register("speedfollowup", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("invincible", "speedfollowup")));
 	public static final RegistryObject<SoundEvent> WEB = REGISTRY.register("web", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("invincible", "web")));
+	public static final RegistryObject<SoundEvent> BLASTER = REGISTRY.register("blaster", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("invincible", "blaster")));
 }

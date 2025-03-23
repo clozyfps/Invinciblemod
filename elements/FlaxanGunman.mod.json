@@ -144,7 +144,7 @@
     "rangedAttackItem": {
       "value": "CUSTOM:FlaxanGun"
     },
-    "rangedItemType": "Default item",
+    "rangedItemType": "BlasterProjectile",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 16.0,
     "height": 1.0,
@@ -160,7 +160,7 @@
     ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 1,
+    "spawningProbability": 5,
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 3,
