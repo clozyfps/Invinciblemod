@@ -84,6 +84,7 @@ public class EnterSpaceProcedure {
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport(x, 200, z, _ent.getYRot(), _ent.getXRot());
 					}
+					entity.setNoGravity(false);
 				}
 			}
 		}
