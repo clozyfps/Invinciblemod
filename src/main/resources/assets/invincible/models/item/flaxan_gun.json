@@ -1,0 +1,7 @@
+{
+  "parent": "invincible:custom/flaxan_gun",
+  "textures": {
+    "0": "invincible:block/flaxan_gun",
+    "particle": "invincible:item/flaxan_gun"
+  }
+}

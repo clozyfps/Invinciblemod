@@ -20,6 +20,7 @@ import net.mcreator.invincible.client.renderer.InvincibleMarkRenderer;
 import net.mcreator.invincible.client.renderer.InvincibleBlueMarkRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanSoldierRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanPortalRenderer;
+import net.mcreator.invincible.client.renderer.FlaxanGunmanRenderer;
 import net.mcreator.invincible.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -38,5 +39,7 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.FLAXAN_SOLDIER.get(), FlaxanSoldierRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.MAULER.get(), MaulerRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.FLAXAN_PORTAL.get(), FlaxanPortalRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.FLAXAN_GUNMAN.get(), FlaxanGunmanRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.FLAXAN_GUNMAN_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

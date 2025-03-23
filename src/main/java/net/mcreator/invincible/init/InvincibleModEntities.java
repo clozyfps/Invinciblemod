@@ -27,6 +27,8 @@ import net.mcreator.invincible.entity.InvincibleMarkEntity;
 import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
+import net.mcreator.invincible.entity.FlaxanGunmanEntityProjectile;
+import net.mcreator.invincible.entity.FlaxanGunmanEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -54,7 +56,7 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<InvincibleBlueMarkEntity>> INVINCIBLE_BLUE_MARK = register("invincible_blue_mark", EntityType.Builder.<InvincibleBlueMarkEntity>of(InvincibleBlueMarkEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvincibleBlueMarkEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<OmnimanEntity>> OMNIMAN = register("omniman",
-			EntityType.Builder.<OmnimanEntity>of(OmnimanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OmnimanEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<OmnimanEntity>of(OmnimanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OmnimanEntity::new).fireImmune().sized(0.8f, 2.2f));
 	public static final RegistryObject<EntityType<FlaxanSoldierEntity>> FLAXAN_SOLDIER = register("flaxan_soldier",
 			EntityType.Builder.<FlaxanSoldierEntity>of(FlaxanSoldierEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanSoldierEntity::new)
 
@@ -62,9 +64,15 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<MaulerEntity>> MAULER = register("mauler",
 			EntityType.Builder.<MaulerEntity>of(MaulerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaulerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(1f, 2.5f));
 	public static final RegistryObject<EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal", EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanPortalEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FlaxanGunmanEntity>> FLAXAN_GUNMAN = register("flaxan_gunman",
+			EntityType.Builder.<FlaxanGunmanEntity>of(FlaxanGunmanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanGunmanEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FlaxanGunmanEntityProjectile>> FLAXAN_GUNMAN_PROJECTILE = register("projectile_flaxan_gunman", EntityType.Builder.<FlaxanGunmanEntityProjectile>of(FlaxanGunmanEntityProjectile::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(FlaxanGunmanEntityProjectile::new).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -85,6 +93,7 @@ public class InvincibleModEntities {
 			FlaxanSoldierEntity.init();
 			MaulerEntity.init();
 			FlaxanPortalEntity.init();
+			FlaxanGunmanEntity.init();
 		});
 	}
 
@@ -100,5 +109,6 @@ public class InvincibleModEntities {
 		event.put(FLAXAN_SOLDIER.get(), FlaxanSoldierEntity.createAttributes().build());
 		event.put(MAULER.get(), MaulerEntity.createAttributes().build());
 		event.put(FLAXAN_PORTAL.get(), FlaxanPortalEntity.createAttributes().build());
+		event.put(FLAXAN_GUNMAN.get(), FlaxanGunmanEntity.createAttributes().build());
 	}
 }

@@ -42,9 +42,21 @@ public class FlaxanPortalOnInitialEntitySpawnProcedure {
 			}
 		});
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
-			for (int index0 = 0; index0 < 15; index0++) {
+			for (int index0 = 0; index0 < 5; index0++) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = InvincibleModEntities.FLAXAN_SOLDIER.get().spawn(_level,
+							BlockPos.containing(
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(), y,
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
+							MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+			}
+			for (int index1 = 0; index1 < 15; index1++) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = InvincibleModEntities.FLAXAN_GUNMAN.get().spawn(_level,
 							BlockPos.containing(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(), y,
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
