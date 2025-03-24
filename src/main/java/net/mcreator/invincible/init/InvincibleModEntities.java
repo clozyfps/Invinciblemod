@@ -58,7 +58,7 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<OmnimanEntity>> OMNIMAN = register("omniman",
 			EntityType.Builder.<OmnimanEntity>of(OmnimanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OmnimanEntity::new).fireImmune().sized(0.8f, 2.2f));
 	public static final RegistryObject<EntityType<FlaxanSoldierEntity>> FLAXAN_SOLDIER = register("flaxan_soldier",
-			EntityType.Builder.<FlaxanSoldierEntity>of(FlaxanSoldierEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanSoldierEntity::new)
+			EntityType.Builder.<FlaxanSoldierEntity>of(FlaxanSoldierEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanSoldierEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MaulerEntity>> MAULER = register("mauler",
@@ -68,7 +68,7 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal", EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanPortalEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FlaxanGunmanEntity>> FLAXAN_GUNMAN = register("flaxan_gunman",
-			EntityType.Builder.<FlaxanGunmanEntity>of(FlaxanGunmanEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanGunmanEntity::new)
+			EntityType.Builder.<FlaxanGunmanEntity>of(FlaxanGunmanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanGunmanEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlasterProjectileEntity>> BLASTER_PROJECTILE = register("blaster_projectile", EntityType.Builder.<BlasterProjectileEntity>of(BlasterProjectileEntity::new, MobCategory.MISC)

@@ -111,23 +111,9 @@ public class InvincibleModVariables {
 			clone.WebN = original.WebN;
 			clone.VerticalMovement = original.VerticalMovement;
 			clone.MaximumMoves = original.MaximumMoves;
-			clone.AbilityBar = original.AbilityBar;
 			if (!event.isWasDeath()) {
 				clone.Flying = original.Flying;
 				clone.SelectedTitle = original.SelectedTitle;
-				clone.KeyHeld = original.KeyHeld;
-				clone.InputDelay = original.InputDelay;
-				clone.Cooldown1 = original.Cooldown1;
-				clone.Cooldown2 = original.Cooldown2;
-				clone.Cooldown3 = original.Cooldown3;
-				clone.Cooldown4 = original.Cooldown4;
-				clone.Cooldown5 = original.Cooldown5;
-				clone.Cooldown6 = original.Cooldown6;
-				clone.Cooldown7 = original.Cooldown7;
-				clone.Cooldown8 = original.Cooldown8;
-				clone.Cooldown9 = original.Cooldown9;
-				clone.Cooldown10 = original.Cooldown10;
-				clone.DashCooldown = original.DashCooldown;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -344,20 +330,6 @@ public class InvincibleModVariables {
 		public double WebN = 0;
 		public double VerticalMovement = 0;
 		public double MaximumMoves = 3.0;
-		public double AbilityBar = 1.0;
-		public boolean KeyHeld = false;
-		public double InputDelay = 0.0;
-		public double Cooldown1 = 0.0;
-		public double Cooldown2 = 0.0;
-		public double Cooldown3 = 0.0;
-		public double Cooldown4 = 0.0;
-		public double Cooldown5 = 0.0;
-		public double Cooldown6 = 0.0;
-		public double Cooldown7 = 0.0;
-		public double Cooldown8 = 0.0;
-		public double Cooldown9 = 0.0;
-		public double Cooldown10 = 0.0;
-		public double DashCooldown = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -394,20 +366,6 @@ public class InvincibleModVariables {
 			nbt.putDouble("WebN", WebN);
 			nbt.putDouble("VerticalMovement", VerticalMovement);
 			nbt.putDouble("MaximumMoves", MaximumMoves);
-			nbt.putDouble("AbilityBar", AbilityBar);
-			nbt.putBoolean("KeyHeld", KeyHeld);
-			nbt.putDouble("InputDelay", InputDelay);
-			nbt.putDouble("Cooldown1", Cooldown1);
-			nbt.putDouble("Cooldown2", Cooldown2);
-			nbt.putDouble("Cooldown3", Cooldown3);
-			nbt.putDouble("Cooldown4", Cooldown4);
-			nbt.putDouble("Cooldown5", Cooldown5);
-			nbt.putDouble("Cooldown6", Cooldown6);
-			nbt.putDouble("Cooldown7", Cooldown7);
-			nbt.putDouble("Cooldown8", Cooldown8);
-			nbt.putDouble("Cooldown9", Cooldown9);
-			nbt.putDouble("Cooldown10", Cooldown10);
-			nbt.putDouble("DashCooldown", DashCooldown);
 			return nbt;
 		}
 
@@ -447,20 +405,6 @@ public class InvincibleModVariables {
 			WebN = nbt.getDouble("WebN");
 			VerticalMovement = nbt.getDouble("VerticalMovement");
 			MaximumMoves = nbt.getDouble("MaximumMoves");
-			AbilityBar = nbt.getDouble("AbilityBar");
-			KeyHeld = nbt.getBoolean("KeyHeld");
-			InputDelay = nbt.getDouble("InputDelay");
-			Cooldown1 = nbt.getDouble("Cooldown1");
-			Cooldown2 = nbt.getDouble("Cooldown2");
-			Cooldown3 = nbt.getDouble("Cooldown3");
-			Cooldown4 = nbt.getDouble("Cooldown4");
-			Cooldown5 = nbt.getDouble("Cooldown5");
-			Cooldown6 = nbt.getDouble("Cooldown6");
-			Cooldown7 = nbt.getDouble("Cooldown7");
-			Cooldown8 = nbt.getDouble("Cooldown8");
-			Cooldown9 = nbt.getDouble("Cooldown9");
-			Cooldown10 = nbt.getDouble("Cooldown10");
-			DashCooldown = nbt.getDouble("DashCooldown");
 		}
 	}
 
@@ -522,20 +466,6 @@ public class InvincibleModVariables {
 					variables.WebN = message.data.WebN;
 					variables.VerticalMovement = message.data.VerticalMovement;
 					variables.MaximumMoves = message.data.MaximumMoves;
-					variables.AbilityBar = message.data.AbilityBar;
-					variables.KeyHeld = message.data.KeyHeld;
-					variables.InputDelay = message.data.InputDelay;
-					variables.Cooldown1 = message.data.Cooldown1;
-					variables.Cooldown2 = message.data.Cooldown2;
-					variables.Cooldown3 = message.data.Cooldown3;
-					variables.Cooldown4 = message.data.Cooldown4;
-					variables.Cooldown5 = message.data.Cooldown5;
-					variables.Cooldown6 = message.data.Cooldown6;
-					variables.Cooldown7 = message.data.Cooldown7;
-					variables.Cooldown8 = message.data.Cooldown8;
-					variables.Cooldown9 = message.data.Cooldown9;
-					variables.Cooldown10 = message.data.Cooldown10;
-					variables.DashCooldown = message.data.DashCooldown;
 				}
 			});
 			context.setPacketHandled(true);
