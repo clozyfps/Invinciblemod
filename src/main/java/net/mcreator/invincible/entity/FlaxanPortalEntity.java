@@ -71,6 +71,7 @@ public class FlaxanPortalEntity extends Monster implements GeoEntity {
 		xpReward = 0;
 		setNoAi(true);
 		setMaxUpStep(0.6f);
+		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -104,6 +105,11 @@ public class FlaxanPortalEntity extends Monster implements GeoEntity {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
