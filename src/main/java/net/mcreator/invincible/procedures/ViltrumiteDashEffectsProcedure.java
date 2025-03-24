@@ -27,8 +27,13 @@ public class ViltrumiteDashEffectsProcedure {
 		double vecY = 0;
 		double vecX = 0;
 		double magnitude = 0;
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 25, 0, false, false));
+		{
+			double _setval = 25;
+			entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.DashCooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 15) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == true) {
 				if (world instanceof ServerLevel _level)

@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Y",
+    "keyBindingName": "Switch Bars",
+    "keyBindingCategoryKey": "invincible",
+    "onKeyPressed": {
+      "name": "SwitchBarsKeybind"
+    }
+  }
+}

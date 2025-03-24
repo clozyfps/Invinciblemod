@@ -16,6 +16,13 @@ public class SelectHumanProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			String _setval = "";
+			entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MoveSelected = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}

@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "overlay",
   "definition": {
-    "priority": "NORMAL",
+    "priority": "HIGH",
     "components": [
       {
         "type": "label",
@@ -17,8 +17,8 @@
             "falpha": 0.0
           },
           "anchorPoint": "BOTTOM_LEFT",
-          "x": 18,
-          "y": 208,
+          "x": 13,
+          "y": 194,
           "locked": true
         }
       },
@@ -35,9 +35,188 @@
             "falpha": 0.0
           },
           "anchorPoint": "BOTTOM_LEFT",
-          "x": 17,
-          "y": 207,
+          "x": 12,
+          "y": 193,
           "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_bar.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 9,
+          "y": 205,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bar_selected.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnBar1"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 109,
+          "y": 209,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bar_selected.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnBar2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 109,
+          "y": 217,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility1"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 14,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 32,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility3"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 50,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility4"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 68,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility5"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 86,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility6"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 14,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility7"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 32,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility8"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 50,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility9"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 68,
+          "y": 210,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbility10"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 86,
+          "y": 210,
+          "locked": false
         }
       }
     ],

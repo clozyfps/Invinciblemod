@@ -22,6 +22,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.invincible.network.InvincibleModVariables;
 import net.mcreator.invincible.init.InvincibleModParticleTypes;
 import net.mcreator.invincible.init.InvincibleModMobEffects;
 import net.mcreator.invincible.InvincibleMod;
@@ -44,8 +45,13 @@ public class ViltrumiteNPCFollowUpTriggerEffectStartedappliedProcedure {
 				if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 20, 0, false, false));
+					{
+						double _setval = 20;
+						entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.DashCooldown = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
 					{

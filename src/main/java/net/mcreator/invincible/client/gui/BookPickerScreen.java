@@ -26,6 +26,7 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 	ImageButton imagebutton_icon_human;
 	ImageButton imagebutton_icon_speedster;
 	ImageButton imagebutton_icon_spider;
+	ImageButton imagebutton_icon_explode;
 
 	public BookPickerScreen(BookPickerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -53,6 +54,8 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_speedster"), mouseX, mouseY);
 		if (mouseX > leftPos + 1 && mouseX < leftPos + 23 && mouseY > topPos + -47 && mouseY < topPos + -25)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_spider"), mouseX, mouseY);
+		if (mouseX > leftPos + 27 && mouseX < leftPos + 49 && mouseY > topPos + -47 && mouseY < topPos + -25)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_explode"), mouseX, mouseY);
 	}
 
 	@Override
@@ -129,5 +132,13 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 		});
 		guistate.put("button:imagebutton_icon_spider", imagebutton_icon_spider);
 		this.addRenderableWidget(imagebutton_icon_spider);
+		imagebutton_icon_explode = new ImageButton(this.leftPos + 30, this.topPos + -44, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_explode.png"), 16, 32, e -> {
+			if (true) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(4, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_icon_explode", imagebutton_icon_explode);
+		this.addRenderableWidget(imagebutton_icon_explode);
 	}
 }

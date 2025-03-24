@@ -15,9 +15,13 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.invincible.network.UseMovesMessage;
+import net.mcreator.invincible.network.UseAbility5Message;
+import net.mcreator.invincible.network.UseAbility4Message;
+import net.mcreator.invincible.network.UseAbility3Message;
+import net.mcreator.invincible.network.UseAbility2Message;
+import net.mcreator.invincible.network.UseAbility1Message;
 import net.mcreator.invincible.network.ToggleHeavyPunchMessage;
-import net.mcreator.invincible.network.SwitchMovesMessage;
+import net.mcreator.invincible.network.SwitchBarsMessage;
 import net.mcreator.invincible.network.GrabMessage;
 import net.mcreator.invincible.network.FollowUpMessage;
 import net.mcreator.invincible.network.FlyMessage;
@@ -45,7 +49,7 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping DASH = new KeyMapping("key.invincible.dash", GLFW.GLFW_KEY_B, "key.categories.invincible") {
+	public static final KeyMapping DASH = new KeyMapping("key.invincible.dash", GLFW.GLFW_KEY_LEFT_CONTROL, "key.categories.invincible") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -58,7 +62,7 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping FOLLOW_UP = new KeyMapping("key.invincible.follow_up", GLFW.GLFW_KEY_X, "key.categories.invincible") {
+	public static final KeyMapping FOLLOW_UP = new KeyMapping("key.invincible.follow_up", GLFW.GLFW_KEY_R, "key.categories.invincible") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -84,32 +88,6 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping SWITCH_MOVES = new KeyMapping("key.invincible.switch_moves", GLFW.GLFW_KEY_R, "key.categories.invincible") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new SwitchMovesMessage(0, 0));
-				SwitchMovesMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
-	public static final KeyMapping USE_MOVES = new KeyMapping("key.invincible.use_moves", GLFW.GLFW_KEY_F, "key.categories.invincible") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new UseMovesMessage(0, 0));
-				UseMovesMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
 	public static final KeyMapping BURST = new KeyMapping("key.invincible.burst", GLFW.GLFW_KEY_H, "key.categories.invincible") {
 		private boolean isDownOld = false;
 
@@ -123,7 +101,7 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping GRAB = new KeyMapping("key.invincible.grab", GLFW.GLFW_KEY_V, "key.categories.invincible") {
+	public static final KeyMapping GRAB = new KeyMapping("key.invincible.grab", GLFW.GLFW_KEY_G, "key.categories.invincible") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -136,7 +114,115 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping USE_ABILITY_1 = new KeyMapping("key.invincible.use_ability_1", GLFW.GLFW_KEY_Z, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility1Message(0, 0));
+				UseAbility1Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				USE_ABILITY_1_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - USE_ABILITY_1_LASTPRESS);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility1Message(1, dt));
+				UseAbility1Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping USE_ABILITY_2 = new KeyMapping("key.invincible.use_ability_2", GLFW.GLFW_KEY_X, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility2Message(0, 0));
+				UseAbility2Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				USE_ABILITY_2_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - USE_ABILITY_2_LASTPRESS);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility2Message(1, dt));
+				UseAbility2Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping USE_ABILITY_3 = new KeyMapping("key.invincible.use_ability_3", GLFW.GLFW_KEY_C, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility3Message(0, 0));
+				UseAbility3Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				USE_ABILITY_3_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - USE_ABILITY_3_LASTPRESS);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility3Message(1, dt));
+				UseAbility3Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping USE_ABILITY_4 = new KeyMapping("key.invincible.use_ability_4", GLFW.GLFW_KEY_V, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility4Message(0, 0));
+				UseAbility4Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				USE_ABILITY_4_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - USE_ABILITY_4_LASTPRESS);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility4Message(1, dt));
+				UseAbility4Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping USE_ABILITY_5 = new KeyMapping("key.invincible.use_ability_5", GLFW.GLFW_KEY_B, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility5Message(0, 0));
+				UseAbility5Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				USE_ABILITY_5_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - USE_ABILITY_5_LASTPRESS);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new UseAbility5Message(1, dt));
+				UseAbility5Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping SWITCH_BARS = new KeyMapping("key.invincible.switch_bars", GLFW.GLFW_KEY_Y, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new SwitchBarsMessage(0, 0));
+				SwitchBarsMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long FLY_LASTPRESS = 0;
+	private static long USE_ABILITY_1_LASTPRESS = 0;
+	private static long USE_ABILITY_2_LASTPRESS = 0;
+	private static long USE_ABILITY_3_LASTPRESS = 0;
+	private static long USE_ABILITY_4_LASTPRESS = 0;
+	private static long USE_ABILITY_5_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -144,10 +230,14 @@ public class InvincibleModKeyMappings {
 		event.register(DASH);
 		event.register(FOLLOW_UP);
 		event.register(TOGGLE_HEAVY_PUNCH);
-		event.register(SWITCH_MOVES);
-		event.register(USE_MOVES);
 		event.register(BURST);
 		event.register(GRAB);
+		event.register(USE_ABILITY_1);
+		event.register(USE_ABILITY_2);
+		event.register(USE_ABILITY_3);
+		event.register(USE_ABILITY_4);
+		event.register(USE_ABILITY_5);
+		event.register(SWITCH_BARS);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -159,10 +249,14 @@ public class InvincibleModKeyMappings {
 				DASH.consumeClick();
 				FOLLOW_UP.consumeClick();
 				TOGGLE_HEAVY_PUNCH.consumeClick();
-				SWITCH_MOVES.consumeClick();
-				USE_MOVES.consumeClick();
 				BURST.consumeClick();
 				GRAB.consumeClick();
+				USE_ABILITY_1.consumeClick();
+				USE_ABILITY_2.consumeClick();
+				USE_ABILITY_3.consumeClick();
+				USE_ABILITY_4.consumeClick();
+				USE_ABILITY_5.consumeClick();
+				SWITCH_BARS.consumeClick();
 			}
 		}
 	}

@@ -16,6 +16,7 @@ import net.mcreator.invincible.procedures.SelectViltrumiteProcedure;
 import net.mcreator.invincible.procedures.SelectSpiderProcedure;
 import net.mcreator.invincible.procedures.SelectSpeedsterProcedure;
 import net.mcreator.invincible.procedures.SelectHumanProcedure;
+import net.mcreator.invincible.procedures.SelectExplodeProcedure;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.function.Supplier;
@@ -80,6 +81,10 @@ public class BookPickerButtonMessage {
 		if (buttonID == 3) {
 
 			SelectSpiderProcedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			SelectExplodeProcedure.execute(entity);
 		}
 	}
 

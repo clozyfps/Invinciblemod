@@ -29,7 +29,7 @@ public class FollowUpOnKeyPressedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(InvincibleModMobEffects.COOLDOWN.get()))) {
+		if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).DashCooldown == 0) {
 			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Viltrumite")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
@@ -38,8 +38,13 @@ public class FollowUpOnKeyPressedProcedure {
 						if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
-							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 20, 0, false, false));
+							{
+								double _setval = 20;
+								entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.DashCooldown = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
 							if (entity.getXRot() >= 70) {
@@ -102,10 +107,15 @@ public class FollowUpOnKeyPressedProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(60 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
-							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 20, 0, false, false));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
+							{
+								double _setval = 20;
+								entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.DashCooldown = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.IMPACT_FRAME_POTION.get(), 4, 0, false, false));
 							{

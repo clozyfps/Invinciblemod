@@ -1,0 +1,15 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Ability 4",
+    "keyBindingCategoryKey": "invincible",
+    "onKeyPressed": {
+      "name": "UseAbilityKey4"
+    },
+    "onKeyReleased": {
+      "name": "UseAbilityKey4"
+    }
+  }
+}

@@ -20,8 +20,13 @@ public class ViltrumiteDashProcedure {
 		double vecX = 0;
 		double magnitude = 0;
 		ViltrumiteDashEffectsProcedure.execute(world, x, y, z, entity);
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 15, 0, false, false));
+		{
+			double _setval = 15;
+			entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.DashCooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == false) {
 			if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), InputConstants.KEY_W)) {
 				magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);

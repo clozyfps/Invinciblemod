@@ -14,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.invincible.network.InvincibleModVariables;
 import net.mcreator.invincible.init.InvincibleModParticleTypes;
 import net.mcreator.invincible.init.InvincibleModMobEffects;
 
@@ -53,8 +54,13 @@ public class SpeedsterDashProcedure {
 		entity.push(vecX, vecY, vecZ);
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 15, 0));
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COOLDOWN.get(), 15, 0, false, false));
+		{
+			double _setval = 15;
+			entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.DashCooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.ACTIVE_BURST.get(), 15, 0, false, false));
 	}
