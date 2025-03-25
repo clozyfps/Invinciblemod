@@ -5708,6 +5708,40 @@
         ]
       },
       "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "RexSplode",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/forge/biome_modifier/rex_splode_biome_modifier.json",
+          "src/main/java/net/mcreator/invincible/entity/RexSplodeEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/RexSplodeModel.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/RexSplodeRenderer.java",
+          "src/main/resources/assets/invincible/models/item/rex_splode_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "RexSplodeSuit",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode_suit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/item/RexSplodeSuitItem.java",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_helmet.json",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_leggings.json",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_boots.json"
+        ]
+      },
+      "path": "~/Item"
     }
   ],
   "variable_elements": [
@@ -6220,13 +6254,15 @@
       "InvincibleBlueSuit",
       "Omniman",
       "OmniManSuit",
-      "Viltrumite",
-      "FlaxanSoldier",
-      "MaulerSuit",
       "Mauler",
-      "FlaxanArmor",
+      "MaulerSuit",
+      "RexSplode",
+      "RexSplodeSuit",
+      "FlaxanSoldier",
       "FlaxanGunman",
-      "FlaxanGun"
+      "FlaxanArmor",
+      "FlaxanGun",
+      "Viltrumite"
     ]
   },
   "language_map": {
@@ -6248,6 +6284,7 @@
       "key.invincible.toggle_heavy_punch": "Toggle Special",
       "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Boots (Blue)",
       "death.attack.phase": "%1$s was blitzed",
+      "entity.invincible.rex_splode": "Rex-Splode",
       "item.invincible.tutorial": "Tutorial",
       "effect.invincible.slowed": "Slowed",
       "entity.invincible.mauler": "Mauler",
@@ -6301,7 +6338,10 @@
       "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
       "subtitles.web": "",
       "key.invincible.use_ability_5": "Ability 5",
+      "item.invincible.rex_splode_suit_boots": "Rex-Splode\u0027s Boots",
+      "item.invincible.rex_splode_suit_helmet": "Rex-Splode\u0027s Mask",
       "effect.invincible.hyper_sonic_burst_tick": "Hyper Sonic Burst Tick",
+      "item.invincible.rex_splode_suit_chestplate": "Rex-Splode\u0027s Suit",
       "item.invincible.flaxan_armor_chestplate": "Flaxan Chestplate",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "item.invincible.viltrumite_spawn_egg": "Viltrumite Spawn Egg",
@@ -6310,8 +6350,10 @@
       "gui.invincible.book_picker.button_viltrumite": "Viltrumite",
       "effect.invincible.backwards_tumble": "Backwards Tumble",
       "gui.invincible.book_picker.tooltip_human": "Human",
+      "item.invincible.rex_splode_spawn_egg": "Rex-Splode Spawn Egg",
       "effect.invincible.destruction_active_burst": "Destruction Active Burst",
       "gui.invincible.book_picker.label_ability_selection": "Ability Selection",
+      "item.invincible.rex_splode_suit_leggings": "Rex-Splode\u0027s Pants",
       "subtitles.takeoff": "",
       "effect.invincible.smoke_circle_expanding": "Smoke Circle Expanding",
       "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",

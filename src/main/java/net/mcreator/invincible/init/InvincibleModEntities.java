@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.invincible.entity.WebLineEntity;
 import net.mcreator.invincible.entity.ViltrumiteEntity;
 import net.mcreator.invincible.entity.SonicClapEntity;
+import net.mcreator.invincible.entity.RexSplodeEntity;
 import net.mcreator.invincible.entity.PastImageEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
 import net.mcreator.invincible.entity.MaulerEntity;
@@ -67,7 +68,7 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<MaulerEntity>> MAULER = register("mauler",
 			EntityType.Builder.<MaulerEntity>of(MaulerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaulerEntity::new)
 
-					.sized(1f, 2.5f));
+					.sized(1f, 3f));
 	public static final RegistryObject<EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal", EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanPortalEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FlaxanGunmanEntity>> FLAXAN_GUNMAN = register("flaxan_gunman",
@@ -82,6 +83,10 @@ public class InvincibleModEntities {
 			EntityType.Builder.<ExplosionSmallEntity>of(ExplosionSmallEntity::new, MobCategory.MISC).setCustomClientFactory(ExplosionSmallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FireworkExplosionEntity>> FIREWORK_EXPLOSION = register("firework_explosion", EntityType.Builder.<FireworkExplosionEntity>of(FireworkExplosionEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireworkExplosionEntity::new).fireImmune().sized(0.5f, 1f));
+	public static final RegistryObject<EntityType<RexSplodeEntity>> REX_SPLODE = register("rex_splode",
+			EntityType.Builder.<RexSplodeEntity>of(RexSplodeEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RexSplodeEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -104,6 +109,7 @@ public class InvincibleModEntities {
 			FlaxanPortalEntity.init();
 			FlaxanGunmanEntity.init();
 			FireworkExplosionEntity.init();
+			RexSplodeEntity.init();
 		});
 	}
 
@@ -121,5 +127,6 @@ public class InvincibleModEntities {
 		event.put(FLAXAN_PORTAL.get(), FlaxanPortalEntity.createAttributes().build());
 		event.put(FLAXAN_GUNMAN.get(), FlaxanGunmanEntity.createAttributes().build());
 		event.put(FIREWORK_EXPLOSION.get(), FireworkExplosionEntity.createAttributes().build());
+		event.put(REX_SPLODE.get(), RexSplodeEntity.createAttributes().build());
 	}
 }
