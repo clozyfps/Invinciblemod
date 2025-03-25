@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.invincible.client.particle.WebParticleParticle;
 import net.mcreator.invincible.client.particle.ShockwaveParticle;
 import net.mcreator.invincible.client.particle.ShockwaveBigParticle;
+import net.mcreator.invincible.client.particle.ExplodeParticle;
 import net.mcreator.invincible.client.particle.ElectricityParticleParticle;
 import net.mcreator.invincible.client.particle.CustomSmokeParticle;
 import net.mcreator.invincible.client.particle.CounterParticleParticle;
@@ -28,5 +29,6 @@ public class InvincibleModParticles {
 		event.registerSpriteSet(InvincibleModParticleTypes.ELECTRICITY_PARTICLE.get(), ElectricityParticleParticle::provider);
 		event.registerSpriteSet(InvincibleModParticleTypes.WEB_PARTICLE.get(), WebParticleParticle::provider);
 		event.registerSpriteSet(InvincibleModParticleTypes.CUSTOM_SMOKE.get(), CustomSmokeParticle::provider);
+		event.registerSpriteSet(InvincibleModParticleTypes.EXPLODE.get(), ExplodeParticle::provider);
 	}
 }

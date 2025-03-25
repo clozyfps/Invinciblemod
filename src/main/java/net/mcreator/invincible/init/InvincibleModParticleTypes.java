@@ -22,4 +22,5 @@ public class InvincibleModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> ELECTRICITY_PARTICLE = REGISTRY.register("electricity_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> WEB_PARTICLE = REGISTRY.register("web_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> CUSTOM_SMOKE = REGISTRY.register("custom_smoke", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> EXPLODE = REGISTRY.register("explode", () -> new SimpleParticleType(true));
 }

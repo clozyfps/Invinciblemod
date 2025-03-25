@@ -56,6 +56,8 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_spider"), mouseX, mouseY);
 		if (mouseX > leftPos + 27 && mouseX < leftPos + 49 && mouseY > topPos + -47 && mouseY < topPos + -25)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_explode"), mouseX, mouseY);
+		if (mouseX > leftPos + 53 && mouseX < leftPos + 75 && mouseY > topPos + -47 && mouseY < topPos + -25)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_cloning"), mouseX, mouseY);
 	}
 
 	@Override
@@ -78,6 +80,8 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 		guiGraphics.blit(new ResourceLocation("invincible:textures/screens/slot.png"), this.leftPos + 27, this.topPos + -47, 0, 0, 22, 22, 22, 22);
 
 		guiGraphics.blit(new ResourceLocation("invincible:textures/screens/slot.png"), this.leftPos + 53, this.topPos + -47, 0, 0, 22, 22, 22, 22);
+
+		guiGraphics.blit(new ResourceLocation("invincible:textures/screens/icon_cloning.png"), this.leftPos + 56, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

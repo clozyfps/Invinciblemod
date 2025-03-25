@@ -5443,10 +5443,271 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
       "path": "~/Procedures/Races/Explode"
+    },
+    {
+      "name": "Explode",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/particles/explode.json",
+          "src/main/java/net/mcreator/invincible/client/particle/ExplodeParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ExplosionLarge",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_large",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/ExplosionLargeEntity.java"
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "LargeExplosionHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "large_explosion_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/LargeExplosionHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "ExplosionFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ExplosionFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "ExplosionFlyingTickSmall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_flying_tick_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ExplosionFlyingTickSmallProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "SmallExplosionHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_explosion_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SmallExplosionHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "ExplosionSmall",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/ExplosionSmallEntity.java"
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "FireworkExplosion",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_explosion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/FireworkExplosionEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/FireworkExplosionRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Util"
+    },
+    {
+      "name": "FireworkExplosionTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_explosion_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FireworkExplosionTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
     }
   ],
   "variable_elements": [
@@ -5928,7 +6189,9 @@
       "EntityTextDisplay",
       "EntityTNTPrimed",
       "EntityTrident",
-      "EntityWitherSkull"
+      "EntityWitherSkull",
+      "CUSTOM:ExplosionSmall",
+      "CUSTOM:ExplosionLarge"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.STONE#0",
@@ -5985,8 +6248,8 @@
       "key.invincible.toggle_heavy_punch": "Toggle Special",
       "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Boots (Blue)",
       "death.attack.phase": "%1$s was blitzed",
-      "effect.invincible.slowed": "Slowed",
       "item.invincible.tutorial": "Tutorial",
+      "effect.invincible.slowed": "Slowed",
       "entity.invincible.mauler": "Mauler",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
       "item.invincible.flaxan_gun": "Flaxan Gun",
@@ -6003,12 +6266,14 @@
       "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
       "item.invincible.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
       "key.invincible.fly": "Fly",
-      "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "effect.invincible.grab_cooldown": "Grab Cooldown",
+      "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
+      "gui.invincible.book_picker.tooltip_cloning": "Cloning (WIP)",
       "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
       "effect.invincible.hyper_sonic": "Hyper Sonic",
       "item.invincible.mauler_spawn_egg": "Mauler Spawn Egg",
       "subtitles.speedfollowup": "",
+      "entity.invincible.firework_explosion": "Firework Explosion",
       "subtitles.powerfulpunch2": "",
       "item.invincible.invincible_suit_helmet": "Invincible\u0027s Mask",
       "item.invincible.invincible_blue_suit_helmet": "Invincible\u0027s Mask (Blue)",

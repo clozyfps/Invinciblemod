@@ -50,6 +50,8 @@
     "text_display",
     "tnt",
     "trident",
-    "wither_skull"
+    "wither_skull",
+    "invincible:explosion_small",
+    "invincible:explosion_large"
   ]
 }

@@ -106,7 +106,7 @@ public class UseAbilityKey1Procedure {
 					});
 				}
 			}
-			ExplodeMovesProcedure.execute(entity);
+			ExplodeMovesProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

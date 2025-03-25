@@ -251,6 +251,30 @@
           "y": 73,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_cloning.png",
+          "use1Xscale": false,
+          "x": 270,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cloning",
+          "text": {
+            "fixedValue": "Cloning (WIP)"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 267,
+          "y": 73,
+          "locked": true
+        }
       }
     ],
     "gridSettings": {

@@ -55,7 +55,6 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> COMBO_STILL = REGISTRY.register("combo_still", () -> new ComboStillMobEffect());
 	public static final RegistryObject<MobEffect> GRABBING_ACTIVE = REGISTRY.register("grabbing_active", () -> new GrabbingActiveMobEffect());
 	public static final RegistryObject<MobEffect> GRABBED = REGISTRY.register("grabbed", () -> new GrabbedMobEffect());
-	public static final RegistryObject<MobEffect> COOLDOWN = REGISTRY.register("cooldown", () -> new CooldownMobEffect());
 	public static final RegistryObject<MobEffect> AFTER_IMAGES = REGISTRY.register("after_images", () -> new AfterImagesMobEffect());
 	public static final RegistryObject<MobEffect> ACTIVE_BURST = REGISTRY.register("active_burst", () -> new ActiveBurstMobEffect());
 	public static final RegistryObject<MobEffect> IMPACT_FRAME_POTION = REGISTRY.register("impact_frame_potion", () -> new ImpactFramePotionMobEffect());
