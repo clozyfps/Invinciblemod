@@ -50,8 +50,8 @@ public class ViltrumiteMobPunchProcedure {
 		double vecY = 0;
 		double vecX = 0;
 		double magnitude = 0;
-		if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:spacemobs")))) {
-			if (Math.random() < 0.5) {
+		if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:spacemob")))) {
+			if (Math.random() < 0.8) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.POINT_DESTRUCTION.get(), 50, 0));
 				entity.getPersistentData().putString("target", (sourceentity.getDisplayName().getString()));
@@ -74,7 +74,7 @@ public class ViltrumiteMobPunchProcedure {
 				vecY = vecY * 2;
 				vecZ = vecZ * (3 - (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense / 7);
 				entity.push(vecX, vecY, vecZ);
-				InvincibleMod.queueServerWork(5, () -> {
+				InvincibleMod.queueServerWork(15, () -> {
 					if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.VILTRUMITE_NPC_FOLLOW_UP_TRIGGER.get(), 20, 0));
 				});

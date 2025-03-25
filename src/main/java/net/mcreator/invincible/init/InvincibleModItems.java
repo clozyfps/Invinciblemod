@@ -55,11 +55,11 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> TUTORIAL = REGISTRY.register("tutorial", () -> new TutorialItem());
 	public static final RegistryObject<Item> FLAXAN_GUNMAN_SPAWN_EGG = REGISTRY.register("flaxan_gunman_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.FLAXAN_GUNMAN, -1574407, -9849256, new Item.Properties()));
 	public static final RegistryObject<Item> FLAXAN_GUN = REGISTRY.register("flaxan_gun", () -> new FlaxanGunItem());
-	public static final RegistryObject<Item> REX_SPLODE_SPAWN_EGG = REGISTRY.register("rex_splode_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.REX_SPLODE, -2103165, -6602959, new Item.Properties()));
 	public static final RegistryObject<Item> REX_SPLODE_SUIT_HELMET = REGISTRY.register("rex_splode_suit_helmet", () -> new RexSplodeSuitItem.Helmet());
 	public static final RegistryObject<Item> REX_SPLODE_SUIT_CHESTPLATE = REGISTRY.register("rex_splode_suit_chestplate", () -> new RexSplodeSuitItem.Chestplate());
 	public static final RegistryObject<Item> REX_SPLODE_SUIT_LEGGINGS = REGISTRY.register("rex_splode_suit_leggings", () -> new RexSplodeSuitItem.Leggings());
 	public static final RegistryObject<Item> REX_SPLODE_SUIT_BOOTS = REGISTRY.register("rex_splode_suit_boots", () -> new RexSplodeSuitItem.Boots());
+	public static final RegistryObject<Item> REX_SPLODE_SPAWN_EGG = REGISTRY.register("rex_splode_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.REX_SPLODE, -2103165, -6602959, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

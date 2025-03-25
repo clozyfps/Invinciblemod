@@ -47,5 +47,6 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.EXPLOSION_SMALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.FIREWORK_EXPLOSION.get(), FireworkExplosionRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.REX_SPLODE.get(), RexSplodeRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.KNOCKBACK_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

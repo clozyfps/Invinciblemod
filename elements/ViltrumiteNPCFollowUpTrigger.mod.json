@@ -18,6 +18,9 @@
     "modifiers": [],
     "onStarted": {
       "name": "ViltrumiteNPCFollowUpTriggerEffectStartedapplied"
+    },
+    "onActiveTick": {
+      "name": "ViltrumiteNPCFollowUpTriggerOnEffectActiveTick"
     }
   }
 }

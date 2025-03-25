@@ -24,6 +24,7 @@ import net.mcreator.invincible.entity.PastImageEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
 import net.mcreator.invincible.entity.MaulerEntity;
 import net.mcreator.invincible.entity.MarsProximityEntity;
+import net.mcreator.invincible.entity.KnockbackProjectileEntity;
 import net.mcreator.invincible.entity.InvincibleMarkEntity;
 import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
@@ -55,7 +56,7 @@ public class InvincibleModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<WebLineEntity>> WEB_LINE = register("web_line",
 			EntityType.Builder.<WebLineEntity>of(WebLineEntity::new, MobCategory.MISC).setCustomClientFactory(WebLineEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<InvincibleMarkEntity>> INVINCIBLE_MARK = register("invincible_mark", EntityType.Builder.<InvincibleMarkEntity>of(InvincibleMarkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+	public static final RegistryObject<EntityType<InvincibleMarkEntity>> INVINCIBLE_MARK = register("invincible_mark", EntityType.Builder.<InvincibleMarkEntity>of(InvincibleMarkEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvincibleMarkEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<InvincibleBlueMarkEntity>> INVINCIBLE_BLUE_MARK = register("invincible_blue_mark", EntityType.Builder.<InvincibleBlueMarkEntity>of(InvincibleBlueMarkEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvincibleBlueMarkEntity::new).fireImmune().sized(0.6f, 1.8f));
@@ -87,6 +88,8 @@ public class InvincibleModEntities {
 			EntityType.Builder.<RexSplodeEntity>of(RexSplodeEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RexSplodeEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<KnockbackProjectileEntity>> KNOCKBACK_PROJECTILE = register("knockback_projectile", EntityType.Builder.<KnockbackProjectileEntity>of(KnockbackProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(KnockbackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

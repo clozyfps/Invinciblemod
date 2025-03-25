@@ -1,17 +1,10 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
-
-import net.mcreator.invincible.init.InvincibleModParticleTypes;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ExplosionFlyingTickSmallProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
 			return;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.EXPLODE.get()), x, y, z, 1, 0.1, 0.1, 0.1, 0);
@@ -22,7 +15,6 @@ public class ExplosionFlyingTickSmallProcedure {
 			immediatesourceentity.getPersistentData().putDouble("explosionTimer", (immediatesourceentity.getPersistentData().getDouble("explosionTimer") - 1));
 		}
 		if (immediatesourceentity.getPersistentData().getDouble("explosionTimer") == 1) {
-			SmallExplosionHitProcedure.execute(world, x, y, z, entity, immediatesourceentity);
 		}
 	}
 }

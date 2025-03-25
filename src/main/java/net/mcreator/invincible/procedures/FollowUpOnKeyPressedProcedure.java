@@ -38,6 +38,8 @@ public class FollowUpOnKeyPressedProcedure {
 						if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
 							{
 								double _setval = 20;
 								entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -45,8 +47,6 @@ public class FollowUpOnKeyPressedProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.COMBO_STILL.get(), 25, 0, false, false));
 							if (entity.getXRot() >= 70) {
 								{
 									Entity _ent = entity;
