@@ -3651,10 +3651,10 @@
       "registry_name": "invincible_mark",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
-          "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
           "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
+          "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
           "src/main/resources/data/invincible/forge/biome_modifier/invincible_mark_biome_modifier.json"
         ]
       },
@@ -4480,7 +4480,7 @@
           }
         ]
       },
-      "path": "~/Potions"
+      "path": "~/Potions/Procedure"
     },
     {
       "name": "ThrowPlayer",
@@ -5447,6 +5447,126 @@
         ]
       },
       "path": "~/Procedures/Races/Explode"
+    },
+    {
+      "name": "ViltrumiteFlightMob",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_flight_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteFlightMobProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ViltrumiteNPCFollowUpTriggerOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_npc_follow_up_trigger_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ViltrumiteNPCFollowUpTriggerOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "KnockbackProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knockback_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/KnockbackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "KnockbackProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knockback_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/KnockbackProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "Finisher",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finisher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/FinisherProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [

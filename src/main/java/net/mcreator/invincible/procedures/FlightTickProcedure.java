@@ -67,8 +67,10 @@ public class FlightTickProcedure {
 				vecY = entity.getLookAngle().y / magnitude;
 				vecZ = entity.getLookAngle().z / magnitude;
 				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 25) {
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+					if (entity.isSprinting()) {
+						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+					}
 				}
 				if (entity.isShiftKeyDown()) {
 					if (world.isClientSide()) {
@@ -93,12 +95,12 @@ public class FlightTickProcedure {
 					_player.onUpdateAbilities();
 				}
 				if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), InputConstants.KEY_W)) {
-					if ((entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
+					if ((entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
 						vecX = vecX * 0.5;
 						vecY = vecY * 1;
 						vecZ = vecZ * 0.5;
 						entity.push(vecX, vecY, vecZ);
-						if ((entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+						if ((entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
 							if (!(entity.getXRot() == 90 && entity.getXRot() == -90)) {
 								if (world.isClientSide()) {
 									SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
@@ -123,7 +125,7 @@ public class FlightTickProcedure {
 						vecY = vecY * 0.5;
 						vecZ = vecZ * 0.1;
 						entity.push(vecX, vecY, vecZ);
-						if ((entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+						if ((entity instanceof LivingEntity _livEnt25 && _livEnt25.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
 							if (!(entity.getXRot() == 90 && entity.getXRot() == -90)) {
 								if (world.isClientSide()) {
 									SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
@@ -152,7 +154,7 @@ public class FlightTickProcedure {
 				}
 			}
 		}
-		if ((entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
+		if ((entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
 			if (world.isClientSide()) {
 				SetupAnimationsProcedure.setAnimationClientside((Player) entity, "grab", true);
 			}

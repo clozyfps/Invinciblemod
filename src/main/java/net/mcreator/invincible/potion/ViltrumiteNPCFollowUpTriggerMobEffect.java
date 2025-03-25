@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import net.mcreator.invincible.procedures.ViltrumiteNPCFollowUpTriggerOnEffectActiveTickProcedure;
 import net.mcreator.invincible.procedures.ViltrumiteNPCFollowUpTriggerEffectStartedappliedProcedure;
 
 import java.util.List;
@@ -32,6 +33,11 @@ public class ViltrumiteNPCFollowUpTriggerMobEffect extends MobEffect {
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.addAttributeModifiers(entity, attributeMap, amplifier);
 		ViltrumiteNPCFollowUpTriggerEffectStartedappliedProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		ViltrumiteNPCFollowUpTriggerOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

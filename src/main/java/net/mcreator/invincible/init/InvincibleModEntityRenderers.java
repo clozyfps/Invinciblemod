@@ -41,5 +41,6 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.FLAXAN_PORTAL.get(), FlaxanPortalRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.FLAXAN_GUNMAN.get(), FlaxanGunmanRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.BLASTER_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.KNOCKBACK_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }
