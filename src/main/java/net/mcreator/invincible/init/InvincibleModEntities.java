@@ -29,6 +29,9 @@ import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
+import net.mcreator.invincible.entity.FireworkExplosionEntity;
+import net.mcreator.invincible.entity.ExplosionSmallEntity;
+import net.mcreator.invincible.entity.ExplosionLargeEntity;
 import net.mcreator.invincible.entity.BlasterProjectileEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
@@ -76,6 +79,12 @@ public class InvincibleModEntities {
 			.setCustomClientFactory(BlasterProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<KnockbackProjectileEntity>> KNOCKBACK_PROJECTILE = register("knockback_projectile", EntityType.Builder.<KnockbackProjectileEntity>of(KnockbackProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(KnockbackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FireworkExplosionEntity>> FIREWORK_EXPLOSION = register("firework_explosion", EntityType.Builder.<FireworkExplosionEntity>of(FireworkExplosionEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireworkExplosionEntity::new).fireImmune().sized(0.5f, 1f));
+	public static final RegistryObject<EntityType<ExplosionSmallEntity>> EXPLOSION_SMALL = register("explosion_small",
+			EntityType.Builder.<ExplosionSmallEntity>of(ExplosionSmallEntity::new, MobCategory.MISC).setCustomClientFactory(ExplosionSmallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ExplosionLargeEntity>> EXPLOSION_LARGE = register("explosion_large",
+			EntityType.Builder.<ExplosionLargeEntity>of(ExplosionLargeEntity::new, MobCategory.MISC).setCustomClientFactory(ExplosionLargeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -97,6 +106,7 @@ public class InvincibleModEntities {
 			MaulerEntity.init();
 			FlaxanPortalEntity.init();
 			FlaxanGunmanEntity.init();
+			FireworkExplosionEntity.init();
 		});
 	}
 
@@ -113,5 +123,6 @@ public class InvincibleModEntities {
 		event.put(MAULER.get(), MaulerEntity.createAttributes().build());
 		event.put(FLAXAN_PORTAL.get(), FlaxanPortalEntity.createAttributes().build());
 		event.put(FLAXAN_GUNMAN.get(), FlaxanGunmanEntity.createAttributes().build());
+		event.put(FIREWORK_EXPLOSION.get(), FireworkExplosionEntity.createAttributes().build());
 	}
 }

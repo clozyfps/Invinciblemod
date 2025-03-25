@@ -91,7 +91,7 @@ public class UseAbilityKey5Procedure {
 		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Explode")) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 1) {
 				{
-					String _setval = "";
+					String _setval = "Detonate";
 					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.MoveSelected = _setval;
 						capability.syncPlayerVariables(entity);
@@ -106,7 +106,7 @@ public class UseAbilityKey5Procedure {
 					});
 				}
 			}
-			ExplodeMovesProcedure.execute(entity);
+			ExplodeMovesProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }
