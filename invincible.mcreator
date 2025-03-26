@@ -6099,6 +6099,81 @@
         ]
       },
       "path": "~/Procedures/Races/Speedster"
+    },
+    {
+      "name": "TransferProjectileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transfer_projectile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TransferProjectileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "TransferProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transfer_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/TransferProjectileEntity.java"
+        ]
+      },
+      "path": "~/Projectile"
+    },
+    {
+      "name": "ReplicateRespawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replicate_respawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReplicateRespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Replicate"
     }
   ],
   "variable_elements": [

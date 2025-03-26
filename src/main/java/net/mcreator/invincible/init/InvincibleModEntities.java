@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.invincible.entity.WebLineEntity;
 import net.mcreator.invincible.entity.ViltrumiteEntity;
+import net.mcreator.invincible.entity.TransferProjectileEntity;
 import net.mcreator.invincible.entity.SonicClapEntity;
 import net.mcreator.invincible.entity.RexSplodeEntity;
 import net.mcreator.invincible.entity.PastImageEntity;
@@ -95,6 +96,8 @@ public class InvincibleModEntities {
 			EntityType.Builder.<CloneEntity>of(CloneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CloneEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TransferProjectileEntity>> TRANSFER_PROJECTILE = register("transfer_projectile", EntityType.Builder.<TransferProjectileEntity>of(TransferProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(TransferProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

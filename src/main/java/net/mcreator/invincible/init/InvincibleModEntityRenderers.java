@@ -50,5 +50,6 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.REX_SPLODE.get(), RexSplodeRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.CLONE.get(), CloneRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.TRANSFER_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

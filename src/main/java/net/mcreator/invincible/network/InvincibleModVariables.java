@@ -209,6 +209,8 @@ public class InvincibleModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "invincible_mapvars";
+		public boolean DaylightChanged = false;
+		public boolean FireDamageChanged = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -220,10 +222,14 @@ public class InvincibleModVariables {
 			if (nbt == null) {
 				nbt = save(new CompoundTag());
 			}
+			DaylightChanged = nbt.getBoolean("DaylightChanged");
+			FireDamageChanged = nbt.getBoolean("FireDamageChanged");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
+			nbt.putBoolean("DaylightChanged", DaylightChanged);
+			nbt.putBoolean("FireDamageChanged", FireDamageChanged);
 			return nbt;
 		}
 

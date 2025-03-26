@@ -3,22 +3,23 @@ package net.mcreator.invincible.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.invincible.network.InvincibleModVariables;
 import net.mcreator.invincible.init.InvincibleModEntities;
+import net.mcreator.invincible.entity.TransferProjectileEntity;
 import net.mcreator.invincible.entity.CloneEntity;
 
-import java.util.List;
 import java.util.Comparator;
 
 public class ReplicateMovesProcedure {
@@ -30,7 +31,7 @@ public class ReplicateMovesProcedure {
 					.getBlockState(new BlockPos(
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
-							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()))
+							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()))
 					.canOcclude()) {
 				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Cooldown1 == 0) {
 					{
@@ -67,32 +68,30 @@ public class ReplicateMovesProcedure {
 		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).MoveSelected).equals("Transfer")) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Cooldown2 == 0) {
 				{
+					Entity _shootFrom = entity;
+					Level projectileLevel = _shootFrom.level();
+					if (!projectileLevel.isClientSide()) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new TransferProjectileEntity(InvincibleModEntities.TRANSFER_PROJECTILE.get(), level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 0, 0);
+						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 6, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+				}
+				{
 					double _setval = 40;
 					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Cooldown2 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
-				}
-				{
-					final Vec3 _center = new Vec3(
-							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
-							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
-						if (entityiterator instanceof CloneEntity) {
-							if (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) {
-								{
-									Entity _ent = entity;
-									_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
-									if (_ent instanceof ServerPlayer _serverPlayer)
-										_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
-								}
-								if (!entityiterator.level().isClientSide())
-									entityiterator.discard();
-							}
-						}
-					}
 				}
 			}
 		}
