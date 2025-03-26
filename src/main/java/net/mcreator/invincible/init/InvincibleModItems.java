@@ -62,13 +62,13 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> REX_SPLODE_SUIT_LEGGINGS = REGISTRY.register("rex_splode_suit_leggings", () -> new RexSplodeSuitItem.Leggings());
 	public static final RegistryObject<Item> REX_SPLODE_SUIT_BOOTS = REGISTRY.register("rex_splode_suit_boots", () -> new RexSplodeSuitItem.Boots());
 	public static final RegistryObject<Item> REX_SPLODE_SPAWN_EGG = REGISTRY.register("rex_splode_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.REX_SPLODE, -2103165, -6602959, new Item.Properties()));
-	public static final RegistryObject<Item> DUPLI_KATE_SUIT_CHESTPLATE = REGISTRY.register("dupli_kate_suit_chestplate", () -> new DupliKateSuitItem.Chestplate());
-	public static final RegistryObject<Item> DUPLI_KATE_SUIT_LEGGINGS = REGISTRY.register("dupli_kate_suit_leggings", () -> new DupliKateSuitItem.Leggings());
-	public static final RegistryObject<Item> DUPLI_KATE_SUIT_BOOTS = REGISTRY.register("dupli_kate_suit_boots", () -> new DupliKateSuitItem.Boots());
+	public static final RegistryObject<Item> DUPLI_KATE_SPAWN_EGG = REGISTRY.register("dupli_kate_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.DUPLI_KATE, -4081449, -13028264, new Item.Properties()));
 	public static final RegistryObject<Item> MULTI_PAUL_SUIT_CHESTPLATE = REGISTRY.register("multi_paul_suit_chestplate", () -> new MultiPaulSuitItem.Chestplate());
 	public static final RegistryObject<Item> MULTI_PAUL_SUIT_LEGGINGS = REGISTRY.register("multi_paul_suit_leggings", () -> new MultiPaulSuitItem.Leggings());
 	public static final RegistryObject<Item> MULTI_PAUL_SUIT_BOOTS = REGISTRY.register("multi_paul_suit_boots", () -> new MultiPaulSuitItem.Boots());
-	public static final RegistryObject<Item> DUPLI_KATE_SPAWN_EGG = REGISTRY.register("dupli_kate_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.DUPLI_KATE, -4081449, -13028264, new Item.Properties()));
+	public static final RegistryObject<Item> DUPLI_KATE_SUIT_CHESTPLATE = REGISTRY.register("dupli_kate_suit_chestplate", () -> new DupliKateSuitItem.Chestplate());
+	public static final RegistryObject<Item> DUPLI_KATE_SUIT_LEGGINGS = REGISTRY.register("dupli_kate_suit_leggings", () -> new DupliKateSuitItem.Leggings());
+	public static final RegistryObject<Item> DUPLI_KATE_SUIT_BOOTS = REGISTRY.register("dupli_kate_suit_boots", () -> new DupliKateSuitItem.Boots());
 	public static final RegistryObject<Item> MULTI_PAUL_SPAWN_EGG = REGISTRY.register("multi_paul_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MULTI_PAUL, -13028264, -4081449, new Item.Properties()));
 
 	// Start of user code block custom items
