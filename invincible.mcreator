@@ -5885,7 +5885,7 @@
     {
       "name": "ReplicateMoves",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "replicate_moves",
       "metadata": {
