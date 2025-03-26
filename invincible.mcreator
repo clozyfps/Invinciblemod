@@ -1309,7 +1309,7 @@
       "name": "AfterImage",
       "type": "livingentity",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "after_image",
       "metadata": {
         "files": [
@@ -3651,10 +3651,10 @@
       "registry_name": "invincible_mark",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
-          "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
           "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
+          "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
           "src/main/resources/data/invincible/forge/biome_modifier/invincible_mark_biome_modifier.json"
         ]
       },
@@ -3685,11 +3685,11 @@
       "registry_name": "invincible_blue_mark",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json",
-          "src/main/java/net/mcreator/invincible/entity/InvincibleBlueMarkEntity.java",
-          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
           "src/main/java/net/mcreator/invincible/client/renderer/InvincibleBlueMarkRenderer.java",
-          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json"
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
+          "src/main/java/net/mcreator/invincible/entity/InvincibleBlueMarkEntity.java",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json",
+          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -3702,11 +3702,11 @@
       "registry_name": "omniman",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/forge/biome_modifier/omniman_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/model/OmnimanModel.java",
-          "src/main/java/net/mcreator/invincible/entity/OmnimanEntity.java",
           "src/main/java/net/mcreator/invincible/client/renderer/OmnimanRenderer.java",
-          "src/main/resources/assets/invincible/models/item/omniman_spawn_egg.json"
+          "src/main/java/net/mcreator/invincible/entity/OmnimanEntity.java",
+          "src/main/resources/assets/invincible/models/item/omniman_spawn_egg.json",
+          "src/main/resources/data/invincible/forge/biome_modifier/omniman_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -3817,11 +3817,11 @@
       "registry_name": "flaxan_soldier",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/flaxan_soldier_biome_modifier.json",
-          "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
           "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java"
+          "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
         ]
       },
       "path": "~/Mobs"
@@ -3850,10 +3850,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/client/renderer/MaulerRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/MaulerModel.java",
+          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/MaulerEntity.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json",
-          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json"
+          "src/main/java/net/mcreator/invincible/entity/model/MaulerModel.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -4219,11 +4219,11 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
           "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java",
           "src/main/resources/assets/invincible/models/item/flaxan_gunman_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java"
+          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -5862,6 +5862,79 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "CloneOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clone_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CloneOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "ReplicateMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replicate_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReplicateMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Replicate"
+    },
+    {
+      "name": "SelectClone",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_clone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectCloneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -6390,9 +6463,9 @@
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
-      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
-      "gamerule.spaceexist": "Existance Of Space",
       "subtitles.grip": "",
+      "gamerule.spaceexist": "Existance Of Space",
+      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
       "key.invincible.follow_up": "Follow Up",
@@ -6402,8 +6475,9 @@
       "key.invincible.toggle_heavy_punch": "Toggle Special",
       "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Boots (Blue)",
       "death.attack.phase": "%1$s was blitzed",
-      "effect.invincible.slowed": "Slowed",
+      "entity.invincible.rex_splode": "Rex-Splode",
       "item.invincible.tutorial": "Tutorial",
+      "effect.invincible.slowed": "Slowed",
       "entity.invincible.mauler": "Mauler",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
       "item.invincible.flaxan_gun": "Flaxan Gun",
@@ -6413,8 +6487,8 @@
       "subtitles.explosion": "",
       "item_group.invincible.invincible_tab": "Invincible",
       "gui.invincible.book_picker.button_speedster": "Speedster WIP",
-      "subtitles.blaster": "",
       "item.invincible.test": "Test",
+      "subtitles.blaster": "",
       "biome.invincible.mars_biome": "Mars Biome",
       "gui.invincible.book_picker.tooltip_speedster": "Speedster (WIP)",
       "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
@@ -6422,7 +6496,7 @@
       "key.invincible.fly": "Fly",
       "effect.invincible.grab_cooldown": "Grab Cooldown",
       "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
-      "gui.invincible.book_picker.tooltip_cloning": "Cloning (WIP)",
+      "gui.invincible.book_picker.tooltip_cloning": "Cloning",
       "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
       "effect.invincible.hyper_sonic": "Hyper Sonic",
       "item.invincible.mauler_spawn_egg": "Mauler Spawn Egg",
@@ -6455,7 +6529,10 @@
       "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
       "subtitles.web": "",
       "key.invincible.use_ability_5": "Ability 5",
+      "item.invincible.rex_splode_suit_boots": "Rex-Splode\u0027s Boots",
+      "item.invincible.rex_splode_suit_helmet": "Rex-Splode\u0027s Mask",
       "effect.invincible.hyper_sonic_burst_tick": "Hyper Sonic Burst Tick",
+      "item.invincible.rex_splode_suit_chestplate": "Rex-Splode\u0027s Suit",
       "item.invincible.flaxan_armor_chestplate": "Flaxan Chestplate",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "item.invincible.viltrumite_spawn_egg": "Viltrumite Spawn Egg",
@@ -6464,8 +6541,10 @@
       "gui.invincible.book_picker.button_viltrumite": "Viltrumite",
       "effect.invincible.backwards_tumble": "Backwards Tumble",
       "gui.invincible.book_picker.tooltip_human": "Human",
+      "item.invincible.rex_splode_spawn_egg": "Rex-Splode Spawn Egg",
       "effect.invincible.destruction_active_burst": "Destruction Active Burst",
       "gui.invincible.book_picker.label_ability_selection": "Ability Selection",
+      "item.invincible.rex_splode_suit_leggings": "Rex-Splode\u0027s Pants",
       "subtitles.takeoff": "",
       "effect.invincible.smoke_circle_expanding": "Smoke Circle Expanding",
       "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",
@@ -6547,6 +6626,10 @@
               },
               {
                 "name": "Viltrumite",
+                "children": []
+              },
+              {
+                "name": "Replicate",
                 "children": []
               }
             ]

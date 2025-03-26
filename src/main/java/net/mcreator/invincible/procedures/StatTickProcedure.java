@@ -109,6 +109,15 @@ public class StatTickProcedure {
 					});
 				}
 			}
+			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Replicate")) {
+				{
+					double _setval = 2;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MaximumMoves = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength > 100) {
 				{
 					double _setval = 100;
