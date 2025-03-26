@@ -1,0 +1,11 @@
+{
+  "_fv": 73,
+  "_type": "tab",
+  "definition": {
+    "name": "Invincible Items",
+    "icon": {
+      "value": "CUSTOM:FlaxanGun"
+    },
+    "showSearch": false
+  }
+}

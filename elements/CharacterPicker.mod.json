@@ -9,7 +9,11 @@
     "states": [],
     "name": "Character Picker",
     "rarity": "EPIC",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:InvincibleItemsTab"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
