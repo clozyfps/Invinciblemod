@@ -3651,10 +3651,10 @@
       "registry_name": "invincible_mark",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
           "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
           "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
           "src/main/resources/data/invincible/forge/biome_modifier/invincible_mark_biome_modifier.json"
         ]
       },
@@ -3685,11 +3685,11 @@
       "registry_name": "invincible_blue_mark",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleBlueMarkRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/InvincibleBlueMarkEntity.java",
-          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleBlueMarkRenderer.java",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3702,11 +3702,11 @@
       "registry_name": "omniman",
       "metadata": {
         "files": [
+          "src/main/resources/data/invincible/forge/biome_modifier/omniman_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/model/OmnimanModel.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/OmnimanRenderer.java",
           "src/main/java/net/mcreator/invincible/entity/OmnimanEntity.java",
-          "src/main/resources/assets/invincible/models/item/omniman_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/omniman_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/client/renderer/OmnimanRenderer.java",
+          "src/main/resources/assets/invincible/models/item/omniman_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3817,11 +3817,11 @@
       "registry_name": "flaxan_soldier",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/flaxan_soldier_biome_modifier.json",
-          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
+          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -3850,10 +3850,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/client/renderer/MaulerRenderer.java",
-          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/entity/MaulerEntity.java",
           "src/main/java/net/mcreator/invincible/entity/model/MaulerModel.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/MaulerEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json",
+          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -4219,11 +4219,11 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
           "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java",
+          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json",
           "src/main/resources/assets/invincible/models/item/flaxan_gunman_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java"
         ]
       },
       "path": "~/Mobs"
@@ -5828,6 +5828,40 @@
         ]
       },
       "path": "~/Projectile/Procedures"
+    },
+    {
+      "name": "RexSplodeSuit",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode_suit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_helmet.json",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_leggings.json",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_chestplate.json",
+          "src/main/java/net/mcreator/invincible/item/RexSplodeSuitItem.java",
+          "src/main/resources/assets/invincible/models/item/rex_splode_suit_boots.json"
+        ]
+      },
+      "path": "~/Item"
+    },
+    {
+      "name": "RexSplode",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/RexSplodeModel.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/rex_splode_biome_modifier.json",
+          "src/main/resources/assets/invincible/models/item/rex_splode_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/RexSplodeRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/RexSplodeEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -6344,7 +6378,9 @@
       "Mauler",
       "FlaxanArmor",
       "FlaxanGunman",
-      "FlaxanGun"
+      "FlaxanGun",
+      "RexSplodeSuit",
+      "RexSplode"
     ]
   },
   "language_map": {

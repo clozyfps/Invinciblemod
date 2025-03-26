@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.invincible.client.renderer.ViltrumiteRenderer;
+import net.mcreator.invincible.client.renderer.RexSplodeRenderer;
 import net.mcreator.invincible.client.renderer.PastImageRenderer;
 import net.mcreator.invincible.client.renderer.OmnimanRenderer;
 import net.mcreator.invincible.client.renderer.MaulerRenderer;
@@ -46,5 +47,6 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.FIREWORK_EXPLOSION.get(), FireworkExplosionRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.EXPLOSION_SMALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.REX_SPLODE.get(), RexSplodeRenderer::new);
 	}
 }

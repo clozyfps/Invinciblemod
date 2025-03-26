@@ -42,5 +42,10 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.FLAXAN_ARMOR_BOOTS.get());
 				tabData.accept(InvincibleModItems.FLAXAN_GUNMAN_SPAWN_EGG.get());
 				tabData.accept(InvincibleModItems.FLAXAN_GUN.get());
+				tabData.accept(InvincibleModItems.REX_SPLODE_SUIT_HELMET.get());
+				tabData.accept(InvincibleModItems.REX_SPLODE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.REX_SPLODE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.REX_SPLODE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.REX_SPLODE_SPAWN_EGG.get());
 			}).build());
 }
