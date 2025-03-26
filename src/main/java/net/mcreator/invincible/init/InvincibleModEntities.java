@@ -33,6 +33,7 @@ import net.mcreator.invincible.entity.FlaxanGunmanEntity;
 import net.mcreator.invincible.entity.FireworkExplosionEntity;
 import net.mcreator.invincible.entity.ExplosionSmallEntity;
 import net.mcreator.invincible.entity.ExplosionLargeEntity;
+import net.mcreator.invincible.entity.CloneEntity;
 import net.mcreator.invincible.entity.BlasterProjectileEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
@@ -90,6 +91,10 @@ public class InvincibleModEntities {
 			EntityType.Builder.<RexSplodeEntity>of(RexSplodeEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RexSplodeEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CloneEntity>> CLONE = register("clone",
+			EntityType.Builder.<CloneEntity>of(CloneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CloneEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -113,6 +118,7 @@ public class InvincibleModEntities {
 			FlaxanGunmanEntity.init();
 			FireworkExplosionEntity.init();
 			RexSplodeEntity.init();
+			CloneEntity.init();
 		});
 	}
 
@@ -131,5 +137,6 @@ public class InvincibleModEntities {
 		event.put(FLAXAN_GUNMAN.get(), FlaxanGunmanEntity.createAttributes().build());
 		event.put(FIREWORK_EXPLOSION.get(), FireworkExplosionEntity.createAttributes().build());
 		event.put(REX_SPLODE.get(), RexSplodeEntity.createAttributes().build());
+		event.put(CLONE.get(), CloneEntity.createAttributes().build());
 	}
 }

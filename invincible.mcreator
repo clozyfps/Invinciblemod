@@ -3817,11 +3817,11 @@
       "registry_name": "flaxan_soldier",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/flaxan_soldier_biome_modifier.json",
-          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
+          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -4219,11 +4219,11 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
           "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java",
+          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json",
           "src/main/resources/assets/invincible/models/item/flaxan_gunman_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java"
         ]
       },
       "path": "~/Mobs"
@@ -5885,7 +5885,7 @@
     {
       "name": "ReplicateMoves",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "replicate_moves",
       "metadata": {
@@ -5935,6 +5935,20 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Clone",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "clone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/renderer/CloneRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/CloneEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Util"
     }
   ],
   "variable_elements": [
@@ -6445,15 +6459,15 @@
       "InvincibleBlueSuit",
       "Omniman",
       "OmniManSuit",
-      "Viltrumite",
-      "FlaxanSoldier",
-      "MaulerSuit",
-      "Mauler",
-      "FlaxanArmor",
-      "FlaxanGunman",
-      "FlaxanGun",
+      "RexSplode",
       "RexSplodeSuit",
-      "RexSplode"
+      "Mauler",
+      "MaulerSuit",
+      "FlaxanSoldier",
+      "FlaxanGunman",
+      "FlaxanArmor",
+      "FlaxanGun",
+      "Viltrumite"
     ]
   },
   "language_map": {
@@ -6577,6 +6591,7 @@
       "effect.invincible.point_destruction": "Point Destruction",
       "item.invincible.omniman_spawn_egg": "Omni-Man Spawn Egg",
       "effect.invincible.smoking": "Smoking",
+      "entity.invincible.clone": "Clone",
       "item.invincible.invincible_suit_chestplate": "Invincible\u0027s Suit",
       "entity.invincible.viltrumite": "Viltrumite",
       "effect.invincible.flash_time": "Flash Time"
