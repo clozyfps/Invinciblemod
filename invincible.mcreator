@@ -4480,7 +4480,7 @@
           }
         ]
       },
-      "path": "~/Potions"
+      "path": "~/Potions/Procedure"
     },
     {
       "name": "ThrowPlayer",
@@ -5534,7 +5534,7 @@
           }
         ]
       },
-      "path": "~/Potions"
+      "path": "~/Potions/Procedure"
     },
     {
       "name": "KnockbackProjectile",
@@ -5949,6 +5949,156 @@
         ]
       },
       "path": "~/Mobs/Util"
+    },
+    {
+      "name": "TimeStopped",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stopped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/TimeStoppedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "StoppedTime",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stopped_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/StoppedTimeMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "StoppedTimeContinue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stopped_time_continue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/StoppedTimeContinueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "TimeStoppedFreeze",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stopped_freeze",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TimeStoppedFreezeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "TimeStoppedUnfreeze",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stopped_unfreeze",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TimeStoppedUnfreezeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedure"
+    },
+    {
+      "name": "TimeStop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TimeStopProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Speedster"
     }
   ],
   "variable_elements": [
@@ -6233,6 +6383,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0.0"
+    },
+    {
+      "name": "DaylightChanged",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "FireDamageChanged",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -6501,8 +6663,8 @@
       "subtitles.explosion": "",
       "item_group.invincible.invincible_tab": "Invincible",
       "gui.invincible.book_picker.button_speedster": "Speedster WIP",
-      "subtitles.blaster": "",
       "item.invincible.test": "Test",
+      "subtitles.blaster": "",
       "biome.invincible.mars_biome": "Mars Biome",
       "gui.invincible.book_picker.tooltip_speedster": "Speedster (WIP)",
       "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
@@ -6538,6 +6700,7 @@
       "key.invincible.use_ability_1": "Ability 1",
       "effect.invincible.grabbing_active": "Grabbing Active",
       "effect.invincible.destruction_active": "Destruction Active",
+      "effect.invincible.stopped_time": "Stopped Time",
       "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
       "entity.invincible.past_image": "Past Image",
       "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
@@ -6565,6 +6728,7 @@
       "effect.invincible.grabbed": "Grabbed",
       "item.invincible.invincible_blue_suit_chestplate": "Invincible\u0027s Suit (Blue)",
       "effect.invincible.mars_shader": "Mars Shader",
+      "effect.invincible.time_stopped": "Time Stopped",
       "entity.invincible.flaxan_gunman": "Flaxan Gunman",
       "gui.invincible.book_picker.label_ability_selection1": "Ability Selection",
       "effect.invincible.combo_still": "Combo Still",

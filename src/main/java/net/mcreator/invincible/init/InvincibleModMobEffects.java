@@ -11,8 +11,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.invincible.potion.ViltrumiteNPCFollowUpTriggerMobEffect;
+import net.mcreator.invincible.potion.TimeStoppedMobEffect;
 import net.mcreator.invincible.potion.ThrowPlayerMobEffect;
 import net.mcreator.invincible.potion.TakeoffEffectsMobEffect;
+import net.mcreator.invincible.potion.StoppedTimeMobEffect;
 import net.mcreator.invincible.potion.SmokingMobEffect;
 import net.mcreator.invincible.potion.SmokeCircleExpandingMobEffect;
 import net.mcreator.invincible.potion.SlowedMobEffect;
@@ -80,4 +82,6 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> HYPER_SONIC = REGISTRY.register("hyper_sonic", () -> new HyperSonicMobEffect());
 	public static final RegistryObject<MobEffect> HYPER_SONIC_BURST_TICK = REGISTRY.register("hyper_sonic_burst_tick", () -> new HyperSonicBurstTickMobEffect());
 	public static final RegistryObject<MobEffect> THROW_PLAYER = REGISTRY.register("throw_player", () -> new ThrowPlayerMobEffect());
+	public static final RegistryObject<MobEffect> TIME_STOPPED = REGISTRY.register("time_stopped", () -> new TimeStoppedMobEffect());
+	public static final RegistryObject<MobEffect> STOPPED_TIME = REGISTRY.register("stopped_time", () -> new StoppedTimeMobEffect());
 }
