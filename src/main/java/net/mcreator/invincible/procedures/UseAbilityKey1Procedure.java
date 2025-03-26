@@ -108,5 +108,25 @@ public class UseAbilityKey1Procedure {
 			}
 			ExplodeMovesProcedure.execute(world, x, y, z, entity);
 		}
+		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Replicate")) {
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 1) {
+				{
+					String _setval = "Clone";
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MoveSelected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 2) {
+				{
+					String _setval = "";
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MoveSelected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			ReplicateMovesProcedure.execute(world, x, y, z, entity);
+		}
 	}
 }
