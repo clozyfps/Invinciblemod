@@ -66,7 +66,7 @@ public class UseAbilityKey5Procedure {
 					});
 				}
 			}
-			SelectSpeedsterProcedure.execute(entity);
+			SpeedsterMovesProcedure.execute(world, x, y, z, entity);
 		}
 		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Spider")) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar == 1) {

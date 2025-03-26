@@ -1,0 +1,26 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Time Stopped",
+    "icon": "clock_00",
+    "color": {
+      "value": -154,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onActiveTick": {
+      "name": "TimeStoppedFreeze"
+    },
+    "onExpired": {
+      "name": "TimeStoppedUnfreeze"
+    }
+  }
+}
