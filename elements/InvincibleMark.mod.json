@@ -29,7 +29,7 @@
     },
     "creativeTabs": [
       {
-        "value": "CUSTOM:InvincibleTab"
+        "value": "CUSTOM:InvincibleMobTab"
       }
     ],
     "isBoss": false,

@@ -15,6 +15,7 @@ import net.mcreator.invincible.client.renderer.ViltrumiteRenderer;
 import net.mcreator.invincible.client.renderer.RexSplodeRenderer;
 import net.mcreator.invincible.client.renderer.PastImageRenderer;
 import net.mcreator.invincible.client.renderer.OmnimanRenderer;
+import net.mcreator.invincible.client.renderer.MultiPaulRenderer;
 import net.mcreator.invincible.client.renderer.MaulerRenderer;
 import net.mcreator.invincible.client.renderer.MarsProximityRenderer;
 import net.mcreator.invincible.client.renderer.InvincibleMarkRenderer;
@@ -23,6 +24,7 @@ import net.mcreator.invincible.client.renderer.FlaxanSoldierRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanPortalRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanGunmanRenderer;
 import net.mcreator.invincible.client.renderer.FireworkExplosionRenderer;
+import net.mcreator.invincible.client.renderer.DupliKateRenderer;
 import net.mcreator.invincible.client.renderer.CloneRenderer;
 import net.mcreator.invincible.client.renderer.AfterImageRenderer;
 
@@ -50,5 +52,7 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.REX_SPLODE.get(), RexSplodeRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.CLONE.get(), CloneRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.DUPLI_KATE.get(), DupliKateRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.MULTI_PAUL.get(), MultiPaulRenderer::new);
 	}
 }

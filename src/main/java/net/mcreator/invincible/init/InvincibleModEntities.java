@@ -22,6 +22,7 @@ import net.mcreator.invincible.entity.SonicClapEntity;
 import net.mcreator.invincible.entity.RexSplodeEntity;
 import net.mcreator.invincible.entity.PastImageEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
+import net.mcreator.invincible.entity.MultiPaulEntity;
 import net.mcreator.invincible.entity.MaulerEntity;
 import net.mcreator.invincible.entity.MarsProximityEntity;
 import net.mcreator.invincible.entity.KnockbackProjectileEntity;
@@ -33,6 +34,7 @@ import net.mcreator.invincible.entity.FlaxanGunmanEntity;
 import net.mcreator.invincible.entity.FireworkExplosionEntity;
 import net.mcreator.invincible.entity.ExplosionSmallEntity;
 import net.mcreator.invincible.entity.ExplosionLargeEntity;
+import net.mcreator.invincible.entity.DupliKateEntity;
 import net.mcreator.invincible.entity.CloneEntity;
 import net.mcreator.invincible.entity.BlasterProjectileEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
@@ -95,6 +97,14 @@ public class InvincibleModEntities {
 			EntityType.Builder.<CloneEntity>of(CloneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CloneEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DupliKateEntity>> DUPLI_KATE = register("dupli_kate",
+			EntityType.Builder.<DupliKateEntity>of(DupliKateEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DupliKateEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MultiPaulEntity>> MULTI_PAUL = register("multi_paul",
+			EntityType.Builder.<MultiPaulEntity>of(MultiPaulEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MultiPaulEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -119,6 +129,8 @@ public class InvincibleModEntities {
 			FireworkExplosionEntity.init();
 			RexSplodeEntity.init();
 			CloneEntity.init();
+			DupliKateEntity.init();
+			MultiPaulEntity.init();
 		});
 	}
 
@@ -138,5 +150,7 @@ public class InvincibleModEntities {
 		event.put(FIREWORK_EXPLOSION.get(), FireworkExplosionEntity.createAttributes().build());
 		event.put(REX_SPLODE.get(), RexSplodeEntity.createAttributes().build());
 		event.put(CLONE.get(), CloneEntity.createAttributes().build());
+		event.put(DUPLI_KATE.get(), DupliKateEntity.createAttributes().build());
+		event.put(MULTI_PAUL.get(), MultiPaulEntity.createAttributes().build());
 	}
 }

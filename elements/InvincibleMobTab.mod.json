@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "tab",
   "definition": {
-    "name": "Invincible Armor",
+    "name": "Invincible Mobs",
     "icon": {
-      "value": "CUSTOM:InvincibleSuit.body"
+      "value": "CUSTOM:InvincibleMark.spawn_egg"
     },
     "showSearch": false
   }

@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "invincible:dupli_kate",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}
