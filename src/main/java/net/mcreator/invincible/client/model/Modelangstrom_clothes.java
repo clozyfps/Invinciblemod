@@ -58,10 +58,10 @@ public class Modelangstrom_clothes<T extends Entity> extends EntityModel<T> {
 						"Body", CubeListBuilder.create().texOffs(44, 57).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.26F)).texOffs(0, 58).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.51F))
 								.texOffs(44, 44).addBox(-5.0F, -0.5F, -3.0F, 10.0F, 7.0F, 6.0F, new CubeDeformation(0.0F)).texOffs(32, 16).addBox(-4.5F, -0.75F, -4.5F, 9.0F, 3.0F, 9.0F, new CubeDeformation(0.25F)),
 						PartPose.offset(0.0F, 12.0F, 0.0F));
-		PartDefinition cape = Body.addOrReplaceChild("cape", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -1.25F, -5.0F, 10.0F, 23.0F, 6.0F, new CubeDeformation(0.26F)), PartPose.offset(0.0F, 0.75F, 2.75F));
-		PartDefinition cape_left = cape.addOrReplaceChild("cape_left", CubeListBuilder.create().texOffs(0, 29).addBox(-0.6F, -1.25F, -5.0F, 5.0F, 23.0F, 6.0F, new CubeDeformation(0.26F)), PartPose.offset(5.0F, 0.0F, 0.0F));
-		PartDefinition cape_right = cape.addOrReplaceChild("cape_right", CubeListBuilder.create().texOffs(22, 29).addBox(-4.4F, -1.25F, -5.0F, 5.0F, 23.0F, 6.0F, new CubeDeformation(0.26F)), PartPose.offset(-5.0F, 0.0F, 0.0F));
-		PartDefinition torso_r1 = cape_right.addOrReplaceChild("torso_r1", CubeListBuilder.create().texOffs(68, 16).addBox(-3.5F, -1.5F, -2.0F, 6.0F, 4.0F, 5.0F, new CubeDeformation(0.25F)),
+		PartDefinition cape = Body.addOrReplaceChild("cape", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -1.25F, -5.0F, 10.0F, 23.0F, 6.0F, new CubeDeformation(0.3F)), PartPose.offset(0.0F, 0.75F, 2.75F));
+		PartDefinition cape_left = cape.addOrReplaceChild("cape_left", CubeListBuilder.create().texOffs(0, 29).addBox(-0.6F, -1.25F, -5.0F, 5.0F, 23.0F, 6.0F, new CubeDeformation(0.3F)), PartPose.offset(5.0F, 0.0F, 0.0F));
+		PartDefinition cape_right = cape.addOrReplaceChild("cape_right", CubeListBuilder.create().texOffs(22, 29).addBox(-4.4F, -1.25F, -5.0F, 5.0F, 23.0F, 6.0F, new CubeDeformation(0.3F)), PartPose.offset(-5.0F, 0.0F, 0.0F));
+		PartDefinition torso_r1 = cape_right.addOrReplaceChild("torso_r1", CubeListBuilder.create().texOffs(68, 16).addBox(-3.5F, -1.5F, -2.0F, 6.0F, 4.0F, 5.0F, new CubeDeformation(0.3F)),
 				PartPose.offsetAndRotation(-2.5F, -0.5F, -3.25F, 0.0F, 0.0F, -0.1309F));
 		PartDefinition LeftArm = partdefinition.addOrReplaceChild("LeftArm",
 				CubeListBuilder.create().texOffs(24, 58).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.26F)).texOffs(40, 73).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.5F)),
