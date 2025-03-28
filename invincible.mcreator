@@ -3817,11 +3817,11 @@
       "registry_name": "flaxan_soldier",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/flaxan_soldier_biome_modifier.json",
-          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
+          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -4219,11 +4219,11 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
           "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java",
+          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json",
           "src/main/resources/assets/invincible/models/item/flaxan_gunman_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java"
         ]
       },
       "path": "~/Mobs"
@@ -6778,12 +6778,21 @@
   },
   "tab_element_order": {
     "CUSTOM:InvincibleTab": [
+      "InvincibleMark",
       "InvincibleSuit",
+      "InvincibleBlueMark",
       "InvincibleBlueSuit",
+      "Omniman",
       "OmniManSuit",
+      "RexSplode",
       "RexSplodeSuit",
+      "Mauler",
       "MaulerSuit",
+      "FlaxanSoldier",
+      "FlaxanGunman",
       "FlaxanArmor",
+      "FlaxanGun",
+      "Viltrumite",
       "MultiPaulSuit",
       "DupliKateSuit"
     ]
