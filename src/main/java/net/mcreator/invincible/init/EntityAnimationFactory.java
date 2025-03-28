@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
+import net.mcreator.invincible.entity.ViltrumiteMaleEntity;
 import net.mcreator.invincible.entity.ViltrumiteFemaleEntity;
 import net.mcreator.invincible.entity.RexSplodeEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
@@ -108,6 +109,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof AngstromEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ViltrumiteMaleEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

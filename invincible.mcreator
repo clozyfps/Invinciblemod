@@ -415,21 +415,6 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "Viltrumite",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "viltrumite",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/entity/ViltrumiteEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteRenderer.java",
-          "src/main/resources/assets/invincible/models/item/viltrumite_spawn_egg.json"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
       "name": "CharacterPicker",
       "type": "item",
       "compiles": true,
@@ -2679,6 +2664,10 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2698,6 +2687,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           }
         ]
       },
@@ -2783,6 +2784,10 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3817,11 +3822,11 @@
       "registry_name": "flaxan_soldier",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/flaxan_soldier_biome_modifier.json",
-          "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
           "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java"
+          "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
         ]
       },
       "path": "~/Mobs"
@@ -4219,11 +4224,11 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
           "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java",
           "src/main/resources/assets/invincible/models/item/flaxan_gunman_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java"
+          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -4445,7 +4450,7 @@
           }
         ]
       },
-      "path": "~/Places"
+      "path": "~/Places/Procedures"
     },
     {
       "name": "ThrowPlayerOnEffectActiveTick",
@@ -6378,6 +6383,124 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "ViltrumiteMale",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_male",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteMaleRenderer.java",
+          "src/main/resources/assets/invincible/models/item/viltrumite_male_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/entity/ViltrumiteMaleEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/ViltrumiteMaleModel.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "DimensionalPortalOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimensional_portal_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DimensionalPortalOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util"
+    },
+    {
+      "name": "ApocalypseDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apocalypse_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/world/dimension/ApocalypseDimensionDimension.java",
+          "src/main/resources/data/invincible/dimension_type/apocalypse_dimension.json",
+          "src/main/resources/data/invincible/dimension/apocalypse_dimension.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "PortalMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/PortalMovesProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Races/Portals"
+    },
+    {
+      "name": "DimensionalPortalOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimensional_portal_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DimensionalPortalOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SelectPortal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectPortalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -6674,6 +6797,66 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "DimensionAmount",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "6.0"
+    },
+    {
+      "name": "DimensionSelected",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "DimensionTable",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Dimension1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Apocalypse World"
+    },
+    {
+      "name": "Dimension2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Ice World"
+    },
+    {
+      "name": "Dimension3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "The End"
+    },
+    {
+      "name": "Dimension4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "The Nether"
+    },
+    {
+      "name": "Dimension5",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Desert Wasteland"
+    },
+    {
+      "name": "Dimension6",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Robot Surgeons"
+    },
+    {
+      "name": "SelectedDimensionString",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -6894,21 +7077,12 @@
   },
   "tab_element_order": {
     "CUSTOM:InvincibleTab": [
-      "InvincibleMark",
       "InvincibleSuit",
-      "InvincibleBlueMark",
       "InvincibleBlueSuit",
-      "Omniman",
       "OmniManSuit",
-      "RexSplode",
       "RexSplodeSuit",
-      "Mauler",
       "MaulerSuit",
-      "FlaxanSoldier",
-      "FlaxanGunman",
       "FlaxanArmor",
-      "FlaxanGun",
-      "Viltrumite",
       "MultiPaulSuit",
       "DupliKateSuit",
       "AngstromSuit"
@@ -6916,14 +7090,18 @@
   },
   "language_map": {
     "en_us": {
-      "entity.invincible.invincible_mark": "Invincible",
+      "effect.invincible.web_active": "Web Active",
       "entity.invincible.mars_proximity": "Mars Proximity",
+      "entity.invincible.invincible_mark": "Invincible",
+      "entity.invincible.dimensional_portal": "Dimensional Portal",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
+      "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
       "entity.invincible.dupli_kate": "Dupli-Kate",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "item.invincible.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
+      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "subtitles.grip": "",
       "gamerule.spaceexist": "Existance Of Space",
       "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
@@ -6931,8 +7109,8 @@
       "item.invincible.character_picker": "Character Picker",
       "key.invincible.follow_up": "Follow Up",
       "item.invincible.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
-      "effect.invincible.impact_frame_potion": "Impact Frame Potion",
       "subtitles.powerfulpunch": "",
+      "effect.invincible.impact_frame_potion": "Impact Frame Potion",
       "key.invincible.toggle_heavy_punch": "Toggle Special",
       "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Boots (Blue)",
       "death.attack.phase": "%1$s was blitzed",
@@ -6948,6 +7126,7 @@
       "item.invincible.invincible_blue_mark_spawn_egg": "Invincible (Blue) Spawn Egg",
       "subtitles.explosion": "",
       "item_group.invincible.invincible_tab": "Invincible Armor",
+      "item.invincible.angstrom_suit_helmet": "Angstrom\u0027s Helmet",
       "gui.invincible.book_picker.button_speedster": "Speedster WIP",
       "item.invincible.test": "Test",
       "subtitles.blaster": "",
@@ -6956,6 +7135,7 @@
       "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
       "item.invincible.dupli_kate_suit_chestplate": "Dupli-Kate\u0027s Suit",
       "item.invincible.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
+      "entity.invincible.viltrumite_male": "Viltrumite Female",
       "key.invincible.fly": "Fly",
       "entity.invincible.multi_paul": "Multi-Paul",
       "effect.invincible.grab_cooldown": "Grab Cooldown",
@@ -6974,11 +7154,13 @@
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
       "item.invincible.flaxan_armor_boots": "Flaxan Boots",
       "subtitles.bloodexplode": "",
+      "item.invincible.viltrumite_female_spawn_egg": "Viltrumite Female Spawn Egg",
       "effect.invincible.punch_catch_cd": "Punch Catch CD",
       "key.invincible.dash": "Dash",
       "entity.invincible.flaxan_portal": "Flaxan Portal",
       "item.invincible.multi_paul_suit_leggings": "Multi-Paul\u0027s Pants",
       "gui.invincible.book_picker.tooltip_explode": "Explode (WIP)",
+      "item.invincible.viltrumite_male_spawn_egg": "Viltrumite Female Spawn Egg",
       "biome.invincible.space_biome": "Space Biome",
       "item_group.invincible.invincible_mob_tab": "Invincible Mobs",
       "item.invincible.multi_paul_suit_boots": "Multi-Paul\u0027s Shoes",
@@ -7000,12 +7182,13 @@
       "item.invincible.rex_splode_suit_boots": "Rex-Splode\u0027s Boots",
       "item_group.invincible.invincible_items_tab": "Invincible Items",
       "item.invincible.rex_splode_suit_helmet": "Rex-Splode\u0027s Mask",
+      "item.invincible.dimensional_portal_spawn_egg": "Dimensional Portal Spawn Egg",
       "effect.invincible.hyper_sonic_burst_tick": "Hyper Sonic Burst Tick",
       "item.invincible.rex_splode_suit_chestplate": "Rex-Splode\u0027s Suit",
       "item.invincible.dupli_kate_suit_boots": "Dupli-Kate\u0027s Shoes",
       "item.invincible.flaxan_armor_chestplate": "Flaxan Chestplate",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
-      "item.invincible.viltrumite_spawn_egg": "Viltrumite Spawn Egg",
+      "item.invincible.viltrumite_spawn_egg": "Viltrumite Male Spawn Egg",
       "gui.invincible.book_picker.tooltip_viltrumite": "Viltrumite",
       "item.invincible.multi_paul_spawn_egg": "Multi-Paul Spawn Egg",
       "effect.invincible.falling_blocks_manip": "Falling Blocks Manip",
@@ -7025,6 +7208,7 @@
       "effect.invincible.time_stopped": "Time Stopped",
       "entity.invincible.flaxan_gunman": "Flaxan Gunman",
       "gui.invincible.book_picker.label_ability_selection1": "Ability Selection",
+      "entity.invincible.angstrom": "Angstrom",
       "effect.invincible.combo_still": "Combo Still",
       "item.invincible.multi_paul_suit_chestplate": "Multi-Paul\u0027s Suit",
       "item.invincible.invincible_suit_leggings": "Invincible\u0027s Pants",
@@ -7042,6 +7226,7 @@
       "item.invincible.omni_man_suit_boots": "Omni-Man\u0027s Boots",
       "effect.invincible.glass_break": "Glass Break",
       "entity.invincible.flaxan_soldier": "Flaxan Soldier",
+      "entity.invincible.viltrumite_female": "Viltrumite Female",
       "effect.invincible.active_flight_speed": "Active Flight Speed",
       "effect.invincible.after_images": "After Images",
       "effect.invincible.active_burst": "Active Burst",
@@ -7051,9 +7236,11 @@
       "item.invincible.omniman_spawn_egg": "Omni-Man Spawn Egg",
       "effect.invincible.smoking": "Smoking",
       "entity.invincible.clone": "Clone",
+      "item.invincible.angstrom_suit_chestplate": "Angstrom\u0027s Chestplate",
       "item.invincible.invincible_suit_chestplate": "Invincible\u0027s Suit",
-      "entity.invincible.viltrumite": "Viltrumite",
-      "effect.invincible.flash_time": "Flash Time"
+      "item.invincible.angstrom_spawn_egg": "Angstrom Spawn Egg",
+      "effect.invincible.flash_time": "Flash Time",
+      "entity.invincible.viltrumite": "Viltrumite Male"
     }
   },
   "foldersRoot": {
@@ -7065,7 +7252,12 @@
       },
       {
         "name": "Places",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Keybind",
@@ -7104,6 +7296,10 @@
               },
               {
                 "name": "Replicate",
+                "children": []
+              },
+              {
+                "name": "Portals",
                 "children": []
               }
             ]

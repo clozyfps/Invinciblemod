@@ -1,6 +1,20 @@
 
 package net.mcreator.invincible.client.renderer;
 
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import net.mcreator.invincible.entity.model.DimensionalPortalModel;
+import net.mcreator.invincible.entity.DimensionalPortalEntity;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class DimensionalPortalRenderer extends GeoEntityRenderer<DimensionalPortalEntity> {
 	public DimensionalPortalRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new DimensionalPortalModel());
@@ -20,5 +34,4 @@ public class DimensionalPortalRenderer extends GeoEntityRenderer<DimensionalPort
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
 	}
-
 }

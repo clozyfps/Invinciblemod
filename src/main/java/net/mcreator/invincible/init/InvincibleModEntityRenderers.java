@@ -11,7 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
-import net.mcreator.invincible.client.renderer.ViltrumiteRenderer;
+import net.mcreator.invincible.client.renderer.ViltrumiteMaleRenderer;
 import net.mcreator.invincible.client.renderer.ViltrumiteFemaleRenderer;
 import net.mcreator.invincible.client.renderer.RexSplodeRenderer;
 import net.mcreator.invincible.client.renderer.PastImageRenderer;
@@ -36,7 +36,6 @@ public class InvincibleModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(InvincibleModEntities.MARS_PROXIMITY.get(), MarsProximityRenderer::new);
-		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE.get(), ViltrumiteRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.AFTER_IMAGE.get(), AfterImageRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.SONIC_CLAP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.PAST_IMAGE.get(), PastImageRenderer::new);
@@ -61,5 +60,6 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE_FEMALE.get(), ViltrumiteFemaleRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.ANGSTROM.get(), AngstromRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE_MALE.get(), ViltrumiteMaleRenderer::new);
 	}
 }

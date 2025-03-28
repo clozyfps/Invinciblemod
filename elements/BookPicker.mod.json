@@ -212,6 +212,9 @@
           "name": "imagebutton_icon_portal",
           "image": "icon_portal.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "SelectPortal"
+          },
           "x": 139,
           "y": 101,
           "locked": true

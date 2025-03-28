@@ -157,6 +157,10 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 		guistate.put("button:imagebutton_icon_cloning", imagebutton_icon_cloning);
 		this.addRenderableWidget(imagebutton_icon_cloning);
 		imagebutton_icon_portal = new ImageButton(this.leftPos + -75, this.topPos + -19, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_portal.png"), 16, 32, e -> {
+			if (true) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(6, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_icon_portal", imagebutton_icon_portal);
 		this.addRenderableWidget(imagebutton_icon_portal);

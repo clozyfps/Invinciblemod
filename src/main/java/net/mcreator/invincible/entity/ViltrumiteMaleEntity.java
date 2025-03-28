@@ -43,27 +43,27 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.invincible.procedures.ViltrumiteFemaleOnInitialEntitySpawnProcedure;
+import net.mcreator.invincible.procedures.ViltrumiteMaleOnInitialEntitySpawnProcedure;
 import net.mcreator.invincible.init.InvincibleModEntities;
 
 import javax.annotation.Nullable;
 
-public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(ViltrumiteFemaleEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(ViltrumiteFemaleEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(ViltrumiteFemaleEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<Integer> DATA_femalevilapp = SynchedEntityData.defineId(ViltrumiteFemaleEntity.class, EntityDataSerializers.INT);
+public class ViltrumiteMaleEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(ViltrumiteMaleEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(ViltrumiteMaleEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(ViltrumiteMaleEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_malevilapp = SynchedEntityData.defineId(ViltrumiteMaleEntity.class, EntityDataSerializers.INT);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public ViltrumiteFemaleEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(InvincibleModEntities.VILTRUMITE_FEMALE.get(), world);
+	public ViltrumiteMaleEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(InvincibleModEntities.VILTRUMITE_MALE.get(), world);
 	}
 
-	public ViltrumiteFemaleEntity(EntityType<ViltrumiteFemaleEntity> type, Level world) {
+	public ViltrumiteMaleEntity(EntityType<ViltrumiteMaleEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
@@ -76,7 +76,7 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
 		this.entityData.define(TEXTURE, "airmob");
-		this.entityData.define(DATA_femalevilapp, 0);
+		this.entityData.define(DATA_malevilapp, 0);
 	}
 
 	public void setTexture(String texture) {
@@ -125,7 +125,7 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ViltrumiteFemaleOnInitialEntitySpawnProcedure.execute(this);
+		ViltrumiteMaleOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -133,7 +133,7 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
-		compound.putInt("Datafemalevilapp", this.entityData.get(DATA_femalevilapp));
+		compound.putInt("Datamalevilapp", this.entityData.get(DATA_malevilapp));
 	}
 
 	@Override
@@ -141,8 +141,8 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
-		if (compound.contains("Datafemalevilapp"))
-			this.entityData.set(DATA_femalevilapp, compound.getInt("Datafemalevilapp"));
+		if (compound.contains("Datamalevilapp"))
+			this.entityData.set(DATA_malevilapp, compound.getInt("Datamalevilapp"));
 	}
 
 	@Override
@@ -226,7 +226,7 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(ViltrumiteFemaleEntity.RemovalReason.KILLED);
+			this.remove(ViltrumiteMaleEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

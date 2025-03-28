@@ -9,26 +9,26 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.invincible.entity.model.ViltrumiteFemaleModel;
-import net.mcreator.invincible.entity.ViltrumiteFemaleEntity;
+import net.mcreator.invincible.entity.model.ViltrumiteMaleModel;
+import net.mcreator.invincible.entity.ViltrumiteMaleEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class ViltrumiteFemaleRenderer extends GeoEntityRenderer<ViltrumiteFemaleEntity> {
-	public ViltrumiteFemaleRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new ViltrumiteFemaleModel());
+public class ViltrumiteMaleRenderer extends GeoEntityRenderer<ViltrumiteMaleEntity> {
+	public ViltrumiteMaleRenderer(EntityRendererProvider.Context renderManager) {
+		super(renderManager, new ViltrumiteMaleModel());
 		this.shadowRadius = 0.5f;
 	}
 
 	@Override
-	public RenderType getRenderType(ViltrumiteFemaleEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
+	public RenderType getRenderType(ViltrumiteMaleEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 
 	@Override
-	public void preRender(PoseStack poseStack, ViltrumiteFemaleEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red,
-			float green, float blue, float alpha) {
+	public void preRender(PoseStack poseStack, ViltrumiteMaleEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
+			float blue, float alpha) {
 		float scale = 1f;
 		this.scaleHeight = scale;
 		this.scaleWidth = scale;

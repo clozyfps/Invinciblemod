@@ -1,27 +1,34 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+
+import net.mcreator.invincible.entity.ViltrumiteMaleEntity;
 
 public class ViltrumiteMaleOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof ViltrumiteEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(ViltrumiteEntity.DATA_malevilapp, Mth.nextInt(RandomSource.create(), 1, 5));
-		if ((entity instanceof ViltrumiteEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteEntity.DATA_malevilapp) : 0) == 1) {
-			if (entity instanceof ViltrumiteEntity animatable)
+		if (entity instanceof ViltrumiteMaleEntity _datEntSetI)
+			_datEntSetI.getEntityData().set(ViltrumiteMaleEntity.DATA_malevilapp, Mth.nextInt(RandomSource.create(), 1, 5));
+		if ((entity instanceof ViltrumiteMaleEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteMaleEntity.DATA_malevilapp) : 0) == 1) {
+			if (entity instanceof ViltrumiteMaleEntity animatable)
 				animatable.setTexture("viltrumite_male_black");
-		} else if ((entity instanceof ViltrumiteEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteEntity.DATA_malevilapp) : 0) == 2) {
-			if (entity instanceof ViltrumiteEntity animatable)
+		} else if ((entity instanceof ViltrumiteMaleEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteMaleEntity.DATA_malevilapp) : 0) == 2) {
+			if (entity instanceof ViltrumiteMaleEntity animatable)
 				animatable.setTexture("viltrumite_male_blonde");
-		} else if ((entity instanceof ViltrumiteEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteEntity.DATA_malevilapp) : 0) == 3) {
-			if (entity instanceof ViltrumiteEntity animatable)
+		} else if ((entity instanceof ViltrumiteMaleEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteMaleEntity.DATA_malevilapp) : 0) == 3) {
+			if (entity instanceof ViltrumiteMaleEntity animatable)
 				animatable.setTexture("viltrumite_male_brown");
-		} else if ((entity instanceof ViltrumiteEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteEntity.DATA_malevilapp) : 0) == 4) {
-			if (entity instanceof ViltrumiteEntity animatable)
+		} else if ((entity instanceof ViltrumiteMaleEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteMaleEntity.DATA_malevilapp) : 0) == 4) {
+			if (entity instanceof ViltrumiteMaleEntity animatable)
 				animatable.setTexture("viltrumite_male_gray");
-		} else if ((entity instanceof ViltrumiteEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteEntity.DATA_malevilapp) : 0) == 5) {
-			if (entity instanceof ViltrumiteEntity animatable)
+		} else if ((entity instanceof ViltrumiteMaleEntity _datEntI ? _datEntI.getEntityData().get(ViltrumiteMaleEntity.DATA_malevilapp) : 0) == 5) {
+			if (entity instanceof ViltrumiteMaleEntity animatable)
 				animatable.setTexture("viltrumite_male_white");
 		}
 		if (entity instanceof LivingEntity _entity)

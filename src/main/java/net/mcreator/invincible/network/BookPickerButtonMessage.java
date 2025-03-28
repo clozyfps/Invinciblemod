@@ -15,6 +15,7 @@ import net.mcreator.invincible.world.inventory.BookPickerMenu;
 import net.mcreator.invincible.procedures.SelectViltrumiteProcedure;
 import net.mcreator.invincible.procedures.SelectSpiderProcedure;
 import net.mcreator.invincible.procedures.SelectSpeedsterProcedure;
+import net.mcreator.invincible.procedures.SelectPortalProcedure;
 import net.mcreator.invincible.procedures.SelectHumanProcedure;
 import net.mcreator.invincible.procedures.SelectExplodeProcedure;
 import net.mcreator.invincible.procedures.SelectCloneProcedure;
@@ -90,6 +91,10 @@ public class BookPickerButtonMessage {
 		if (buttonID == 5) {
 
 			SelectCloneProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			SelectPortalProcedure.execute(entity);
 		}
 	}
 

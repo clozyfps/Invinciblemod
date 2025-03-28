@@ -17,8 +17,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.invincible.entity.WebLineEntity;
+import net.mcreator.invincible.entity.ViltrumiteMaleEntity;
 import net.mcreator.invincible.entity.ViltrumiteFemaleEntity;
-import net.mcreator.invincible.entity.ViltrumiteEntity;
 import net.mcreator.invincible.entity.TransferProjectileEntity;
 import net.mcreator.invincible.entity.SonicClapEntity;
 import net.mcreator.invincible.entity.RexSplodeEntity;
@@ -49,10 +49,6 @@ public class InvincibleModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, InvincibleMod.MODID);
 	public static final RegistryObject<EntityType<MarsProximityEntity>> MARS_PROXIMITY = register("mars_proximity", EntityType.Builder.<MarsProximityEntity>of(MarsProximityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarsProximityEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<ViltrumiteEntity>> VILTRUMITE = register("viltrumite",
-			EntityType.Builder.<ViltrumiteEntity>of(ViltrumiteEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ViltrumiteEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<AfterImageEntity>> AFTER_IMAGE = register("after_image", EntityType.Builder.<AfterImageEntity>of(AfterImageEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(AfterImageEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SonicClapEntity>> SONIC_CLAP = register("sonic_clap",
@@ -123,6 +119,10 @@ public class InvincibleModEntities {
 			EntityType.Builder.<AngstromEntity>of(AngstromEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AngstromEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ViltrumiteMaleEntity>> VILTRUMITE_MALE = register("viltrumite_male",
+			EntityType.Builder.<ViltrumiteMaleEntity>of(ViltrumiteMaleEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ViltrumiteMaleEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -134,7 +134,6 @@ public class InvincibleModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			MarsProximityEntity.init();
-			ViltrumiteEntity.init();
 			AfterImageEntity.init();
 			PastImageEntity.init();
 			InvincibleMarkEntity.init();
@@ -152,13 +151,13 @@ public class InvincibleModEntities {
 			DimensionalPortalEntity.init();
 			ViltrumiteFemaleEntity.init();
 			AngstromEntity.init();
+			ViltrumiteMaleEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(MARS_PROXIMITY.get(), MarsProximityEntity.createAttributes().build());
-		event.put(VILTRUMITE.get(), ViltrumiteEntity.createAttributes().build());
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
 		event.put(PAST_IMAGE.get(), PastImageEntity.createAttributes().build());
 		event.put(INVINCIBLE_MARK.get(), InvincibleMarkEntity.createAttributes().build());
@@ -176,5 +175,6 @@ public class InvincibleModEntities {
 		event.put(DIMENSIONAL_PORTAL.get(), DimensionalPortalEntity.createAttributes().build());
 		event.put(VILTRUMITE_FEMALE.get(), ViltrumiteFemaleEntity.createAttributes().build());
 		event.put(ANGSTROM.get(), AngstromEntity.createAttributes().build());
+		event.put(VILTRUMITE_MALE.get(), ViltrumiteMaleEntity.createAttributes().build());
 	}
 }
