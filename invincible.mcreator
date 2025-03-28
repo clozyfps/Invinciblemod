@@ -6859,6 +6859,7 @@
       "entity.invincible.rex_splode": "Rex-Splode",
       "effect.invincible.slowed": "Slowed",
       "item.invincible.tutorial": "Tutorial",
+      "gui.invincible.book_picker.tooltip_portal": "Portal (WIP)",
       "entity.invincible.mauler": "Mauler",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
       "item.invincible.flaxan_gun": "Flaxan Gun",
