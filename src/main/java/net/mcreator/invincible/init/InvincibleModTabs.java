@@ -44,6 +44,10 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.DUPLI_KATE_SUIT_CHESTPLATE.get());
 				tabData.accept(InvincibleModItems.DUPLI_KATE_SUIT_LEGGINGS.get());
 				tabData.accept(InvincibleModItems.DUPLI_KATE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_HELMET.get());
+				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_BOOTS.get());
 			}).build());
 	public static final RegistryObject<CreativeModeTab> INVINCIBLE_MOB_TAB = REGISTRY.register("invincible_mob_tab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible.invincible_mob_tab")).icon(() -> new ItemStack(InvincibleModItems.INVINCIBLE_MARK_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
@@ -57,6 +61,7 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.REX_SPLODE_SPAWN_EGG.get());
 				tabData.accept(InvincibleModItems.DUPLI_KATE_SPAWN_EGG.get());
 				tabData.accept(InvincibleModItems.MULTI_PAUL_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.ANGSTROM_SPAWN_EGG.get());
 			}).withTabsBefore(INVINCIBLE_TAB.getId()).build());
 	public static final RegistryObject<CreativeModeTab> INVINCIBLE_ITEMS_TAB = REGISTRY.register("invincible_items_tab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible.invincible_items_tab")).icon(() -> new ItemStack(InvincibleModItems.FLAXAN_GUN.get())).displayItems((parameters, tabData) -> {

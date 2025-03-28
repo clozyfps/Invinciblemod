@@ -14,6 +14,7 @@ import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
 import net.mcreator.invincible.entity.DupliKateEntity;
+import net.mcreator.invincible.entity.AngstromEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -84,6 +85,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MultiPaulEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AngstromEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

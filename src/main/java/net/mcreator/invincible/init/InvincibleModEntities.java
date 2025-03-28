@@ -38,6 +38,7 @@ import net.mcreator.invincible.entity.ExplosionLargeEntity;
 import net.mcreator.invincible.entity.DupliKateEntity;
 import net.mcreator.invincible.entity.CloneEntity;
 import net.mcreator.invincible.entity.BlasterProjectileEntity;
+import net.mcreator.invincible.entity.AngstromEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -108,6 +109,10 @@ public class InvincibleModEntities {
 			EntityType.Builder.<MultiPaulEntity>of(MultiPaulEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MultiPaulEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AngstromEntity>> ANGSTROM = register("angstrom",
+			EntityType.Builder.<AngstromEntity>of(AngstromEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AngstromEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -134,6 +139,7 @@ public class InvincibleModEntities {
 			CloneEntity.init();
 			DupliKateEntity.init();
 			MultiPaulEntity.init();
+			AngstromEntity.init();
 		});
 	}
 
@@ -155,5 +161,6 @@ public class InvincibleModEntities {
 		event.put(CLONE.get(), CloneEntity.createAttributes().build());
 		event.put(DUPLI_KATE.get(), DupliKateEntity.createAttributes().build());
 		event.put(MULTI_PAUL.get(), MultiPaulEntity.createAttributes().build());
+		event.put(ANGSTROM.get(), AngstromEntity.createAttributes().build());
 	}
 }
