@@ -1,10 +1,6 @@
 package net.mcreator.invincible.entity.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.mcreator.invincible.entity.ViltrumiteFemaleEntity;
+import software.bernie.geckolib.core.animation.AnimationState;
 
 public class ViltrumiteFemaleModel extends GeoModel<ViltrumiteFemaleEntity> {
 	@Override

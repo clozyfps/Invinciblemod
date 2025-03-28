@@ -28,6 +28,7 @@ import net.mcreator.invincible.client.renderer.FireworkExplosionRenderer;
 import net.mcreator.invincible.client.renderer.DupliKateRenderer;
 import net.mcreator.invincible.client.renderer.DimensionalPortalRenderer;
 import net.mcreator.invincible.client.renderer.CloneRenderer;
+import net.mcreator.invincible.client.renderer.AngstromRenderer;
 import net.mcreator.invincible.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -35,6 +36,7 @@ public class InvincibleModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(InvincibleModEntities.MARS_PROXIMITY.get(), MarsProximityRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE.get(), ViltrumiteRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.AFTER_IMAGE.get(), AfterImageRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.SONIC_CLAP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.PAST_IMAGE.get(), PastImageRenderer::new);
@@ -57,7 +59,7 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.DUPLI_KATE.get(), DupliKateRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.MULTI_PAUL.get(), MultiPaulRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
-		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE.get(), ViltrumiteRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE_FEMALE.get(), ViltrumiteFemaleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.ANGSTROM.get(), AngstromRenderer::new);
 	}
 }

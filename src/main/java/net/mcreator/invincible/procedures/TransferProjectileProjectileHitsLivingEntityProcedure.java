@@ -1,7 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.eventbus.api.Event;
 
 public class TransferProjectileProjectileHitsLivingEntityProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {

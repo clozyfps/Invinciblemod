@@ -113,6 +113,16 @@
         }
       },
       {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_icon_viltrumite",
@@ -179,6 +189,31 @@
           },
           "x": 244,
           "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_cloning",
+          "image": "icon_cloning.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectClone"
+          },
+          "x": 270,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_portal",
+          "image": "icon_portal.png",
+          "hoveredImage": "",
+          "x": 139,
+          "y": 101,
           "locked": true
         }
       },
@@ -253,16 +288,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "icon_cloning.png",
-          "use1Xscale": false,
-          "x": 270,
-          "y": 76,
-          "locked": true
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_cloning",
@@ -277,17 +302,17 @@
         }
       },
       {
-        "type": "imagebutton",
+        "type": "tooltip",
         "data": {
-          "name": "imagebutton_icon_cloning",
-          "image": "icon_cloning.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "SelectClone"
+          "name": "tooltip_portal",
+          "text": {
+            "fixedValue": "Portal (WIP)"
           },
-          "x": 271,
-          "y": 76,
-          "locked": false
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 98,
+          "locked": true
         }
       }
     ],

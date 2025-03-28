@@ -1,13 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-
-import net.mcreator.invincible.entity.ViltrumiteEntity;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ViltrumiteMaleOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {

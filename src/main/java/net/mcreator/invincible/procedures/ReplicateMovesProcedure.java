@@ -1,26 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.invincible.network.InvincibleModVariables;
-import net.mcreator.invincible.init.InvincibleModEntities;
-import net.mcreator.invincible.entity.TransferProjectileEntity;
-import net.mcreator.invincible.entity.CloneEntity;
-
-import java.util.Comparator;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ReplicateMovesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
