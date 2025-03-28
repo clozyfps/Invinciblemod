@@ -71,11 +71,11 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> DUPLI_KATE_SUIT_LEGGINGS = REGISTRY.register("dupli_kate_suit_leggings", () -> new DupliKateSuitItem.Leggings());
 	public static final RegistryObject<Item> DUPLI_KATE_SUIT_BOOTS = REGISTRY.register("dupli_kate_suit_boots", () -> new DupliKateSuitItem.Boots());
 	public static final RegistryObject<Item> MULTI_PAUL_SPAWN_EGG = REGISTRY.register("multi_paul_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MULTI_PAUL, -13028264, -4081449, new Item.Properties()));
-	public static final RegistryObject<Item> ANGSTROM_SPAWN_EGG = REGISTRY.register("angstrom_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.ANGSTROM, -13421773, -10092544, new Item.Properties()));
 	public static final RegistryObject<Item> ANGSTROM_SUIT_HELMET = REGISTRY.register("angstrom_suit_helmet", () -> new AngstromSuitItem.Helmet());
 	public static final RegistryObject<Item> ANGSTROM_SUIT_CHESTPLATE = REGISTRY.register("angstrom_suit_chestplate", () -> new AngstromSuitItem.Chestplate());
 	public static final RegistryObject<Item> ANGSTROM_SUIT_LEGGINGS = REGISTRY.register("angstrom_suit_leggings", () -> new AngstromSuitItem.Leggings());
 	public static final RegistryObject<Item> ANGSTROM_SUIT_BOOTS = REGISTRY.register("angstrom_suit_boots", () -> new AngstromSuitItem.Boots());
+	public static final RegistryObject<Item> ANGSTROM_SPAWN_EGG = REGISTRY.register("angstrom_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.ANGSTROM, -13421773, -10092544, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -6273,23 +6273,6 @@
       "path": "~/Mobs"
     },
     {
-      "name": "Angstrom",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "angstrom",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/entity/model/AngstromModel.java",
-          "src/main/resources/assets/invincible/models/item/angstrom_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/client/renderer/AngstromRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/AngstromEntity.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/angstrom_biome_modifier.json"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
       "name": "AngstromSuit",
       "type": "armor",
       "compiles": true,
@@ -6305,6 +6288,23 @@
         ]
       },
       "path": "~/Item"
+    },
+    {
+      "name": "Angstrom",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angstrom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/AngstromModel.java",
+          "src/main/resources/assets/invincible/models/item/angstrom_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/AngstromRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/AngstromEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/angstrom_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
