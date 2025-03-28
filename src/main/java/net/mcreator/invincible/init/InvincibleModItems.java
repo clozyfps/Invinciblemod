@@ -31,7 +31,6 @@ public class InvincibleModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, InvincibleMod.MODID);
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> SPACE_BLOCK = block(InvincibleModBlocks.SPACE_BLOCK);
-	public static final RegistryObject<Item> VILTRUMITE_SPAWN_EGG = REGISTRY.register("viltrumite_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.VILTRUMITE, -1250068, -5460820, new Item.Properties()));
 	public static final RegistryObject<Item> CHARACTER_PICKER = REGISTRY.register("character_picker", () -> new CharacterPickerItem());
 	public static final RegistryObject<Item> INVINCIBLE_SUIT_HELMET = REGISTRY.register("invincible_suit_helmet", () -> new InvincibleSuitItem.Helmet());
 	public static final RegistryObject<Item> INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("invincible_suit_chestplate", () -> new InvincibleSuitItem.Chestplate());
@@ -70,6 +69,8 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> DUPLI_KATE_SUIT_LEGGINGS = REGISTRY.register("dupli_kate_suit_leggings", () -> new DupliKateSuitItem.Leggings());
 	public static final RegistryObject<Item> DUPLI_KATE_SUIT_BOOTS = REGISTRY.register("dupli_kate_suit_boots", () -> new DupliKateSuitItem.Boots());
 	public static final RegistryObject<Item> MULTI_PAUL_SPAWN_EGG = REGISTRY.register("multi_paul_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MULTI_PAUL, -13028264, -4081449, new Item.Properties()));
+	public static final RegistryObject<Item> VILTRUMITE_SPAWN_EGG = REGISTRY.register("viltrumite_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.VILTRUMITE, -1250068, -5460820, new Item.Properties()));
+	public static final RegistryObject<Item> VILTRUMITE_FEMALE_SPAWN_EGG = REGISTRY.register("viltrumite_female_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.VILTRUMITE_FEMALE, -1250068, -5460820, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

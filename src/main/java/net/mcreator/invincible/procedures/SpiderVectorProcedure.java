@@ -1,68 +1,36 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.invincible.network.InvincibleModVariables;
+import net.mcreator.invincible.init.InvincibleModMobEffects;
 
-import javax.annotation.Nullable;
-
-@Mod.EventBusSubscriber
 public class SpiderVectorProcedure {
-	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
-		}
-	}
-
-	public static void execute(Entity entity) {
-		execute(null, entity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity) {
+	public static void execute(double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double mag = 0;
+		double deltaz = 0;
+		double deltax = 0;
+		double deltay = 0;
+		double dampen = 0;
 		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Spider")) {
-			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).WebN != 0) {
-				entity.push(((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).WebX + entity.getDeltaMovement().x()),
-						((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).WebY + entity.getDeltaMovement().y()
-								+ (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).VerticalMovement),
-						((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).WebZ + entity.getDeltaMovement().z()));
-				{
-					double _setval = (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).WebN - 1;
-					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WebN = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else {
-				{
-					double _setval = 0;
-					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WebX = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 0;
-					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WebZ = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 0;
-					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WebY = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
+			deltax = (entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(30)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() - x
+					+ entity.getPersistentData().getDouble("SwingBlockX") - x) / 2;
+			deltay = (entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(30)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() - y
+					+ entity.getPersistentData().getDouble("SwingBlockY") - y) / 2;
+			deltaz = (entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(30)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() - z
+					+ entity.getPersistentData().getDouble("SwingBlockZ") - z) / 2;
+			mag = Math.sqrt(deltax * deltax + deltay * deltay + deltaz * deltaz);
+			dampen = Math.sqrt(mag) * 1.6;
+			entity.setDeltaMovement(new Vec3((deltax / dampen), (deltay / dampen + 0.4), (deltaz / dampen)));
+			entity.fallDistance = 0;
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.NO_FALL.get(), 5, 0, false, false));
 		}
 	}
 }

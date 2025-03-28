@@ -6,6 +6,7 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 
 public class CloneOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {
@@ -48,8 +49,13 @@ public class CloneOnEntityTickUpdateProcedure {
 					_living.setItemSlot(EquipmentSlot.FEET, ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY));
 				}
 			}
-			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1);
+			if (entity instanceof LivingEntity _entity) {
+				ItemStack _setstack = ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy();
+				_setstack.setCount(1);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
 		}
 	}
 }

@@ -1,16 +1,21 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 
 public class TransferProjectileProjectileHitsLivingEntityProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
+		sourceentity.getPersistentData().putDouble("transferx", (sourceentity.getX()));
+		sourceentity.getPersistentData().putDouble("transfery", (sourceentity.getY()));
+		sourceentity.getPersistentData().putDouble("transferz", (sourceentity.getZ()));
 		{
 			Entity _ent = entity;
-			_ent.teleportTo((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()));
+			_ent.teleportTo((sourceentity.getPersistentData().getDouble("transferx")), (sourceentity.getPersistentData().getDouble("transfery")), (sourceentity.getPersistentData().getDouble("transferz")));
 			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), _ent.getYRot(), _ent.getXRot());
+				_serverPlayer.connection.teleport((sourceentity.getPersistentData().getDouble("transferx")), (sourceentity.getPersistentData().getDouble("transfery")), (sourceentity.getPersistentData().getDouble("transferz")), _ent.getYRot(),
+						_ent.getXRot());
 		}
 		{
 			Entity _ent = sourceentity;

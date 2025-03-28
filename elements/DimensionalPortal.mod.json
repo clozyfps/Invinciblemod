@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Viltrumite Male",
+    "mobName": "Dimensional Portal",
     "mobLabel": "",
-    "mobModelTexture": "airmob.png",
+    "mobModelTexture": "angstrom_portal.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -12,34 +12,22 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [
-      {
-        "min": -2147483648,
-        "max": 2147483647,
-        "name": "malevilapp",
-        "type": "integer",
-        "value": 0
-      }
-    ],
+    "entityDataEntries": [],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
-      "value": -1250068,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -5460820,
+      "value": -1,
       "falpha": 0.0
     },
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:InvincibleMobTab"
-      }
-    ],
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -63,14 +51,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 9,
-    "attackKnockback": 0.7,
+    "attackStrength": 3,
+    "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "armorBaseValue": 25.0,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 50,
-    "health": 100,
+    "followRange": 16,
+    "health": 10,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -79,7 +67,7 @@
     "inventoryStackSize": 64,
     "deathTime": 20,
     "lerp": 4,
-    "disableCollisions": false,
+    "disableCollisions": true,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -103,10 +91,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": ""
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": ""
     },
     "stepSound": {
       "value": ""
@@ -114,28 +102,25 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "onInitialSpawn": {
-      "name": "ViltrumiteMaleOnInitialEntitySpawn"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "viltrumite_male.geo.json",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "flaxanportal.geo.json",
     "groupName": "",
-    "animation1": "idle",
-    "animation2": "walk",
+    "animation1": "0",
+    "animation2": "",
     "animation3": "",
-    "animation4": "attack",
-    "animation5": "swim",
+    "animation4": "",
+    "animation5": "",
     "animation6": "",
     "animation7": "",
     "animation8": "",
     "animation9": "",
     "animation10": "",
-    "enable2": true,
+    "enable2": false,
     "enable3": false,
-    "enable4": true,
-    "enable5": true,
+    "enable4": false,
+    "enable5": false,
     "enable6": false,
     "enable7": false,
     "enable8": false,
@@ -154,7 +139,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 0.0,
+    "height": 1.0,
     "attackRate": 7,
     "raidSpawnsCount": [
       4,
@@ -167,10 +152,10 @@
     ],
     "spawnThisMob": false,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 1,
-    "mobSpawningType": "ambient",
-    "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 1,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
     "spawnInDungeons": false
   }

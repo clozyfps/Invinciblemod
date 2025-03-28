@@ -114,14 +114,16 @@ public class SpeedsterSprintTickProcedure {
 					}
 				}
 				if (entity.getPersistentData().getDouble("speedsterimagetimer") >= 15) {
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE_BIG.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 1, 0.1, 2, 0.1, 0);
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.ELECTRICITY_PARTICLE.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 5, 0.1, 2, 0.1, 0.2);
-					entity.getPersistentData().putDouble("speedsterimagetimer", 0);
+					if (entity.isSprinting()) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE_BIG.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 1, 0.1, 2, 0.1, 0);
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.ELECTRICITY_PARTICLE.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 5, 0.1, 2, 0.1, 0.2);
+						entity.getPersistentData().putDouble("speedsterimagetimer", 0);
+					}
 				}
 			} else {
-				if (!(entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(InvincibleModMobEffects.FLASH_TIME.get()))) {
+				if (!(entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(InvincibleModMobEffects.FLASH_TIME.get()))) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(MobEffects.INVISIBILITY);
 				}

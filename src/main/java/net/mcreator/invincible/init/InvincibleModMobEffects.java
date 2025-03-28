@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.invincible.potion.WebActiveMobEffect;
 import net.mcreator.invincible.potion.ViltrumiteNPCFollowUpTriggerMobEffect;
 import net.mcreator.invincible.potion.TimeStoppedMobEffect;
 import net.mcreator.invincible.potion.ThrowPlayerMobEffect;
@@ -84,4 +85,5 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> THROW_PLAYER = REGISTRY.register("throw_player", () -> new ThrowPlayerMobEffect());
 	public static final RegistryObject<MobEffect> TIME_STOPPED = REGISTRY.register("time_stopped", () -> new TimeStoppedMobEffect());
 	public static final RegistryObject<MobEffect> STOPPED_TIME = REGISTRY.register("stopped_time", () -> new StoppedTimeMobEffect());
+	public static final RegistryObject<MobEffect> WEB_ACTIVE = REGISTRY.register("web_active", () -> new WebActiveMobEffect());
 }

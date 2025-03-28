@@ -4,6 +4,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
+import net.mcreator.invincible.entity.ViltrumiteFemaleEntity;
+import net.mcreator.invincible.entity.ViltrumiteEntity;
 import net.mcreator.invincible.entity.RexSplodeEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
 import net.mcreator.invincible.entity.MultiPaulEntity;
@@ -14,6 +16,7 @@ import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
 import net.mcreator.invincible.entity.DupliKateEntity;
+import net.mcreator.invincible.entity.DimensionalPortalEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -84,6 +87,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MultiPaulEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DimensionalPortalEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ViltrumiteEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ViltrumiteFemaleEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
