@@ -12,9 +12,9 @@
       "value": "Blocks.SNOW"
     },
     "fluidBlock": {
-      "value": "Blocks.FROSTED_ICE"
+      "value": "Blocks.PACKED_ICE"
     },
-    "seaLevel": 63,
+    "seaLevel": -63,
     "generateOreVeins": false,
     "generateAquifers": false,
     "horizontalNoiseSize": 1,
