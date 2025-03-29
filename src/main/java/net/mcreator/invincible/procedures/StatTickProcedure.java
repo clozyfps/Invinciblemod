@@ -80,6 +80,8 @@ public class StatTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 99999, 0, false, false));
 			}
 			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Human")) {
 				{
@@ -126,7 +128,7 @@ public class StatTickProcedure {
 					});
 				}
 			}
-			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Portals")) {
+			if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race).equals("Portal")) {
 				{
 					double _setval = 2;
 					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

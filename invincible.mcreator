@@ -8017,9 +8017,6 @@
       "~CUSTOM:IceAgeBiome",
       "~CUSTOM:ApocalypticForest"
     ],
-    "BIOMES:minecraft:has_structure/igloo": [
-      "~CUSTOM:IceAgeBiome"
-    ],
     "BLOCKS:mod:modglass": [
       "Blocks.GLASS",
       "Blocks.TINTED_GLASS",
@@ -8056,6 +8053,9 @@
       "Blocks.STAINED_GLASS_PANE#13",
       "Blocks.STAINED_GLASS_PANE#14",
       "Blocks.STAINED_GLASS_PANE#15"
+    ],
+    "BIOMES:minecraft:has_structure/igloo": [
+      "~CUSTOM:IceAgeBiome"
     ],
     "ENTITIES:mod:goodmobs": [
       "CUSTOM:InvincibleBlueMark",
@@ -8194,22 +8194,22 @@
   "language_map": {
     "en_us": {
       "effect.invincible.web_active": "Web Active",
-      "entity.invincible.invincible_mark": "Invincible",
       "entity.invincible.mars_proximity": "Mars Proximity",
+      "entity.invincible.invincible_mark": "Invincible",
       "entity.invincible.dimensional_portal": "Dimensional Portal",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
-      "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
-      "entity.invincible.dupli_kate": "Dupli-Kate",
+      "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
+      "entity.invincible.dupli_kate": "Dupli-Kate",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
-      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "item.invincible.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
-      "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
-      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
-      "gamerule.spaceexist": "Existance Of Space",
+      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "subtitles.grip": "",
+      "gamerule.spaceexist": "Existance Of Space",
+      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
+      "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
       "key.invincible.follow_up": "Follow Up",
