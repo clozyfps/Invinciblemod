@@ -1,8 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.invincible.network.InvincibleModVariables;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ReturnNameApocalypticProcedure {
 	public static String execute(Entity entity) {

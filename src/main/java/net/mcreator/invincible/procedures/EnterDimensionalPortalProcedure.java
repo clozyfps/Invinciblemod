@@ -1,27 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
-import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
-import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
-import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.invincible.entity.DimensionalPortalEntity;
-import net.mcreator.invincible.InvincibleMod;
-
-import java.util.Map;
+import net.minecraftforge.eventbus.api.Event;
 
 public class EnterDimensionalPortalProcedure {
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {

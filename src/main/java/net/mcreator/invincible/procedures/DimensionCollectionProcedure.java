@@ -1,21 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
-
-import net.mcreator.invincible.network.InvincibleModVariables;
-
-import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class DimensionCollectionProcedure {
