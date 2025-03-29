@@ -40,6 +40,12 @@ public class EXPProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
+			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(
+						Component.literal(
+								("+ " + "1" + " EXP (" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp)
+										+ "/" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap) + ")")),
+						true);
 		} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:expaverage")))) {
 			{
 				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 25;
@@ -48,6 +54,12 @@ public class EXPProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
+			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(
+						Component.literal(
+								("+ " + "25" + " EXP (" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp)
+										+ "/" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap) + ")")),
+						true);
 		} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:expstrong")))) {
 			{
 				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 250;
@@ -56,6 +68,12 @@ public class EXPProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
+			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(
+						Component.literal(
+								("+ " + "250" + " EXP (" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp)
+										+ "/" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap) + ")")),
+						true);
 		} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:expboss")))) {
 			{
 				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 500;
@@ -64,9 +82,26 @@ public class EXPProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
+			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(
+						Component.literal(
+								("+ " + "500" + " EXP (" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp)
+										+ "/" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap) + ")")),
+						true);
+		} else {
+			{
+				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 10;
+				sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PowerExp = _setval;
+					capability.syncPlayerVariables(sourceentity);
+				});
+			}
+			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(
+						Component.literal(
+								("+ " + "10" + " EXP (" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp)
+										+ "/" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap) + ")")),
+						true);
 		}
-		if (sourceentity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp)
-					+ "/" + new java.text.DecimalFormat("#").format((sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap))), true);
 	}
 }
