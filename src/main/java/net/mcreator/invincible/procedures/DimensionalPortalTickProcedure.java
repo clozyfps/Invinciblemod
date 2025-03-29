@@ -20,5 +20,9 @@ public class DimensionalPortalTickProcedure {
 			if (!entity.level().isClientSide())
 				entity.discard();
 		}
+		if ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_Enters) : 0) >= 10) {
+			if (!entity.level().isClientSide())
+				entity.discard();
+		}
 	}
 }

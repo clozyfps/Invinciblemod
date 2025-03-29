@@ -142,7 +142,7 @@ public class KleidersRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
-			if (entity.getPersistentData().getDouble("rexSPLODE") <= 2 && entity.getPersistentData().getDouble("rexSPLODE") > 0) {
+			if (entity.getPersistentData().getDouble("rexSPLODE") <= 2 && entity.getPersistentData().getDouble("rexSPLODE") >= 1) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
 					if (ResourceLocation.tryParse("invincible:textures/entities/explode_10.png") != null) {

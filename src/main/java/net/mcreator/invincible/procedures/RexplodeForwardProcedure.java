@@ -7,7 +7,9 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.tags.TagKey;
@@ -19,6 +21,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 
 import net.mcreator.invincible.init.InvincibleModParticleTypes;
+import net.mcreator.invincible.init.InvincibleModMobEffects;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.List;
@@ -73,5 +76,9 @@ public class RexplodeForwardProcedure {
 				}
 			}
 		}
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.CIRCLE_EXPANDING_BURST.get(), 5, 0, false, false));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.GLASS_BREAK.get(), 1, 0, false, false));
 	}
 }

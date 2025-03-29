@@ -89,7 +89,10 @@
     },
     "defaultFeatures": [
       "ForestGrass",
-      "PlainsTallGrass"
+      "PlainsTallGrass",
+      "Caves",
+      "Ores",
+      "DeadBushes"
     ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
@@ -117,18 +120,18 @@
           "value": "EntityZombie"
         },
         "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 5,
-        "spawnType": "ambient"
+        "maxGroup": 3,
+        "weight": 3,
+        "spawnType": "creature"
       },
       {
         "entity": {
           "value": "EntityHusk"
         },
         "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 5,
-        "spawnType": "ambient"
+        "maxGroup": 3,
+        "weight": 3,
+        "spawnType": "creature"
       }
     ]
   }

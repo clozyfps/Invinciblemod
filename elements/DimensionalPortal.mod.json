@@ -31,6 +31,13 @@
         "name": "Despawn",
         "type": "integer",
         "value": 100
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Enters",
+        "type": "integer",
+        "value": 0
       }
     ],
     "modelWidth": 0.6,

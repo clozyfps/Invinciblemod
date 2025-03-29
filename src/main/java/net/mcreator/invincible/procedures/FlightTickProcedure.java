@@ -103,20 +103,18 @@ public class FlightTickProcedure {
 						vecZ = vecZ * 0.5;
 						entity.push(vecX, vecY, vecZ);
 						if ((entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
-							if (!(entity.getXRot() == 90 && entity.getXRot() == -90)) {
-								if (world.isClientSide()) {
-									SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
-								}
-								if (!world.isClientSide()) {
-									if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-										List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-										synchronized (connections) {
-											Iterator<Connection> iterator = connections.iterator();
-											while (iterator.hasNext()) {
-												Connection connection = iterator.next();
-												if (!connection.isConnecting() && connection.isConnected())
-													InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-											}
+							if (world.isClientSide()) {
+								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
+							}
+							if (!world.isClientSide()) {
+								if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+									List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+									synchronized (connections) {
+										Iterator<Connection> iterator = connections.iterator();
+										while (iterator.hasNext()) {
+											Connection connection = iterator.next();
+											if (!connection.isConnecting() && connection.isConnected())
+												InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
 										}
 									}
 								}
@@ -127,21 +125,19 @@ public class FlightTickProcedure {
 						vecY = vecY * 0.5;
 						vecZ = vecZ * 0.1;
 						entity.push(vecX, vecY, vecZ);
-						if ((entity instanceof LivingEntity _livEnt25 && _livEnt25.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
-							if (!(entity.getXRot() == 90 && entity.getXRot() == -90)) {
-								if (world.isClientSide()) {
-									SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
-								}
-								if (!world.isClientSide()) {
-									if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-										List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-										synchronized (connections) {
-											Iterator<Connection> iterator = connections.iterator();
-											while (iterator.hasNext()) {
-												Connection connection = iterator.next();
-												if (!connection.isConnecting() && connection.isConnected())
-													InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-											}
+						if ((entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+							if (world.isClientSide()) {
+								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
+							}
+							if (!world.isClientSide()) {
+								if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+									List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+									synchronized (connections) {
+										Iterator<Connection> iterator = connections.iterator();
+										while (iterator.hasNext()) {
+											Connection connection = iterator.next();
+											if (!connection.isConnecting() && connection.isConnected())
+												InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
 										}
 									}
 								}
@@ -156,7 +152,7 @@ public class FlightTickProcedure {
 				}
 			}
 		}
-		if ((entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
+		if ((entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
 			if (world.isClientSide()) {
 				SetupAnimationsProcedure.setAnimationClientside((Player) entity, "grab", true);
 			}

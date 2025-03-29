@@ -20,6 +20,11 @@ public class FlaxxanDimensionPlayerEntersDimensionProcedure {
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 250, false, false));
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = InvincibleModEntities.FLAXAN_PORTAL.get().spawn(_level, BlockPos.containing(x - 3, y, z - 3), MobSpawnType.MOB_SUMMONED);
+			if (entityToSpawn != null) {
+			}
+		}
 		InvincibleMod.queueServerWork(20, () -> {
 			for (int index0 = 0; index0 < 5; index0++) {
 				if (world instanceof ServerLevel _level) {
@@ -29,11 +34,6 @@ public class FlaxxanDimensionPlayerEntersDimensionProcedure {
 				}
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = InvincibleModEntities.FLAXAN_GUNMAN.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-					}
-				}
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = InvincibleModEntities.FLAXAN_PORTAL.get().spawn(_level, BlockPos.containing(x - 3, y, z - 3), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}
