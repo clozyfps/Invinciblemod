@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "invincible:after_image",
+    "invincible:blaster_projectile",
+    "invincible:dimensional_portal",
+    "invincible:explosion_large",
+    "invincible:explosion_small",
+    "invincible:firework_explosion",
+    "invincible:flaxan_portal",
+    "invincible:knockback_projectile",
+    "invincible:mars_proximity",
+    "invincible:past_image",
+    "invincible:sonic_clap",
+    "invincible:transfer_projectile",
+    "invincible:web_line"
+  ]
+}

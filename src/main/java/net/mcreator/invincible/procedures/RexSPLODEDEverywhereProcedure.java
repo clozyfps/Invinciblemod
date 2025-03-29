@@ -40,17 +40,8 @@ public class RexSPLODEDEverywhereProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			}
-			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ExplodeTimer == 1) {
+			} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ExplodeTimer == 1) {
 				ExplodeSelfProcedure.execute(world, x, y, z, entity);
-				{
-					double _setval = 0;
-					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ExplodeTimer = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				entity.getPersistentData().putDouble("rexSPLODE", 0);
 			}
 		}
 	}

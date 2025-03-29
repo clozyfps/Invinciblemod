@@ -6398,25 +6398,6 @@
       "path": "~/Mobs"
     },
     {
-      "name": "DimensionalPortalOnInitialEntitySpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dimensional_portal_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/DimensionalPortalOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Mobs/Util"
-    },
-    {
       "name": "ApocalypseDimension",
       "type": "dimension",
       "compiles": true,
@@ -6465,41 +6446,6 @@
         ]
       },
       "path": "~/Procedures/Races/Portals"
-    },
-    {
-      "name": "DimensionalPortalOnEntityTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dimensional_portal_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/DimensionalPortalOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedures"
     },
     {
       "name": "SelectPortal",
@@ -6577,63 +6523,6 @@
         ]
       },
       "path": "~/Places"
-    },
-    {
-      "name": "CollectDesert",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "collect_desert",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/CollectDesertProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Portals"
-    },
-    {
-      "name": "CollectApocalyptic",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "collect_apocalyptic",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/CollectApocalypticProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Portals"
-    },
-    {
-      "name": "CollectNether",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "collect_nether",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/CollectNetherProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Portals"
     },
     {
       "name": "SetAge",
@@ -6828,63 +6717,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "CollectEnd",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "collect_end",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/CollectEndProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Portals"
-    },
-    {
-      "name": "CollectFlaxan",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "collect_flaxan",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/CollectFlaxanProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Portals"
-    },
-    {
-      "name": "CollectSnow",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "collect_snow",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/CollectSnowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Portals"
-    },
-    {
       "name": "IceAgeDimension",
       "type": "dimension",
       "compiles": true,
@@ -7049,6 +6881,745 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "DimensionSelector",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimension_selector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/world/inventory/DimensionSelectorMenu.java",
+          "src/main/java/net/mcreator/invincible/network/DimensionSelectorButtonMessage.java",
+          "src/main/java/net/mcreator/invincible/client/gui/DimensionSelectorScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "ReturnNameEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name_end",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnNameNether",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name_nether",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameNetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnNameApocalyptic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name_apocalyptic",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameApocalypticProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnNameDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name_desert",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameDesertProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnNameSnow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name_snow",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameSnowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnNameFlaxan",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name_flaxan",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameFlaxanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnLockedEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_locked_end",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnLockedEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnLockedNether",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_locked_nether",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnLockedNetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnLockedApocalyptic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_locked_apocalyptic",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnLockedApocalypticProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnLockedDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_locked_desert",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnLockedDesertProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnLockedSnow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_locked_snow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnLockedSnowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnLockedFlaxan",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_locked_flaxan",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnLockedFlaxanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnUnlockedEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_unlocked_end",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnUnlockedEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnUnlockedNether",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_unlocked_nether",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnUnlockedNetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnUnlockedApocalytpic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_unlocked_apocalytpic",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnUnlockedApocalytpicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnUnlockedDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_unlocked_desert",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnUnlockedDesertProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnUnlockedSnow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_unlocked_snow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnUnlockedSnowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "ReturnUnlockedFlaxan",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_unlocked_flaxan",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnUnlockedFlaxanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "DimensionCollection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimension_collection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DimensionCollectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Portals"
+    },
+    {
+      "name": "SelectDimensionEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "EnterDimensionalPortal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_dimensional_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/EnterDimensionalPortalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "SelectDimensionNether",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_nether",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionNetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "SelectDimensionApocalyptic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_apocalyptic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionApocalypticProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "SelectDimensionDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_desert",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionDesertProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "SelectDimensionSnow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_snow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionSnowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "SelectDimensionFlaxan",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_flaxan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionFlaxanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "SelectDimensionOverworld",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_overworld",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionOverworldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "SelectDimensionRandom",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_dimension_random",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectDimensionRandomProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "DimensionalPortalTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimensional_portal_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/DimensionalPortalTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Util/Procedures"
+    },
+    {
+      "name": "EntityNoDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_no_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/EntityNoDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -7347,72 +7918,6 @@
       "value": "false"
     },
     {
-      "name": "DimensionAmount",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "6.0"
-    },
-    {
-      "name": "DimensionSelected",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
-    },
-    {
-      "name": "DimensionTable",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Dimension1",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Dimension2",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Dimension3",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Dimension4",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Dimension5",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Dimension6",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "SelectedDimensionString",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "RandomDimension",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "Empty"
-    },
-    {
       "name": "DimensionList",
       "type": "string",
       "scope": "player_persistent",
@@ -7549,26 +8054,6 @@
       "Blocks.STAINED_GLASS_PANE#14",
       "Blocks.STAINED_GLASS_PANE#15"
     ],
-    "BLOCKS:mod:indestructible": [
-      "Blocks.REINFORCED_DEEPSLATE",
-      "Blocks.BEDROCK",
-      "Blocks.BARRIER",
-      "Blocks.COMMAND_BLOCK",
-      "Blocks.END_PORTAL",
-      "Blocks.END_PORTAL_FRAME",
-      "Blocks.PORTAL",
-      "Blocks.STRUCTURE_VOID",
-      "Blocks.STRUCTURE_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#1",
-      "Blocks.STRUCTURE_BLOCK#2",
-      "Blocks.STRUCTURE_BLOCK#3",
-      "Blocks.STRUCTURE_BLOCK#4",
-      "Blocks.JIGSAW",
-      "Blocks.AIR",
-      "Blocks.VOID_AIR",
-      "Blocks.CAVE_AIR",
-      "Blocks.MOB_SPAWNER"
-    ],
     "BIOMES:minecraft:has_structure/igloo": [
       "~CUSTOM:IceAgeBiome"
     ],
@@ -7629,9 +8114,6 @@
       "EntityTrident",
       "EntityWitherSkull"
     ],
-    "BIOMES:minecraft:has_structure/village_snowy": [
-      "~CUSTOM:IceAgeBiome"
-    ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.SNOW_LAYER",
       "~Blocks.SNOW",
@@ -7649,13 +8131,51 @@
       "CUSTOM:FlaxanGunman",
       "CUSTOM:FlaxanSoldier"
     ],
-    "BIOMES:minecraft:has_structure/village_plains": [
-      "~CUSTOM:ApocalypticForest"
-    ],
     "ENTITIES:mod:spacemob": [
       "CUSTOM:Omniman",
       "CUSTOM:InvincibleMark",
       "CUSTOM:InvincibleBlueMark"
+    ],
+    "BLOCKS:mod:indestructible": [
+      "Blocks.REINFORCED_DEEPSLATE",
+      "Blocks.BEDROCK",
+      "Blocks.BARRIER",
+      "Blocks.COMMAND_BLOCK",
+      "Blocks.END_PORTAL",
+      "Blocks.END_PORTAL_FRAME",
+      "Blocks.PORTAL",
+      "Blocks.STRUCTURE_VOID",
+      "Blocks.STRUCTURE_BLOCK",
+      "Blocks.STRUCTURE_BLOCK#1",
+      "Blocks.STRUCTURE_BLOCK#2",
+      "Blocks.STRUCTURE_BLOCK#3",
+      "Blocks.STRUCTURE_BLOCK#4",
+      "Blocks.JIGSAW",
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR",
+      "Blocks.MOB_SPAWNER"
+    ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~CUSTOM:IceAgeBiome"
+    ],
+    "BIOMES:minecraft:has_structure/village_plains": [
+      "~CUSTOM:ApocalypticForest"
+    ],
+    "ENTITIES:mod:nodamage": [
+      "CUSTOM:AfterImage",
+      "CUSTOM:BlasterProjectile",
+      "CUSTOM:DimensionalPortal",
+      "CUSTOM:ExplosionLarge",
+      "CUSTOM:ExplosionSmall",
+      "CUSTOM:FireworkExplosion",
+      "CUSTOM:FlaxanPortal",
+      "CUSTOM:KnockbackProjectile",
+      "CUSTOM:MarsProximity",
+      "CUSTOM:PastImage",
+      "CUSTOM:SonicClap",
+      "CUSTOM:TransferProjectile",
+      "CUSTOM:WebLine"
     ]
   },
   "tab_element_order": {
@@ -7674,26 +8194,28 @@
   "language_map": {
     "en_us": {
       "effect.invincible.web_active": "Web Active",
-      "entity.invincible.invincible_mark": "Invincible",
       "entity.invincible.mars_proximity": "Mars Proximity",
+      "entity.invincible.invincible_mark": "Invincible",
       "entity.invincible.dimensional_portal": "Dimensional Portal",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
-      "entity.invincible.dupli_kate": "Dupli-Kate",
+      "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
+      "entity.invincible.dupli_kate": "Dupli-Kate",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "item.invincible.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
       "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "subtitles.grip": "",
       "gamerule.spaceexist": "Existance Of Space",
       "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
+      "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
       "key.invincible.follow_up": "Follow Up",
       "item.invincible.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
-      "effect.invincible.impact_frame_potion": "Impact Frame Potion",
       "subtitles.powerfulpunch": "",
+      "effect.invincible.impact_frame_potion": "Impact Frame Potion",
       "key.invincible.toggle_heavy_punch": "Toggle Special",
       "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Boots (Blue)",
       "death.attack.phase": "%1$s was blitzed",
@@ -7714,8 +8236,10 @@
       "item.invincible.test": "Test",
       "subtitles.blaster": "",
       "biome.invincible.mars_biome": "Mars Biome",
+      "gui.invincible.dimension_selector.tooltip_viltrumite": "Viltrumite",
       "gui.invincible.book_picker.tooltip_speedster": "Speedster (WIP)",
       "item.invincible.invincible_suit_boots": "Invincible\u0027s Boots",
+      "gui.invincible.dimension_selector.tooltip_portal": "Portal (WIP)",
       "item.invincible.dupli_kate_suit_chestplate": "Dupli-Kate\u0027s Suit",
       "item.invincible.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
       "entity.invincible.viltrumite_male": "Viltrumite Female",
@@ -7737,6 +8261,7 @@
       "effect.invincible.takeoff_effects": "Takeoff Effects",
       "effect.invincible.throw_player": "Throw Player",
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
+      "gui.invincible.dimension_selector.tooltip_overworld": "The Overworld",
       "item.invincible.flaxan_armor_boots": "Flaxan Boots",
       "subtitles.bloodexplode": "",
       "item.invincible.viltrumite_female_spawn_egg": "Viltrumite Female Spawn Egg",
@@ -7744,6 +8269,7 @@
       "key.invincible.dash": "Dash",
       "entity.invincible.flaxan_portal": "Flaxan Portal",
       "item.invincible.multi_paul_suit_leggings": "Multi-Paul\u0027s Pants",
+      "gui.invincible.dimension_selector.tooltip_human": "Human",
       "gui.invincible.book_picker.tooltip_explode": "Explode (WIP)",
       "item.invincible.viltrumite_male_spawn_egg": "Viltrumite Female Spawn Egg",
       "biome.invincible.space_biome": "Space Biome",
@@ -7759,6 +8285,7 @@
       "effect.invincible.grabbing_active": "Grabbing Active",
       "effect.invincible.destruction_active": "Destruction Active",
       "effect.invincible.stopped_time": "Stopped Time",
+      "gui.invincible.dimension_selector.tooltip_cloning": "Cloning",
       "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
       "entity.invincible.past_image": "Past Image",
       "death.attack.phase.player": "%1$s died whilst trying to escape %2$s",
@@ -7771,6 +8298,7 @@
       "effect.invincible.hyper_sonic_burst_tick": "Hyper Sonic Burst Tick",
       "item.invincible.rex_splode_suit_chestplate": "Rex-Splode\u0027s Suit",
       "item.invincible.dupli_kate_suit_boots": "Dupli-Kate\u0027s Shoes",
+      "gui.invincible.dimension_selector.tooltip_random": "Random",
       "item.invincible.flaxan_armor_chestplate": "Flaxan Chestplate",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "item.invincible.viltrumite_spawn_egg": "Viltrumite Male Spawn Egg",
@@ -7817,6 +8345,7 @@
       "effect.invincible.after_images": "After Images",
       "effect.invincible.active_burst": "Active Burst",
       "item.invincible.flaxan_soldier_spawn_egg": "Flaxan Soldier Spawn Egg",
+      "gui.invincible.dimension_selector.tooltip_explode": "Explode (WIP)",
       "biome.invincible.flaxxan_biome": "Flaxxan Biome",
       "effect.invincible.point_destruction": "Point Destruction",
       "item.invincible.omniman_spawn_egg": "Omni-Man Spawn Egg",
@@ -7824,7 +8353,9 @@
       "entity.invincible.clone": "Clone",
       "item.invincible.angstrom_suit_chestplate": "Angstrom\u0027s Chestplate",
       "item.invincible.invincible_suit_chestplate": "Invincible\u0027s Suit",
+      "gui.invincible.dimension_selector.label_ability_selection1": "Dimension Selection",
       "item.invincible.angstrom_spawn_egg": "Angstrom Spawn Egg",
+      "gui.invincible.dimension_selector.label_ability_selection": "Dimension Selection",
       "effect.invincible.flash_time": "Flash Time",
       "entity.invincible.viltrumite": "Viltrumite Male"
     }
@@ -7889,10 +8420,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "name": "Portals",
-            "children": []
           }
         ]
       },
@@ -7914,7 +8441,12 @@
         "children": [
           {
             "name": "Procedures",
-            "children": []
+            "children": [
+              {
+                "name": "Dimension",
+                "children": []
+              }
+            ]
           }
         ]
       },

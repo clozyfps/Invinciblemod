@@ -17,7 +17,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
+import net.mcreator.invincible.entity.FlaxanPortalEntity;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
+import net.mcreator.invincible.entity.DimensionalPortalEntity;
 
 import javax.annotation.Nullable;
 
@@ -36,7 +38,7 @@ public class DimensionTickProcedure {
 		if (entity == null)
 			return;
 		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("invincible:flaxxan_dimension"))) {
-			if (!(entity instanceof Player || entity instanceof FlaxanSoldierEntity || entity instanceof FlaxanGunmanEntity)) {
+			if (!(entity instanceof Player || entity instanceof FlaxanSoldierEntity || entity instanceof FlaxanGunmanEntity || entity instanceof FlaxanPortalEntity || entity instanceof DimensionalPortalEntity)) {
 				if (!entity.level().isClientSide())
 					entity.discard();
 			}

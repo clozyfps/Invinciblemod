@@ -1,0 +1,550 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "selection_menu.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ability_selection1",
+          "text": {
+            "fixedValue": "Dimension Selection"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 52,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ability_selection",
+          "text": {
+            "fixedValue": "Dimension Selection"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 51,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 241,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 267,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionRandom"
+          },
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank1",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionOverworld"
+          },
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank2",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionNether"
+          },
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank3",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionEnd"
+          },
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank4",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionApocalyptic"
+          },
+          "x": 241,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank5",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionDesert"
+          },
+          "x": 267,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank6",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionSnow"
+          },
+          "x": 136,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank7",
+          "image": "blank.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectDimensionFlaxan"
+          },
+          "x": 162,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_overworld",
+          "text": {
+            "fixedValue": "The Overworld"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_random",
+          "text": {
+            "fixedValue": "Random"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_name_nether",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNameNether"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_name_end",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNameEnd"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_name_apocalyptic",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNameApocalyptic"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 241,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_name_desert",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNameDesert"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 267,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_name_snow",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNameSnow"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_name_flaxan",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNameFlaxan"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "x": 165,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockedNether"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockedEnd"
+          },
+          "x": 218,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockedApocalytpic"
+          },
+          "x": 244,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockedDesert"
+          },
+          "x": 270,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockedSnow"
+          },
+          "x": 139,
+          "y": 101,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_portal.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockedFlaxan"
+          },
+          "x": 165,
+          "y": 101,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockedNether"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockedEnd"
+          },
+          "x": 218,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockedApocalyptic"
+          },
+          "x": 244,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockedDesert"
+          },
+          "x": 270,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockedSnow"
+          },
+          "x": 139,
+          "y": 101,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_question.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockedFlaxan"
+          },
+          "x": 165,
+          "y": 101,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
