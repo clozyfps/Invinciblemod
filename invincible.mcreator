@@ -229,8 +229,8 @@
       "registry_name": "mars",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/dimension_type/mars.json",
           "src/main/java/net/mcreator/invincible/world/dimension/MarsDimension.java",
+          "src/main/resources/data/invincible/dimension_type/mars.json",
           "src/main/resources/data/invincible/dimension/mars.json"
         ]
       },
@@ -3773,8 +3773,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/dimension_type/flaxxan_dimension.json",
-          "src/main/resources/data/invincible/dimension/flaxxan_dimension.json",
-          "src/main/java/net/mcreator/invincible/world/dimension/FlaxxanDimensionDimension.java"
+          "src/main/java/net/mcreator/invincible/world/dimension/FlaxxanDimensionDimension.java",
+          "src/main/resources/data/invincible/dimension/flaxxan_dimension.json"
         ]
       },
       "path": "~/Places"
@@ -6405,9 +6405,9 @@
       "registry_name": "apocalypse_dimension",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/dimension/apocalypse_dimension.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/ApocalypseDimensionDimension.java",
           "src/main/resources/data/invincible/dimension_type/apocalypse_dimension.json",
-          "src/main/java/net/mcreator/invincible/world/dimension/ApocalypseDimensionDimension.java"
+          "src/main/resources/data/invincible/dimension/apocalypse_dimension.json"
         ]
       },
       "path": "~/Places"
@@ -6474,8 +6474,8 @@
       "registry_name": "apocalyptic_forest",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/worldgen/placed_feature/apocalyptic_forest_tree.json",
           "src/main/resources/data/invincible/worldgen/configured_feature/apocalyptic_forest_tree.json",
+          "src/main/resources/data/invincible/worldgen/placed_feature/apocalyptic_forest_tree.json",
           "src/main/resources/data/invincible/worldgen/biome/apocalyptic_forest.json"
         ]
       },
@@ -6518,8 +6518,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/dimension/desert_wasteland.json",
-          "src/main/java/net/mcreator/invincible/world/dimension/DesertWastelandDimension.java",
-          "src/main/resources/data/invincible/dimension_type/desert_wasteland.json"
+          "src/main/resources/data/invincible/dimension_type/desert_wasteland.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/DesertWastelandDimension.java"
         ]
       },
       "path": "~/Places"
