@@ -281,7 +281,7 @@
         "data": {
           "name": "tooltip_explode",
           "text": {
-            "fixedValue": "Explode (WIP)"
+            "fixedValue": "Explode"
           },
           "width": 22,
           "height": 22,
