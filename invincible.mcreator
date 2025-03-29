@@ -679,6 +679,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
           }
@@ -6694,29 +6698,6 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "EXPBoss",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "exp_boss",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/EXPBossProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "IceAgeDimension",
       "type": "dimension",
       "compiles": true,
@@ -7679,7 +7660,7 @@
       "name": "PowerEXPCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "10.0"
+      "value": "100.0"
     },
     {
       "name": "Strength",
@@ -8011,9 +7992,50 @@
     }
   ],
   "tag_elements": {
+    "ENTITIES:mod:expaverage": [
+      "CUSTOM:FlaxanGunman",
+      "CUSTOM:FlaxanSoldier",
+      "EntityBlaze",
+      "EntityCaveSpider",
+      "EntityCreeper",
+      "EntityDrowned",
+      "EntityElderGuardian",
+      "EntityEnderman",
+      "EntityEvoker",
+      "EntityGhast",
+      "EntityGiantZombie",
+      "EntityGuardian",
+      "EntityHoglin",
+      "EntityHusk",
+      "EntityIllusionIllager",
+      "EntityIronGolem",
+      "EntityPhantom",
+      "EntityPiglin",
+      "EntityPiglinBrute",
+      "EntityPillager",
+      "EntityRavager",
+      "EntityShulker",
+      "EntitySkeleton",
+      "EntitySpider",
+      "EntityStray",
+      "EntityVindicator",
+      "EntityWitch",
+      "EntityWitherSkeleton",
+      "EntityZoglin",
+      "EntityZombie",
+      "EntityZombieVillager",
+      "EntityPigZombie"
+    ],
+    "ENTITIES:mod:expboss": [
+      "CUSTOM:InvincibleBlueMark",
+      "CUSTOM:Omniman"
+    ],
     "BIOMES:minecraft:has_structure/pillager_outpost": [
       "~CUSTOM:IceAgeBiome",
       "~CUSTOM:ApocalypticForest"
+    ],
+    "BIOMES:minecraft:has_structure/igloo": [
+      "~CUSTOM:IceAgeBiome"
     ],
     "BLOCKS:mod:modglass": [
       "Blocks.GLASS",
@@ -8052,33 +8074,67 @@
       "Blocks.STAINED_GLASS_PANE#14",
       "Blocks.STAINED_GLASS_PANE#15"
     ],
-    "BLOCKS:mod:indestructible": [
-      "Blocks.REINFORCED_DEEPSLATE",
-      "Blocks.BEDROCK",
-      "Blocks.BARRIER",
-      "Blocks.COMMAND_BLOCK",
-      "Blocks.END_PORTAL",
-      "Blocks.END_PORTAL_FRAME",
-      "Blocks.PORTAL",
-      "Blocks.STRUCTURE_VOID",
-      "Blocks.STRUCTURE_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#1",
-      "Blocks.STRUCTURE_BLOCK#2",
-      "Blocks.STRUCTURE_BLOCK#3",
-      "Blocks.STRUCTURE_BLOCK#4",
-      "Blocks.JIGSAW",
-      "Blocks.AIR",
-      "Blocks.VOID_AIR",
-      "Blocks.CAVE_AIR",
-      "Blocks.MOB_SPAWNER"
-    ],
-    "BIOMES:minecraft:has_structure/igloo": [
-      "~CUSTOM:IceAgeBiome"
-    ],
-    "ENTITIES:mod:goodmobs": [
-      "CUSTOM:InvincibleBlueMark",
+    "ENTITIES:mod:expstrong": [
+      "EntityDragon",
+      "EntityWither",
+      "EntityWarden",
+      "CUSTOM:Angstrom",
+      "CUSTOM:DupliKate",
       "CUSTOM:InvincibleMark",
-      "CUSTOM:Omniman"
+      "CUSTOM:Mauler",
+      "CUSTOM:MultiPaul",
+      "CUSTOM:RexSplode",
+      "CUSTOM:ViltrumiteFemale",
+      "CUSTOM:ViltrumiteMale"
+    ],
+    "ENTITIES:mod:expweak": [
+      "EntityAllay",
+      "EntityArmadillo",
+      "EntityAxolotl",
+      "EntityBat",
+      "EntityBee",
+      "EntityCamel",
+      "EntityCat",
+      "EntityChicken",
+      "EntityCod",
+      "EntityCow",
+      "EntityDolphin",
+      "EntityDonkey",
+      "EntityEndermite",
+      "EntityFox",
+      "EntityFrog",
+      "EntityGlowSquid",
+      "EntityGoat",
+      "EntityHorse",
+      "EntityLlama",
+      "EntityMagmaCube",
+      "EntityMooshroom",
+      "EntityMule",
+      "EntityOcelot",
+      "EntityPanda",
+      "EntityParrot",
+      "EntityPig",
+      "EntityPolarBear",
+      "EntityPufferfish",
+      "EntityRabbit",
+      "EntitySalmon",
+      "EntitySheep",
+      "EntitySilverfish",
+      "EntitySkeletonHorse",
+      "EntitySlime",
+      "EntitySniffer",
+      "EntitySnowman",
+      "EntitySquid",
+      "EntityStrider",
+      "EntityTadpole",
+      "EntityTraderLlama",
+      "EntityTropicalFish",
+      "EntityTurtle",
+      "EntityVex",
+      "EntityVillager",
+      "EntityWanderingTrader",
+      "EntityWolf",
+      "EntityZombieHorse"
     ],
     "ENTITIES:mod:untargetable": [
       "CUSTOM:AfterImage",
@@ -8132,9 +8188,6 @@
       "EntityTrident",
       "EntityWitherSkull"
     ],
-    "BIOMES:minecraft:has_structure/village_snowy": [
-      "~CUSTOM:IceAgeBiome"
-    ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.SNOW_LAYER",
       "~Blocks.SNOW",
@@ -8147,18 +8200,36 @@
       "~Blocks.SAND#1",
       "~Blocks.SMOOTH_RED_SANDSTONE"
     ],
-    "ENTITIES:mod:villains": [
-      "CUSTOM:Mauler",
-      "CUSTOM:FlaxanGunman",
-      "CUSTOM:FlaxanSoldier"
-    ],
-    "BIOMES:minecraft:has_structure/village_plains": [
-      "~CUSTOM:ApocalypticForest"
-    ],
     "ENTITIES:mod:spacemob": [
       "CUSTOM:Omniman",
       "CUSTOM:InvincibleMark",
       "CUSTOM:InvincibleBlueMark"
+    ],
+    "BLOCKS:mod:indestructible": [
+      "Blocks.REINFORCED_DEEPSLATE",
+      "Blocks.BEDROCK",
+      "Blocks.BARRIER",
+      "Blocks.COMMAND_BLOCK",
+      "Blocks.END_PORTAL",
+      "Blocks.END_PORTAL_FRAME",
+      "Blocks.PORTAL",
+      "Blocks.STRUCTURE_VOID",
+      "Blocks.STRUCTURE_BLOCK",
+      "Blocks.STRUCTURE_BLOCK#1",
+      "Blocks.STRUCTURE_BLOCK#2",
+      "Blocks.STRUCTURE_BLOCK#3",
+      "Blocks.STRUCTURE_BLOCK#4",
+      "Blocks.JIGSAW",
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR",
+      "Blocks.MOB_SPAWNER"
+    ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~CUSTOM:IceAgeBiome"
+    ],
+    "BIOMES:minecraft:has_structure/village_plains": [
+      "~CUSTOM:ApocalypticForest"
     ]
   },
   "tab_element_order": {

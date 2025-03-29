@@ -331,7 +331,7 @@ public class InvincibleModVariables {
 		public double Age = 10.0;
 		public double AgeTimer = 0;
 		public double PowerExp = 0;
-		public double PowerEXPCap = 10.0;
+		public double PowerEXPCap = 100.0;
 		public double Strength = 0;
 		public double Health = 0;
 		public double Agility = 0;
