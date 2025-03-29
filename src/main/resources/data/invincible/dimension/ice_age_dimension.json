@@ -21,7 +21,7 @@
     },
     "settings": {
       "name": "invincible:ice_age_dimension",
-      "sea_level": -63,
+      "sea_level": 63,
       "legacy_random_source": false,
       "disable_mob_generation": false,
       "aquifers_enabled": true,

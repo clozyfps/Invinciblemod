@@ -71,8 +71,8 @@
       "registry_name": "test",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/models/item/test.json",
-          "src/main/java/net/mcreator/invincible/item/TestItem.java"
+          "src/main/java/net/mcreator/invincible/item/TestItem.java",
+          "src/main/resources/assets/invincible/models/item/test.json"
         ]
       },
       "path": "~/Item"
@@ -85,10 +85,10 @@
       "registry_name": "space_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/blockstates/space_block.json",
           "src/main/java/net/mcreator/invincible/block/SpaceBlockBlock.java",
-          "src/main/resources/data/invincible/loot_tables/blocks/space_block.json",
           "src/main/resources/assets/invincible/models/item/space_block.json",
+          "src/main/resources/assets/invincible/blockstates/space_block.json",
+          "src/main/resources/data/invincible/loot_tables/blocks/space_block.json",
           "src/main/resources/assets/invincible/models/block/space_block.json"
         ]
       },
@@ -152,8 +152,8 @@
       "registry_name": "mars_proximity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/MarsProximityRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/MarsProximityEntity.java"
+          "src/main/java/net/mcreator/invincible/entity/MarsProximityEntity.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/MarsProximityRenderer.java"
         ]
       },
       "path": "~/Mobs/Util"
@@ -202,8 +202,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/worldgen/template_pool/mars_dome.json",
-          "src/main/resources/data/invincible/worldgen/structure_set/mars_dome.json",
-          "src/main/resources/data/invincible/worldgen/structure/mars_dome.json"
+          "src/main/resources/data/invincible/worldgen/structure/mars_dome.json",
+          "src/main/resources/data/invincible/worldgen/structure_set/mars_dome.json"
         ]
       },
       "path": "~/Structures"
@@ -311,7 +311,16 @@
         "files": [
           "src/main/java/net/mcreator/invincible/procedures/SetupSkyboxProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -1277,8 +1286,8 @@
       "registry_name": "shockwave_big",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/particles/shockwave_big.json",
-          "src/main/java/net/mcreator/invincible/client/particle/ShockwaveBigParticle.java"
+          "src/main/java/net/mcreator/invincible/client/particle/ShockwaveBigParticle.java",
+          "src/main/resources/assets/invincible/particles/shockwave_big.json"
         ]
       },
       "path": "~/Particles"
@@ -1870,8 +1879,8 @@
       "registry_name": "counter_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/particles/counter_particle.json",
-          "src/main/java/net/mcreator/invincible/client/particle/CounterParticleParticle.java"
+          "src/main/java/net/mcreator/invincible/client/particle/CounterParticleParticle.java",
+          "src/main/resources/assets/invincible/particles/counter_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -2196,8 +2205,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/particles/electricity_particle.json",
-          "src/main/java/net/mcreator/invincible/client/particle/ElectricityParticleParticle.java"
+          "src/main/java/net/mcreator/invincible/client/particle/ElectricityParticleParticle.java",
+          "src/main/resources/assets/invincible/particles/electricity_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -2574,8 +2583,8 @@
       "registry_name": "past_image",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/PastImageEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/PastImageRenderer.java"
+          "src/main/java/net/mcreator/invincible/client/renderer/PastImageRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/PastImageEntity.java"
         ]
       },
       "path": "~/Mobs/Util"
@@ -3573,11 +3582,11 @@
       "registry_name": "invincible_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/models/item/invincible_suit_chestplate.json",
-          "src/main/resources/assets/invincible/models/item/invincible_suit_helmet.json",
-          "src/main/resources/assets/invincible/models/item/invincible_suit_leggings.json",
           "src/main/java/net/mcreator/invincible/item/InvincibleSuitItem.java",
-          "src/main/resources/assets/invincible/models/item/invincible_suit_boots.json"
+          "src/main/resources/assets/invincible/models/item/invincible_suit_helmet.json",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_boots.json",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/invincible_suit_leggings.json"
         ]
       },
       "path": "~/Item"
@@ -3621,10 +3630,10 @@
       "registry_name": "invincible_mark",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
           "src/main/java/net/mcreator/invincible/entity/model/InvincibleMarkModel.java",
           "src/main/resources/assets/invincible/models/item/invincible_mark_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleMarkRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/InvincibleMarkEntity.java",
           "src/main/resources/data/invincible/forge/biome_modifier/invincible_mark_biome_modifier.json"
         ]
       },
@@ -3639,10 +3648,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/invincible/models/item/invincible_blue_suit_helmet.json",
-          "src/main/java/net/mcreator/invincible/item/InvincibleBlueSuitItem.java",
           "src/main/resources/assets/invincible/models/item/invincible_blue_suit_chestplate.json",
-          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_boots.json",
-          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_leggings.json"
+          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_leggings.json",
+          "src/main/java/net/mcreator/invincible/item/InvincibleBlueSuitItem.java",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_suit_boots.json"
         ]
       },
       "path": "~/Item"
@@ -3655,11 +3664,11 @@
       "registry_name": "invincible_blue_mark",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleBlueMarkRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/InvincibleBlueMarkEntity.java",
-          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/invincible_blue_mark_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/model/InvincibleBlueMarkModel.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/InvincibleBlueMarkRenderer.java",
+          "src/main/resources/assets/invincible/models/item/invincible_blue_mark_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3672,11 +3681,11 @@
       "registry_name": "omniman",
       "metadata": {
         "files": [
+          "src/main/resources/data/invincible/forge/biome_modifier/omniman_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/model/OmnimanModel.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/OmnimanRenderer.java",
           "src/main/java/net/mcreator/invincible/entity/OmnimanEntity.java",
-          "src/main/resources/assets/invincible/models/item/omniman_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/omniman_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/client/renderer/OmnimanRenderer.java",
+          "src/main/resources/assets/invincible/models/item/omniman_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3690,9 +3699,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/invincible/models/item/omni_man_suit_chestplate.json",
-          "src/main/resources/assets/invincible/models/item/omni_man_suit_boots.json",
+          "src/main/resources/assets/invincible/models/item/omni_man_suit_leggings.json",
           "src/main/java/net/mcreator/invincible/item/OmniManSuitItem.java",
-          "src/main/resources/assets/invincible/models/item/omni_man_suit_leggings.json"
+          "src/main/resources/assets/invincible/models/item/omni_man_suit_boots.json"
         ]
       },
       "path": "~/Item"
@@ -3772,9 +3781,9 @@
       "registry_name": "flaxxan_dimension",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/dimension_type/flaxxan_dimension.json",
           "src/main/java/net/mcreator/invincible/world/dimension/FlaxxanDimensionDimension.java",
-          "src/main/resources/data/invincible/dimension/flaxxan_dimension.json"
+          "src/main/resources/data/invincible/dimension/flaxxan_dimension.json",
+          "src/main/resources/data/invincible/dimension_type/flaxxan_dimension.json"
         ]
       },
       "path": "~/Places"
@@ -3787,11 +3796,11 @@
       "registry_name": "flaxan_soldier",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/flaxan_soldier_biome_modifier.json",
-          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/FlaxanSoldierEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanSoldierModel.java"
+          "src/main/resources/assets/invincible/models/item/flaxan_soldier_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanSoldierRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -3805,8 +3814,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/item/MaulerSuitItem.java",
-          "src/main/resources/assets/invincible/models/item/mauler_suit_leggings.json",
-          "src/main/resources/assets/invincible/models/item/mauler_suit_chestplate.json"
+          "src/main/resources/assets/invincible/models/item/mauler_suit_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/mauler_suit_leggings.json"
         ]
       },
       "path": "~/Item"
@@ -3820,10 +3829,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/client/renderer/MaulerRenderer.java",
-          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/entity/MaulerEntity.java",
           "src/main/java/net/mcreator/invincible/entity/model/MaulerModel.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/MaulerEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/mauler_biome_modifier.json",
+          "src/main/resources/assets/invincible/models/item/mauler_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3836,10 +3845,10 @@
       "registry_name": "flaxan_armor",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/item/FlaxanArmorItem.java",
           "src/main/resources/assets/invincible/models/item/flaxan_armor_leggings.json",
-          "src/main/resources/assets/invincible/models/item/flaxan_armor_chestplate.json",
           "src/main/resources/assets/invincible/models/item/flaxan_armor_boots.json",
-          "src/main/java/net/mcreator/invincible/item/FlaxanArmorItem.java"
+          "src/main/resources/assets/invincible/models/item/flaxan_armor_chestplate.json"
         ]
       },
       "path": "~/Item"
@@ -3852,9 +3861,9 @@
       "registry_name": "flaxxan_1",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_1.json",
+          "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_1.json",
           "src/main/resources/data/invincible/worldgen/structure/flaxxan_1.json",
-          "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_1.json"
+          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_1.json"
         ]
       },
       "path": "~/Structures"
@@ -3867,9 +3876,9 @@
       "registry_name": "flaxxan_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_2.json",
           "src/main/resources/data/invincible/worldgen/structure/flaxxan_2.json",
-          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_2.json"
+          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_2.json",
+          "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_2.json"
         ]
       },
       "path": "~/Structures"
@@ -3898,8 +3907,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_4.json",
-          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_4.json",
-          "src/main/resources/data/invincible/worldgen/structure/flaxxan_4.json"
+          "src/main/resources/data/invincible/worldgen/structure/flaxxan_4.json",
+          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_4.json"
         ]
       },
       "path": "~/Structures"
@@ -3912,9 +3921,9 @@
       "registry_name": "flaxxan_5",
       "metadata": {
         "files": [
+          "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_5.json",
           "src/main/resources/data/invincible/worldgen/structure/flaxxan_5.json",
-          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_5.json",
-          "src/main/resources/data/invincible/worldgen/structure_set/flaxxan_5.json"
+          "src/main/resources/data/invincible/worldgen/template_pool/flaxxan_5.json"
         ]
       },
       "path": "~/Structures"
@@ -3963,8 +3972,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/entity/model/FlaxanPortalModel.java",
-          "src/main/java/net/mcreator/invincible/entity/FlaxanPortalEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanPortalRenderer.java"
+          "src/main/java/net/mcreator/invincible/client/renderer/FlaxanPortalRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/FlaxanPortalEntity.java"
         ]
       },
       "path": "~/Mobs/Util"
@@ -4221,11 +4230,11 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
           "src/main/java/net/mcreator/invincible/client/renderer/FlaxanGunmanRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java",
+          "src/main/java/net/mcreator/invincible/entity/FlaxanGunmanEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json",
           "src/main/resources/assets/invincible/models/item/flaxan_gunman_spawn_egg.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/flaxan_gunman_biome_modifier.json"
+          "src/main/java/net/mcreator/invincible/entity/model/FlaxanGunmanModel.java"
         ]
       },
       "path": "~/Mobs"
@@ -5594,8 +5603,8 @@
       "registry_name": "explode",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/client/particle/ExplodeParticle.java",
-          "src/main/resources/assets/invincible/particles/explode.json"
+          "src/main/resources/assets/invincible/particles/explode.json",
+          "src/main/java/net/mcreator/invincible/client/particle/ExplodeParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -5839,10 +5848,10 @@
       "registry_name": "rex_splode_suit",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/item/RexSplodeSuitItem.java",
           "src/main/resources/assets/invincible/models/item/rex_splode_suit_helmet.json",
           "src/main/resources/assets/invincible/models/item/rex_splode_suit_leggings.json",
           "src/main/resources/assets/invincible/models/item/rex_splode_suit_chestplate.json",
-          "src/main/java/net/mcreator/invincible/item/RexSplodeSuitItem.java",
           "src/main/resources/assets/invincible/models/item/rex_splode_suit_boots.json"
         ]
       },
@@ -5856,11 +5865,11 @@
       "registry_name": "rex_splode",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/invincible/entity/model/RexSplodeModel.java",
           "src/main/resources/data/invincible/forge/biome_modifier/rex_splode_biome_modifier.json",
-          "src/main/resources/assets/invincible/models/item/rex_splode_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/entity/RexSplodeEntity.java",
+          "src/main/java/net/mcreator/invincible/entity/model/RexSplodeModel.java",
           "src/main/java/net/mcreator/invincible/client/renderer/RexSplodeRenderer.java",
-          "src/main/java/net/mcreator/invincible/entity/RexSplodeEntity.java"
+          "src/main/resources/assets/invincible/models/item/rex_splode_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -6207,11 +6216,11 @@
       "registry_name": "dupli_kate",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/invincible/entity/DupliKateEntity.java",
           "src/main/java/net/mcreator/invincible/client/renderer/DupliKateRenderer.java",
           "src/main/resources/data/invincible/forge/biome_modifier/dupli_kate_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/model/DupliKateModel.java",
-          "src/main/resources/assets/invincible/models/item/dupli_kate_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/entity/DupliKateEntity.java"
+          "src/main/resources/assets/invincible/models/item/dupli_kate_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -6240,10 +6249,10 @@
       "registry_name": "dupli_kate_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/models/item/dupli_kate_suit_boots.json",
-          "src/main/resources/assets/invincible/models/item/dupli_kate_suit_leggings.json",
           "src/main/java/net/mcreator/invincible/item/DupliKateSuitItem.java",
-          "src/main/resources/assets/invincible/models/item/dupli_kate_suit_chestplate.json"
+          "src/main/resources/assets/invincible/models/item/dupli_kate_suit_chestplate.json",
+          "src/main/resources/assets/invincible/models/item/dupli_kate_suit_leggings.json",
+          "src/main/resources/assets/invincible/models/item/dupli_kate_suit_boots.json"
         ]
       },
       "path": "~/Item"
@@ -6256,11 +6265,11 @@
       "registry_name": "multi_paul",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible/models/item/multi_paul_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/client/renderer/MultiPaulRenderer.java",
-          "src/main/resources/data/invincible/forge/biome_modifier/multi_paul_biome_modifier.json",
           "src/main/java/net/mcreator/invincible/entity/MultiPaulEntity.java",
-          "src/main/java/net/mcreator/invincible/entity/model/MultiPaulModel.java"
+          "src/main/resources/assets/invincible/models/item/multi_paul_spawn_egg.json",
+          "src/main/java/net/mcreator/invincible/entity/model/MultiPaulModel.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/MultiPaulRenderer.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/multi_paul_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -6321,9 +6330,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/entity/model/ViltrumiteFemaleModel.java",
+          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteFemaleRenderer.java",
           "src/main/resources/assets/invincible/models/item/viltrumite_female_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/entity/ViltrumiteFemaleEntity.java",
-          "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteFemaleRenderer.java"
+          "src/main/java/net/mcreator/invincible/entity/ViltrumiteFemaleEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -6356,10 +6365,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/invincible/models/item/angstrom_suit_helmet.json",
-          "src/main/resources/assets/invincible/models/item/angstrom_suit_boots.json",
+          "src/main/resources/assets/invincible/models/item/angstrom_suit_leggings.json",
           "src/main/resources/assets/invincible/models/item/angstrom_suit_chestplate.json",
           "src/main/java/net/mcreator/invincible/item/AngstromSuitItem.java",
-          "src/main/resources/assets/invincible/models/item/angstrom_suit_leggings.json"
+          "src/main/resources/assets/invincible/models/item/angstrom_suit_boots.json"
         ]
       },
       "path": "~/Item"
@@ -6372,11 +6381,11 @@
       "registry_name": "angstrom",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/forge/biome_modifier/angstrom_biome_modifier.json",
-          "src/main/java/net/mcreator/invincible/entity/AngstromEntity.java",
           "src/main/java/net/mcreator/invincible/entity/model/AngstromModel.java",
           "src/main/resources/assets/invincible/models/item/angstrom_spawn_egg.json",
-          "src/main/java/net/mcreator/invincible/client/renderer/AngstromRenderer.java"
+          "src/main/java/net/mcreator/invincible/client/renderer/AngstromRenderer.java",
+          "src/main/java/net/mcreator/invincible/entity/AngstromEntity.java",
+          "src/main/resources/data/invincible/forge/biome_modifier/angstrom_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -6390,9 +6399,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/client/renderer/ViltrumiteMaleRenderer.java",
-          "src/main/resources/assets/invincible/models/item/viltrumite_male_spawn_egg.json",
           "src/main/java/net/mcreator/invincible/entity/ViltrumiteMaleEntity.java",
-          "src/main/java/net/mcreator/invincible/entity/model/ViltrumiteMaleModel.java"
+          "src/main/java/net/mcreator/invincible/entity/model/ViltrumiteMaleModel.java",
+          "src/main/resources/assets/invincible/models/item/viltrumite_male_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -6406,8 +6415,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/invincible/world/dimension/ApocalypseDimensionDimension.java",
-          "src/main/resources/data/invincible/dimension_type/apocalypse_dimension.json",
-          "src/main/resources/data/invincible/dimension/apocalypse_dimension.json"
+          "src/main/resources/data/invincible/dimension/apocalypse_dimension.json",
+          "src/main/resources/data/invincible/dimension_type/apocalypse_dimension.json"
         ]
       },
       "path": "~/Places"
@@ -6475,8 +6484,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/worldgen/configured_feature/apocalyptic_forest_tree.json",
-          "src/main/resources/data/invincible/worldgen/placed_feature/apocalyptic_forest_tree.json",
-          "src/main/resources/data/invincible/worldgen/biome/apocalyptic_forest.json"
+          "src/main/resources/data/invincible/worldgen/biome/apocalyptic_forest.json",
+          "src/main/resources/data/invincible/worldgen/placed_feature/apocalyptic_forest_tree.json"
         ]
       },
       "path": "~/Places"
@@ -6490,8 +6499,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/invincible/worldgen/configured_feature/fire_area.json",
-          "src/main/resources/data/invincible/forge/biome_modifier/fire_area_biome_modifier.json",
-          "src/main/resources/data/invincible/worldgen/placed_feature/fire_area.json"
+          "src/main/resources/data/invincible/worldgen/placed_feature/fire_area.json",
+          "src/main/resources/data/invincible/forge/biome_modifier/fire_area_biome_modifier.json"
         ]
       },
       "path": "~/Places"
@@ -6724,9 +6733,9 @@
       "registry_name": "ice_age_dimension",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible/dimension/ice_age_dimension.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/IceAgeDimensionDimension.java",
           "src/main/resources/data/invincible/dimension_type/ice_age_dimension.json",
-          "src/main/java/net/mcreator/invincible/world/dimension/IceAgeDimensionDimension.java"
+          "src/main/resources/data/invincible/dimension/ice_age_dimension.json"
         ]
       },
       "path": "~/Places"
@@ -8017,9 +8026,6 @@
       "~CUSTOM:IceAgeBiome",
       "~CUSTOM:ApocalypticForest"
     ],
-    "BIOMES:minecraft:has_structure/igloo": [
-      "~CUSTOM:IceAgeBiome"
-    ],
     "BLOCKS:mod:modglass": [
       "Blocks.GLASS",
       "Blocks.TINTED_GLASS",
@@ -8056,6 +8062,9 @@
       "Blocks.STAINED_GLASS_PANE#13",
       "Blocks.STAINED_GLASS_PANE#14",
       "Blocks.STAINED_GLASS_PANE#15"
+    ],
+    "BIOMES:minecraft:has_structure/igloo": [
+      "~CUSTOM:IceAgeBiome"
     ],
     "ENTITIES:mod:goodmobs": [
       "CUSTOM:InvincibleBlueMark",
@@ -8194,22 +8203,22 @@
   "language_map": {
     "en_us": {
       "effect.invincible.web_active": "Web Active",
-      "entity.invincible.invincible_mark": "Invincible",
       "entity.invincible.mars_proximity": "Mars Proximity",
+      "entity.invincible.invincible_mark": "Invincible",
       "entity.invincible.dimensional_portal": "Dimensional Portal",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
-      "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
-      "entity.invincible.dupli_kate": "Dupli-Kate",
+      "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
+      "entity.invincible.dupli_kate": "Dupli-Kate",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
-      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "item.invincible.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
-      "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
-      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
-      "gamerule.spaceexist": "Existance Of Space",
+      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "subtitles.grip": "",
+      "gamerule.spaceexist": "Existance Of Space",
+      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
+      "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
       "key.invincible.follow_up": "Follow Up",
@@ -8242,7 +8251,7 @@
       "gui.invincible.dimension_selector.tooltip_portal": "Portal (WIP)",
       "item.invincible.dupli_kate_suit_chestplate": "Dupli-Kate\u0027s Suit",
       "item.invincible.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
-      "entity.invincible.viltrumite_male": "Viltrumite Female",
+      "entity.invincible.viltrumite_male": "Viltrumite Male",
       "biome.invincible.ice_age_biome": "Ice Age Biome",
       "key.invincible.fly": "Fly",
       "entity.invincible.multi_paul": "Multi-Paul",
@@ -8261,6 +8270,7 @@
       "effect.invincible.takeoff_effects": "Takeoff Effects",
       "effect.invincible.throw_player": "Throw Player",
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
+      "gui.invincible.dimension_selector.tooltip_overworld": "The Overworld",
       "item.invincible.flaxan_armor_boots": "Flaxan Boots",
       "subtitles.bloodexplode": "",
       "item.invincible.viltrumite_female_spawn_egg": "Viltrumite Female Spawn Egg",
@@ -8270,7 +8280,7 @@
       "item.invincible.multi_paul_suit_leggings": "Multi-Paul\u0027s Pants",
       "gui.invincible.dimension_selector.tooltip_human": "Human",
       "gui.invincible.book_picker.tooltip_explode": "Explode",
-      "item.invincible.viltrumite_male_spawn_egg": "Viltrumite Female Spawn Egg",
+      "item.invincible.viltrumite_male_spawn_egg": "Viltrumite Male Spawn Egg",
       "biome.invincible.space_biome": "Space Biome",
       "item_group.invincible.invincible_mob_tab": "Invincible Mobs",
       "item.invincible.multi_paul_suit_boots": "Multi-Paul\u0027s Shoes",
@@ -8297,6 +8307,7 @@
       "effect.invincible.hyper_sonic_burst_tick": "Hyper Sonic Burst Tick",
       "item.invincible.rex_splode_suit_chestplate": "Rex-Splode\u0027s Suit",
       "item.invincible.dupli_kate_suit_boots": "Dupli-Kate\u0027s Shoes",
+      "gui.invincible.dimension_selector.tooltip_random": "Random",
       "item.invincible.flaxan_armor_chestplate": "Flaxan Chestplate",
       "item.invincible.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "item.invincible.viltrumite_spawn_egg": "Viltrumite Male Spawn Egg",
@@ -8351,7 +8362,9 @@
       "entity.invincible.clone": "Clone",
       "item.invincible.angstrom_suit_chestplate": "Angstrom\u0027s Chestplate",
       "item.invincible.invincible_suit_chestplate": "Invincible\u0027s Suit",
+      "gui.invincible.dimension_selector.label_ability_selection1": "Dimension Selection",
       "item.invincible.angstrom_spawn_egg": "Angstrom Spawn Egg",
+      "gui.invincible.dimension_selector.label_ability_selection": "Dimension Selection",
       "effect.invincible.flash_time": "Flash Time",
       "entity.invincible.viltrumite": "Viltrumite Male"
     }
