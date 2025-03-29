@@ -4,10 +4,9 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="invincible"
-version="3"
+version="1.0.0"
 displayName="Invincible"
 displayURL="https://discord.gg/gHqRUE4ecb"
-logoFile="logo.png"
 credits="sushiclozy, NoiiLive, Invincible"
 authors="sushiclozy, NoiiLive"
 description="Adds Invincible into Minecraft"

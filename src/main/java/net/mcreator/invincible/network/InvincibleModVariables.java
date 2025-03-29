@@ -366,7 +366,7 @@ public class InvincibleModVariables {
 		public double Cooldown9 = 0.0;
 		public double Cooldown10 = 0.0;
 		public double DashCooldown = 0.0;
-		public String DimensionList = "";
+		public String DimensionList = "\"\"";
 		public double ExplodeTimer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
