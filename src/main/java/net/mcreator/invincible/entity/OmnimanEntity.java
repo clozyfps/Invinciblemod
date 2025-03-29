@@ -259,7 +259,7 @@ public class OmnimanEntity extends TamableAnimal implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
 		builder = builder.add(Attributes.MAX_HEALTH, 1000);
-		builder = builder.add(Attributes.ARMOR, 0.1);
+		builder = builder.add(Attributes.ARMOR, 30);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 50);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 150);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
