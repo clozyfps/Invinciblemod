@@ -9,12 +9,12 @@ import net.mcreator.invincible.entity.ViltrumiteMaleEntity;
 public class ViltrumiteMaleModel extends GeoModel<ViltrumiteMaleEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(ViltrumiteMaleEntity entity) {
-		return new ResourceLocation("invincible", "animations/viltrumite_female.animation.json");
+		return new ResourceLocation("invincible", "animations/viltrumite_male.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(ViltrumiteMaleEntity entity) {
-		return new ResourceLocation("invincible", "geo/viltrumite_female.geo.json");
+		return new ResourceLocation("invincible", "geo/viltrumite_male.geo.json");
 	}
 
 	@Override
