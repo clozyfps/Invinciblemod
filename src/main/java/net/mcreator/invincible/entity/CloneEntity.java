@@ -19,6 +19,7 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -38,6 +39,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.invincible.procedures.CloneOnEntityTickUpdateProcedure;
 import net.mcreator.invincible.init.InvincibleModEntities;
@@ -52,6 +54,8 @@ public class CloneEntity extends TamableAnimal {
 		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(false);
+		setCustomName(Component.literal("Clone"));
+		setCustomNameVisible(true);
 		setPersistenceRequired();
 	}
 
@@ -74,11 +78,12 @@ public class CloneEntity extends TamableAnimal {
 			}
 		});
 		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(6, new OpenDoorGoal(this, true));
-		this.goalSelector.addGoal(7, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, (float) 6));
+		this.goalSelector.addGoal(7, new OpenDoorGoal(this, true));
+		this.goalSelector.addGoal(8, new OpenDoorGoal(this, false));
+		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(11, new FloatGoal(this));
 	}
 
 	@Override

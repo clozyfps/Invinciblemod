@@ -24,6 +24,8 @@ public class LargeExplosionHitProcedure {
 			return;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.EXPLODE.get()), x, y, z, 30, 1, 1, 1, 0);
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.LARGE_EXPLODE.get()), x, y, z, 5, 1, 1, 1, 0);
 		if (world instanceof Level _level && !_level.isClientSide())
 			_level.explode(null, x, y, z, 5, Level.ExplosionInteraction.MOB);
 		if (!immediatesourceentity.level().isClientSide())

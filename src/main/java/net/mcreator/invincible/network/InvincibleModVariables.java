@@ -112,17 +112,6 @@ public class InvincibleModVariables {
 			clone.VerticalMovement = original.VerticalMovement;
 			clone.MaximumMoves = original.MaximumMoves;
 			clone.AbilityBar = original.AbilityBar;
-			clone.DimensionAmount = original.DimensionAmount;
-			clone.DimensionSelected = original.DimensionSelected;
-			clone.DimensionTable = original.DimensionTable;
-			clone.Dimension1 = original.Dimension1;
-			clone.Dimension2 = original.Dimension2;
-			clone.Dimension3 = original.Dimension3;
-			clone.Dimension4 = original.Dimension4;
-			clone.Dimension5 = original.Dimension5;
-			clone.Dimension6 = original.Dimension6;
-			clone.SelectedDimensionString = original.SelectedDimensionString;
-			clone.RandomDimension = original.RandomDimension;
 			clone.DimensionList = original.DimensionList;
 			if (!event.isWasDeath()) {
 				clone.Flying = original.Flying;
@@ -140,6 +129,7 @@ public class InvincibleModVariables {
 				clone.Cooldown9 = original.Cooldown9;
 				clone.Cooldown10 = original.Cooldown10;
 				clone.DashCooldown = original.DashCooldown;
+				clone.ExplodeTimer = original.ExplodeTimer;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -376,18 +366,8 @@ public class InvincibleModVariables {
 		public double Cooldown9 = 0.0;
 		public double Cooldown10 = 0.0;
 		public double DashCooldown = 0.0;
-		public double DimensionAmount = 6.0;
-		public double DimensionSelected = 0.0;
-		public String DimensionTable = "";
-		public String Dimension1 = "";
-		public String Dimension2 = "";
-		public String Dimension3 = "";
-		public String Dimension4 = "";
-		public String Dimension5 = "";
-		public String Dimension6 = "";
-		public String SelectedDimensionString = "";
-		public String RandomDimension = "Empty";
 		public String DimensionList = "\"\"";
+		public double ExplodeTimer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -438,18 +418,8 @@ public class InvincibleModVariables {
 			nbt.putDouble("Cooldown9", Cooldown9);
 			nbt.putDouble("Cooldown10", Cooldown10);
 			nbt.putDouble("DashCooldown", DashCooldown);
-			nbt.putDouble("DimensionAmount", DimensionAmount);
-			nbt.putDouble("DimensionSelected", DimensionSelected);
-			nbt.putString("DimensionTable", DimensionTable);
-			nbt.putString("Dimension1", Dimension1);
-			nbt.putString("Dimension2", Dimension2);
-			nbt.putString("Dimension3", Dimension3);
-			nbt.putString("Dimension4", Dimension4);
-			nbt.putString("Dimension5", Dimension5);
-			nbt.putString("Dimension6", Dimension6);
-			nbt.putString("SelectedDimensionString", SelectedDimensionString);
-			nbt.putString("RandomDimension", RandomDimension);
 			nbt.putString("DimensionList", DimensionList);
+			nbt.putDouble("ExplodeTimer", ExplodeTimer);
 			return nbt;
 		}
 
@@ -503,18 +473,8 @@ public class InvincibleModVariables {
 			Cooldown9 = nbt.getDouble("Cooldown9");
 			Cooldown10 = nbt.getDouble("Cooldown10");
 			DashCooldown = nbt.getDouble("DashCooldown");
-			DimensionAmount = nbt.getDouble("DimensionAmount");
-			DimensionSelected = nbt.getDouble("DimensionSelected");
-			DimensionTable = nbt.getString("DimensionTable");
-			Dimension1 = nbt.getString("Dimension1");
-			Dimension2 = nbt.getString("Dimension2");
-			Dimension3 = nbt.getString("Dimension3");
-			Dimension4 = nbt.getString("Dimension4");
-			Dimension5 = nbt.getString("Dimension5");
-			Dimension6 = nbt.getString("Dimension6");
-			SelectedDimensionString = nbt.getString("SelectedDimensionString");
-			RandomDimension = nbt.getString("RandomDimension");
 			DimensionList = nbt.getString("DimensionList");
+			ExplodeTimer = nbt.getDouble("ExplodeTimer");
 		}
 	}
 
@@ -590,18 +550,8 @@ public class InvincibleModVariables {
 					variables.Cooldown9 = message.data.Cooldown9;
 					variables.Cooldown10 = message.data.Cooldown10;
 					variables.DashCooldown = message.data.DashCooldown;
-					variables.DimensionAmount = message.data.DimensionAmount;
-					variables.DimensionSelected = message.data.DimensionSelected;
-					variables.DimensionTable = message.data.DimensionTable;
-					variables.Dimension1 = message.data.Dimension1;
-					variables.Dimension2 = message.data.Dimension2;
-					variables.Dimension3 = message.data.Dimension3;
-					variables.Dimension4 = message.data.Dimension4;
-					variables.Dimension5 = message.data.Dimension5;
-					variables.Dimension6 = message.data.Dimension6;
-					variables.SelectedDimensionString = message.data.SelectedDimensionString;
-					variables.RandomDimension = message.data.RandomDimension;
 					variables.DimensionList = message.data.DimensionList;
+					variables.ExplodeTimer = message.data.ExplodeTimer;
 				}
 			});
 			context.setPacketHandled(true);
