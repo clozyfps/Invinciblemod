@@ -183,6 +183,15 @@ public class StatTickProcedure {
 					});
 				}
 			}
+			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerEXPCap < 100) {
+				{
+					double _setval = 100;
+					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.PowerEXPCap = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AbilityBar > 2) {
 				{
 					double _setval = 2;
