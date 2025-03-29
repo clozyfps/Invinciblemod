@@ -38,6 +38,8 @@ public class FireworkExplosionTickProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.EXPLODE.get()), x, y, z, 50, 2, 2, 2, 0);
 			if (world instanceof ServerLevel _level)
+				_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.LARGE_EXPLODE.get()), x, y, z, 20, 3, 2, 3, 0);
+			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (InvincibleModParticleTypes.SHOCKWAVE_BIG.get()), x, y, z, 1, 1, 1, 1, 0);
 			{
 				final Vec3 _center = new Vec3(x, y, z);
