@@ -122,6 +122,8 @@ public class InvincibleModVariables {
 			clone.Dimension5 = original.Dimension5;
 			clone.Dimension6 = original.Dimension6;
 			clone.SelectedDimensionString = original.SelectedDimensionString;
+			clone.RandomDimension = original.RandomDimension;
+			clone.DimensionList = original.DimensionList;
 			if (!event.isWasDeath()) {
 				clone.Flying = original.Flying;
 				clone.SelectedTitle = original.SelectedTitle;
@@ -377,13 +379,15 @@ public class InvincibleModVariables {
 		public double DimensionAmount = 6.0;
 		public double DimensionSelected = 0.0;
 		public String DimensionTable = "";
-		public String Dimension1 = "Apocalypse World";
-		public String Dimension2 = "Ice World";
-		public String Dimension3 = "The End";
-		public String Dimension4 = "The Nether";
-		public String Dimension5 = "Desert Wasteland";
-		public String Dimension6 = "Robot Surgeons";
+		public String Dimension1 = "";
+		public String Dimension2 = "";
+		public String Dimension3 = "";
+		public String Dimension4 = "";
+		public String Dimension5 = "";
+		public String Dimension6 = "";
 		public String SelectedDimensionString = "";
+		public String RandomDimension = "Empty";
+		public String DimensionList = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -444,6 +448,8 @@ public class InvincibleModVariables {
 			nbt.putString("Dimension5", Dimension5);
 			nbt.putString("Dimension6", Dimension6);
 			nbt.putString("SelectedDimensionString", SelectedDimensionString);
+			nbt.putString("RandomDimension", RandomDimension);
+			nbt.putString("DimensionList", DimensionList);
 			return nbt;
 		}
 
@@ -507,6 +513,8 @@ public class InvincibleModVariables {
 			Dimension5 = nbt.getString("Dimension5");
 			Dimension6 = nbt.getString("Dimension6");
 			SelectedDimensionString = nbt.getString("SelectedDimensionString");
+			RandomDimension = nbt.getString("RandomDimension");
+			DimensionList = nbt.getString("DimensionList");
 		}
 	}
 
@@ -592,6 +600,8 @@ public class InvincibleModVariables {
 					variables.Dimension5 = message.data.Dimension5;
 					variables.Dimension6 = message.data.Dimension6;
 					variables.SelectedDimensionString = message.data.SelectedDimensionString;
+					variables.RandomDimension = message.data.RandomDimension;
+					variables.DimensionList = message.data.DimensionList;
 				}
 			});
 			context.setPacketHandled(true);

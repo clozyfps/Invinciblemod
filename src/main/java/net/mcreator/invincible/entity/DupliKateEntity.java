@@ -105,7 +105,7 @@ public class DupliKateEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.4, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -225,9 +225,9 @@ public class DupliKateEntity extends TamableAnimal implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 100);
-		builder = builder.add(Attributes.ARMOR, 20);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.ARMOR, 2);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 7);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 150);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		return builder;

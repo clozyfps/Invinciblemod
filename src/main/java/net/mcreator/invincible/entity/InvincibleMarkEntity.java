@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
@@ -29,6 +30,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -63,6 +65,7 @@ import net.mcreator.invincible.init.InvincibleModItems;
 import net.mcreator.invincible.init.InvincibleModEntities;
 
 import java.util.List;
+import java.util.EnumSet;
 
 public class InvincibleMarkEntity extends TamableAnimal implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(InvincibleMarkEntity.class, EntityDataSerializers.BOOLEAN);
@@ -127,8 +130,47 @@ public class InvincibleMarkEntity extends TamableAnimal implements GeoEntity {
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(4, new Goal() {
+			{
+				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+			}
+
+			public boolean canUse() {
+				if (InvincibleMarkEntity.this.getTarget() != null && !InvincibleMarkEntity.this.getMoveControl().hasWanted()) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				return InvincibleMarkEntity.this.getMoveControl().hasWanted() && InvincibleMarkEntity.this.getTarget() != null && InvincibleMarkEntity.this.getTarget().isAlive();
+			}
+
+			@Override
+			public void start() {
+				LivingEntity livingentity = InvincibleMarkEntity.this.getTarget();
+				Vec3 vec3d = livingentity.getEyePosition(1);
+				InvincibleMarkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.5);
+			}
+
+			@Override
+			public void tick() {
+				LivingEntity livingentity = InvincibleMarkEntity.this.getTarget();
+				if (InvincibleMarkEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+					InvincibleMarkEntity.this.doHurtTarget(livingentity);
+				} else {
+					double d0 = InvincibleMarkEntity.this.distanceToSqr(livingentity);
+					if (d0 < 50) {
+						Vec3 vec3d = livingentity.getEyePosition(1);
+						InvincibleMarkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.5);
+					}
+				}
+			}
+		});
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
@@ -283,9 +325,9 @@ public class InvincibleMarkEntity extends TamableAnimal implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 500);
-		builder = builder.add(Attributes.ARMOR, 50);
+		builder = builder.add(Attributes.ARMOR, 0.1);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 100);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 150);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 6);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);

@@ -55,14 +55,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 5,
+    "attackStrength": 12,
     "attackKnockback": 1.0,
     "knockbackResistance": 0.19999999999999998,
     "movementSpeed": 0.3,
-    "armorBaseValue": 20.0,
+    "armorBaseValue": 2.0,
     "trackingRange": 64,
-    "followRange": 16,
-    "health": 150,
+    "followRange": 150,
+    "health": 220,
     "xpAmount": 10,
     "waterMob": false,
     "flyingMob": false,
@@ -105,6 +105,9 @@
     },
     "raidCelebrationSound": {
       "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "AngstromOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",

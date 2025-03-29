@@ -3968,6 +3968,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6444,7 +6460,28 @@
         "files": [
           "src/main/java/net/mcreator/invincible/procedures/PortalMovesProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures/Races/Portals"
     },
@@ -6501,6 +6538,394 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ApocalypticForest",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apocalyptic_forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/configured_feature/apocalyptic_forest_tree.json",
+          "src/main/resources/data/invincible/worldgen/placed_feature/apocalyptic_forest_tree.json",
+          "src/main/resources/data/invincible/worldgen/biome/apocalyptic_forest.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "FireArea",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_area",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/configured_feature/fire_area.json",
+          "src/main/resources/data/invincible/forge/biome_modifier/fire_area_biome_modifier.json",
+          "src/main/resources/data/invincible/worldgen/placed_feature/fire_area.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "DesertWastelandBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desert_wasteland_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/biome/desert_wasteland_biome.json"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "DesertWasteland",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desert_wasteland",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/dimension/desert_wasteland.json",
+          "src/main/resources/data/invincible/dimension_type/desert_wasteland.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/DesertWastelandDimension.java"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "CollectDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collect_desert",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CollectDesertProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Portals"
+    },
+    {
+      "name": "CollectApocalyptic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collect_apocalyptic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CollectApocalypticProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Portals"
+    },
+    {
+      "name": "CollectNether",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collect_nether",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CollectNetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Portals"
+    },
+    {
+      "name": "SetAge",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_age",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetAgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetSpeedster",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_speedster",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetSpeedsterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetExplode",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_explode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetExplodeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetDuplicate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_duplicate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetDuplicateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetPortals",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_portals",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SetPortalsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "RexSplodeOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/RexSplodeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "AngstromOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angstrom_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AngstromOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "EXPBoss",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/EXPBossProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CollectEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collect_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CollectEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Portals"
+    },
+    {
+      "name": "CollectFlaxan",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collect_flaxan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CollectFlaxanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Portals"
+    },
+    {
+      "name": "CollectSnow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collect_snow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/CollectSnowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Portals"
+    },
+    {
+      "name": "IceAgeDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_age_dimension",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/dimension/ice_age_dimension.json",
+          "src/main/resources/data/invincible/dimension_type/ice_age_dimension.json",
+          "src/main/java/net/mcreator/invincible/world/dimension/IceAgeDimensionDimension.java"
+        ]
+      },
+      "path": "~/Places"
+    },
+    {
+      "name": "IceAgeBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_age_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible/worldgen/biome/ice_age_biome.json"
+        ]
+      },
+      "path": "~/Places"
     }
   ],
   "variable_elements": [
@@ -6820,43 +7245,55 @@
       "name": "Dimension1",
       "type": "string",
       "scope": "player_persistent",
-      "value": "Apocalypse World"
+      "value": ""
     },
     {
       "name": "Dimension2",
       "type": "string",
       "scope": "player_persistent",
-      "value": "Ice World"
+      "value": ""
     },
     {
       "name": "Dimension3",
       "type": "string",
       "scope": "player_persistent",
-      "value": "The End"
+      "value": ""
     },
     {
       "name": "Dimension4",
       "type": "string",
       "scope": "player_persistent",
-      "value": "The Nether"
+      "value": ""
     },
     {
       "name": "Dimension5",
       "type": "string",
       "scope": "player_persistent",
-      "value": "Desert Wasteland"
+      "value": ""
     },
     {
       "name": "Dimension6",
       "type": "string",
       "scope": "player_persistent",
-      "value": "Robot Surgeons"
+      "value": ""
     },
     {
       "name": "SelectedDimensionString",
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "RandomDimension",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Empty"
+    },
+    {
+      "name": "DimensionList",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -6942,6 +7379,10 @@
     }
   ],
   "tag_elements": {
+    "BIOMES:minecraft:has_structure/pillager_outpost": [
+      "~CUSTOM:IceAgeBiome",
+      "~CUSTOM:ApocalypticForest"
+    ],
     "BLOCKS:mod:modglass": [
       "Blocks.GLASS",
       "Blocks.TINTED_GLASS",
@@ -6998,6 +7439,9 @@
       "Blocks.VOID_AIR",
       "Blocks.CAVE_AIR",
       "Blocks.MOB_SPAWNER"
+    ],
+    "BIOMES:minecraft:has_structure/igloo": [
+      "~CUSTOM:IceAgeBiome"
     ],
     "ENTITIES:mod:goodmobs": [
       "CUSTOM:InvincibleBlueMark",
@@ -7056,7 +7500,15 @@
       "EntityTrident",
       "EntityWitherSkull"
     ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~CUSTOM:IceAgeBiome"
+    ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.SNOW_LAYER",
+      "~Blocks.SNOW",
+      "~Blocks.SANDSTONE#0",
+      "~Blocks.SAND#0",
+      "~Blocks.GRASS",
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.RED_SANDSTONE#0",
@@ -7068,8 +7520,10 @@
       "CUSTOM:FlaxanGunman",
       "CUSTOM:FlaxanSoldier"
     ],
+    "BIOMES:minecraft:has_structure/village_plains": [
+      "~CUSTOM:ApocalypticForest"
+    ],
     "ENTITIES:mod:spacemob": [
-      "CUSTOM:Viltrumite",
       "CUSTOM:Omniman",
       "CUSTOM:InvincibleMark",
       "CUSTOM:InvincibleBlueMark"
@@ -7091,14 +7545,14 @@
   "language_map": {
     "en_us": {
       "effect.invincible.web_active": "Web Active",
-      "entity.invincible.mars_proximity": "Mars Proximity",
       "entity.invincible.invincible_mark": "Invincible",
+      "entity.invincible.mars_proximity": "Mars Proximity",
       "entity.invincible.dimensional_portal": "Dimensional Portal",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
-      "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
       "entity.invincible.dupli_kate": "Dupli-Kate",
+      "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
       "item.invincible.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
       "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
@@ -7109,8 +7563,8 @@
       "item.invincible.character_picker": "Character Picker",
       "key.invincible.follow_up": "Follow Up",
       "item.invincible.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
-      "subtitles.powerfulpunch": "",
       "effect.invincible.impact_frame_potion": "Impact Frame Potion",
+      "subtitles.powerfulpunch": "",
       "key.invincible.toggle_heavy_punch": "Toggle Special",
       "item.invincible.invincible_blue_suit_boots": "Invincible\u0027s Boots (Blue)",
       "death.attack.phase": "%1$s was blitzed",
@@ -7136,6 +7590,7 @@
       "item.invincible.dupli_kate_suit_chestplate": "Dupli-Kate\u0027s Suit",
       "item.invincible.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
       "entity.invincible.viltrumite_male": "Viltrumite Female",
+      "biome.invincible.ice_age_biome": "Ice Age Biome",
       "key.invincible.fly": "Fly",
       "entity.invincible.multi_paul": "Multi-Paul",
       "effect.invincible.grab_cooldown": "Grab Cooldown",
@@ -7144,6 +7599,7 @@
       "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
       "effect.invincible.hyper_sonic": "Hyper Sonic",
       "item.invincible.mauler_spawn_egg": "Mauler Spawn Egg",
+      "biome.invincible.apocalyptic_forest": "Apocalyptic Forest",
       "subtitles.speedfollowup": "",
       "entity.invincible.firework_explosion": "Firework Explosion",
       "subtitles.powerfulpunch2": "",
@@ -7226,6 +7682,7 @@
       "item.invincible.omni_man_suit_boots": "Omni-Man\u0027s Boots",
       "effect.invincible.glass_break": "Glass Break",
       "entity.invincible.flaxan_soldier": "Flaxan Soldier",
+      "biome.invincible.desert_wasteland_biome": "Desert Wasteland Biome",
       "entity.invincible.viltrumite_female": "Viltrumite Female",
       "effect.invincible.active_flight_speed": "Active Flight Speed",
       "effect.invincible.after_images": "After Images",
@@ -7303,6 +7760,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Portals",
+            "children": []
           }
         ]
       },

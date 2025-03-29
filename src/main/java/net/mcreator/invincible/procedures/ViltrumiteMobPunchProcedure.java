@@ -74,7 +74,7 @@ public class ViltrumiteMobPunchProcedure {
 				vecY = vecY * 2;
 				vecZ = vecZ * (3 - (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Defense / 7);
 				entity.push(vecX, vecY, vecZ);
-				InvincibleMod.queueServerWork(15, () -> {
+				InvincibleMod.queueServerWork(6, () -> {
 					if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.VILTRUMITE_NPC_FOLLOW_UP_TRIGGER.get(), 20, 0));
 				});

@@ -48,7 +48,7 @@ public class MobTargetingProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entity == entityiterator)) {
 							if (entityiterator instanceof Player || entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:goodmobs"))) || entityiterator instanceof Animal) {
-								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+								if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
 									if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
 										_entity.setTarget(_ent);
 								}
@@ -84,7 +84,7 @@ public class MobTargetingProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
 						if (entityiterator instanceof Player || entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:goodmobs"))) || entityiterator instanceof Animal) {
-							if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+							if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
 								if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
 									_entity.setTarget(_ent);
 							}

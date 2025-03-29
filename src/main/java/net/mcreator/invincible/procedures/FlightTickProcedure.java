@@ -68,8 +68,10 @@ public class FlightTickProcedure {
 				vecZ = entity.getLookAngle().z / magnitude;
 				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 25) {
 					if (entity.isSprinting()) {
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+						if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ToggleSpecial) {
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+						}
 					}
 				}
 				if (entity.isShiftKeyDown()) {

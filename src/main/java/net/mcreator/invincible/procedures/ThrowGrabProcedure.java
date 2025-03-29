@@ -13,7 +13,6 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -113,19 +112,18 @@ public class ThrowGrabProcedure {
 								_entity.removeEffect(InvincibleModMobEffects.GRABBED.get());
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.POINT_DESTRUCTION.get(), 60, 0, false, false));
-							if (!(entityiterator instanceof Player)) {
-								magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
-								vecX = entity.getLookAngle().x / magnitude;
-								vecY = entity.getLookAngle().y / magnitude;
-								vecZ = entity.getLookAngle().z / magnitude;
-								vecX = vecX * (1.5 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20);
-								vecY = vecY * (1.5 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20);
-								vecZ = vecZ * (1.5 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20);
-								entityiterator.push(vecX, vecY, vecZ);
-							} else {
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.THROW_PLAYER.get(), 60, 0, false, false));
-							}
+							entityiterator.getPersistentData().putBoolean("flight", false);
+							InvincibleMod.queueServerWork(10, () -> {
+								entityiterator.getPersistentData().putBoolean("flight", true);
+							});
+							magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
+							vecX = entity.getLookAngle().x / magnitude;
+							vecY = entity.getLookAngle().y / magnitude;
+							vecZ = entity.getLookAngle().z / magnitude;
+							vecX = vecX * (1.5 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20);
+							vecY = vecY * (1.5 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20);
+							vecZ = vecZ * (1.5 + (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength / 20);
+							entityiterator.push(vecX, vecY, vecZ);
 						}
 					}
 				}

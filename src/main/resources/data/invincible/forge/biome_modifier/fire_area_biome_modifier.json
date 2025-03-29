@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "invincible:apocalyptic_forest",
+  "features": "invincible:fire_area",
+  "step": "surface_structures"
+}

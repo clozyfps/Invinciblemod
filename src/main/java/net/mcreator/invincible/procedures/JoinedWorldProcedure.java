@@ -53,7 +53,7 @@ public class JoinedWorldProcedure {
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(""), false);
+				_player.displayClientMessage(Component.literal("\u00A7lTip: \u00A7rThe \"Activate Special\" Keybind allows you to perform powerful punches at 10 Strength."), true);
 		}
 	}
 }

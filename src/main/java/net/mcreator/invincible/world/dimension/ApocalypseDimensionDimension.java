@@ -18,15 +18,15 @@ public class ApocalypseDimensionDimension {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {
-			DimensionSpecialEffects customEffect = new DimensionSpecialEffects(192f, true, DimensionSpecialEffects.SkyType.NORMAL, false, false) {
+			DimensionSpecialEffects customEffect = new DimensionSpecialEffects(192f, true, DimensionSpecialEffects.SkyType.NONE, false, false) {
 				@Override
 				public Vec3 getBrightnessDependentFogColor(Vec3 color, float sunHeight) {
-					return new Vec3(0.0745098039, 0.137254902, 0.0274509804);
+					return new Vec3(0.0588235294, 0.1019607843, 0.0235294118);
 				}
 
 				@Override
 				public boolean isFoggyAt(int x, int y) {
-					return false;
+					return true;
 				}
 			};
 			event.register(new ResourceLocation("invincible:apocalypse_dimension"), customEffect);

@@ -51,6 +51,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.invincible.procedures.AngstromOnEntityTickUpdateProcedure;
 import net.mcreator.invincible.init.InvincibleModEntities;
 
 import java.util.List;
@@ -186,6 +187,7 @@ public class AngstromEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		AngstromOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -219,10 +221,10 @@ public class AngstromEntity extends TamableAnimal implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 150);
-		builder = builder.add(Attributes.ARMOR, 20);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.MAX_HEALTH, 220);
+		builder = builder.add(Attributes.ARMOR, 2);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 150);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		return builder;
