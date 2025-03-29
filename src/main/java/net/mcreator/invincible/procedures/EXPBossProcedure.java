@@ -24,50 +24,50 @@ public class EXPBossProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity());
+			execute(event, event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(Entity entity, Entity sourceentity) {
+		execute(null, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
-		if (entity == null)
+	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof OmnimanEntity) {
 			{
-				double _setval = 250;
-				entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 250;
+				sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.PowerExp = _setval;
-					capability.syncPlayerVariables(entity);
+					capability.syncPlayerVariables(sourceentity);
 				});
 			}
 		}
 		if (entity instanceof InvincibleMarkEntity || entity instanceof InvincibleBlueMarkEntity) {
 			{
-				double _setval = 150;
-				entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 150;
+				sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.PowerExp = _setval;
-					capability.syncPlayerVariables(entity);
+					capability.syncPlayerVariables(sourceentity);
 				});
 			}
 		}
 		if (entity instanceof RexSplodeEntity || entity instanceof DupliKateEntity) {
 			{
-				double _setval = 30;
-				entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 30;
+				sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.PowerExp = _setval;
-					capability.syncPlayerVariables(entity);
+					capability.syncPlayerVariables(sourceentity);
 				});
 			}
 		}
 		if (entity instanceof MaulerEntity || entity instanceof FlaxanSoldierEntity || entity instanceof FlaxanGunmanEntity) {
 			{
-				double _setval = 20;
-				entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				double _setval = (sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).PowerExp + 20;
+				sourceentity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.PowerExp = _setval;
-					capability.syncPlayerVariables(entity);
+					capability.syncPlayerVariables(sourceentity);
 				});
 			}
 		}

@@ -691,41 +691,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "EXPTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "exp_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/EXPTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "ViltrumitePunches",
       "type": "procedure",
       "compiles": true,
@@ -4155,6 +4120,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6837,6 +6818,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
           }
         ]
       },
@@ -6926,6 +6911,144 @@
         ]
       },
       "path": "~/Places"
+    },
+    {
+      "name": "RexplodeForward",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rexplode_forward",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/RexplodeForwardProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Explode"
+    },
+    {
+      "name": "RexSPLODEDEverywhere",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_sploded_everywhere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/RexSPLODEDEverywhereProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Explode"
+    },
+    {
+      "name": "KleidersRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kleiders_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/KleidersRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ExplodeSelf",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_self",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ExplodeSelfProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Explode"
+    },
+    {
+      "name": "LargeExplode",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "large_explode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/particle/LargeExplodeParticle.java",
+          "src/main/resources/assets/invincible/particles/large_explode.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -7293,7 +7416,13 @@
       "name": "DimensionList",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
+    },
+    {
+      "name": "ExplodeTimer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [

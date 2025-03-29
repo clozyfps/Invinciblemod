@@ -140,6 +140,7 @@ public class InvincibleModVariables {
 				clone.Cooldown9 = original.Cooldown9;
 				clone.Cooldown10 = original.Cooldown10;
 				clone.DashCooldown = original.DashCooldown;
+				clone.ExplodeTimer = original.ExplodeTimer;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -387,7 +388,8 @@ public class InvincibleModVariables {
 		public String Dimension6 = "";
 		public String SelectedDimensionString = "";
 		public String RandomDimension = "Empty";
-		public String DimensionList = "\"\"";
+		public String DimensionList = "";
+		public double ExplodeTimer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -450,6 +452,7 @@ public class InvincibleModVariables {
 			nbt.putString("SelectedDimensionString", SelectedDimensionString);
 			nbt.putString("RandomDimension", RandomDimension);
 			nbt.putString("DimensionList", DimensionList);
+			nbt.putDouble("ExplodeTimer", ExplodeTimer);
 			return nbt;
 		}
 
@@ -515,6 +518,7 @@ public class InvincibleModVariables {
 			SelectedDimensionString = nbt.getString("SelectedDimensionString");
 			RandomDimension = nbt.getString("RandomDimension");
 			DimensionList = nbt.getString("DimensionList");
+			ExplodeTimer = nbt.getDouble("ExplodeTimer");
 		}
 	}
 
@@ -602,6 +606,7 @@ public class InvincibleModVariables {
 					variables.SelectedDimensionString = message.data.SelectedDimensionString;
 					variables.RandomDimension = message.data.RandomDimension;
 					variables.DimensionList = message.data.DimensionList;
+					variables.ExplodeTimer = message.data.ExplodeTimer;
 				}
 			});
 			context.setPacketHandled(true);
