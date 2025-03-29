@@ -88,7 +88,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		this.entityData.define(TEXTURE, "angstrom_portal");
 		this.entityData.define(DATA_TargetDimension, "");
 		this.entityData.define(DATA_DelayEnter, 20);
-		this.entityData.define(DATA_Despawn, 150);
+		this.entityData.define(DATA_Despawn, 100);
 	}
 
 	public void setTexture(String texture) {

@@ -30,7 +30,7 @@
         "max": 2147483647,
         "name": "Despawn",
         "type": "integer",
-        "value": 150
+        "value": 100
       }
     ],
     "modelWidth": 0.6,
