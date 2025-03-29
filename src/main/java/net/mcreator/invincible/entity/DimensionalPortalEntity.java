@@ -61,6 +61,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> DATA_TargetDimension = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<Integer> DATA_DelayEnter = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Despawn = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.INT);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -87,6 +88,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		this.entityData.define(TEXTURE, "angstrom_portal");
 		this.entityData.define(DATA_TargetDimension, "");
 		this.entityData.define(DATA_DelayEnter, 20);
+		this.entityData.define(DATA_Despawn, 100);
 	}
 
 	public void setTexture(String texture) {
@@ -162,6 +164,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		compound.putString("Texture", this.getTexture());
 		compound.putString("DataTargetDimension", this.entityData.get(DATA_TargetDimension));
 		compound.putInt("DataDelayEnter", this.entityData.get(DATA_DelayEnter));
+		compound.putInt("DataDespawn", this.entityData.get(DATA_Despawn));
 	}
 
 	@Override
@@ -173,6 +176,8 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 			this.entityData.set(DATA_TargetDimension, compound.getString("DataTargetDimension"));
 		if (compound.contains("DataDelayEnter"))
 			this.entityData.set(DATA_DelayEnter, compound.getInt("DataDelayEnter"));
+		if (compound.contains("DataDespawn"))
+			this.entityData.set(DATA_Despawn, compound.getInt("DataDespawn"));
 	}
 
 	@Override
@@ -221,7 +226,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		Entity entity = this;
 		Level world = this.level();
 
-		EnterDimensionalPortalProcedure.execute(world, entity, sourceentity);
+		EnterDimensionalPortalProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 
@@ -240,7 +245,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		EnterDimensionalPortalProcedure.execute(this.level(), this, sourceentity);
+		EnterDimensionalPortalProcedure.execute(this, sourceentity);
 	}
 
 	@Override

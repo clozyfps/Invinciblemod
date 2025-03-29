@@ -12,5 +12,13 @@ public class DimensionalPortalTickProcedure {
 			if (entity instanceof DimensionalPortalEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(DimensionalPortalEntity.DATA_DelayEnter, (int) ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_DelayEnter) : 0) - 1));
 		}
+		if ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_Despawn) : 0) > 0) {
+			if (entity instanceof DimensionalPortalEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(DimensionalPortalEntity.DATA_Despawn, (int) ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_Despawn) : 0) - 1));
+		}
+		if ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_Despawn) : 0) == 0) {
+			if (!entity.level().isClientSide())
+				entity.discard();
+		}
 	}
 }

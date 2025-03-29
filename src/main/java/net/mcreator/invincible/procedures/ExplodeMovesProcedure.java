@@ -29,6 +29,7 @@ import net.mcreator.invincible.init.InvincibleModEntities;
 import net.mcreator.invincible.entity.FireworkExplosionEntity;
 import net.mcreator.invincible.entity.ExplosionSmallEntity;
 import net.mcreator.invincible.entity.ExplosionLargeEntity;
+import net.mcreator.invincible.InvincibleMod;
 
 import java.util.List;
 import java.util.Comparator;
@@ -302,13 +303,10 @@ public class ExplodeMovesProcedure {
 		if (((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).MoveSelected).equals("Detonate")) {
 			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Cooldown5 == 0) {
 				entity.getPersistentData().putDouble("rexSPLODE", 20);
-				{
-					double _setval = 20;
-					entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ExplodeTimer = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+				InvincibleMod.queueServerWork(20, () -> {
+					ExplodeSelfProcedure.execute(world, x, y, z, entity);
+					entity.getPersistentData().putDouble("rexSPLODE", 0);
+				});
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wither.spawn")), SoundSource.PLAYERS, (float) 0.8, 1);

@@ -2,11 +2,9 @@ package net.mcreator.invincible.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.MobSpawnType;
@@ -18,7 +16,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.invincible.init.InvincibleModEntities;
 import net.mcreator.invincible.entity.DimensionalPortalEntity;
 
-import java.util.Map;
 import java.util.List;
 import java.util.Comparator;
 
@@ -28,37 +25,14 @@ public class SelectDimensionOverworldProcedure {
 			return;
 		if (!((entity.level().dimension()) == Level.OVERWORLD)) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = InvincibleModEntities.DIMENSIONAL_PORTAL.get().spawn(_level, BlockPos.containing(x + 2, y, z + 2), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = InvincibleModEntities.DIMENSIONAL_PORTAL.get().spawn(_level,
+						BlockPos.containing(
+								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
+								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1,
+								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
+						MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 				}
-			}
-			{
-				BlockPos _bp = BlockPos.containing(x + 2, y, z + 2);
-				BlockState _bs = Blocks.AIR.defaultBlockState();
-				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
-						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-						} catch (Exception e) {
-						}
-				}
-				world.setBlock(_bp, _bs, 3);
-			}
-			{
-				BlockPos _bp = BlockPos.containing(x + 2, y + 1, z + 2);
-				BlockState _bs = Blocks.AIR.defaultBlockState();
-				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
-						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-						} catch (Exception e) {
-						}
-				}
-				world.setBlock(_bp, _bs, 3);
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);

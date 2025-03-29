@@ -7620,6 +7620,30 @@
         ]
       },
       "path": "~/GUI/Procedures/Dimension"
+    },
+    {
+      "name": "RandomPowers",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_powers",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "PowerSelectionBook",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_selection_book",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
     }
   ],
   "variable_elements": [
@@ -7922,12 +7946,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
-    },
-    {
-      "name": "ExplodeTimer",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
     }
   ],
   "sound_elements": [
