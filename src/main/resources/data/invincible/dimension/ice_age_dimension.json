@@ -30,10 +30,7 @@
         "Name": "minecraft:snow_block"
       },
       "default_fluid": {
-        "Name": "minecraft:frosted_ice",
-        "Properties": {
-          "age": "0"
-        }
+        "Name": "minecraft:packed_ice"
       },
       "spawn_target": [],
       "noise": {

@@ -21,7 +21,7 @@
     },
     "settings": {
       "name": "invincible:desert_wasteland",
-      "sea_level": 63,
+      "sea_level": -63,
       "legacy_random_source": false,
       "disable_mob_generation": false,
       "aquifers_enabled": true,
@@ -30,7 +30,7 @@
         "Name": "minecraft:sandstone"
       },
       "default_fluid": {
-        "Name": "minecraft:sandstone"
+        "Name": "minecraft:air"
       },
       "spawn_target": [],
       "noise": {
