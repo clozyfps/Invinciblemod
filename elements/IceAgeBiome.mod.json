@@ -4,7 +4,7 @@
   "definition": {
     "name": "Ice Age Biome",
     "groundBlock": {
-      "value": "Blocks.SNOW_LAYER"
+      "value": "Blocks.SNOW"
     },
     "undergroundBlock": {
       "value": "Blocks.SNOW"

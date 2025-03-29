@@ -15,7 +15,7 @@
       "value": "Blocks.PACKED_ICE"
     },
     "seaLevel": 63,
-    "generateOreVeins": false,
+    "generateOreVeins": true,
     "generateAquifers": false,
     "horizontalNoiseSize": 1,
     "verticalNoiseSize": 2,

@@ -129,7 +129,6 @@ public class InvincibleModVariables {
 				clone.Cooldown9 = original.Cooldown9;
 				clone.Cooldown10 = original.Cooldown10;
 				clone.DashCooldown = original.DashCooldown;
-				clone.ExplodeTimer = original.ExplodeTimer;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -367,7 +366,6 @@ public class InvincibleModVariables {
 		public double Cooldown10 = 0.0;
 		public double DashCooldown = 0.0;
 		public String DimensionList = "\"\"";
-		public double ExplodeTimer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -419,7 +417,6 @@ public class InvincibleModVariables {
 			nbt.putDouble("Cooldown10", Cooldown10);
 			nbt.putDouble("DashCooldown", DashCooldown);
 			nbt.putString("DimensionList", DimensionList);
-			nbt.putDouble("ExplodeTimer", ExplodeTimer);
 			return nbt;
 		}
 
@@ -474,7 +471,6 @@ public class InvincibleModVariables {
 			Cooldown10 = nbt.getDouble("Cooldown10");
 			DashCooldown = nbt.getDouble("DashCooldown");
 			DimensionList = nbt.getString("DimensionList");
-			ExplodeTimer = nbt.getDouble("ExplodeTimer");
 		}
 	}
 
@@ -551,7 +547,6 @@ public class InvincibleModVariables {
 					variables.Cooldown10 = message.data.Cooldown10;
 					variables.DashCooldown = message.data.DashCooldown;
 					variables.DimensionList = message.data.DimensionList;
-					variables.ExplodeTimer = message.data.ExplodeTimer;
 				}
 			});
 			context.setPacketHandled(true);

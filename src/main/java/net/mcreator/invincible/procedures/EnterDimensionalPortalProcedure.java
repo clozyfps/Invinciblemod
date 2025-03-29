@@ -1,9 +1,5 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -19,12 +15,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.invincible.entity.DimensionalPortalEntity;
-import net.mcreator.invincible.InvincibleMod;
-
-import java.util.Map;
 
 public class EnterDimensionalPortalProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
+	public static void execute(Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_DelayEnter) : 0) == 0) {
@@ -43,36 +36,7 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
 			if ((entity instanceof DimensionalPortalEntity _datEntS ? _datEntS.getEntityData().get(DimensionalPortalEntity.DATA_TargetDimension) : "").equals("End")) {
 				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -89,36 +53,7 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
 			if ((entity instanceof DimensionalPortalEntity _datEntS ? _datEntS.getEntityData().get(DimensionalPortalEntity.DATA_TargetDimension) : "").equals("Nether")) {
 				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -135,36 +70,7 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
 			if ((entity instanceof DimensionalPortalEntity _datEntS ? _datEntS.getEntityData().get(DimensionalPortalEntity.DATA_TargetDimension) : "").equals("Apocalyptic")) {
 				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -181,36 +87,7 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
 			if ((entity instanceof DimensionalPortalEntity _datEntS ? _datEntS.getEntityData().get(DimensionalPortalEntity.DATA_TargetDimension) : "").equals("Desert")) {
 				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -227,36 +104,7 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
 			if ((entity instanceof DimensionalPortalEntity _datEntS ? _datEntS.getEntityData().get(DimensionalPortalEntity.DATA_TargetDimension) : "").equals("Snow")) {
 				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -273,36 +121,7 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
 			if ((entity instanceof DimensionalPortalEntity _datEntS ? _datEntS.getEntityData().get(DimensionalPortalEntity.DATA_TargetDimension) : "").equals("Flaxan")) {
 				if (sourceentity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -319,39 +138,8 @@ public class EnterDimensionalPortalProcedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				InvincibleMod.queueServerWork(5, () -> {
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-					{
-						BlockPos _bp = BlockPos.containing(sourceentity.getX(), sourceentity.getY() + 1, sourceentity.getZ());
-						BlockState _bs = Blocks.AIR.defaultBlockState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						world.setBlock(_bp, _bs, 3);
-					}
-				});
+				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
-			if (!entity.level().isClientSide())
-				entity.discard();
 		}
 	}
 }

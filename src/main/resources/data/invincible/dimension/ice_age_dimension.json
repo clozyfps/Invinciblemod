@@ -25,7 +25,7 @@
       "legacy_random_source": false,
       "disable_mob_generation": false,
       "aquifers_enabled": true,
-      "ore_veins_enabled": false,
+      "ore_veins_enabled": true,
       "default_block": {
         "Name": "minecraft:snow_block"
       },
@@ -394,10 +394,7 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:snow",
-                              "Properties": {
-                                "layers": "1"
-                              }
+                              "Name": "minecraft:snow_block"
                             }
                           }
                         },

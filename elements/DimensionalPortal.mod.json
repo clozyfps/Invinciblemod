@@ -24,6 +24,13 @@
         "name": "DelayEnter",
         "type": "integer",
         "value": 20
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Despawn",
+        "type": "integer",
+        "value": 150
       }
     ],
     "modelWidth": 0.6,
