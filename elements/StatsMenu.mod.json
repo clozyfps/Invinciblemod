@@ -1,0 +1,539 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "statsmenu.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ability1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAbility"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 171,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ability",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAbility"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 170,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillpoint",
+          "image": "skillpoint.png",
+          "hoveredImage": "skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointStrength"
+          },
+          "x": 273,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillpoint1",
+          "image": "skillpoint.png",
+          "hoveredImage": "skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointDefence"
+          },
+          "x": 273,
+          "y": 123,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillpoint2",
+          "image": "skillpoint.png",
+          "hoveredImage": "skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointAgility"
+          },
+          "x": 273,
+          "y": 136,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillpoint3",
+          "image": "skillpoint.png",
+          "hoveredImage": "skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointIntelligence"
+          },
+          "x": 273,
+          "y": 149,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_str",
+          "text": {
+            "fixedValue": "+ Strength"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 273,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_vit",
+          "text": {
+            "fixedValue": "+ Vitality"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 273,
+          "y": 123,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agl",
+          "text": {
+            "fixedValue": "+ Agility"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 273,
+          "y": 136,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_int",
+          "text": {
+            "fixedValue": "+ Intelligence"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 273,
+          "y": 149,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_left",
+          "image": "arrow_left.png",
+          "hoveredImage": "arrow_left_s.png",
+          "onClick": {
+            "name": "RemovePlayerSkillPoints"
+          },
+          "x": 252,
+          "y": 80,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_right",
+          "image": "arrow_right.png",
+          "hoveredImage": "arrow_right_s.png",
+          "onClick": {
+            "name": "AddPlayerSkillPoints"
+          },
+          "x": 282,
+          "y": 80,
+          "locked": true
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnPlayerEntity"
+          },
+          "scale": 35,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 149,
+          "y": 136,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_name1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnName"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 52,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_name",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 51,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_strength1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatStrength"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 113,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_defence1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatDefence"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 126,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_agility1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatAgility"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 139,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_intelligence1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatIntelligence"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 152,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_strength",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatStrength"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 217,
+          "y": 112,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_defence",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatDefence"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 217,
+          "y": 125,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_agility",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatAgility"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 217,
+          "y": 138,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_intelligence",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatIntelligence"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 217,
+          "y": 151,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_power1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPower"
+          },
+          "color": {
+            "value": -14664184,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 87,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_power",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPower"
+          },
+          "color": {
+            "value": -8455136,
+            "falpha": 0.0
+          },
+          "x": 217,
+          "y": 86,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_skill_points1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSkillPoints"
+          },
+          "color": {
+            "value": -14664184,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 100,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_skill_points",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSkillPoints"
+          },
+          "color": {
+            "value": -8455136,
+            "falpha": 0.0
+          },
+          "x": 217,
+          "y": 99,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_add_skill_points",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAddSkillPoints"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 265,
+          "y": 85,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_exp_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnEXPAmount"
+          },
+          "width": 162,
+          "height": 9,
+          "x": 132,
+          "y": 69,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "exp_bar.png",
+          "spritesCount": 16,
+          "displayCondition": {
+            "name": "ReturnShowEXP"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnEXP"
+          },
+          "x": 133,
+          "y": 70,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_mastery_amount",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnMasteryAmount"
+          },
+          "width": 162,
+          "height": 9,
+          "x": 132,
+          "y": 186,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "exp_bar.png",
+          "spritesCount": 16,
+          "displayCondition": {
+            "name": "ReturnShowMastery"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnMastery"
+          },
+          "x": 133,
+          "y": 187,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

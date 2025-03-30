@@ -13,7 +13,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class SetHealthProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "health");
+			double _setval = DoubleArgumentType.getDouble(arguments, "intelligence");
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -24,7 +24,7 @@ public class SetHealthProcedure {
 					}
 				}
 			}.getEntity()).getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Health = _setval;
+				capability.Intelligence = _setval;
 				capability.syncPlayerVariables((new Object() {
 					public Entity getEntity() {
 						try {

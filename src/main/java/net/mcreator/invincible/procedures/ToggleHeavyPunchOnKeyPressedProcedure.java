@@ -19,7 +19,7 @@ public class ToggleHeavyPunchOnKeyPressedProcedure {
 				});
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Special: On"), false);
+				_player.displayClientMessage(Component.literal("Special: On"), true);
 		} else if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ToggleSpecial) {
 			{
 				boolean _setval = false;
@@ -29,7 +29,7 @@ public class ToggleHeavyPunchOnKeyPressedProcedure {
 				});
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Special: Off"), false);
+				_player.displayClientMessage(Component.literal("Special: Off"), true);
 		}
 	}
 }

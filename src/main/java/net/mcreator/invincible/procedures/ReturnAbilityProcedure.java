@@ -8,6 +8,7 @@ public class ReturnAbilityProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race;
+		return (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Race + " : "
+				+ new java.text.DecimalFormat("##").format((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Age) + " Years Old";
 	}
 }
