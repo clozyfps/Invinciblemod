@@ -36,6 +36,7 @@ public class ExplodeSelfProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(50 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
+				entityiterator.invulnerableTime = 0;
 				if (entityiterator instanceof Player) {
 					if (new Object() {
 						public boolean checkGamemode(Entity _ent) {
@@ -53,6 +54,7 @@ public class ExplodeSelfProcedure {
 				} else {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION), entity), 300);
 				}
+				entity.getPersistentData().putDouble("rexSPLODE", 0);
 			}
 		}
 		entity.getPersistentData().putDouble("rexSPLODE", 0);
