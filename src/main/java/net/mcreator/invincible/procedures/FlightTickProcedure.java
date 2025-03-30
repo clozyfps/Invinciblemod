@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
@@ -98,10 +99,10 @@ public class FlightTickProcedure {
 				}
 				if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), InputConstants.KEY_W)) {
 					if ((entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
-						vecX = vecX * 0.5;
-						vecY = vecY * 1;
-						vecZ = vecZ * 0.5;
-						entity.push(vecX, vecY, vecZ);
+						vecX = vecX * 4;
+						vecY = vecY * 4.5;
+						vecZ = vecZ * 4;
+						entity.setDeltaMovement(new Vec3(vecX, vecY, vecZ));
 						if ((entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
 							if (world.isClientSide()) {
 								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
@@ -121,10 +122,10 @@ public class FlightTickProcedure {
 							}
 						}
 					} else if (entity.isSprinting()) {
-						vecX = vecX * 0.1;
-						vecY = vecY * 0.5;
-						vecZ = vecZ * 0.1;
-						entity.push(vecX, vecY, vecZ);
+						vecX = vecX * 1.5;
+						vecY = vecY * 2;
+						vecZ = vecZ * 1.5;
+						entity.setDeltaMovement(new Vec3(vecX, vecY, vecZ));
 						if ((entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
 							if (world.isClientSide()) {
 								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
