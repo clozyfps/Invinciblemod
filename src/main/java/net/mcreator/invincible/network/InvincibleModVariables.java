@@ -113,6 +113,10 @@ public class InvincibleModVariables {
 			clone.MaximumMoves = original.MaximumMoves;
 			clone.AbilityBar = original.AbilityBar;
 			clone.DimensionList = original.DimensionList;
+			clone.AddPlayerSkillPoints = original.AddPlayerSkillPoints;
+			clone.Intelligence = original.Intelligence;
+			clone.AbilityMastery = original.AbilityMastery;
+			clone.SkillPoints = original.SkillPoints;
 			if (!event.isWasDeath()) {
 				clone.Flying = original.Flying;
 				clone.SelectedTitle = original.SelectedTitle;
@@ -366,6 +370,10 @@ public class InvincibleModVariables {
 		public double Cooldown10 = 0.0;
 		public double DashCooldown = 0.0;
 		public String DimensionList = "\"\"";
+		public double AddPlayerSkillPoints = 1.0;
+		public double Intelligence = 0;
+		public double AbilityMastery = 0;
+		public double SkillPoints = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -417,6 +425,10 @@ public class InvincibleModVariables {
 			nbt.putDouble("Cooldown10", Cooldown10);
 			nbt.putDouble("DashCooldown", DashCooldown);
 			nbt.putString("DimensionList", DimensionList);
+			nbt.putDouble("AddPlayerSkillPoints", AddPlayerSkillPoints);
+			nbt.putDouble("Intelligence", Intelligence);
+			nbt.putDouble("AbilityMastery", AbilityMastery);
+			nbt.putDouble("SkillPoints", SkillPoints);
 			return nbt;
 		}
 
@@ -471,6 +483,10 @@ public class InvincibleModVariables {
 			Cooldown10 = nbt.getDouble("Cooldown10");
 			DashCooldown = nbt.getDouble("DashCooldown");
 			DimensionList = nbt.getString("DimensionList");
+			AddPlayerSkillPoints = nbt.getDouble("AddPlayerSkillPoints");
+			Intelligence = nbt.getDouble("Intelligence");
+			AbilityMastery = nbt.getDouble("AbilityMastery");
+			SkillPoints = nbt.getDouble("SkillPoints");
 		}
 	}
 
@@ -547,6 +563,10 @@ public class InvincibleModVariables {
 					variables.Cooldown10 = message.data.Cooldown10;
 					variables.DashCooldown = message.data.DashCooldown;
 					variables.DimensionList = message.data.DimensionList;
+					variables.AddPlayerSkillPoints = message.data.AddPlayerSkillPoints;
+					variables.Intelligence = message.data.Intelligence;
+					variables.AbilityMastery = message.data.AbilityMastery;
+					variables.SkillPoints = message.data.SkillPoints;
 				}
 			});
 			context.setPacketHandled(true);

@@ -130,7 +130,7 @@ public class InvincibleCommand {
 
 			SetAgilityProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.literal("health").then(Commands.argument("health", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		}))).then(Commands.literal("intelligence").then(Commands.argument("intelligence", DoubleArgumentType.doubleArg()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

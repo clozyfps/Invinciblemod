@@ -222,7 +222,7 @@ public class AngstromEntity extends TamableAnimal implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 220);
-		builder = builder.add(Attributes.ARMOR, 2);
+		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 150);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);

@@ -71,7 +71,14 @@
     "treeFruits": {
       "value": ""
     },
-    "defaultFeatures": [],
+    "defaultFeatures": [
+      "DesertFeatures",
+      "DeadBushes",
+      "Caves",
+      "Ores",
+      "MonsterRooms",
+      "Fossils"
+    ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,

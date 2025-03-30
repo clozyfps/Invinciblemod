@@ -22,6 +22,7 @@ import net.mcreator.invincible.network.UseAbility2Message;
 import net.mcreator.invincible.network.UseAbility1Message;
 import net.mcreator.invincible.network.ToggleHeavyPunchMessage;
 import net.mcreator.invincible.network.SwitchBarsMessage;
+import net.mcreator.invincible.network.StatMenuMessage;
 import net.mcreator.invincible.network.GrabMessage;
 import net.mcreator.invincible.network.FollowUpMessage;
 import net.mcreator.invincible.network.FlyMessage;
@@ -101,7 +102,7 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping GRAB = new KeyMapping("key.invincible.grab", GLFW.GLFW_KEY_G, "key.categories.invincible") {
+	public static final KeyMapping GRAB = new KeyMapping("key.invincible.grab", GLFW.GLFW_KEY_J, "key.categories.invincible") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -217,12 +218,29 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping STAT_MENU = new KeyMapping("key.invincible.stat_menu", GLFW.GLFW_KEY_G, "key.categories.invincible") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				STAT_MENU_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - STAT_MENU_LASTPRESS);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new StatMenuMessage(1, dt));
+				StatMenuMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long FLY_LASTPRESS = 0;
 	private static long USE_ABILITY_1_LASTPRESS = 0;
 	private static long USE_ABILITY_2_LASTPRESS = 0;
 	private static long USE_ABILITY_3_LASTPRESS = 0;
 	private static long USE_ABILITY_4_LASTPRESS = 0;
 	private static long USE_ABILITY_5_LASTPRESS = 0;
+	private static long STAT_MENU_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -238,6 +256,7 @@ public class InvincibleModKeyMappings {
 		event.register(USE_ABILITY_4);
 		event.register(USE_ABILITY_5);
 		event.register(SWITCH_BARS);
+		event.register(STAT_MENU);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -257,6 +276,7 @@ public class InvincibleModKeyMappings {
 				USE_ABILITY_4.consumeClick();
 				USE_ABILITY_5.consumeClick();
 				SWITCH_BARS.consumeClick();
+				STAT_MENU.consumeClick();
 			}
 		}
 	}

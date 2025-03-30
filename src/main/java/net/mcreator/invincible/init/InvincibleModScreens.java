@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.invincible.client.gui.StatsMenuScreen;
 import net.mcreator.invincible.client.gui.DimensionSelectorScreen;
 import net.mcreator.invincible.client.gui.BookPickerScreen;
 
@@ -21,6 +22,7 @@ public class InvincibleModScreens {
 		event.enqueueWork(() -> {
 			MenuScreens.register(InvincibleModMenus.BOOK_PICKER.get(), BookPickerScreen::new);
 			MenuScreens.register(InvincibleModMenus.DIMENSION_SELECTOR.get(), DimensionSelectorScreen::new);
+			MenuScreens.register(InvincibleModMenus.STATS_MENU.get(), StatsMenuScreen::new);
 		});
 	}
 }

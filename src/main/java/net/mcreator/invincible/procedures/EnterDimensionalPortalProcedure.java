@@ -140,6 +140,8 @@ public class EnterDimensionalPortalProcedure {
 				}
 				sourceentity.getPersistentData().putBoolean("EnterDimension", true);
 			}
+			if (entity instanceof DimensionalPortalEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(DimensionalPortalEntity.DATA_Enters, (int) ((entity instanceof DimensionalPortalEntity _datEntI ? _datEntI.getEntityData().get(DimensionalPortalEntity.DATA_Enters) : 0) + 1));
 		}
 	}
 }

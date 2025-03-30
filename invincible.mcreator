@@ -4536,19 +4536,6 @@
       "path": "~/Potions/Procedure"
     },
     {
-      "name": "StatsOverlay",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stats_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/client/screens/StatsOverlayOverlay.java"
-        ]
-      },
-      "path": "~/Overlay"
-    },
-    {
       "name": "ReturnStatHealth",
       "type": "procedure",
       "compiles": true,
@@ -6694,29 +6681,6 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "EXPBoss",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "exp_boss",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/invincible/procedures/EXPBossProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "IceAgeDimension",
       "type": "dimension",
       "compiles": true,
@@ -7644,6 +7608,378 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
+    },
+    {
+      "name": "AddPointAgility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_point_agility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AddPointAgilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "StatMenuOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_menu_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/StatMenuOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybind/Procedures"
+    },
+    {
+      "name": "ReturnSkillPoints",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_skill_points",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnSkillPointsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnAddSkillPoints",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_add_skill_points",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnAddSkillPointsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnMasteryAmount",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_mastery_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnMasteryAmountProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RemovePlayerSkillPoints",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_player_skill_points",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/RemovePlayerSkillPointsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnPower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_power",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "AddPointStrength",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_point_strength",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AddPointStrengthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnEXPAmount",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_exp_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnEXPAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnMastery",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_mastery",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnMasteryProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnPlayerEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_player_entity",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnPlayerEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnStatIntelligence",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_stat_intelligence",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnStatIntelligenceProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "StatMenu",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/network/StatMenuMessage.java"
+        ]
+      },
+      "path": "~/Keybind"
+    },
+    {
+      "name": "AddPlayerSkillPoints",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_player_skill_points",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AddPlayerSkillPointsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "AddPointIntelligence",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_point_intelligence",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AddPointIntelligenceProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "AddPointDefence",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_point_defence",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/AddPointDefenceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnEXP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_exp",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnEXPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnNameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "ReturnShowEXP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_show_exp",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnShowEXPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ReturnShowMastery",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_show_mastery",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/ReturnShowMasteryProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "StatsMenu",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/client/gui/StatsMenuScreen.java",
+          "src/main/java/net/mcreator/invincible/world/inventory/StatsMenuMenu.java",
+          "src/main/java/net/mcreator/invincible/network/StatsMenuButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [
@@ -7946,6 +8282,30 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "AddPlayerSkillPoints",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Intelligence",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillPoints",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -8204,6 +8564,7 @@
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
+      "gamerule.powerSelectionBook": "Power Selection Book",
       "entity.invincible.dupli_kate": "Dupli-Kate",
       "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
@@ -8320,6 +8681,7 @@
       "effect.invincible.circle_expanding_burst": "Circle Expanding Burst",
       "effect.invincible.grabbed": "Grabbed",
       "item.invincible.invincible_blue_suit_chestplate": "Invincible\u0027s Suit (Blue)",
+      "gamerule.randomPowers": "Random Powers",
       "effect.invincible.mars_shader": "Mars Shader",
       "effect.invincible.time_stopped": "Time Stopped",
       "entity.invincible.flaxan_gunman": "Flaxan Gunman",
@@ -8344,10 +8706,12 @@
       "entity.invincible.flaxan_soldier": "Flaxan Soldier",
       "biome.invincible.desert_wasteland_biome": "Desert Wasteland Biome",
       "entity.invincible.viltrumite_female": "Viltrumite Female",
+      "gamerule.powerSelectionBook.description": "Players spawn with a book to select their powers",
       "effect.invincible.active_flight_speed": "Active Flight Speed",
       "effect.invincible.after_images": "After Images",
       "effect.invincible.active_burst": "Active Burst",
       "item.invincible.flaxan_soldier_spawn_egg": "Flaxan Soldier Spawn Egg",
+      "gamerule.randomPowers.description": "Players will spawn with a randomly selected power",
       "gui.invincible.dimension_selector.tooltip_explode": "Explode (WIP)",
       "biome.invincible.flaxxan_biome": "Flaxxan Biome",
       "effect.invincible.point_destruction": "Point Destruction",

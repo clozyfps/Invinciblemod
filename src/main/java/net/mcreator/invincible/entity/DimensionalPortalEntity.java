@@ -62,6 +62,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 	public static final EntityDataAccessor<String> DATA_TargetDimension = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<Integer> DATA_DelayEnter = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_Despawn = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Enters = SynchedEntityData.defineId(DimensionalPortalEntity.class, EntityDataSerializers.INT);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -89,6 +90,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		this.entityData.define(DATA_TargetDimension, "");
 		this.entityData.define(DATA_DelayEnter, 20);
 		this.entityData.define(DATA_Despawn, 100);
+		this.entityData.define(DATA_Enters, 0);
 	}
 
 	public void setTexture(String texture) {
@@ -165,6 +167,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		compound.putString("DataTargetDimension", this.entityData.get(DATA_TargetDimension));
 		compound.putInt("DataDelayEnter", this.entityData.get(DATA_DelayEnter));
 		compound.putInt("DataDespawn", this.entityData.get(DATA_Despawn));
+		compound.putInt("DataEnters", this.entityData.get(DATA_Enters));
 	}
 
 	@Override
@@ -178,6 +181,8 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 			this.entityData.set(DATA_DelayEnter, compound.getInt("DataDelayEnter"));
 		if (compound.contains("DataDespawn"))
 			this.entityData.set(DATA_Despawn, compound.getInt("DataDespawn"));
+		if (compound.contains("DataEnters"))
+			this.entityData.set(DATA_Enters, compound.getInt("DataEnters"));
 	}
 
 	@Override
