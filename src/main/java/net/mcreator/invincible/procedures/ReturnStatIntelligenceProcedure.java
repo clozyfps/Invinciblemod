@@ -1,13 +1,9 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.invincible.network.InvincibleModVariables;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ReturnStatIntelligenceProcedure {
-	public static String execute(Entity entity) {
-		if (entity == null)
-			return "";
-		return new java.text.DecimalFormat("##").format((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Intelligence);
+	public static String execute() {
+		return new java.text.DecimalFormat("##").format();
 	}
 }

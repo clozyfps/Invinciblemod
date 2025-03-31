@@ -1,30 +1,9 @@
 
 package net.mcreator.invincible.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.invincible.world.inventory.StatsMenuMenu;
-import net.mcreator.invincible.procedures.RemovePlayerSkillPointsProcedure;
-import net.mcreator.invincible.procedures.AddPointStrengthProcedure;
-import net.mcreator.invincible.procedures.AddPointIntelligenceProcedure;
-import net.mcreator.invincible.procedures.AddPointDefenceProcedure;
-import net.mcreator.invincible.procedures.AddPointAgilityProcedure;
-import net.mcreator.invincible.procedures.AddPlayerSkillPointsProcedure;
-import net.mcreator.invincible.InvincibleMod;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class StatsMenuButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public StatsMenuButtonMessage(FriendlyByteBuf buffer) {
@@ -56,6 +35,7 @@ public class StatsMenuButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -64,9 +44,11 @@ public class StatsMenuButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = StatsMenuMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
 			AddPointStrengthProcedure.execute(entity);
@@ -81,15 +63,15 @@ public class StatsMenuButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			AddPointIntelligenceProcedure.execute(entity);
+			AddPointIntelligenceProcedure.execute();
 		}
 		if (buttonID == 4) {
 
-			RemovePlayerSkillPointsProcedure.execute(entity);
+			RemovePlayerSkillPointsProcedure.execute();
 		}
 		if (buttonID == 5) {
 
-			AddPlayerSkillPointsProcedure.execute(entity);
+			AddPlayerSkillPointsProcedure.execute();
 		}
 	}
 
@@ -97,4 +79,5 @@ public class StatsMenuButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		InvincibleMod.addNetworkMessage(StatsMenuButtonMessage.class, StatsMenuButtonMessage::buffer, StatsMenuButtonMessage::new, StatsMenuButtonMessage::handler);
 	}
+
 }

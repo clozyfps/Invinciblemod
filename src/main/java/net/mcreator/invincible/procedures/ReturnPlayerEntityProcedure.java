@@ -1,6 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ReturnPlayerEntityProcedure {
 	public static Entity execute(Entity entity) {

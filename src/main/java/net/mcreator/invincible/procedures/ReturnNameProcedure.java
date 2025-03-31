@@ -1,6 +1,6 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
 public class ReturnNameProcedure {
 	public static String execute(Entity entity) {
