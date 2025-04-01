@@ -7980,6 +7980,18 @@
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "Flightanimation",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flightanimation",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
     }
   ],
   "variable_elements": [
@@ -8562,6 +8574,7 @@
       "entity.invincible.dimensional_portal": "Dimensional Portal",
       "effect.invincible.no_fall": "No Fall",
       "item.invincible.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
+      "gui.invincible.stats_menu.tooltip_agl": "+ Agility",
       "item.invincible.mauler_suit_chestplate": "Mauler\u0027s Suit",
       "gui.invincible.dimension_selector.tooltip_spider": "Spider (WIP)",
       "gamerule.powerSelectionBook": "Power Selection Book",
@@ -8576,6 +8589,7 @@
       "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
+      "gui.invincible.stats_menu.tooltip_int": "+ Intelligence",
       "key.invincible.follow_up": "Follow Up",
       "item.invincible.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
       "subtitles.powerfulpunch": "",
@@ -8589,6 +8603,7 @@
       "gui.invincible.book_picker.tooltip_portal": "Portal (WIP)",
       "entity.invincible.mauler": "Mauler",
       "effect.invincible.punch_catch_active": "Punch Catch Active",
+      "gui.invincible.stats_menu.tooltip_vit": "+ Vitality",
       "item.invincible.flaxan_gun": "Flaxan Gun",
       "key.invincible.burst": "Burst",
       "item.invincible.mauler_suit_leggings": "Mauler\u0027s Pants",
@@ -8612,7 +8627,9 @@
       "entity.invincible.multi_paul": "Multi-Paul",
       "effect.invincible.grab_cooldown": "Grab Cooldown",
       "item.invincible.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
+      "key.invincible.stat_menu": "Stat Menu",
       "gui.invincible.book_picker.tooltip_cloning": "Cloning",
+      "gui.invincible.stats_menu.tooltip_str": "+ Strength",
       "item.invincible.invincible_mark_spawn_egg": "Invincible Spawn Egg",
       "effect.invincible.hyper_sonic": "Hyper Sonic",
       "item.invincible.mauler_spawn_egg": "Mauler Spawn Egg",

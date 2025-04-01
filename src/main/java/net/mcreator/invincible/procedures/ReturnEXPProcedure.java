@@ -1,6 +1,8 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.invincible.network.InvincibleModVariables;
 
 public class ReturnEXPProcedure {
 	public static double execute(Entity entity) {

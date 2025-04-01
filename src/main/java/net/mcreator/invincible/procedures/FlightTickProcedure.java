@@ -22,6 +22,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.invincible.network.InvincibleModVariables;
 import net.mcreator.invincible.init.InvincibleModMobEffects;
+import net.mcreator.invincible.init.InvincibleModGameRules;
 import net.mcreator.invincible.InvincibleMod;
 
 import javax.annotation.Nullable;
@@ -51,61 +52,36 @@ public class FlightTickProcedure {
 		double vecY = 0;
 		double vecX = 0;
 		double magnitude = 0;
-		if (new Object() {
-			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-				}
-				return false;
-			}
-		}.checkGamemode(entity)) {
-			if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == true) {
-				entity.fallDistance = 0;
-				magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
-				vecX = entity.getLookAngle().x / magnitude;
-				vecY = entity.getLookAngle().y / magnitude;
-				vecZ = entity.getLookAngle().z / magnitude;
-				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 25) {
-					if (entity.isSprinting()) {
-						if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ToggleSpecial) {
-							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
-						}
+		if (world.getLevelData().getGameRules().getBoolean(InvincibleModGameRules.FLIGHTANIMATION) == true) {
+			if (new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayer _serverPlayer) {
+						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
+					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 					}
+					return false;
 				}
-				if (entity.isShiftKeyDown()) {
-					if (world.isClientSide()) {
-						SetupAnimationsProcedure.setAnimationClientside((Player) entity, "descending", true);
-					}
-					if (!world.isClientSide()) {
-						if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-							List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-							synchronized (connections) {
-								Iterator<Connection> iterator = connections.iterator();
-								while (iterator.hasNext()) {
-									Connection connection = iterator.next();
-									if (!connection.isConnecting() && connection.isConnected())
-										InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("descending"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-								}
+			}.checkGamemode(entity)) {
+				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == true) {
+					entity.fallDistance = 0;
+					magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
+					vecX = entity.getLookAngle().x / magnitude;
+					vecY = entity.getLookAngle().y / magnitude;
+					vecZ = entity.getLookAngle().z / magnitude;
+					if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 25) {
+						if (entity.isSprinting()) {
+							if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ToggleSpecial) {
+								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
 							}
 						}
 					}
-				}
-				if (entity instanceof Player _player) {
-					_player.getAbilities().flying = true;
-					_player.onUpdateAbilities();
-				}
-				if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), InputConstants.KEY_W)) {
-					if ((entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
-						vecX = vecX * 4;
-						vecY = vecY * 4.5;
-						vecZ = vecZ * 4;
-						entity.setDeltaMovement(new Vec3(vecX, vecY, vecZ));
-						if ((entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+					if (entity.isShiftKeyDown()) {
+						if (world.getLevelData().getGameRules().getBoolean(InvincibleModGameRules.FLIGHTANIMATION) == true) {
 							if (world.isClientSide()) {
-								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
+								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "descending", true);
 							}
 							if (!world.isClientSide()) {
 								if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
@@ -115,66 +91,141 @@ public class FlightTickProcedure {
 										while (iterator.hasNext()) {
 											Connection connection = iterator.next();
 											if (!connection.isConnecting() && connection.isConnected())
-												InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-										}
-									}
-								}
-							}
-						}
-					} else if (entity.isSprinting()) {
-						vecX = vecX * 1.5;
-						vecY = vecY * 2;
-						vecZ = vecZ * 1.5;
-						entity.setDeltaMovement(new Vec3(vecX, vecY, vecZ));
-						if ((entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
-							if (world.isClientSide()) {
-								SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
-							}
-							if (!world.isClientSide()) {
-								if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-									List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-									synchronized (connections) {
-										Iterator<Connection> iterator = connections.iterator();
-										while (iterator.hasNext()) {
-											Connection connection = iterator.next();
-											if (!connection.isConnecting() && connection.isConnected())
-												InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+												InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("descending"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
 										}
 									}
 								}
 							}
 						}
 					}
-				}
-			} else {
-				if (entity instanceof Player _player) {
-					_player.getAbilities().flying = false;
-					_player.onUpdateAbilities();
-				}
-			}
-		}
-		if ((entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
-			if (world.isClientSide()) {
-				SetupAnimationsProcedure.setAnimationClientside((Player) entity, "grab", true);
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("grab"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+					if (entity instanceof Player _player) {
+						_player.getAbilities().flying = true;
+						_player.onUpdateAbilities();
+					}
+					if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), InputConstants.KEY_W)) {
+						if ((entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(InvincibleModMobEffects.ACTIVE_FLIGHT_SPEED.get())) == true) {
+							vecX = vecX * 4;
+							vecY = vecY * 4.5;
+							vecZ = vecZ * 4;
+							entity.setDeltaMovement(new Vec3(vecX, vecY, vecZ));
+							if ((entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+								if (world.getLevelData().getGameRules().getBoolean(InvincibleModGameRules.FLIGHTANIMATION) == true) {
+									if (world.isClientSide()) {
+										SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
+									}
+									if (!world.isClientSide()) {
+										if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+											List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+											synchronized (connections) {
+												Iterator<Connection> iterator = connections.iterator();
+												while (iterator.hasNext()) {
+													Connection connection = iterator.next();
+													if (!connection.isConnecting() && connection.isConnected())
+														InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+												}
+											}
+										}
+									}
+								}
+							}
+						} else if (entity.isSprinting()) {
+							vecX = vecX * 1.5;
+							vecY = vecY * 2;
+							vecZ = vecZ * 1.5;
+							entity.setDeltaMovement(new Vec3(vecX, vecY, vecZ));
+							if ((entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == false) {
+								if (world.getLevelData().getGameRules().getBoolean(InvincibleModGameRules.FLIGHTANIMATION) == true) {
+									if (world.isClientSide()) {
+										SetupAnimationsProcedure.setAnimationClientside((Player) entity, "flight", true);
+									}
+									if (!world.isClientSide()) {
+										if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+											List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+											synchronized (connections) {
+												Iterator<Connection> iterator = connections.iterator();
+												while (iterator.hasNext()) {
+													Connection connection = iterator.next();
+													if (!connection.isConnecting() && connection.isConnected())
+														InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("flight"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+												}
+											}
+										}
+									}
+								}
+							}
 						}
+					}
+				} else {
+					if (entity instanceof Player _player) {
+						_player.getAbilities().flying = false;
+						_player.onUpdateAbilities();
 					}
 				}
 			}
-			if (entity.isSprinting()) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 5, 250, false, false));
+			if ((entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
+				if (world.isClientSide()) {
+					SetupAnimationsProcedure.setAnimationClientside((Player) entity, "grab", true);
+				}
+				if (!world.isClientSide()) {
+					if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+						List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+						synchronized (connections) {
+							Iterator<Connection> iterator = connections.iterator();
+							while (iterator.hasNext()) {
+								Connection connection = iterator.next();
+								if (!connection.isConnecting() && connection.isConnected())
+									InvincibleMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.InvincibleModAnimationMessage(Component.literal("grab"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+							}
+						}
+					}
+				}
+				if (entity.isSprinting()) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 5, 250, false, false));
+				}
+			}
+		} else if (world.getLevelData().getGameRules().getBoolean(InvincibleModGameRules.FLIGHTANIMATION) == false) {
+			if (new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayer _serverPlayer) {
+						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
+					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
+					}
+					return false;
+				}
+			}.checkGamemode(entity)) {
+				if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying == true) {
+					if (entity instanceof Player _player) {
+						_player.getAbilities().flying = true;
+						_player.onUpdateAbilities();
+					}
+					entity.fallDistance = 0;
+					if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Strength >= 25) {
+						if (entity.isSprinting()) {
+							if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).ToggleSpecial) {
+								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+							}
+						}
+					}
+				} else {
+					if (entity instanceof Player _player) {
+						_player.getAbilities().flying = false;
+						_player.onUpdateAbilities();
+					}
+				}
+			}
+			if ((entity instanceof LivingEntity _livEnt42 && _livEnt42.hasEffect(InvincibleModMobEffects.GRABBING_ACTIVE.get())) == true) {
+				if (entity.isSprinting()) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(InvincibleModMobEffects.DESTRUCTION_ACTIVE_BURST.get(), 5, 0, false, false));
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 5, 250, false, false));
+				}
 			}
 		}
 	}
