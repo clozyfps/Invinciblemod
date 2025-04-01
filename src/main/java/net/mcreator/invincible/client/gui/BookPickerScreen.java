@@ -29,6 +29,7 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 	ImageButton imagebutton_icon_explode;
 	ImageButton imagebutton_icon_cloning;
 	ImageButton imagebutton_icon_portal;
+	ImageButton imagebutton_icon_battlebeast;
 
 	public BookPickerScreen(BookPickerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -62,6 +63,8 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_cloning"), mouseX, mouseY);
 		if (mouseX > leftPos + -78 && mouseX < leftPos + -56 && mouseY > topPos + -22 && mouseY < topPos + 0)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_portal"), mouseX, mouseY);
+		if (mouseX > leftPos + -54 && mouseX < leftPos + -30 && mouseY > topPos + -23 && mouseY < topPos + 1)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible.book_picker.tooltip_beast"), mouseX, mouseY);
 	}
 
 	@Override
@@ -86,6 +89,8 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 		guiGraphics.blit(new ResourceLocation("invincible:textures/screens/slot.png"), this.leftPos + 53, this.topPos + -47, 0, 0, 22, 22, 22, 22);
 
 		guiGraphics.blit(new ResourceLocation("invincible:textures/screens/slot.png"), this.leftPos + -78, this.topPos + -22, 0, 0, 22, 22, 22, 22);
+
+		guiGraphics.blit(new ResourceLocation("invincible:textures/screens/slot.png"), this.leftPos + -52, this.topPos + -22, 0, 0, 22, 22, 22, 22);
 
 		RenderSystem.disableBlend();
 	}
@@ -164,5 +169,13 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 		});
 		guistate.put("button:imagebutton_icon_portal", imagebutton_icon_portal);
 		this.addRenderableWidget(imagebutton_icon_portal);
+		imagebutton_icon_battlebeast = new ImageButton(this.leftPos + -49, this.topPos + -19, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_battlebeast.png"), 16, 32, e -> {
+			if (true) {
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(7, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_icon_battlebeast", imagebutton_icon_battlebeast);
+		this.addRenderableWidget(imagebutton_icon_battlebeast);
 	}
 }
