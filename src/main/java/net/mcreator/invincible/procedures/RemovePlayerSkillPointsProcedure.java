@@ -1,10 +1,21 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.invincible.network.InvincibleModVariables;
 
 public class RemovePlayerSkillPointsProcedure {
-public static void execute(
-) {
-if (>1) {}
-}
+	public static void execute(Entity entity) {
+		if (entity == null)
+			return;
+		if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AddPlayerSkillPoints > 1) {
+			{
+				double _setval = (entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).AddPlayerSkillPoints - 1;
+				entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.AddPlayerSkillPoints = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+	}
 }

@@ -1,9 +1,13 @@
 package net.mcreator.invincible.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.invincible.network.InvincibleModVariables;
 
 public class ReturnSkillPointsProcedure {
-	public static String execute() {
-		return new java.text.DecimalFormat("##").format();
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return new java.text.DecimalFormat("##").format((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).SkillPoints);
 	}
 }
