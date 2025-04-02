@@ -317,6 +317,44 @@
           "y": 98,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_battlebeast",
+          "image": "icon_battlebeast.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectBeast"
+          },
+          "x": 165,
+          "y": 101,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_beast",
+          "text": {
+            "fixedValue": "Beast"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 160,
+          "y": 97,
+          "locked": true
+        }
       }
     ],
     "gridSettings": {

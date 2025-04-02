@@ -8008,6 +8008,25 @@
         ]
       },
       "path": "~/Item"
+    },
+    {
+      "name": "SelectBeast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_beast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/SelectBeastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
