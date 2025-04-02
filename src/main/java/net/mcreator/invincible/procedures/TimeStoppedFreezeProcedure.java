@@ -47,8 +47,8 @@ public class TimeStoppedFreezeProcedure {
 			}
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3((entity.getPersistentData().getDouble("LookX")), (entity.getPersistentData().getDouble("LookY")), (entity.getPersistentData().getDouble("LookZ"))));
 			if (!(entity instanceof Player)) {
-				if (entity instanceof Mob _mob) {
-					_mob.setNoAi(true);
+				if (entity instanceof Mob _mobSetNoAi) {
+					_mobSetNoAi.setNoAi(true);
 				}
 			}
 			if (entity instanceof Creeper) {
