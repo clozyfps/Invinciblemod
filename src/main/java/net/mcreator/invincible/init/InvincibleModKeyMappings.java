@@ -41,11 +41,6 @@ public class InvincibleModKeyMappings {
 			if (isDownOld != isDown && isDown) {
 				InvincibleMod.PACKET_HANDLER.sendToServer(new FlyMessage(0, 0));
 				FlyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-				FLY_LASTPRESS = System.currentTimeMillis();
-			} else if (isDownOld != isDown && !isDown) {
-				int dt = (int) (System.currentTimeMillis() - FLY_LASTPRESS);
-				InvincibleMod.PACKET_HANDLER.sendToServer(new FlyMessage(1, dt));
-				FlyMessage.pressAction(Minecraft.getInstance().player, 1, dt);
 			}
 			isDownOld = isDown;
 		}
@@ -234,7 +229,6 @@ public class InvincibleModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	private static long FLY_LASTPRESS = 0;
 	private static long USE_ABILITY_1_LASTPRESS = 0;
 	private static long USE_ABILITY_2_LASTPRESS = 0;
 	private static long USE_ABILITY_3_LASTPRESS = 0;

@@ -85,10 +85,22 @@ public class ViltrumitePunchesProcedure {
 						});
 					}
 					if (entity instanceof Player) {
-						if (entity.getPersistentData().getBoolean("flight")) {
-							entity.getPersistentData().putBoolean("flight", false);
+						if ((entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new InvincibleModVariables.PlayerVariables())).Flying) {
+							{
+								boolean _setval = false;
+								entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.Flying = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
 							InvincibleMod.queueServerWork(10, () -> {
-								entity.getPersistentData().putBoolean("flight", true);
+								{
+									boolean _setval = true;
+									entity.getCapability(InvincibleModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.Flying = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
 							});
 						}
 						if (world instanceof ServerLevel _level)

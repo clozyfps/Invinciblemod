@@ -7,9 +7,6 @@
     "keyBindingCategoryKey": "invincible",
     "onKeyPressed": {
       "name": "FlyOnKeyPressed"
-    },
-    "onKeyReleased": {
-      "name": "FlyOnKeyReleased"
     }
   }
 }

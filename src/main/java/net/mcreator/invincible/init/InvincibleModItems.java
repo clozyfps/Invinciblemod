@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.invincible.item.ViltrumiteSuitItem;
 import net.mcreator.invincible.item.TutorialItem;
 import net.mcreator.invincible.item.TestItem;
 import net.mcreator.invincible.item.RexSplodeSuitItem;
@@ -77,6 +78,9 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> ANGSTROM_SUIT_BOOTS = REGISTRY.register("angstrom_suit_boots", () -> new AngstromSuitItem.Boots());
 	public static final RegistryObject<Item> ANGSTROM_SPAWN_EGG = REGISTRY.register("angstrom_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.ANGSTROM, -13421773, -10092544, new Item.Properties()));
 	public static final RegistryObject<Item> VILTRUMITE_MALE_SPAWN_EGG = REGISTRY.register("viltrumite_male_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.VILTRUMITE_MALE, -1250068, -5460820, new Item.Properties()));
+	public static final RegistryObject<Item> VILTRUMITE_SUIT_CHESTPLATE = REGISTRY.register("viltrumite_suit_chestplate", () -> new ViltrumiteSuitItem.Chestplate());
+	public static final RegistryObject<Item> VILTRUMITE_SUIT_LEGGINGS = REGISTRY.register("viltrumite_suit_leggings", () -> new ViltrumiteSuitItem.Leggings());
+	public static final RegistryObject<Item> VILTRUMITE_SUIT_BOOTS = REGISTRY.register("viltrumite_suit_boots", () -> new ViltrumiteSuitItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

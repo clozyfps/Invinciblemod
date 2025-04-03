@@ -11,19 +11,17 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.invincible.world.inventory.BookPickerMenu;
 import net.mcreator.invincible.network.BookPickerButtonMessage;
-import net.mcreator.invincible.init.InvincibleModScreens.WidgetScreen;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> implements WidgetScreen {
+public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> {
 	private final static HashMap<String, Object> guistate = BookPickerMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_icon_viltrumite;
 	ImageButton imagebutton_icon_human;
 	ImageButton imagebutton_icon_speedster;
@@ -97,10 +95,6 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> im
 		RenderSystem.disableBlend();
 	}
 
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
-	}
-
 	@Override
 	public boolean keyPressed(int key, int b, int c) {
 		if (key == 256) {
@@ -121,64 +115,64 @@ public class BookPickerScreen extends AbstractContainerScreen<BookPickerMenu> im
 		super.init();
 		imagebutton_icon_viltrumite = new ImageButton(this.leftPos + -49, this.topPos + -44, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_viltrumite.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(0, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(0, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_viltrumite", imagebutton_icon_viltrumite);
 		this.addRenderableWidget(imagebutton_icon_viltrumite);
 		imagebutton_icon_human = new ImageButton(this.leftPos + -75, this.topPos + -43, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_human.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(1, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(1, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_human", imagebutton_icon_human);
 		this.addRenderableWidget(imagebutton_icon_human);
 		imagebutton_icon_speedster = new ImageButton(this.leftPos + -23, this.topPos + -44, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_speedster.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(2, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(2, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_speedster", imagebutton_icon_speedster);
 		this.addRenderableWidget(imagebutton_icon_speedster);
 		imagebutton_icon_spider = new ImageButton(this.leftPos + 4, this.topPos + -44, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_spider.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(3, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(3, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_spider", imagebutton_icon_spider);
 		this.addRenderableWidget(imagebutton_icon_spider);
 		imagebutton_icon_explode = new ImageButton(this.leftPos + 30, this.topPos + -44, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_explode.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(4, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(4, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_explode", imagebutton_icon_explode);
 		this.addRenderableWidget(imagebutton_icon_explode);
 		imagebutton_icon_cloning = new ImageButton(this.leftPos + 56, this.topPos + -44, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_cloning.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(5, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 5, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(5, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_cloning", imagebutton_icon_cloning);
 		this.addRenderableWidget(imagebutton_icon_cloning);
 		imagebutton_icon_portal = new ImageButton(this.leftPos + -75, this.topPos + -19, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_portal.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(6, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 6, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(6, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_portal", imagebutton_icon_portal);
 		this.addRenderableWidget(imagebutton_icon_portal);
 		imagebutton_icon_battlebeast = new ImageButton(this.leftPos + -49, this.topPos + -19, 16, 16, 0, 0, 16, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_icon_battlebeast.png"), 16, 32, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(7, x, y, z, textstate));
-				BookPickerButtonMessage.handleButtonAction(entity, 7, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new BookPickerButtonMessage(7, x, y, z));
+				BookPickerButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_icon_battlebeast", imagebutton_icon_battlebeast);

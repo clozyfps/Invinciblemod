@@ -26,8 +26,8 @@ public class TimeStoppedUnfreezeProcedure {
 			_entity.removeEffect(MobEffects.BLINDNESS);
 		if (entity instanceof LivingEntity _entity)
 			_entity.removeEffect(MobEffects.DARKNESS);
-		if (entity instanceof Mob _mobSetNoAi) {
-			_mobSetNoAi.setNoAi(false);
+		if (entity instanceof Mob _mob) {
+			_mob.setNoAi(false);
 		}
 		if (entity instanceof Creeper) {
 			if (!(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).isEmpty())) {

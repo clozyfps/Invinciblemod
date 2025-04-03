@@ -48,6 +48,9 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_CHESTPLATE.get());
 				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_LEGGINGS.get());
 				tabData.accept(InvincibleModItems.ANGSTROM_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.VILTRUMITE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.VILTRUMITE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.VILTRUMITE_SUIT_BOOTS.get());
 			}).build());
 	public static final RegistryObject<CreativeModeTab> INVINCIBLE_ITEMS_TAB = REGISTRY.register("invincible_items_tab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible.invincible_items_tab")).icon(() -> new ItemStack(InvincibleModItems.FLAXAN_GUN.get())).displayItems((parameters, tabData) -> {

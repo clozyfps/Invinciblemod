@@ -10,7 +10,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.invincible.procedures.FlyOnKeyReleasedProcedure;
 import net.mcreator.invincible.procedures.FlyOnKeyPressedProcedure;
 import net.mcreator.invincible.InvincibleMod;
 
@@ -54,10 +53,6 @@ public class FlyMessage {
 		if (type == 0) {
 
 			FlyOnKeyPressedProcedure.execute(entity);
-		}
-		if (type == 1) {
-
-			FlyOnKeyReleasedProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

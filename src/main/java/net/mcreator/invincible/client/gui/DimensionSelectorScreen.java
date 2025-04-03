@@ -29,19 +29,17 @@ import net.mcreator.invincible.procedures.ReturnLockedEndProcedure;
 import net.mcreator.invincible.procedures.ReturnLockedDesertProcedure;
 import net.mcreator.invincible.procedures.ReturnLockedApocalypticProcedure;
 import net.mcreator.invincible.network.DimensionSelectorButtonMessage;
-import net.mcreator.invincible.init.InvincibleModScreens.WidgetScreen;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSelectorMenu> implements WidgetScreen {
+public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSelectorMenu> {
 	private final static HashMap<String, Object> guistate = DimensionSelectorMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_blank;
 	ImageButton imagebutton_blank1;
 	ImageButton imagebutton_blank2;
@@ -155,10 +153,6 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		RenderSystem.disableBlend();
 	}
 
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
-	}
-
 	@Override
 	public boolean keyPressed(int key, int b, int c) {
 		if (key == 256) {
@@ -179,64 +173,64 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		super.init();
 		imagebutton_blank = new ImageButton(this.leftPos + -78, this.topPos + -47, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(0, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(0, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank", imagebutton_blank);
 		this.addRenderableWidget(imagebutton_blank);
 		imagebutton_blank1 = new ImageButton(this.leftPos + -52, this.topPos + -47, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank1.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(1, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(1, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank1", imagebutton_blank1);
 		this.addRenderableWidget(imagebutton_blank1);
 		imagebutton_blank2 = new ImageButton(this.leftPos + -26, this.topPos + -47, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank2.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(2, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(2, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank2", imagebutton_blank2);
 		this.addRenderableWidget(imagebutton_blank2);
 		imagebutton_blank3 = new ImageButton(this.leftPos + 1, this.topPos + -47, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank3.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(3, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(3, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank3", imagebutton_blank3);
 		this.addRenderableWidget(imagebutton_blank3);
 		imagebutton_blank4 = new ImageButton(this.leftPos + 27, this.topPos + -47, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank4.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(4, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(4, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank4", imagebutton_blank4);
 		this.addRenderableWidget(imagebutton_blank4);
 		imagebutton_blank5 = new ImageButton(this.leftPos + 53, this.topPos + -47, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank5.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(5, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 5, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(5, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank5", imagebutton_blank5);
 		this.addRenderableWidget(imagebutton_blank5);
 		imagebutton_blank6 = new ImageButton(this.leftPos + -78, this.topPos + -22, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank6.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(6, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 6, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(6, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank6", imagebutton_blank6);
 		this.addRenderableWidget(imagebutton_blank6);
 		imagebutton_blank7 = new ImageButton(this.leftPos + -52, this.topPos + -22, 22, 22, 0, 0, 22, new ResourceLocation("invincible:textures/screens/atlas/imagebutton_blank7.png"), 22, 44, e -> {
 			if (true) {
-				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(7, x, y, z, textstate));
-				DimensionSelectorButtonMessage.handleButtonAction(entity, 7, x, y, z, textstate);
+				InvincibleMod.PACKET_HANDLER.sendToServer(new DimensionSelectorButtonMessage(7, x, y, z));
+				DimensionSelectorButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_blank7", imagebutton_blank7);
