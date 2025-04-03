@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.invincible.potion.WebActiveMobEffect;
 import net.mcreator.invincible.potion.ViltrumiteNPCFollowUpTriggerMobEffect;
+import net.mcreator.invincible.potion.TitanLeapEffectMobEffect;
 import net.mcreator.invincible.potion.TimeStoppedMobEffect;
 import net.mcreator.invincible.potion.ThrowPlayerMobEffect;
 import net.mcreator.invincible.potion.TakeoffEffectsMobEffect;
@@ -86,4 +87,5 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> TIME_STOPPED = REGISTRY.register("time_stopped", () -> new TimeStoppedMobEffect());
 	public static final RegistryObject<MobEffect> STOPPED_TIME = REGISTRY.register("stopped_time", () -> new StoppedTimeMobEffect());
 	public static final RegistryObject<MobEffect> WEB_ACTIVE = REGISTRY.register("web_active", () -> new WebActiveMobEffect());
+	public static final RegistryObject<MobEffect> TITAN_LEAP_EFFECT = REGISTRY.register("titan_leap_effect", () -> new TitanLeapEffectMobEffect());
 }

@@ -4432,22 +4432,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8040,6 +8024,71 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "TitanLeapEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titan_leap_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TitanLeapEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "TitanLeapEffectEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titan_leap_effect_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/TitanLeapEffectEffectExpiresProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "TitanLeapEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titan_leap_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/potion/TitanLeapEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BeastMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/invincible/procedures/BeastMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Races/Beast"
     }
   ],
   "variable_elements": [
@@ -8628,12 +8677,12 @@
       "entity.invincible.dupli_kate": "Dupli-Kate",
       "item.invincible.angstrom_suit_leggings": "Angstrom\u0027s Pants",
       "gamerule.spaceexist.description": "Disable Or Enable Space",
-      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "item.invincible.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
-      "subtitles.grip": "",
-      "gamerule.spaceexist": "Existance Of Space",
-      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
+      "item.invincible.angstrom_suit_boots": "Angstrom\u0027s Shoes",
       "gui.invincible.dimension_selector.tooltip_speedster": "Speedster (WIP)",
+      "item.invincible.flaxan_armor_leggings": "Flaxan Pants",
+      "gamerule.spaceexist": "Existance Of Space",
+      "subtitles.grip": "",
       "entity.invincible.invincible_blue_mark": "Invincible (Blue)",
       "item.invincible.character_picker": "Character Picker",
       "gui.invincible.stats_menu.tooltip_int": "+ Intelligence",
@@ -8688,6 +8737,7 @@
       "item.invincible.invincible_blue_suit_helmet": "Invincible\u0027s Mask (Blue)",
       "effect.invincible.takeoff_effects": "Takeoff Effects",
       "effect.invincible.throw_player": "Throw Player",
+      "gamerule.flightanimation": "servercompatibleflight",
       "effect.invincible.point_destruction_universal": "Point Destruction Universal",
       "gui.invincible.dimension_selector.tooltip_overworld": "The Overworld",
       "item.invincible.flaxan_armor_boots": "Flaxan Boots",
@@ -8700,6 +8750,7 @@
       "gui.invincible.dimension_selector.tooltip_human": "Human",
       "gui.invincible.book_picker.tooltip_explode": "Explode",
       "item.invincible.viltrumite_male_spawn_egg": "Viltrumite Male Spawn Egg",
+      "effect.invincible.titan_leap_effect": "Titan Leap Effect",
       "biome.invincible.space_biome": "Space Biome",
       "item_group.invincible.invincible_mob_tab": "Invincible Mobs",
       "item.invincible.multi_paul_suit_boots": "Multi-Paul\u0027s Shoes",
@@ -8712,6 +8763,7 @@
       "key.invincible.use_ability_1": "Ability 1",
       "effect.invincible.grabbing_active": "Grabbing Active",
       "effect.invincible.destruction_active": "Destruction Active",
+      "gamerule.flightanimation.description": "Flight is known to cause crashes on servers.",
       "effect.invincible.stopped_time": "Stopped Time",
       "gui.invincible.dimension_selector.tooltip_cloning": "Cloning",
       "death.attack.phase.item": "%1$s was killed by %2$s using %3$s",
@@ -8849,6 +8901,10 @@
               },
               {
                 "name": "Replicate",
+                "children": []
+              },
+              {
+                "name": "Beast",
                 "children": []
               }
             ]

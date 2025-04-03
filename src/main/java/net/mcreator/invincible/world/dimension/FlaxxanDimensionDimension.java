@@ -48,7 +48,7 @@ public class FlaxxanDimensionDimension {
 		double y = entity.getY();
 		double z = entity.getZ();
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("invincible:flaxxan_dimension"))) {
-			FlaxxanDimensionPlayerEntersDimensionProcedure.execute(world, x, y, z, entity);
+			FlaxxanDimensionPlayerEntersDimensionProcedure.execute(entity);
 		}
 	}
 }

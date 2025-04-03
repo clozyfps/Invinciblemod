@@ -12,7 +12,20 @@
   },
   "spawners": {
     "monster": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "invincible:flaxan_soldier",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "invincible:flaxan_gunman",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
     "ambient": [],
     "axolotls": [],
     "underground_water_creature": [],

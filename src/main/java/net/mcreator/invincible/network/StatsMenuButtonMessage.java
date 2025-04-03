@@ -81,15 +81,15 @@ public class StatsMenuButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			AddPointIntelligenceProcedure.execute();
+			AddPointIntelligenceProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			RemovePlayerSkillPointsProcedure.execute();
+			RemovePlayerSkillPointsProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			AddPlayerSkillPointsProcedure.execute();
+			AddPlayerSkillPointsProcedure.execute(entity);
 		}
 	}
 

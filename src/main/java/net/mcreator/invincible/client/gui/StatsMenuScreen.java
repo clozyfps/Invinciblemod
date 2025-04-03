@@ -81,7 +81,7 @@ public class StatsMenuScreen extends AbstractContainerScreen<StatsMenuMenu> {
 		if (mouseX > leftPos + -82 && mouseX < leftPos + 80 && mouseY > topPos + -51 && mouseY < topPos + -42)
 			guiGraphics.renderTooltip(font, Component.literal(ReturnEXPAmountProcedure.execute(entity)), mouseX, mouseY);
 		if (mouseX > leftPos + -82 && mouseX < leftPos + 80 && mouseY > topPos + 66 && mouseY < topPos + 75)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnMasteryAmountProcedure.execute()), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnMasteryAmountProcedure.execute(entity)), mouseX, mouseY);
 	}
 
 	@Override
@@ -96,8 +96,8 @@ public class StatsMenuScreen extends AbstractContainerScreen<StatsMenuMenu> {
 		if (ReturnShowEXPProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("invincible:textures/screens/exp_bar.png"), this.leftPos + -81, this.topPos + -50, Mth.clamp((int) ReturnEXPProcedure.execute(entity) * 160, 0, 2400), 0, 160, 7, 2560, 7);
 		}
-		if (ReturnShowMasteryProcedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("invincible:textures/screens/exp_bar.png"), this.leftPos + -81, this.topPos + 67, Mth.clamp((int) ReturnMasteryProcedure.execute() * 160, 0, 2400), 0, 160, 7, 2560, 7);
+		if (ReturnShowMasteryProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("invincible:textures/screens/exp_bar.png"), this.leftPos + -81, this.topPos + 67, Mth.clamp((int) ReturnMasteryProcedure.execute(entity) * 160, 0, 2400), 0, 160, 7, 2560, 7);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -136,7 +136,7 @@ public class StatsMenuScreen extends AbstractContainerScreen<StatsMenuMenu> {
 				ReturnStatAgilityProcedure.execute(entity), 4, 19, -11252677, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnStatIntelligenceProcedure.execute(), 4, 32, -11252677, false);
+				ReturnStatIntelligenceProcedure.execute(entity), 4, 32, -11252677, false);
 		guiGraphics.drawString(this.font,
 
 				ReturnStatStrengthProcedure.execute(entity), 3, -8, -1, false);
@@ -148,7 +148,7 @@ public class StatsMenuScreen extends AbstractContainerScreen<StatsMenuMenu> {
 				ReturnStatAgilityProcedure.execute(entity), 3, 18, -1, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnStatIntelligenceProcedure.execute(), 3, 31, -1, false);
+				ReturnStatIntelligenceProcedure.execute(entity), 3, 31, -1, false);
 		guiGraphics.drawString(this.font,
 
 				ReturnPowerProcedure.execute(entity), 4, -33, -14664184, false);
@@ -157,13 +157,13 @@ public class StatsMenuScreen extends AbstractContainerScreen<StatsMenuMenu> {
 				ReturnPowerProcedure.execute(entity), 3, -34, -8455136, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnSkillPointsProcedure.execute(), 4, -20, -14664184, false);
+				ReturnSkillPointsProcedure.execute(entity), 4, -20, -14664184, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnSkillPointsProcedure.execute(), 3, -21, -8455136, false);
+				ReturnSkillPointsProcedure.execute(entity), 3, -21, -8455136, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnAddSkillPointsProcedure.execute(), 51, -35, -1, false);
+				ReturnAddSkillPointsProcedure.execute(entity), 51, -35, -1, false);
 	}
 
 	@Override
