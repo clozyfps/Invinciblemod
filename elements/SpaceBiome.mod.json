@@ -13,7 +13,7 @@
       "value": "Blocks.AIR"
     },
     "airColor": {
-      "value": -16777216,
+      "value": -16250872,
       "falpha": 0.0
     },
     "fogColor": {
@@ -33,11 +33,11 @@
       "value": ""
     },
     "moodSoundDelay": 6000,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "FIREWORKS_SPARK"
     },
-    "particlesProbability": 0.5,
+    "particlesProbability": 0.2,
     "rainingPossibility": 0.0,
     "temperature": 2.0,
     "spawnBiome": false,

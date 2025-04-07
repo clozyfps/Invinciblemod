@@ -37,9 +37,6 @@
 					}
 				},
 				"head": {
-					"rotation": {
-						"vector": [-7.5, 0, 0]
-					},
 					"position": {
 						"vector": [0, -2, -1]
 					}

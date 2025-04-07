@@ -20,6 +20,7 @@ import net.mcreator.invincible.procedures.SelectHumanProcedure;
 import net.mcreator.invincible.procedures.SelectExplodeProcedure;
 import net.mcreator.invincible.procedures.SelectCloneProcedure;
 import net.mcreator.invincible.procedures.SelectBeastProcedure;
+import net.mcreator.invincible.procedures.SelectAtomEveProcedure;
 import net.mcreator.invincible.InvincibleMod;
 
 import java.util.function.Supplier;
@@ -71,7 +72,7 @@ public class BookPickerButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			SelectViltrumiteProcedure.execute(entity);
+			SelectViltrumiteProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
@@ -100,6 +101,10 @@ public class BookPickerButtonMessage {
 		if (buttonID == 7) {
 
 			SelectBeastProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			SelectAtomEveProcedure.execute(entity);
 		}
 	}
 

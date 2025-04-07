@@ -19,27 +19,42 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.invincible.entity.WebLineEntity;
 import net.mcreator.invincible.entity.ViltrumiteMaleEntity;
 import net.mcreator.invincible.entity.ViltrumiteFemaleEntity;
+import net.mcreator.invincible.entity.ViltrumPlanetEntity;
+import net.mcreator.invincible.entity.VeilInvincibleEntity;
 import net.mcreator.invincible.entity.TransferProjectileEntity;
 import net.mcreator.invincible.entity.SonicClapEntity;
+import net.mcreator.invincible.entity.SinisterInvincibleEntity;
+import net.mcreator.invincible.entity.RoboBallEntity;
 import net.mcreator.invincible.entity.RexSplodeEntity;
 import net.mcreator.invincible.entity.PastImageEntity;
 import net.mcreator.invincible.entity.OmnimanEntity;
 import net.mcreator.invincible.entity.MultiPaulEntity;
+import net.mcreator.invincible.entity.MohawkInvincibleEntity;
 import net.mcreator.invincible.entity.MaulerEntity;
+import net.mcreator.invincible.entity.MasklessInvincibleEntity;
+import net.mcreator.invincible.entity.MartianSpearmanEntity;
+import net.mcreator.invincible.entity.MartianEntity;
 import net.mcreator.invincible.entity.MarsProximityEntity;
+import net.mcreator.invincible.entity.MarsPlanetEntity;
 import net.mcreator.invincible.entity.KnockbackProjectileEntity;
 import net.mcreator.invincible.entity.InvincibleMarkEntity;
 import net.mcreator.invincible.entity.InvincibleBlueMarkEntity;
+import net.mcreator.invincible.entity.FullMaskInvincibleEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
 import net.mcreator.invincible.entity.FireworkExplosionEntity;
 import net.mcreator.invincible.entity.ExplosionSmallEntity;
 import net.mcreator.invincible.entity.ExplosionLargeEntity;
+import net.mcreator.invincible.entity.EarthEntity;
 import net.mcreator.invincible.entity.DupliKateEntity;
+import net.mcreator.invincible.entity.DinosaurEntity;
 import net.mcreator.invincible.entity.DimensionalPortalEntity;
 import net.mcreator.invincible.entity.CloneEntity;
+import net.mcreator.invincible.entity.ClawMobEntity;
 import net.mcreator.invincible.entity.BlasterProjectileEntity;
+import net.mcreator.invincible.entity.BattleBeastEntity;
+import net.mcreator.invincible.entity.AtomBarrierEntity;
 import net.mcreator.invincible.entity.AngstromEntity;
 import net.mcreator.invincible.entity.AfterImageEntity;
 import net.mcreator.invincible.InvincibleMod;
@@ -66,7 +81,7 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<OmnimanEntity>> OMNIMAN = register("omniman",
 			EntityType.Builder.<OmnimanEntity>of(OmnimanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OmnimanEntity::new).fireImmune().sized(0.8f, 2.2f));
 	public static final RegistryObject<EntityType<FlaxanSoldierEntity>> FLAXAN_SOLDIER = register("flaxan_soldier",
-			EntityType.Builder.<FlaxanSoldierEntity>of(FlaxanSoldierEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanSoldierEntity::new)
+			EntityType.Builder.<FlaxanSoldierEntity>of(FlaxanSoldierEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanSoldierEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MaulerEntity>> MAULER = register("mauler",
@@ -76,7 +91,7 @@ public class InvincibleModEntities {
 	public static final RegistryObject<EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal", EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanPortalEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FlaxanGunmanEntity>> FLAXAN_GUNMAN = register("flaxan_gunman",
-			EntityType.Builder.<FlaxanGunmanEntity>of(FlaxanGunmanEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanGunmanEntity::new)
+			EntityType.Builder.<FlaxanGunmanEntity>of(FlaxanGunmanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlaxanGunmanEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlasterProjectileEntity>> BLASTER_PROJECTILE = register("blaster_projectile", EntityType.Builder.<BlasterProjectileEntity>of(BlasterProjectileEntity::new, MobCategory.MISC)
@@ -121,6 +136,46 @@ public class InvincibleModEntities {
 			EntityType.Builder.<ViltrumiteMaleEntity>of(ViltrumiteMaleEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ViltrumiteMaleEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ClawMobEntity>> CLAW_MOB = register("claw_mob",
+			EntityType.Builder.<ClawMobEntity>of(ClawMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ClawMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RoboBallEntity>> ROBO_BALL = register("robo_ball",
+			EntityType.Builder.<RoboBallEntity>of(RoboBallEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RoboBallEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BattleBeastEntity>> BATTLE_BEAST = register("battle_beast",
+			EntityType.Builder.<BattleBeastEntity>of(BattleBeastEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BattleBeastEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AtomBarrierEntity>> ATOM_BARRIER = register("atom_barrier", EntityType.Builder.<AtomBarrierEntity>of(AtomBarrierEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AtomBarrierEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MartianEntity>> MARTIAN = register("martian",
+			EntityType.Builder.<MartianEntity>of(MartianEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MartianEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MartianSpearmanEntity>> MARTIAN_SPEARMAN = register("martian_spearman",
+			EntityType.Builder.<MartianSpearmanEntity>of(MartianSpearmanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MartianSpearmanEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SinisterInvincibleEntity>> SINISTER_INVINCIBLE = register("sinister_invincible", EntityType.Builder.<SinisterInvincibleEntity>of(SinisterInvincibleEntity::new, MobCategory.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SinisterInvincibleEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MohawkInvincibleEntity>> MOHAWK_INVINCIBLE = register("mohawk_invincible", EntityType.Builder.<MohawkInvincibleEntity>of(MohawkInvincibleEntity::new, MobCategory.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MohawkInvincibleEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VeilInvincibleEntity>> VEIL_INVINCIBLE = register("veil_invincible", EntityType.Builder.<VeilInvincibleEntity>of(VeilInvincibleEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VeilInvincibleEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MasklessInvincibleEntity>> MASKLESS_INVINCIBLE = register("maskless_invincible", EntityType.Builder.<MasklessInvincibleEntity>of(MasklessInvincibleEntity::new, MobCategory.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MasklessInvincibleEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FullMaskInvincibleEntity>> FULL_MASK_INVINCIBLE = register("full_mask_invincible", EntityType.Builder.<FullMaskInvincibleEntity>of(FullMaskInvincibleEntity::new, MobCategory.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FullMaskInvincibleEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DinosaurEntity>> DINOSAUR = register("dinosaur",
+			EntityType.Builder.<DinosaurEntity>of(DinosaurEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DinosaurEntity::new)
+
+					.sized(1.3f, 2.5f));
+	public static final RegistryObject<EntityType<EarthEntity>> EARTH = register("earth",
+			EntityType.Builder.<EarthEntity>of(EarthEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthEntity::new).fireImmune().sized(5f, 5f));
+	public static final RegistryObject<EntityType<MarsPlanetEntity>> MARS_PLANET = register("mars_planet",
+			EntityType.Builder.<MarsPlanetEntity>of(MarsPlanetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarsPlanetEntity::new).fireImmune().sized(5f, 5f));
+	public static final RegistryObject<EntityType<ViltrumPlanetEntity>> VILTRUM_PLANET = register("viltrum_planet", EntityType.Builder.<ViltrumPlanetEntity>of(ViltrumPlanetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ViltrumPlanetEntity::new).fireImmune().sized(5f, 5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -150,6 +205,21 @@ public class InvincibleModEntities {
 			ViltrumiteFemaleEntity.init();
 			AngstromEntity.init();
 			ViltrumiteMaleEntity.init();
+			ClawMobEntity.init();
+			RoboBallEntity.init();
+			BattleBeastEntity.init();
+			AtomBarrierEntity.init();
+			MartianEntity.init();
+			MartianSpearmanEntity.init();
+			SinisterInvincibleEntity.init();
+			MohawkInvincibleEntity.init();
+			VeilInvincibleEntity.init();
+			MasklessInvincibleEntity.init();
+			FullMaskInvincibleEntity.init();
+			DinosaurEntity.init();
+			EarthEntity.init();
+			MarsPlanetEntity.init();
+			ViltrumPlanetEntity.init();
 		});
 	}
 
@@ -174,5 +244,20 @@ public class InvincibleModEntities {
 		event.put(VILTRUMITE_FEMALE.get(), ViltrumiteFemaleEntity.createAttributes().build());
 		event.put(ANGSTROM.get(), AngstromEntity.createAttributes().build());
 		event.put(VILTRUMITE_MALE.get(), ViltrumiteMaleEntity.createAttributes().build());
+		event.put(CLAW_MOB.get(), ClawMobEntity.createAttributes().build());
+		event.put(ROBO_BALL.get(), RoboBallEntity.createAttributes().build());
+		event.put(BATTLE_BEAST.get(), BattleBeastEntity.createAttributes().build());
+		event.put(ATOM_BARRIER.get(), AtomBarrierEntity.createAttributes().build());
+		event.put(MARTIAN.get(), MartianEntity.createAttributes().build());
+		event.put(MARTIAN_SPEARMAN.get(), MartianSpearmanEntity.createAttributes().build());
+		event.put(SINISTER_INVINCIBLE.get(), SinisterInvincibleEntity.createAttributes().build());
+		event.put(MOHAWK_INVINCIBLE.get(), MohawkInvincibleEntity.createAttributes().build());
+		event.put(VEIL_INVINCIBLE.get(), VeilInvincibleEntity.createAttributes().build());
+		event.put(MASKLESS_INVINCIBLE.get(), MasklessInvincibleEntity.createAttributes().build());
+		event.put(FULL_MASK_INVINCIBLE.get(), FullMaskInvincibleEntity.createAttributes().build());
+		event.put(DINOSAUR.get(), DinosaurEntity.createAttributes().build());
+		event.put(EARTH.get(), EarthEntity.createAttributes().build());
+		event.put(MARS_PLANET.get(), MarsPlanetEntity.createAttributes().build());
+		event.put(VILTRUM_PLANET.get(), ViltrumPlanetEntity.createAttributes().build());
 	}
 }

@@ -51,6 +51,21 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.VILTRUMITE_SUIT_CHESTPLATE.get());
 				tabData.accept(InvincibleModItems.VILTRUMITE_SUIT_LEGGINGS.get());
 				tabData.accept(InvincibleModItems.VILTRUMITE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.VEIL_INVINCIBLE_SUIT_HELMET.get());
+				tabData.accept(InvincibleModItems.VEIL_INVINCIBLE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.VEIL_INVINCIBLE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.VEIL_INVINCIBLE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.MASKED_INVINCIBLE_SUIT_HELMET.get());
+				tabData.accept(InvincibleModItems.MASKED_INVINCIBLE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.MASKED_INVINCIBLE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.MASKED_INVINCIBLE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.MOHAWK_INVINCIBLE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.MOHAWK_INVINCIBLE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.MOHAWK_INVINCIBLE_SUIT_BOOTS.get());
+				tabData.accept(InvincibleModItems.SINISTER_INVINCIBLE_SUIT_HELMET.get());
+				tabData.accept(InvincibleModItems.SINISTER_INVINCIBLE_SUIT_CHESTPLATE.get());
+				tabData.accept(InvincibleModItems.SINISTER_INVINCIBLE_SUIT_LEGGINGS.get());
+				tabData.accept(InvincibleModItems.SINISTER_INVINCIBLE_SUIT_BOOTS.get());
 			}).build());
 	public static final RegistryObject<CreativeModeTab> INVINCIBLE_ITEMS_TAB = REGISTRY.register("invincible_items_tab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible.invincible_items_tab")).icon(() -> new ItemStack(InvincibleModItems.FLAXAN_GUN.get())).displayItems((parameters, tabData) -> {
@@ -71,5 +86,13 @@ public class InvincibleModTabs {
 				tabData.accept(InvincibleModItems.VILTRUMITE_FEMALE_SPAWN_EGG.get());
 				tabData.accept(InvincibleModItems.ANGSTROM_SPAWN_EGG.get());
 				tabData.accept(InvincibleModItems.VILTRUMITE_MALE_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.BATTLE_BEAST_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.MARTIAN_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.MARTIAN_SPEARMAN_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.SINISTER_INVINCIBLE_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.MOHAWK_INVINCIBLE_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.VEIL_INVINCIBLE_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.MASKLESS_INVINCIBLE_SPAWN_EGG.get());
+				tabData.accept(InvincibleModItems.FULL_MASK_INVINCIBLE_SPAWN_EGG.get());
 			}).withTabsBefore(INVINCIBLE_ITEMS_TAB.getId()).build());
 }

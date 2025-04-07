@@ -24,23 +24,30 @@
     "hasClouds": false,
     "cloudHeight": 192.0,
     "skyType": "NONE",
+    "airColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
     "sunHeightAffectsFog": false,
     "canRespawnHere": false,
     "hasFog": false,
-    "ambientLight": 0.0,
+    "ambientLight": 0.1,
     "doesWaterVaporize": false,
     "hasFixedTime": false,
     "fixedTimeValue": 0,
     "coordinateScale": 1.0,
     "infiniburnTag": "minecraft:infiniburn_overworld",
     "bedWorks": false,
-    "hasSkyLight": true,
+    "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
-    "piglinSafe": true,
+    "piglinSafe": false,
     "hasRaids": false,
-    "minMonsterSpawnLightLimit": 0,
-    "maxMonsterSpawnLightLimit": 7,
+    "minMonsterSpawnLightLimit": 15,
+    "maxMonsterSpawnLightLimit": 15,
     "monsterSpawnBlockLightLimit": 0,
+    "onPlayerEntersDimension": {
+      "name": "SpacePlayerEntersDimension"
+    },
     "portalFrame": {
       "value": ""
     },

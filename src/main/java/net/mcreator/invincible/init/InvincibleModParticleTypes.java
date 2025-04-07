@@ -24,4 +24,9 @@ public class InvincibleModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> CUSTOM_SMOKE = REGISTRY.register("custom_smoke", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> EXPLODE = REGISTRY.register("explode", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> LARGE_EXPLODE = REGISTRY.register("large_explode", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> PINK_SHOCKWAVE = REGISTRY.register("pink_shockwave", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> PINK_SMOKE = REGISTRY.register("pink_smoke", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> SAND_SMOKE = REGISTRY.register("sand_smoke", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> STEAM_SMOKE = REGISTRY.register("steam_smoke", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> DIRT_SMOKE = REGISTRY.register("dirt_smoke", () -> new SimpleParticleType(false));
 }

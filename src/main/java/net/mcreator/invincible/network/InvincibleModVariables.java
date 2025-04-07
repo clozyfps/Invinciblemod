@@ -117,6 +117,9 @@ public class InvincibleModVariables {
 			clone.Intelligence = original.Intelligence;
 			clone.AbilityMastery = original.AbilityMastery;
 			clone.SkillPoints = original.SkillPoints;
+			clone.QuestDisplay = original.QuestDisplay;
+			clone.LastPlanet = original.LastPlanet;
+			clone.ConquerTimer = original.ConquerTimer;
 			if (!event.isWasDeath()) {
 				clone.Flying = original.Flying;
 				clone.SelectedTitle = original.SelectedTitle;
@@ -133,6 +136,9 @@ public class InvincibleModVariables {
 				clone.Cooldown9 = original.Cooldown9;
 				clone.Cooldown10 = original.Cooldown10;
 				clone.DashCooldown = original.DashCooldown;
+				clone.SpaceX = original.SpaceX;
+				clone.SpaceY = original.SpaceY;
+				clone.SpaceZ = original.SpaceZ;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -216,6 +222,7 @@ public class InvincibleModVariables {
 		public static final String DATA_NAME = "invincible_mapvars";
 		public boolean DaylightChanged = false;
 		public boolean FireDamageChanged = false;
+		public boolean GeneratedPlanets = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -229,12 +236,14 @@ public class InvincibleModVariables {
 			}
 			DaylightChanged = nbt.getBoolean("DaylightChanged");
 			FireDamageChanged = nbt.getBoolean("FireDamageChanged");
+			GeneratedPlanets = nbt.getBoolean("GeneratedPlanets");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("DaylightChanged", DaylightChanged);
 			nbt.putBoolean("FireDamageChanged", FireDamageChanged);
+			nbt.putBoolean("GeneratedPlanets", GeneratedPlanets);
 			return nbt;
 		}
 
@@ -374,6 +383,12 @@ public class InvincibleModVariables {
 		public double Intelligence = 0;
 		public double AbilityMastery = 0;
 		public double SkillPoints = 0;
+		public String QuestDisplay = "";
+		public double SpaceX = 0;
+		public double SpaceY = 0;
+		public double SpaceZ = 0;
+		public String LastPlanet = "\"\"";
+		public double ConquerTimer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -429,6 +444,12 @@ public class InvincibleModVariables {
 			nbt.putDouble("Intelligence", Intelligence);
 			nbt.putDouble("AbilityMastery", AbilityMastery);
 			nbt.putDouble("SkillPoints", SkillPoints);
+			nbt.putString("QuestDisplay", QuestDisplay);
+			nbt.putDouble("SpaceX", SpaceX);
+			nbt.putDouble("SpaceY", SpaceY);
+			nbt.putDouble("SpaceZ", SpaceZ);
+			nbt.putString("LastPlanet", LastPlanet);
+			nbt.putDouble("ConquerTimer", ConquerTimer);
 			return nbt;
 		}
 
@@ -487,6 +508,12 @@ public class InvincibleModVariables {
 			Intelligence = nbt.getDouble("Intelligence");
 			AbilityMastery = nbt.getDouble("AbilityMastery");
 			SkillPoints = nbt.getDouble("SkillPoints");
+			QuestDisplay = nbt.getString("QuestDisplay");
+			SpaceX = nbt.getDouble("SpaceX");
+			SpaceY = nbt.getDouble("SpaceY");
+			SpaceZ = nbt.getDouble("SpaceZ");
+			LastPlanet = nbt.getString("LastPlanet");
+			ConquerTimer = nbt.getDouble("ConquerTimer");
 		}
 	}
 
@@ -567,6 +594,12 @@ public class InvincibleModVariables {
 					variables.Intelligence = message.data.Intelligence;
 					variables.AbilityMastery = message.data.AbilityMastery;
 					variables.SkillPoints = message.data.SkillPoints;
+					variables.QuestDisplay = message.data.QuestDisplay;
+					variables.SpaceX = message.data.SpaceX;
+					variables.SpaceY = message.data.SpaceY;
+					variables.SpaceZ = message.data.SpaceZ;
+					variables.LastPlanet = message.data.LastPlanet;
+					variables.ConquerTimer = message.data.ConquerTimer;
 				}
 			});
 			context.setPacketHandled(true);

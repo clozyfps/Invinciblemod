@@ -14,12 +14,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.invincible.item.ViltrumiteSuitItem;
+import net.mcreator.invincible.item.VeilInvincibleSuitItem;
 import net.mcreator.invincible.item.TutorialItem;
 import net.mcreator.invincible.item.TestItem;
+import net.mcreator.invincible.item.SinisterInvincibleSuitItem;
 import net.mcreator.invincible.item.RexSplodeSuitItem;
 import net.mcreator.invincible.item.OmniManSuitItem;
 import net.mcreator.invincible.item.MultiPaulSuitItem;
+import net.mcreator.invincible.item.MohawkInvincibleSuitItem;
 import net.mcreator.invincible.item.MaulerSuitItem;
+import net.mcreator.invincible.item.MaskedInvincibleSuitItem;
 import net.mcreator.invincible.item.InvincibleSuitItem;
 import net.mcreator.invincible.item.InvincibleBlueSuitItem;
 import net.mcreator.invincible.item.FlaxanGunItem;
@@ -81,6 +85,30 @@ public class InvincibleModItems {
 	public static final RegistryObject<Item> VILTRUMITE_SUIT_CHESTPLATE = REGISTRY.register("viltrumite_suit_chestplate", () -> new ViltrumiteSuitItem.Chestplate());
 	public static final RegistryObject<Item> VILTRUMITE_SUIT_LEGGINGS = REGISTRY.register("viltrumite_suit_leggings", () -> new ViltrumiteSuitItem.Leggings());
 	public static final RegistryObject<Item> VILTRUMITE_SUIT_BOOTS = REGISTRY.register("viltrumite_suit_boots", () -> new ViltrumiteSuitItem.Boots());
+	public static final RegistryObject<Item> BATTLE_BEAST_SPAWN_EGG = REGISTRY.register("battle_beast_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.BATTLE_BEAST, -6750208, -3368704, new Item.Properties()));
+	public static final RegistryObject<Item> MARTIAN_SPAWN_EGG = REGISTRY.register("martian_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MARTIAN, -7882139, -1, new Item.Properties()));
+	public static final RegistryObject<Item> MARTIAN_SPEARMAN_SPAWN_EGG = REGISTRY.register("martian_spearman_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MARTIAN_SPEARMAN, -7882139, -1, new Item.Properties()));
+	public static final RegistryObject<Item> VEIL_INVINCIBLE_SUIT_HELMET = REGISTRY.register("veil_invincible_suit_helmet", () -> new VeilInvincibleSuitItem.Helmet());
+	public static final RegistryObject<Item> VEIL_INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("veil_invincible_suit_chestplate", () -> new VeilInvincibleSuitItem.Chestplate());
+	public static final RegistryObject<Item> VEIL_INVINCIBLE_SUIT_LEGGINGS = REGISTRY.register("veil_invincible_suit_leggings", () -> new VeilInvincibleSuitItem.Leggings());
+	public static final RegistryObject<Item> VEIL_INVINCIBLE_SUIT_BOOTS = REGISTRY.register("veil_invincible_suit_boots", () -> new VeilInvincibleSuitItem.Boots());
+	public static final RegistryObject<Item> MASKED_INVINCIBLE_SUIT_HELMET = REGISTRY.register("masked_invincible_suit_helmet", () -> new MaskedInvincibleSuitItem.Helmet());
+	public static final RegistryObject<Item> MASKED_INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("masked_invincible_suit_chestplate", () -> new MaskedInvincibleSuitItem.Chestplate());
+	public static final RegistryObject<Item> MASKED_INVINCIBLE_SUIT_LEGGINGS = REGISTRY.register("masked_invincible_suit_leggings", () -> new MaskedInvincibleSuitItem.Leggings());
+	public static final RegistryObject<Item> MASKED_INVINCIBLE_SUIT_BOOTS = REGISTRY.register("masked_invincible_suit_boots", () -> new MaskedInvincibleSuitItem.Boots());
+	public static final RegistryObject<Item> MOHAWK_INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("mohawk_invincible_suit_chestplate", () -> new MohawkInvincibleSuitItem.Chestplate());
+	public static final RegistryObject<Item> MOHAWK_INVINCIBLE_SUIT_LEGGINGS = REGISTRY.register("mohawk_invincible_suit_leggings", () -> new MohawkInvincibleSuitItem.Leggings());
+	public static final RegistryObject<Item> MOHAWK_INVINCIBLE_SUIT_BOOTS = REGISTRY.register("mohawk_invincible_suit_boots", () -> new MohawkInvincibleSuitItem.Boots());
+	public static final RegistryObject<Item> SINISTER_INVINCIBLE_SUIT_HELMET = REGISTRY.register("sinister_invincible_suit_helmet", () -> new SinisterInvincibleSuitItem.Helmet());
+	public static final RegistryObject<Item> SINISTER_INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("sinister_invincible_suit_chestplate", () -> new SinisterInvincibleSuitItem.Chestplate());
+	public static final RegistryObject<Item> SINISTER_INVINCIBLE_SUIT_LEGGINGS = REGISTRY.register("sinister_invincible_suit_leggings", () -> new SinisterInvincibleSuitItem.Leggings());
+	public static final RegistryObject<Item> SINISTER_INVINCIBLE_SUIT_BOOTS = REGISTRY.register("sinister_invincible_suit_boots", () -> new SinisterInvincibleSuitItem.Boots());
+	public static final RegistryObject<Item> SINISTER_INVINCIBLE_SPAWN_EGG = REGISTRY.register("sinister_invincible_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.SINISTER_INVINCIBLE, -16777216, -1513415, new Item.Properties()));
+	public static final RegistryObject<Item> MOHAWK_INVINCIBLE_SPAWN_EGG = REGISTRY.register("mohawk_invincible_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MOHAWK_INVINCIBLE, -16777216, -13472318, new Item.Properties()));
+	public static final RegistryObject<Item> VEIL_INVINCIBLE_SPAWN_EGG = REGISTRY.register("veil_invincible_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.VEIL_INVINCIBLE, -1511836, -16086563, new Item.Properties()));
+	public static final RegistryObject<Item> MASKLESS_INVINCIBLE_SPAWN_EGG = REGISTRY.register("maskless_invincible_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.MASKLESS_INVINCIBLE, -1513415, -16086563, new Item.Properties()));
+	public static final RegistryObject<Item> FULL_MASK_INVINCIBLE_SPAWN_EGG = REGISTRY.register("full_mask_invincible_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.FULL_MASK_INVINCIBLE, -16777216, -13472318, new Item.Properties()));
+	public static final RegistryObject<Item> DINOSAUR_SPAWN_EGG = REGISTRY.register("dinosaur_spawn_egg", () -> new ForgeSpawnEggItem(InvincibleModEntities.DINOSAUR, -8827621, -8827621, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

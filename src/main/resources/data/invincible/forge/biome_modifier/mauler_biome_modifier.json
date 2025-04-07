@@ -1,6 +1,8 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "plains",
+  "biomes": {
+    "type": "forge:any"
+  },
   "spawners": {
     "type": "invincible:mauler",
     "weight": 1,

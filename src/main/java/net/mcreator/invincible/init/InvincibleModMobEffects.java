@@ -20,9 +20,12 @@ import net.mcreator.invincible.potion.StoppedTimeMobEffect;
 import net.mcreator.invincible.potion.SmokingMobEffect;
 import net.mcreator.invincible.potion.SmokeCircleExpandingMobEffect;
 import net.mcreator.invincible.potion.SlowedMobEffect;
+import net.mcreator.invincible.potion.SliceExpandMobEffect;
 import net.mcreator.invincible.potion.SlamTimerMobEffect;
+import net.mcreator.invincible.potion.RobotBallPotionMobEffect;
 import net.mcreator.invincible.potion.PunchCatchCDMobEffect;
 import net.mcreator.invincible.potion.PunchCatchActiveMobEffect;
+import net.mcreator.invincible.potion.PoofExpandMobEffect;
 import net.mcreator.invincible.potion.PointDestructionUniversalMobEffect;
 import net.mcreator.invincible.potion.PointDestructionMobEffect;
 import net.mcreator.invincible.potion.NoFallMobEffect;
@@ -38,15 +41,19 @@ import net.mcreator.invincible.potion.GrabCooldownMobEffect;
 import net.mcreator.invincible.potion.GlassBreakMobEffect;
 import net.mcreator.invincible.potion.FlashTimeMobEffect;
 import net.mcreator.invincible.potion.FallingBlocksManipMobEffect;
+import net.mcreator.invincible.potion.DragMobEffect;
 import net.mcreator.invincible.potion.DestructionActiveMobEffect;
 import net.mcreator.invincible.potion.DestructionActiveBurstMobEffect;
 import net.mcreator.invincible.potion.ComboStillMobEffect;
 import net.mcreator.invincible.potion.CircleExpandingBurstMobEffect;
 import net.mcreator.invincible.potion.BulletSlamMobEffect;
+import net.mcreator.invincible.potion.BeastSliceIntervalsMobEffect;
+import net.mcreator.invincible.potion.BeastMobTimersMobEffect;
 import net.mcreator.invincible.potion.BackwardsTumbleMobEffect;
 import net.mcreator.invincible.potion.AfterImagesMobEffect;
 import net.mcreator.invincible.potion.ActiveFlightSpeedMobEffect;
 import net.mcreator.invincible.potion.ActiveBurstMobEffect;
+import net.mcreator.invincible.potion.ActiveAirSlamClawMobEffect;
 import net.mcreator.invincible.InvincibleMod;
 
 public class InvincibleModMobEffects {
@@ -88,4 +95,11 @@ public class InvincibleModMobEffects {
 	public static final RegistryObject<MobEffect> STOPPED_TIME = REGISTRY.register("stopped_time", () -> new StoppedTimeMobEffect());
 	public static final RegistryObject<MobEffect> WEB_ACTIVE = REGISTRY.register("web_active", () -> new WebActiveMobEffect());
 	public static final RegistryObject<MobEffect> TITAN_LEAP_EFFECT = REGISTRY.register("titan_leap_effect", () -> new TitanLeapEffectMobEffect());
+	public static final RegistryObject<MobEffect> POOF_EXPAND = REGISTRY.register("poof_expand", () -> new PoofExpandMobEffect());
+	public static final RegistryObject<MobEffect> ACTIVE_AIR_SLAM_CLAW = REGISTRY.register("active_air_slam_claw", () -> new ActiveAirSlamClawMobEffect());
+	public static final RegistryObject<MobEffect> SLICE_EXPAND = REGISTRY.register("slice_expand", () -> new SliceExpandMobEffect());
+	public static final RegistryObject<MobEffect> ROBOT_BALL_POTION = REGISTRY.register("robot_ball_potion", () -> new RobotBallPotionMobEffect());
+	public static final RegistryObject<MobEffect> BEAST_SLICE_INTERVALS = REGISTRY.register("beast_slice_intervals", () -> new BeastSliceIntervalsMobEffect());
+	public static final RegistryObject<MobEffect> BEAST_MOB_TIMERS = REGISTRY.register("beast_mob_timers", () -> new BeastMobTimersMobEffect());
+	public static final RegistryObject<MobEffect> DRAG = REGISTRY.register("drag", () -> new DragMobEffect());
 }

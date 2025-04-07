@@ -78,5 +78,13 @@
         "stream": false
       }
     ]
+  },
+  "sliceblood": {
+    "sounds": [
+      {
+        "name": "invincible:crush",
+        "stream": false
+      }
+    ]
   }
 }

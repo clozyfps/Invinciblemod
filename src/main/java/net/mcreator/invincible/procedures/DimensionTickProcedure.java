@@ -13,11 +13,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.invincible.entity.MartianSpearmanEntity;
+import net.mcreator.invincible.entity.MartianEntity;
 import net.mcreator.invincible.entity.FlaxanSoldierEntity;
 import net.mcreator.invincible.entity.FlaxanPortalEntity;
 import net.mcreator.invincible.entity.FlaxanGunmanEntity;
@@ -90,6 +93,13 @@ public class DimensionTickProcedure {
 		}
 		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("invincible:flaxxan_dimension"))) {
 			if (!(entity instanceof Player || entity instanceof FlaxanSoldierEntity || entity instanceof FlaxanGunmanEntity || entity instanceof FlaxanPortalEntity || entity instanceof DimensionalPortalEntity)) {
+				if (!entity.level().isClientSide())
+					entity.discard();
+			}
+		}
+		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("invincible:mars"))) {
+			if (!(entity instanceof Player || entity instanceof MartianEntity || entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("invincible:untargetable"))) || entity instanceof MartianEntity
+					|| entity instanceof MartianSpearmanEntity)) {
 				if (!entity.level().isClientSide())
 					entity.discard();
 			}

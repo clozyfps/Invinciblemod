@@ -3,9 +3,15 @@
   "temperature": 2,
   "downfall": 0,
   "effects": {
+    "particle": {
+      "options": {
+        "type": "firework"
+      },
+      "probability": 0.002
+    },
     "foliage_color": 10387789,
     "grass_color": 9470285,
-    "sky_color": -16777216,
+    "sky_color": -16250872,
     "fog_color": -16777216,
     "water_color": 4159204,
     "water_fog_color": 329011

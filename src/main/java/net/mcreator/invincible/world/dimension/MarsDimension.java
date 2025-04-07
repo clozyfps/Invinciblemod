@@ -26,7 +26,7 @@ public class MarsDimension {
 
 				@Override
 				public boolean isFoggyAt(int x, int y) {
-					return false;
+					return true;
 				}
 			};
 			event.register(new ResourceLocation("invincible:mars"), customEffect);

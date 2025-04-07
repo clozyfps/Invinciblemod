@@ -355,6 +355,44 @@
           "y": 97,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_atomeve",
+          "image": "icon_atomeve.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAtomEve"
+          },
+          "x": 191,
+          "y": 101,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_atomic",
+          "text": {
+            "fixedValue": "Atomic"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 187,
+          "y": 97,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

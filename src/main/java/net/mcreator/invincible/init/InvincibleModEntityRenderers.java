@@ -13,21 +13,36 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.invincible.client.renderer.ViltrumiteMaleRenderer;
 import net.mcreator.invincible.client.renderer.ViltrumiteFemaleRenderer;
+import net.mcreator.invincible.client.renderer.ViltrumPlanetRenderer;
+import net.mcreator.invincible.client.renderer.VeilInvincibleRenderer;
+import net.mcreator.invincible.client.renderer.SinisterInvincibleRenderer;
+import net.mcreator.invincible.client.renderer.RoboBallRenderer;
 import net.mcreator.invincible.client.renderer.RexSplodeRenderer;
 import net.mcreator.invincible.client.renderer.PastImageRenderer;
 import net.mcreator.invincible.client.renderer.OmnimanRenderer;
 import net.mcreator.invincible.client.renderer.MultiPaulRenderer;
+import net.mcreator.invincible.client.renderer.MohawkInvincibleRenderer;
 import net.mcreator.invincible.client.renderer.MaulerRenderer;
+import net.mcreator.invincible.client.renderer.MasklessInvincibleRenderer;
+import net.mcreator.invincible.client.renderer.MartianSpearmanRenderer;
+import net.mcreator.invincible.client.renderer.MartianRenderer;
 import net.mcreator.invincible.client.renderer.MarsProximityRenderer;
+import net.mcreator.invincible.client.renderer.MarsPlanetRenderer;
 import net.mcreator.invincible.client.renderer.InvincibleMarkRenderer;
 import net.mcreator.invincible.client.renderer.InvincibleBlueMarkRenderer;
+import net.mcreator.invincible.client.renderer.FullMaskInvincibleRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanSoldierRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanPortalRenderer;
 import net.mcreator.invincible.client.renderer.FlaxanGunmanRenderer;
 import net.mcreator.invincible.client.renderer.FireworkExplosionRenderer;
+import net.mcreator.invincible.client.renderer.EarthRenderer;
 import net.mcreator.invincible.client.renderer.DupliKateRenderer;
+import net.mcreator.invincible.client.renderer.DinosaurRenderer;
 import net.mcreator.invincible.client.renderer.DimensionalPortalRenderer;
 import net.mcreator.invincible.client.renderer.CloneRenderer;
+import net.mcreator.invincible.client.renderer.ClawMobRenderer;
+import net.mcreator.invincible.client.renderer.BattleBeastRenderer;
+import net.mcreator.invincible.client.renderer.AtomBarrierRenderer;
 import net.mcreator.invincible.client.renderer.AngstromRenderer;
 import net.mcreator.invincible.client.renderer.AfterImageRenderer;
 
@@ -61,5 +76,20 @@ public class InvincibleModEntityRenderers {
 		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE_FEMALE.get(), ViltrumiteFemaleRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.ANGSTROM.get(), AngstromRenderer::new);
 		event.registerEntityRenderer(InvincibleModEntities.VILTRUMITE_MALE.get(), ViltrumiteMaleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.CLAW_MOB.get(), ClawMobRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.ROBO_BALL.get(), RoboBallRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.BATTLE_BEAST.get(), BattleBeastRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.ATOM_BARRIER.get(), AtomBarrierRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.MARTIAN.get(), MartianRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.MARTIAN_SPEARMAN.get(), MartianSpearmanRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.SINISTER_INVINCIBLE.get(), SinisterInvincibleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.MOHAWK_INVINCIBLE.get(), MohawkInvincibleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.VEIL_INVINCIBLE.get(), VeilInvincibleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.MASKLESS_INVINCIBLE.get(), MasklessInvincibleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.FULL_MASK_INVINCIBLE.get(), FullMaskInvincibleRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.DINOSAUR.get(), DinosaurRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.EARTH.get(), EarthRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.MARS_PLANET.get(), MarsPlanetRenderer::new);
+		event.registerEntityRenderer(InvincibleModEntities.VILTRUM_PLANET.get(), ViltrumPlanetRenderer::new);
 	}
 }

@@ -116,7 +116,11 @@ public class JoinedWorldProcedure {
 			}
 			InvincibleMod.queueServerWork(30, () -> {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7lTip: \u00A7rThe \"Activate Special\" Keybind allows you to perform powerful punches at 10 Strength."), true);
+					_player.displayClientMessage(Component.literal("\u00A7lTip: \u00A7rThe \"Activate Special\" Keybind allows you to perform powerful punches at 10 Strength."), false);
+				InvincibleMod.queueServerWork(30, () -> {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7lTip: \u00A7rSpawnOnViltrum Gamerule is active! Meaning Viltrumites spawn on Viltrum while its active. "), false);
+				});
 			});
 		}
 	}
